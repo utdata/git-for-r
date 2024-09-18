@@ -1,0 +1,6 @@
+---
+title: "Collaborating"
+---
+
+Here we need to talk about branches, pull requests, merge conflicts and those types of things.
+

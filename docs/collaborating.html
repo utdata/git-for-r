@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Git for R - Appendix A — Resources</title>
+<title>Git for R - 6&nbsp; Collaborating</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./collaborating.html" rel="prev">
+<link href="./resources.html" rel="next">
+<link href="./git-gui-r.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -80,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./resources.html">Appendices</a></li><li class="breadcrumb-item"><a href="./resources.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Resources</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./terminal.html">Basics</a></li><li class="breadcrumb-item"><a href="./collaborating.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Collaborating</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -163,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./collaborating.html" class="sidebar-item-text sidebar-link">
+  <a href="./collaborating.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Collaborating</span></span></a>
   </div>
 </li>
@@ -180,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link active">
+  <a href="./resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Resources</span></span></a>
   </div>
 </li>
@@ -197,9 +198,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./resources.html">Appendices</a></li><li class="breadcrumb-item"><a href="./resources.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Resources</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./terminal.html">Basics</a></li><li class="breadcrumb-item"><a href="./collaborating.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Collaborating</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Appendix A — Resources</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Collaborating</span></h1>
 </div>
 
 
@@ -216,13 +217,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This book is a work in progress. I actually wanted to point to existing resources instead of writing a new one, but I found I wanted to be more opinionated with the workflow I want students to use.</p>
-<p>That said, here are the resources I’m working from, which might also be useful to students.</p>
-<ul>
-<li><a href="https://happygitwithr.com/">Happy Git and Github for the useR</a> by Jenny Bryant is a great on working with Git/Github and RStudio.</li>
-<li>The first four chapters of my book <a href="https://utdata.github.io/icj-class/">Intro to Coding for Journalists</a> were not written with RStudio in mind, but it is a beginner look at Terminal, Git and Github. Once understood, moving that knowledge into RStudio isn’t too much of a stretch.</li>
-<li>Another way to go about it is to start with <a href="https://docs.github.com/en/get-started/start-your-journey/about-github-and-git">Github’s Docs</a>. It’s comprehensive, but it’s a lot. There is way more than the basic minimum knowledge there.</li>
-</ul>
+<p>Here we need to talk about branches, pull requests, merge conflicts and those types of things.</p>
 
 
 
@@ -611,11 +606,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./collaborating.html" class="pagination-link  aria-label=" &lt;span="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Collaborating</span></span>
+      <a href="./git-gui-r.html" class="pagination-link  aria-label=" &lt;span="" gui="" in="" rstudio&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Git GUI in RStudio</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./resources.html" class="pagination-link" aria-label="<span class='chapter-number'>A</span>&nbsp; <span class='chapter-title'>Resources</span>">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Resources</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

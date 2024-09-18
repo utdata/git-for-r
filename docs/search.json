@@ -98,6 +98,138 @@
     ]
   },
   {
+    "objectID": "git-project.html",
+    "href": "git-project.html",
+    "title": "4  Git basics",
+    "section": "",
+    "text": "4.1 Explaining repositories, projects\nWhen we work in R, we typically create an R “project” that keeps together all our files for a specific project. When we start tracking that folder’s contents using version control, we call it a repository. So in reference to R, our repo (as we call them) is really just our project folder.\nIn addition to tracking a repo’s history on our computer, we can also push our changes to a remote server, like Github. This allows us to share our work with others, and collaborate on projects. This remote version will have the same historical record of our file changes as our local version.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-project.html#start-a-new-project",
+    "href": "git-project.html#start-a-new-project",
+    "title": "4  Git basics",
+    "section": "4.2 Start a new project",
+    "text": "4.2 Start a new project\nLet’s start a new R project and create a Github repository for it. We’ll use the RStudio IDE to do this.\n\nCreate a new R project, using the Quarto Website option.\n\nWhen you name the project, use lowercase letters with dashes for spaces, like git-test-project.\n\nOpen the project in RStudio.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-project.html#setting-a-new-output-directory",
+    "href": "git-project.html#setting-a-new-output-directory",
+    "title": "4  Git basics",
+    "section": "4.3 Setting a new output directory",
+    "text": "4.3 Setting a new output directory\nTypically when you Render a Quarto Website, it stores the HTML files in a folder called _site. We want to adjust the _quarto.yml file to use a different folder that allows us to publish our site to Github Pages.\n\nOpen the _quarto.yml file in the project folder.\nAdd the following output-dir line as shown below:\nproject:\n  type: website\n  output-dir: docs\nNow when we Render our site, it will put all those files into a folder called docs.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-project.html#the-git-cycle",
+    "href": "git-project.html#the-git-cycle",
+    "title": "4  Git basics",
+    "section": "4.4 The git cycle",
+    "text": "4.4 The git cycle\nWhen we add files to our git history, there are a couple of steps.\n\nWe first have to tell git to track the folder. We do this only once using git init.\nWe designate which files we to track by “adding” them to stage using git add. Stage is a weird term, but it basically means the list of files that are ready to be saved to the history. We often add all our files, but sometimes we want to just save specific ones.\nWhen we are ready to save that change to the history, we “commit” it using git commit. It’s required that we add a short message about why we are committing to our history at this point.\nWhen we are ready to send all our changes and history to Github, we “push” them using git push.\n\nOther than initializing, you repeat these steps often, especially git add and git commit.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-project.html#adding-.gitignore",
+    "href": "git-project.html#adding-.gitignore",
+    "title": "4  Git basics",
+    "section": "4.5 Adding .gitignore",
+    "text": "4.5 Adding .gitignore\nBy default, git will track all the files in your project folder, even those that are hidden from view and don’t really have bearing on your project. We can tell git to ignore these files by creating a .gitignore file in the project folder.\nThere is a website called gitignore.io that can help you create a .gitignore file for your project. You can search for the type of project you are working on, and it will generate a .gitignore file for you.\nAs you build the file, you tell the website which programming language and such that you are using, and it will build the appropriate file for you. I have a standard set for R, but we need to make one change to it once it is build.\n\nGo to gitignore.io.\nIn the box, type in the following indicators: macOS, Windows, R.\nClick Create to create the file.\nCopy the contents of the file.\nCreate a new text file in your project folder called .gitignore.\nPaste the contents of the file into the .gitignore file.\nLook through that file and find this line.\n# pkgdown site\ndocs/\nAdd a hashtag before docs/ so it looks like this:\n# pkgdown site\n# docs/\nSave the file and close it.\n\nWe commented out this docs/ line because we don’t want to ignore that folder. We are going to purposefully use the docs folder later to publish our work on Github. This will make more sense later.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-project.html#git-init-initialize-a-repo",
+    "href": "git-project.html#git-init-initialize-a-repo",
+    "title": "4  Git basics",
+    "section": "4.6 git init: Initialize a repo",
+    "text": "4.6 git init: Initialize a repo\nTo start tracking our project in git, we have to initialize it. This is done by going to our Terminal in RStudio and running the following command:\ngit init\nThe command and response will look something like this in your Terminal:\ncrit:git-project-test$ git init\nInitialized empty Git repository in /Users/crit/git-project-test/.git/\nThis command creates a hidden folder called .git in the project folder. This folder contains all the information git needs to track changes in our project.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-project.html#git-status-check-status-of-files",
+    "href": "git-project.html#git-status-check-status-of-files",
+    "title": "4  Git basics",
+    "section": "4.7 git status: Check status of files",
+    "text": "4.7 git status: Check status of files\nAfter initializing the repo, we can check the status of our files by running the following command:\ngit status\nThis command isn’t a required part of the git cycle, but it is very useful to see where you are in the cycle. Use it often.\nAt this point it will indicate that there are no files being tracked:\n$ git status\nOn branch main\n\nNo commits yet\n\nUntracked files:\n  (use \"git add &lt;file&gt;...\" to include in what will be committed)\n        _quarto.yml\n        about.qmd\n        git-project-test.Rproj\n        index.qmd\n        styles.css\n\nnothing added to commit but untracked files present (use \"git add\" to track)\nThat’s fine. We’ll add them next.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-project.html#git-add-add-files-to-stage",
+    "href": "git-project.html#git-add-add-files-to-stage",
+    "title": "4  Git basics",
+    "section": "4.8 git add: Add files to stage",
+    "text": "4.8 git add: Add files to stage\nWe will often want to add ALL the untracked files to staging, so we’ll do that now.\n\nIn your Terminal, type in:\ngit add .\n\nYou should get no response from the Terminal, but if you run git status again, you’ll see that the files are now being tracked:\n\nRun git status again to see the changes:\ngit status\n\nThe command and response should like this:\n$ git status\nOn branch main\n\nNo commits yet\n\nChanges to be committed:\n  (use \"git rm --cached &lt;file&gt;...\" to unstage)\n        new file:   .gitignore\n        new file:   _quarto.yml\n        new file:   about.qmd\n        new file:   git-project-test.Rproj\n        new file:   index.qmd\n        new file:   styles.css\n\n4.8.1 Adding specific files to stage\nAdd specific files to stage:\ngit add index.qmd, about.qmd\nWe don’t need to do that here, but you should know how.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-project.html#git-commit-commit-changes-to-history",
+    "href": "git-project.html#git-commit-commit-changes-to-history",
+    "title": "4  Git basics",
+    "section": "4.9 git commit: Commit changes to history",
+    "text": "4.9 git commit: Commit changes to history\nFinally we get to where we “commit” our changes to the history. Git requires that we include a short message to our future selves and colleges about why we are saving at this time. These messages become a way for us to find specific commits in our history later if we need them.\nThese messages should be short and sweet, like “Added index page” or “Fixed typo in about page”.\n\nUse the following command in your Terminal to commit your files now with a message:\ngit commit -m \"Initial commit\"\n\nAnd you should get a response something like this:\n$ git commit -m \"Initial commit\"\n[main (root-commit) 0f0a604] Initial commit\n 6 files changed, 176 insertions(+)\n create mode 100644 .gitignore\n create mode 100644 _quarto.yml\n create mode 100644 about.qmd\n create mode 100644 git-project-test.Rproj\n create mode 100644 index.qmd\n create mode 100644 styles.css\n\nRun git status again to see the changes:\ngit status\n\nYou’ll get a response that there are no new changes to consider committing.\n$ git status\nOn branch main\nnothing to commit, working tree clean\n\n4.9.1 More about status\nTo be clear, we didn’t need to run git status so many times through that process, but doing so gives you insight into how your files are being tracked. It’s a good habit to get into.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-project.html#git-remote-connecting-to-github",
+    "href": "git-project.html#git-remote-connecting-to-github",
+    "title": "4  Git basics",
+    "section": "4.10 git remote: Connecting to Github",
+    "text": "4.10 git remote: Connecting to Github\nNow, at this point our own computer has a history of our files, but we want to push that history to Github so we can share it with others. We need to connect our local repo to a remote repo on Github.\n\nGo to Github.com\nLog in to your account.\nClick the + in the upper right corner and select New repository.\nName the repository the same as your project folder, like git-project-test.\nClick Create repository.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
+    ]
+  },
+  {
+    "objectID": "git-gui-r.html",
+    "href": "git-gui-r.html",
+    "title": "5  Git GUI in RStudio",
+    "section": "",
+    "text": "One trick you might have to do to get the Git GUI to work within R Studio:\nMake a change and get everything ready to push to Github.\nAs you are doing so, make sure you use the -u flag to push:\ngit push -u origin main\nOnce you’ve done this, Quit and relaunch RStudio and your project and it should the Pull/Push buttons should work.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Git GUI in RStudio</span>"
+    ]
+  },
+  {
+    "objectID": "collaborating.html",
+    "href": "collaborating.html",
+    "title": "6  Collaborating",
+    "section": "",
+    "text": "Here we need to talk about branches, pull requests, merge conflicts and those types of things.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Collaborating</span>"
+    ]
+  },
+  {
     "objectID": "resources.html",
     "href": "resources.html",
     "title": "Appendix A — Resources",

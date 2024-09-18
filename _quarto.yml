@@ -15,6 +15,9 @@ book:
     - part: "Basics"
       chapters:
       - terminal.qmd
+      - git-project.qmd
+      - git-gui-r.qmd
+      - collaborating.qmd
   appendices:
     - resources.qmd
 
