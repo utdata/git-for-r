@@ -222,7 +222,7 @@ To be clear, we didn't need to run `git status` so many times through that proce
 
 Now, at this point our own computer has a history of our files, but we want to push that history to Github so we can share it with others. We need to connect our local repo to a remote repo on Github.
 
-
+1. Go to Github.com
 
 
 
