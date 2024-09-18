@@ -1,0 +1,244 @@
+---
+title: "Git basics"
+---
+
+We'll learn the basic git commands and experience what they do by creating a new R project with a Github repository. It will be just enough knowledge to get the job done.
+
+If after going through this book you want to learn more, there are plenty of resources [on google](https://www.google.com/search?q=understanding+git+version+control&oq=understanding+git+version+control) where you'll find a ton of [posts](https://www.atlassian.com/git/tutorials/what-is-version-control), [tutorials](https://www.codecademy.com/learn/learn-git) and [videos](https://www.youtube.com/results?search_query=git+tutorial) about Git and version control systems. 
+
+At its most basic, Git allows you to save your work at intervals and it keeps a history of files on your computer when you choose to save them. Once you have something that works, you can "commit" it and leave a comment about what you've done. You can then go back to that exact point in time if you need to. This frees the developer to experiment and make changes that may NOT work, because you know you can always go back. It works for any kind of file you want to put under version control.
+
+Git allows for a "distributed" version control system, meaning that all the code can be stored on a central server (like on the Internet) so other people can work on the shared code. When they "check out" a repository (or repo), they get the entire code base. Contributors can then make changes and "check in" those changes for others to use.
+
+## Explaining repositories, projects
+
+When we work in R, we typically create an R "project" that keeps together all our files for a specific project. When we start tracking that folder's contents using version control, we call it a repository. So in reference to R, our repo (as we call them) is really just our project folder.
+
+In addition to tracking a repo's history on our computer, we can also push our changes to a remote server, like Github. This allows us to share our work with others, and collaborate on projects. This remote version will have the same historical record of our file changes as our local version.
+
+## Start a new project
+
+Let's start a new R project and create a Github repository for it. We'll use the RStudio IDE to do this.
+
+1. Create a new R project, using the Quarto Website option.
+    - When you name the project, use lowercase letters with dashes for spaces, like `git-test-project`.
+2. Open the project in RStudio.
+
+## Setting a new output directory
+
+Typically when you Render a Quarto Website, it stores the HTML files in a folder called `_site`. We want to adjust the _quarto.yml file to use a different folder that allows us to publish our site to Github Pages.
+
+1. Open the `_quarto.yml` file in the project folder.
+2. Add the following output-dir line as shown below:
+
+    ```yaml
+    project:
+      type: website
+      output-dir: docs
+    ```
+Now when we Render our site, it will put all those files into a folder called `docs`.
+
+## The git cycle
+
+When we add files to our git history, there are a couple of steps.
+
+- We first have to tell git to track the folder. We do this only once using `git init`.
+- We designate which files we to track by "adding" them to _stage_ using `git add`. Stage is a weird term, but it basically means the list of files that are ready to be saved to the history. We often add all our files, but sometimes we want to just save specific ones.
+- When we are ready to save that change to the history, we "commit" it using `git commit`. It's required that we add a short message about why we are committing to our history at this point.
+- When we are ready to send all our changes and history to Github, we "push" them using `git push`.
+
+Other than initializing, you repeat these steps often, especially `git add` and `git commit`.
+
+## Adding .gitignore
+
+By default, git will track all the files in your project folder, even those that are hidden from view and don't really have bearing on your project. We can tell git to ignore these files by creating a `.gitignore` file in the project folder.
+
+There is a website called [gitignore.io](https://www.gitignore.io/) that can help you create a `.gitignore` file for your project. You can search for the type of project you are working on, and it will generate a `.gitignore` file for you.
+
+As you build the file, you tell the website which programming language and such that you are using, and it will build the appropriate file for you. I have a standard set for R, but we need to make one change to it once it is build.
+
+1. Go to [gitignore.io](https://www.gitignore.io/).
+2. In the box, type in the following indicators: `macOS, Windows, R`.
+3. Click **Create** to create the file.
+4. Copy the contents of the file.
+5. Create a new text file in your project folder called `.gitignore`.
+6. Paste the contents of the file into the `.gitignore` file.
+7. Look through that file and find this line.
+
+    ```text
+    # pkgdown site
+    docs/
+    ```
+8. Add a hashtag before `docs/` so it looks like this:
+
+    ```text
+    # pkgdown site
+    # docs/
+    ```
+9. Save the file and close it.
+
+We commented out this `docs/` line because we **don't** want to ignore that folder. We are going to purposefully use the docs folder later to publish our work on Github. This will make more sense later.
+
+## git init: Initialize a repo
+
+To start tracking our project in git, we have to initialize it. This is done by going to our Terminal in RStudio and running the following command:
+
+```bash
+git init
+```
+
+The command and response will look something like this in your Terminal:
+
+```text
+crit:git-project-test$ git init
+Initialized empty Git repository in /Users/crit/git-project-test/.git/
+```
+
+This command creates a hidden folder called `.git` in the project folder. This folder contains all the information git needs to track changes in our project.
+
+## git status: Check status of files
+
+After initializing the repo, we can check the status of our files by running the following command:
+
+```bash
+git status
+```
+
+This command isn't a required part of the git cycle, but it is very useful to see where you are in the cycle. Use it often.
+
+At this point it will indicate that there are no files being tracked:
+
+```text
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        _quarto.yml
+        about.qmd
+        git-project-test.Rproj
+        index.qmd
+        styles.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+That's fine. We'll add them next.
+
+## git add: Add files to stage
+
+We will often want to add ALL the untracked files to staging, so we'll do that now.
+
+1. In your Terminal, type in:
+
+    ```bash
+    git add .
+    ```
+
+You should get no response from the Terminal, but if you run `git status` again, you'll see that the files are now being tracked:
+
+2. Run `git status` again to see the changes:
+
+    ```bash
+    git status
+    ```
+
+The command and response should like this:
+
+```text
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   _quarto.yml
+        new file:   about.qmd
+        new file:   git-project-test.Rproj
+        new file:   index.qmd
+        new file:   styles.css
+```
+
+
+### Adding specific files to stage
+
+Add specific files to stage:
+
+```bash
+git add index.qmd, about.qmd
+```
+
+We don't need to do that here, but you should know how.
+
+## git commit: Commit changes to history
+
+Finally we get to where we "commit" our changes to the history. Git requires that we include a short message to our future selves and colleges about why we are saving at this time. These messages become a way for us to find specific commits in our history later if we need them.
+
+These messages should be short and sweet, like "Added index page" or "Fixed typo in about page".
+
+1. Use the following command in your Terminal to commit your files now with a message:
+
+    ```bash
+    git commit -m "Initial commit"
+    ```
+
+And you should get a response something like this:
+
+```text
+$ git commit -m "Initial commit"
+[main (root-commit) 0f0a604] Initial commit
+ 6 files changed, 176 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 _quarto.yml
+ create mode 100644 about.qmd
+ create mode 100644 git-project-test.Rproj
+ create mode 100644 index.qmd
+ create mode 100644 styles.css
+```
+
+2. Run `git status` again to see the changes:
+
+    ```bash
+    git status
+    ```
+
+You'll get a response that there are no new changes to consider committing.
+
+```text
+$ git status
+On branch main
+nothing to commit, working tree clean
+```
+
+### More about status
+
+To be clear, we didn't need to run `git status` so many times through that process, but doing so gives you insight into how your files are being tracked. It's a good habit to get into.
+
+## git remote: Connecting to Github
+
+Now, at this point our own computer has a history of our files, but we want to push that history to Github so we can share it with others. We need to connect our local repo to a remote repo on Github.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

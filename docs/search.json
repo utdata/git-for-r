@@ -87,6 +87,17 @@
     ]
   },
   {
+    "objectID": "terminal.html",
+    "href": "terminal.html",
+    "title": "3  Using a Terminal",
+    "section": "",
+    "text": "A short chapter to explain basic bash commands like ls, cd, mkdir, etc.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Using a Terminal</span>"
+    ]
+  },
+  {
     "objectID": "resources.html",
     "href": "resources.html",
     "title": "Appendix A — Resources",
