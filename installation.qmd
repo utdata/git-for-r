@@ -1,0 +1,67 @@
+---
+title: "Installation"
+---
+
+These first two chapters you should only have to do one time for your computer.
+
+
+## GitHub
+
+Github is a website where you can store your code and collaborate with others. It's also a place where you can publish your code so that others can see it.
+
+If you don't already have a GitHub account, go to [github.com](http://github.com) and create an account.
+
+:::callout-important
+Choose your Github username carefully and **DON'T make the name specific to school or a project**. This is profile is specific to you and will become a public facing display of your work. I would also avoid upper case characters as a matter of convention. Your name becomes part of a URL for your projects when we publish them.
+:::
+
+## Git
+
+You have to install Git before you can use it. The Git program itself lives in the bowels of your computer and you use either the Terminal or another program to interact with it.
+
+On a Mac, RStudio requires Git and bugs you until you install it, but we should test just to be sure. I'm not sure with Windows, but you can run the same test below.
+
+### Test if you have it
+
+We'll use your Terminal within RStudio.
+
+1. Launch RStudio.
+2. Go to the **Terminal** tab.
+    - It's usually in the same pane as Console and Background jobs on the bottom left.
+3. Type `git --version` and press Enter.
+    - It should respond with a version number.
+  
+![Teminal Window](images/git-version.png)
+
+If it doesn't, then you'll want to install it.
+
+If you get a version number, move on to the next chapter.
+
+### Installing Git
+
+There are different approaches to installing git based on whether you use MacOS or Windows.
+
+::: {.panel-tabset}
+
+#### MacOS
+
+To install Git, we'll install something called Xcode tools.
+
+1. In your Terminal,type and then run `xcode-select --install`.
+    - This will prompt you to install the Xcode tools.
+
+It might say it will take hours to install, but it usually does in 5 and 30 minutes, depending on how many people are trying to download at the same time.
+
+#### Windows
+
+1. Go to [Git Downloads](https://git-scm.com/downloads) and install it, using the defaults except for these items listed below.
+    - When asked to "Adjust your PATH environment" choose **"Use Git from Git Bash only"**.
+    - When it asks you to choose the default branch name, **change it to `main`**.
+
+##### Perhaps an alternative
+
+I'm wondering out loud here if I should instead point students to [Git for Windows](https://gitforwindows.org/)? How do they differ?
+
+:::
+
+

@@ -1,0 +1,25 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Git for R"
+  author: "Christian McDonald"
+  date: "September 2024"
+  chapters:
+    - index.qmd
+    - part: "Installation"
+      chapters:
+      - installation.qmd
+      - setup.qmd
+    - part: "Basics"
+      chapters:
+      - terminal.qmd
+  appendices:
+    - resources.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-overflow: wrap

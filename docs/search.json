@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Git for R",
+    "section": "",
+    "text": "About this book\nI’m finding I’m not happy with existing resources on using Git with R, so I want to make a very opinionated guide specifically for my students.",
+    "crumbs": [
+      "About this book"
+    ]
+  },
+  {
+    "objectID": "installation.html",
+    "href": "installation.html",
+    "title": "1  Installation",
+    "section": "",
+    "text": "1.1 GitHub\nGithub is a website where you can store your code and collaborate with others. It’s also a place where you can publish your code so that others can see it.\nIf you don’t already have a GitHub account, go to github.com and create an account.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
+    ]
+  },
+  {
+    "objectID": "installation.html#github",
+    "href": "installation.html#github",
+    "title": "1  Installation",
+    "section": "",
+    "text": "Important\n\n\n\nChoose your Github username carefully and DON’T make the name specific to school or a project. This is profile is specific to you and will become a public facing display of your work. I would also avoid upper case characters as a matter of convention. Your name becomes part of a URL for your projects when we publish them.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
+    ]
+  },
+  {
+    "objectID": "installation.html#git",
+    "href": "installation.html#git",
+    "title": "1  Installation",
+    "section": "1.2 Git",
+    "text": "1.2 Git\nYou have to install Git before you can use it. The Git program itself lives in the bowels of your computer and you use either the Terminal or another program to interact with it.\nOn a Mac, RStudio requires Git and bugs you until you install it, but we should test just to be sure. I’m not sure with Windows, but you can run the same test below.\n\n1.2.1 Test if you have it\nWe’ll use your Terminal within RStudio.\n\nLaunch RStudio.\nGo to the Terminal tab.\n\nIt’s usually in the same pane as Console and Background jobs on the bottom left.\n\nType git --version and press Enter.\n\nIt should respond with a version number.\n\n\n\n\n\nTeminal Window\n\n\nIf it doesn’t, then you’ll want to install it.\nIf you get a version number, move on to the next chapter.\n\n\n1.2.2 Installing Git\nThere are different approaches to installing git based on whether you use MacOS or Windows.\n\nMacOSWindows\n\n\nTo install Git, we’ll install something called Xcode tools.\n\nIn your Terminal,type and then run xcode-select --install.\n\nThis will prompt you to install the Xcode tools.\n\n\nIt might say it will take hours to install, but it usually does in 5 and 30 minutes, depending on how many people are trying to download at the same time.\n\n\n\nGo to Git Downloads and install it, using the defaults except for these items listed below.\n\nWhen asked to “Adjust your PATH environment” choose “Use Git from Git Bash only”.\nWhen it asks you to choose the default branch name, change it to main.\n\n\n\n1.2.2.0.1 Perhaps an alternative\nI’m wondering out loud here if I should instead point students to Git for Windows? How do they differ?",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "2  Setup",
+    "section": "",
+    "text": "2.1 Configure git\nHere we’ll update some settings within git on your machine.\nFirst we’ll set your user.name so Git knows who you are.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setup</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html#configure-git",
+    "href": "setup.html#configure-git",
+    "title": "2  Setup",
+    "section": "",
+    "text": "In your Terminal, do this but use your name in quotes instead of “Mona Lisa”:\ngit config --global user.name \"Mona Lisa\"\nNow we’ll set your user.email.\nIn your Terminal do this but use your email:\ngit config --global user.email \"email@example.com\"\nYou will want to use the same email when you create your GitHub account.\nLastly we’ll set git to name your default branch “main” instead of “master” as this is a new standard.\nIn your terminal, run this:\ngit config --global init.defaultBranch main\nYou won’t get a response unless there was a problem.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setup</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html#ssh-keys",
+    "href": "setup.html#ssh-keys",
+    "title": "2  Setup",
+    "section": "2.2 SSH Keys",
+    "text": "2.2 SSH Keys\nThere are a couple of ways to authenticate with Github from your computer. The book Happy Git with R recommends using personal access tokens and I think that is fine, but I prefer the one-and-done nature of SSH keys.\n\n\n\n\n\n\nImportant\n\n\n\nIf you have ever set up SSH keys before, find the instructor. (If you don’t understand that sentence, you likely haven’t.)\n\n\nWe’re going to create a special file on your computer so that your machine can connect to your GitHub account. (GitHub doesn’t like sending your password around). It will seem complicated, but it’s not really.\nThese directions come from (macOS | Windows) but use the steps below as they are streamlined.\n\nDuring this process, you’ll be asked to save the location of the rsa_id. Just hit return to save the default location.\nYou’ll also be asked to set a password for the file. JUST LEAVE THE PASSWORD BLANK and hit return. It will ask you a couple of times.\nAt the end of the installation, it will give a path to the rsa_id file. We might need to open this file in the next step to copy it. Ask for help at this step.\n\n\nIn your terminal, run the following command but with your email:\nssh-keygen -t ed25519 -C \"your_email@example.com\"\nWhen it prompts you about a location, JUST HIT RETURN to accept the default.\nwhen it prompts you for a passphrase, JUST HIT RETURN to leave it blank.\n\nYou should get a nice little art looking return on your terminal, eventually.\nWhat those steps did is create a file on your computer and put inside of it a bunch of random characters.\nTo “copy” the contents of this file, the command differs between macOS and Windows:\n\nmacOSWindows\n\n\n\nOnce you are through the steps above, do the following command:\n\npbcopy &lt; ~/.ssh/id_ed25519.pub\n\n\n\nOnce you are through the steps above, do the following command:\n\nclip &lt; ~/.ssh/id_ed25519.pub\n\n\n\nThis copies the contents of that file you created to your clipboard. It’s like opening the file and copying the contents.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setup</span>"
+    ]
+  },
+  {
+    "objectID": "setup.html#saving-ssh-key-in-github",
+    "href": "setup.html#saving-ssh-key-in-github",
+    "title": "2  Setup",
+    "section": "2.3 Saving SSH key in Github",
+    "text": "2.3 Saving SSH key in Github\nNow we’ll save the contents of that secret file on your computer into your Github account so Github “knows” about your computer.\n\nGo to github.com and click your user icon and choose Settings.\nIn the user settings sidebar on the left, click SSH and GPG keys.\nClick New SSH key or Add SSH key.\nIn the “Title” field, add a descriptive label for the new key. Name it after your computer, like “Personal MacBook Air” or something.\nIn the “Key” field, so Command-V to paste your key into the box.\n\nIt will look something like this (but the contents will be different):\n\n\n\nSaving the key\n\n\nAlmost done!\n\nClick Add SSH key.\nIf prompted, confirm your GitHub password.\n\n\n2.3.1 Test Github connection\n\nFrom your Terminal, do the following command:\n\nssh -T git@github.com\n\nIf you are asked about “RSA key fingerprint”, type yes and hit return.\nIn the end, you should have a success message like: “Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.” If you get that message, you are good!",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setup</span>"
+    ]
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Appendix A — Resources",
+    "section": "",
+    "text": "This book is a work in progress. I actually wanted to point to existing resources instead of writing a new one, but I found I wanted to be more opinionated with the workflow I want students to use.\nThat said, here are the resources I’m working from, which might also be useful to students.\n\nHappy Git and Github for the useR by Jenny Bryant is a great on working with Git/Github and RStudio.\nThe first four chapters of my book Intro to Coding for Journalists were not written with RStudio in mind, but it is a beginner look at Terminal, Git and Github. Once understood, moving that knowledge into RStudio isn’t too much of a stretch.\nAnother way to go about it is to start with Github’s Docs. It’s comprehensive, but it’s a lot. There is way more than the basic minimum knowledge there.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Resources</span>"
+    ]
+  }
+]

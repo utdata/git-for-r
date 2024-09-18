@@ -1,0 +1,4 @@
+# About this book {.unnumbered}
+
+I'm finding I'm not happy with existing resources on using Git with R, so I want to make a very opinionated guide specifically for my students.
+
