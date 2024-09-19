@@ -60,7 +60,7 @@ It might say it will take hours to install, but it usually does in 5 and 30 minu
 
 ##### Perhaps an alternative
 
-I'm wondering out loud here if I should instead point students to [Git for Windows](https://gitforwindows.org/)? How do they differ?
+~~I'm wondering out loud here if I should instead point students to [Git for Windows](https://gitforwindows.org/)? How do they differ?~~
 
 :::
 

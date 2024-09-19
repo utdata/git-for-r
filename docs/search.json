@@ -10,96 +10,96 @@
     ]
   },
   {
+    "objectID": "terminal.html",
+    "href": "terminal.html",
+    "title": "1  Using a Terminal",
+    "section": "",
+    "text": "A short chapter to explain basic bash commands like ls, cd, mkdir, etc.",
+    "crumbs": [
+      "Terminal",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Using a Terminal</span>"
+    ]
+  },
+  {
     "objectID": "installation.html",
     "href": "installation.html",
-    "title": "1  Installation",
+    "title": "2  Installation",
     "section": "",
-    "text": "1.1 GitHub\nGithub is a website where you can store your code and collaborate with others. It’s also a place where you can publish your code so that others can see it.\nIf you don’t already have a GitHub account, go to github.com and create an account.",
+    "text": "2.1 GitHub\nGithub is a website where you can store your code and collaborate with others. It’s also a place where you can publish your code so that others can see it.\nIf you don’t already have a GitHub account, go to github.com and create an account.",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
     ]
   },
   {
     "objectID": "installation.html#github",
     "href": "installation.html#github",
-    "title": "1  Installation",
+    "title": "2  Installation",
     "section": "",
     "text": "Important\n\n\n\nChoose your Github username carefully and DON’T make the name specific to school or a project. This is profile is specific to you and will become a public facing display of your work. I would also avoid upper case characters as a matter of convention. Your name becomes part of a URL for your projects when we publish them.",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
     ]
   },
   {
     "objectID": "installation.html#git",
     "href": "installation.html#git",
-    "title": "1  Installation",
-    "section": "1.2 Git",
-    "text": "1.2 Git\nYou have to install Git before you can use it. The Git program itself lives in the bowels of your computer and you use either the Terminal or another program to interact with it.\nOn a Mac, RStudio requires Git and bugs you until you install it, but we should test just to be sure. I’m not sure with Windows, but you can run the same test below.\n\n1.2.1 Test if you have it\nWe’ll use your Terminal within RStudio.\n\nLaunch RStudio.\nGo to the Terminal tab.\n\nIt’s usually in the same pane as Console and Background jobs on the bottom left.\n\nType git --version and press Enter.\n\nIt should respond with a version number.\n\n\n\n\n\nTeminal Window\n\n\nIf it doesn’t, then you’ll want to install it.\nIf you get a version number, move on to the next chapter.\n\n\n1.2.2 Installing Git\nThere are different approaches to installing git based on whether you use MacOS or Windows.\n\nMacOSWindows\n\n\nTo install Git, we’ll install something called Xcode tools.\n\nIn your Terminal,type and then run xcode-select --install.\n\nThis will prompt you to install the Xcode tools.\n\n\nIt might say it will take hours to install, but it usually does in 5 and 30 minutes, depending on how many people are trying to download at the same time.\n\n\n\nGo to Git Downloads and install it, using the defaults except for these items listed below.\n\nWhen asked to “Adjust your PATH environment” choose “Use Git from Git Bash only”.\nWhen it asks you to choose the default branch name, change it to main.\n\n\n\n1.2.2.0.1 Perhaps an alternative\nI’m wondering out loud here if I should instead point students to Git for Windows? How do they differ?",
+    "title": "2  Installation",
+    "section": "2.2 Git",
+    "text": "2.2 Git\nYou have to install Git before you can use it. The Git program itself lives in the bowels of your computer and you use either the Terminal or another program to interact with it.\nOn a Mac, RStudio requires Git and bugs you until you install it, but we should test just to be sure. I’m not sure with Windows, but you can run the same test below.\n\n2.2.1 Test if you have it\nWe’ll use your Terminal within RStudio.\n\nLaunch RStudio.\nGo to the Terminal tab.\n\nIt’s usually in the same pane as Console and Background jobs on the bottom left.\n\nType git --version and press Enter.\n\nIt should respond with a version number.\n\n\n\n\n\nTeminal Window\n\n\nIf it doesn’t, then you’ll want to install it.\nIf you get a version number, move on to the next chapter.\n\n\n2.2.2 Installing Git\nThere are different approaches to installing git based on whether you use MacOS or Windows.\n\nMacOSWindows\n\n\nTo install Git, we’ll install something called Xcode tools.\n\nIn your Terminal,type and then run xcode-select --install.\n\nThis will prompt you to install the Xcode tools.\n\n\nIt might say it will take hours to install, but it usually does in 5 and 30 minutes, depending on how many people are trying to download at the same time.\n\n\n\nGo to Git Downloads and install it, using the defaults except for these items listed below.\n\nWhen asked to “Adjust your PATH environment” choose “Use Git from Git Bash only”.\nWhen it asks you to choose the default branch name, change it to main.\n\n\n\n2.2.2.0.1 Perhaps an alternative\nI’m wondering out loud here if I should instead point students to Git for Windows? How do they differ?",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Installation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Installation</span>"
     ]
   },
   {
     "objectID": "setup.html",
     "href": "setup.html",
-    "title": "2  Setup",
+    "title": "3  Setup",
     "section": "",
-    "text": "2.1 Configure git\nHere we’ll update some settings within git on your machine.\nFirst we’ll set your user.name so Git knows who you are.",
+    "text": "3.1 Configure git\nHere we’ll update some settings within git on your machine.\nFirst we’ll set your user.name so Git knows who you are.",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setup</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Setup</span>"
     ]
   },
   {
     "objectID": "setup.html#configure-git",
     "href": "setup.html#configure-git",
-    "title": "2  Setup",
+    "title": "3  Setup",
     "section": "",
     "text": "In your Terminal, do this but use your name in quotes instead of “Mona Lisa”:\ngit config --global user.name \"Mona Lisa\"\nNow we’ll set your user.email.\nIn your Terminal do this but use your email:\ngit config --global user.email \"email@example.com\"\nYou will want to use the same email when you create your GitHub account.\nLastly we’ll set git to name your default branch “main” instead of “master” as this is a new standard.\nIn your terminal, run this:\ngit config --global init.defaultBranch main\nYou won’t get a response unless there was a problem.",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setup</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Setup</span>"
     ]
   },
   {
     "objectID": "setup.html#ssh-keys",
     "href": "setup.html#ssh-keys",
-    "title": "2  Setup",
-    "section": "2.2 SSH Keys",
-    "text": "2.2 SSH Keys\nThere are a couple of ways to authenticate with Github from your computer. The book Happy Git with R recommends using personal access tokens and I think that is fine, but I prefer the one-and-done nature of SSH keys.\n\n\n\n\n\n\nImportant\n\n\n\nIf you have ever set up SSH keys before, find the instructor. (If you don’t understand that sentence, you likely haven’t.)\n\n\nWe’re going to create a special file on your computer so that your machine can connect to your GitHub account. (GitHub doesn’t like sending your password around). It will seem complicated, but it’s not really.\nThese directions come from (macOS | Windows) but use the steps below as they are streamlined.\n\nDuring this process, you’ll be asked to save the location of the rsa_id. Just hit return to save the default location.\nYou’ll also be asked to set a password for the file. JUST LEAVE THE PASSWORD BLANK and hit return. It will ask you a couple of times.\nAt the end of the installation, it will give a path to the rsa_id file. We might need to open this file in the next step to copy it. Ask for help at this step.\n\n\nIn your terminal, run the following command but with your email:\nssh-keygen -t ed25519 -C \"your_email@example.com\"\nWhen it prompts you about a location, JUST HIT RETURN to accept the default.\nwhen it prompts you for a passphrase, JUST HIT RETURN to leave it blank.\n\nYou should get a nice little art looking return on your terminal, eventually.\nWhat those steps did is create a file on your computer and put inside of it a bunch of random characters.\nTo “copy” the contents of this file, the command differs between macOS and Windows:\n\nmacOSWindows\n\n\n\nOnce you are through the steps above, do the following command:\n\npbcopy &lt; ~/.ssh/id_ed25519.pub\n\n\n\nOnce you are through the steps above, do the following command:\n\nclip &lt; ~/.ssh/id_ed25519.pub\n\n\n\nThis copies the contents of that file you created to your clipboard. It’s like opening the file and copying the contents.",
+    "title": "3  Setup",
+    "section": "3.2 SSH Keys",
+    "text": "3.2 SSH Keys\nThere are a couple of ways to authenticate with Github from your computer. The book Happy Git with R recommends using personal access tokens and I think that is fine, but I prefer the one-and-done nature of SSH keys, so that is the method we will use.\n\nAfter making sure git is installed, launch RStudio. (If it was already open, quit and re-launch it.)\nGo to the menu Tools &gt; Global Options, then click on the Git/SVN tab.\nCheck the Enable version control interface for RStudio button.\nThere should already be a path included in the Make sure the path to the git executable is correct.\n\nIf it is not, try quitting RStudio and relaunching it and do this step again.\nIf it is still not there, talk to the prof. We’ll find it.\n\n\n\n\n\nGit/SVN window\n\n\n\n3.2.1 Create a new SSH key\nIf you SSH Key path was already filled then you can skip to the next step.\nIf you’ve never used SSH keys before, you’ll have to create one, but RStudio makes that fairly painless.\n\nClick on the Create RSA Key button.\nYou should be able to leave all the defaults as they are. Leave the optional Passphrase field blank.\nClick Create.\nYou should see a message that says “Key Created Successfully” and it might show you a pretty picture. Click OK.\n\n\n\n\nSSH Key Creation window",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setup</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Setup</span>"
     ]
   },
   {
     "objectID": "setup.html#saving-ssh-key-in-github",
     "href": "setup.html#saving-ssh-key-in-github",
-    "title": "2  Setup",
-    "section": "2.3 Saving SSH key in Github",
-    "text": "2.3 Saving SSH key in Github\nNow we’ll save the contents of that secret file on your computer into your Github account so Github “knows” about your computer.\n\nGo to github.com and click your user icon and choose Settings.\nIn the user settings sidebar on the left, click SSH and GPG keys.\nClick New SSH key or Add SSH key.\nIn the “Title” field, add a descriptive label for the new key. Name it after your computer, like “Personal MacBook Air” or something.\nIn the “Key” field, so Command-V to paste your key into the box.\n\nIt will look something like this (but the contents will be different):\n\n\n\nSaving the key\n\n\nAlmost done!\n\nClick Add SSH key.\nIf prompted, confirm your GitHub password.\n\n\n2.3.1 Test Github connection\n\nFrom your Terminal, do the following command:\n\nssh -T git@github.com\n\nIf you are asked about “RSA key fingerprint”, type yes and hit return.\nIn the end, you should have a success message like: “Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.” If you get that message, you are good!",
+    "title": "3  Setup",
+    "section": "3.3 Saving SSH key in Github",
+    "text": "3.3 Saving SSH key in Github\nNow we’ll save the contents of that secret file on your computer into your Github account so Github “knows” about your computer.\nFirst we need access to your “Public” key:\n\nIn the RStudio Git/SVN window, click on the View public key button.\nThis will open a new window with the contents of your public key.\n\n\n\n\nPublic key example\n\n\nYou’ll want access to copy that key to paste into Github in the next step:\n\nGo to github.com and click your user icon and choose Settings.\nIn the user settings sidebar on the left, click SSH and GPG keys.\nClick New SSH key or Add SSH key.\nIn the “Title” field, add a descriptive label for the new key. Name it after your computer, like “Personal MacBook Air” or something.\nIn the “Key” field, so Command-V to paste your key into the box.\n\nIt will look something like this:\n\n\n\nSaving the key\n\n\nAlmost done!\n\nClick Add SSH key.\nIf prompted, confirm your GitHub password.\n\n\n3.3.1 Test Github connection\n\nFrom your Terminal in RStudio, do the following command:\n\nssh -T git@github.com\n\nIf you are asked about “RSA key fingerprint”, type yes and hit return.\nIn the end, you should have a success message like: “Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.” If you get that message, you are good!",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Setup</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Setup</span>"
     ]
   },
   {
-    "objectID": "terminal.html",
-    "href": "terminal.html",
-    "title": "3  Using a Terminal",
-    "section": "",
-    "text": "A short chapter to explain basic bash commands like ls, cd, mkdir, etc.",
-    "crumbs": [
-      "Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Using a Terminal</span>"
-    ]
-  },
-  {
-    "objectID": "git-project.html",
-    "href": "git-project.html",
+    "objectID": "basics.html",
+    "href": "basics.html",
     "title": "4  Git basics",
     "section": "",
     "text": "4.1 Explaining repositories, projects\nWhen we work in R, we typically create an R “project” that keeps together all our files for a specific project. When we start tracking that folder’s contents using version control, we call it a repository. So in reference to R, our repo (as we call them) is really just our project folder.\nIn addition to tracking a repo’s history on our computer, we can also push our changes to a remote server, like Github. This allows us to share our work with others, and collaborate on projects. This remote version will have the same historical record of our file changes as our local version.",
@@ -109,107 +109,74 @@
     ]
   },
   {
-    "objectID": "git-project.html#start-a-new-project",
-    "href": "git-project.html#start-a-new-project",
+    "objectID": "basics.html#start-a-new-project",
+    "href": "basics.html#start-a-new-project",
     "title": "4  Git basics",
     "section": "4.2 Start a new project",
-    "text": "4.2 Start a new project\nLet’s start a new R project and create a Github repository for it. We’ll use the RStudio IDE to do this.\n\nCreate a new R project, using the Quarto Website option.\n\nWhen you name the project, use lowercase letters with dashes for spaces, like git-test-project.\n\nOpen the project in RStudio.",
+    "text": "4.2 Start a new project\nLet’s start a new R project and create a Github repository for it. We’ll use the RStudio IDE to do this.\n\nCreate a new R project, using the Quarto Website option.\n\nWhen you name the project, use lowercase letters with dashes for spaces, like git-test-project.\n\nOpen the project in RStudio.\n\n\n4.2.1 Adding .gitignore\nBy default, git will track all the files in your project folder, even those that are hidden from view and don’t really have bearing on your project. We can tell git to ignore these files by creating a .gitignore file in the project folder.\nThere is a website called gitignore.io that can help you create a .gitignore file for your project. You can search for the type of project you are working on, and it will generate a .gitignore file for you.\nAs you build the file, you tell the website which programming language and such that you are using, and it will build the appropriate file for you. I have a standard set for R, but we need to make one change to it once it is build.\n\nGo to gitignore.io.\nIn the box, type in the following indicators: macOS, Windows, R.\nClick Create to create the file.\nCopy the contents of the file.\nCreate a new text file in your project folder called .gitignore.\nPaste the contents of the file into the .gitignore file.\nLook through that file and find this line.\n# pkgdown site\ndocs/\nAdd a hashtag before docs/ so it looks like this:\n# pkgdown site\n# docs/\nSave the file and close it.\n\nWe commented out this docs/ line because we don’t want to ignore that folder. We are going to purposefully use the docs folder later to publish our work on Github. This will make more sense later.\n\n\n4.2.2 Setting a new output directory\n\nI MIGHT MOVE THIS TO SOMEPLACE ELSE AS IT ISN’T THAT IMPORTANT NOW. THAT SAID, WE JUST ADJUSTED THE GITIGNRE TO HANDLE IT?\n\nTypically when you Render a Quarto Website, it stores the HTML files in a folder called _site. We want to adjust the _quarto.yml file to use a different folder that allows us to publish our site to Github Pages.\n\nOpen the _quarto.yml file in the project folder.\nAdd the following output-dir line as shown below:\nproject:\n  type: website\n  output-dir: docs\nNow when we Render our site, it will put all those files into a folder called docs. ## The git cycle\n\nWhen we add files to our git history, there are a couple of steps.\n\nWe first have to tell git to track the folder. We do this only once using git init.\nWe designate which files we to track by “adding” them to stage using git add. Stage is a weird term, but it basically means the list of files that are ready to be saved to the history. We often add all our files, but sometimes we want to just save specific ones.\nWhen we are ready to save that change to the history, we “commit” it using git commit. It’s required that we add a short message about why we are committing to our history at this point.\nWhen we are ready to send all our changes and history to Github, we “push” them using git push.\n\nOther than initializing, you repeat these steps often, especially git add and git commit.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
     ]
   },
   {
-    "objectID": "git-project.html#setting-a-new-output-directory",
-    "href": "git-project.html#setting-a-new-output-directory",
+    "objectID": "basics.html#git-init-initialize-a-repo",
+    "href": "basics.html#git-init-initialize-a-repo",
     "title": "4  Git basics",
-    "section": "4.3 Setting a new output directory",
-    "text": "4.3 Setting a new output directory\nTypically when you Render a Quarto Website, it stores the HTML files in a folder called _site. We want to adjust the _quarto.yml file to use a different folder that allows us to publish our site to Github Pages.\n\nOpen the _quarto.yml file in the project folder.\nAdd the following output-dir line as shown below:\nproject:\n  type: website\n  output-dir: docs\nNow when we Render our site, it will put all those files into a folder called docs.",
+    "section": "4.3 git init: Initialize a repo",
+    "text": "4.3 git init: Initialize a repo\nTo start tracking our project in git, we have to initialize it. This is done by going to our Terminal in RStudio and running the following command:\ngit init\nThe command and response will look something like this in your Terminal:\ncrit:git-project-test$ git init\nInitialized empty Git repository in /Users/crit/git-project-test/.git/\nThis command creates a hidden folder called .git in the project folder. This folder contains all the information git needs to track changes in our project.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
     ]
   },
   {
-    "objectID": "git-project.html#the-git-cycle",
-    "href": "git-project.html#the-git-cycle",
+    "objectID": "basics.html#git-status-check-status-of-files",
+    "href": "basics.html#git-status-check-status-of-files",
     "title": "4  Git basics",
-    "section": "4.4 The git cycle",
-    "text": "4.4 The git cycle\nWhen we add files to our git history, there are a couple of steps.\n\nWe first have to tell git to track the folder. We do this only once using git init.\nWe designate which files we to track by “adding” them to stage using git add. Stage is a weird term, but it basically means the list of files that are ready to be saved to the history. We often add all our files, but sometimes we want to just save specific ones.\nWhen we are ready to save that change to the history, we “commit” it using git commit. It’s required that we add a short message about why we are committing to our history at this point.\nWhen we are ready to send all our changes and history to Github, we “push” them using git push.\n\nOther than initializing, you repeat these steps often, especially git add and git commit.",
+    "section": "4.4 git status: Check status of files",
+    "text": "4.4 git status: Check status of files\nAfter initializing the repo, we can check the status of our files by running the following command:\ngit status\nThis command isn’t a required part of the git cycle, but it is very useful to see where you are in the cycle. Use it often.\nAt this point it will indicate that there are no files being tracked:\n$ git status\nOn branch main\n\nNo commits yet\n\nUntracked files:\n  (use \"git add &lt;file&gt;...\" to include in what will be committed)\n        _quarto.yml\n        about.qmd\n        git-project-test.Rproj\n        index.qmd\n        styles.css\n\nnothing added to commit but untracked files present (use \"git add\" to track)\nThat’s fine. We’ll add them next.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
     ]
   },
   {
-    "objectID": "git-project.html#adding-.gitignore",
-    "href": "git-project.html#adding-.gitignore",
+    "objectID": "basics.html#git-add-add-files-to-stage",
+    "href": "basics.html#git-add-add-files-to-stage",
     "title": "4  Git basics",
-    "section": "4.5 Adding .gitignore",
-    "text": "4.5 Adding .gitignore\nBy default, git will track all the files in your project folder, even those that are hidden from view and don’t really have bearing on your project. We can tell git to ignore these files by creating a .gitignore file in the project folder.\nThere is a website called gitignore.io that can help you create a .gitignore file for your project. You can search for the type of project you are working on, and it will generate a .gitignore file for you.\nAs you build the file, you tell the website which programming language and such that you are using, and it will build the appropriate file for you. I have a standard set for R, but we need to make one change to it once it is build.\n\nGo to gitignore.io.\nIn the box, type in the following indicators: macOS, Windows, R.\nClick Create to create the file.\nCopy the contents of the file.\nCreate a new text file in your project folder called .gitignore.\nPaste the contents of the file into the .gitignore file.\nLook through that file and find this line.\n# pkgdown site\ndocs/\nAdd a hashtag before docs/ so it looks like this:\n# pkgdown site\n# docs/\nSave the file and close it.\n\nWe commented out this docs/ line because we don’t want to ignore that folder. We are going to purposefully use the docs folder later to publish our work on Github. This will make more sense later.",
+    "section": "4.5 git add: Add files to stage",
+    "text": "4.5 git add: Add files to stage\nWe will often want to add ALL the untracked files to staging, so we’ll do that now.\n\nIn your Terminal, type in:\ngit add .\n\nYou should get no response from the Terminal, but if you run git status again, you’ll see that the files are now being tracked:\n\nRun git status again to see the changes:\ngit status\n\nThe command and response should like this:\n$ git status\nOn branch main\n\nNo commits yet\n\nChanges to be committed:\n  (use \"git rm --cached &lt;file&gt;...\" to unstage)\n        new file:   .gitignore\n        new file:   _quarto.yml\n        new file:   about.qmd\n        new file:   git-project-test.Rproj\n        new file:   index.qmd\n        new file:   styles.css\n\n4.5.1 Adding specific files to stage\nAdd specific files to stage:\ngit add index.qmd, about.qmd\nWe don’t need to do that here, but you should know how.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
     ]
   },
   {
-    "objectID": "git-project.html#git-init-initialize-a-repo",
-    "href": "git-project.html#git-init-initialize-a-repo",
+    "objectID": "basics.html#git-commit-commit-changes-to-history",
+    "href": "basics.html#git-commit-commit-changes-to-history",
     "title": "4  Git basics",
-    "section": "4.6 git init: Initialize a repo",
-    "text": "4.6 git init: Initialize a repo\nTo start tracking our project in git, we have to initialize it. This is done by going to our Terminal in RStudio and running the following command:\ngit init\nThe command and response will look something like this in your Terminal:\ncrit:git-project-test$ git init\nInitialized empty Git repository in /Users/crit/git-project-test/.git/\nThis command creates a hidden folder called .git in the project folder. This folder contains all the information git needs to track changes in our project.",
+    "section": "4.6 git commit: Commit changes to history",
+    "text": "4.6 git commit: Commit changes to history\nFinally we get to where we “commit” our changes to the history. Git requires that we include a short message to our future selves and colleges about why we are saving at this time. These messages become a way for us to find specific commits in our history later if we need them.\nThese messages should be short and sweet, like “Added index page” or “Fixed typo in about page”.\n\nUse the following command in your Terminal to commit your files now with a message:\ngit commit -m \"Initial commit\"\n\nAnd you should get a response something like this:\n$ git commit -m \"Initial commit\"\n[main (root-commit) 0f0a604] Initial commit\n 6 files changed, 176 insertions(+)\n create mode 100644 .gitignore\n create mode 100644 _quarto.yml\n create mode 100644 about.qmd\n create mode 100644 git-project-test.Rproj\n create mode 100644 index.qmd\n create mode 100644 styles.css\n\nRun git status again to see the changes:\ngit status\n\nYou’ll get a response that there are no new changes to consider committing.\n$ git status\nOn branch main\nnothing to commit, working tree clean\n\n4.6.1 More about status\nTo be clear, we didn’t need to run git status so many times through that process, but doing so gives you insight into how your files are being tracked. It’s a good habit to get into.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
     ]
   },
   {
-    "objectID": "git-project.html#git-status-check-status-of-files",
-    "href": "git-project.html#git-status-check-status-of-files",
+    "objectID": "basics.html#git-remote-connecting-to-github",
+    "href": "basics.html#git-remote-connecting-to-github",
     "title": "4  Git basics",
-    "section": "4.7 git status: Check status of files",
-    "text": "4.7 git status: Check status of files\nAfter initializing the repo, we can check the status of our files by running the following command:\ngit status\nThis command isn’t a required part of the git cycle, but it is very useful to see where you are in the cycle. Use it often.\nAt this point it will indicate that there are no files being tracked:\n$ git status\nOn branch main\n\nNo commits yet\n\nUntracked files:\n  (use \"git add &lt;file&gt;...\" to include in what will be committed)\n        _quarto.yml\n        about.qmd\n        git-project-test.Rproj\n        index.qmd\n        styles.css\n\nnothing added to commit but untracked files present (use \"git add\" to track)\nThat’s fine. We’ll add them next.",
+    "section": "4.7 git remote: Connecting to Github",
+    "text": "4.7 git remote: Connecting to Github\nNow, at this point our own computer has a history of our files, but we want to push that history to Github so we can share it with others. We need to connect our local repo to a remote repo on Github.\n\nGo to Github.com\nLog in to your account.\nClick the + in the upper right corner and select New repository.\nName the repository the same as your project folder, like git-project-test.\nClick Create repository.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
     ]
   },
   {
-    "objectID": "git-project.html#git-add-add-files-to-stage",
-    "href": "git-project.html#git-add-add-files-to-stage",
-    "title": "4  Git basics",
-    "section": "4.8 git add: Add files to stage",
-    "text": "4.8 git add: Add files to stage\nWe will often want to add ALL the untracked files to staging, so we’ll do that now.\n\nIn your Terminal, type in:\ngit add .\n\nYou should get no response from the Terminal, but if you run git status again, you’ll see that the files are now being tracked:\n\nRun git status again to see the changes:\ngit status\n\nThe command and response should like this:\n$ git status\nOn branch main\n\nNo commits yet\n\nChanges to be committed:\n  (use \"git rm --cached &lt;file&gt;...\" to unstage)\n        new file:   .gitignore\n        new file:   _quarto.yml\n        new file:   about.qmd\n        new file:   git-project-test.Rproj\n        new file:   index.qmd\n        new file:   styles.css\n\n4.8.1 Adding specific files to stage\nAdd specific files to stage:\ngit add index.qmd, about.qmd\nWe don’t need to do that here, but you should know how.",
-    "crumbs": [
-      "Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
-    ]
-  },
-  {
-    "objectID": "git-project.html#git-commit-commit-changes-to-history",
-    "href": "git-project.html#git-commit-commit-changes-to-history",
-    "title": "4  Git basics",
-    "section": "4.9 git commit: Commit changes to history",
-    "text": "4.9 git commit: Commit changes to history\nFinally we get to where we “commit” our changes to the history. Git requires that we include a short message to our future selves and colleges about why we are saving at this time. These messages become a way for us to find specific commits in our history later if we need them.\nThese messages should be short and sweet, like “Added index page” or “Fixed typo in about page”.\n\nUse the following command in your Terminal to commit your files now with a message:\ngit commit -m \"Initial commit\"\n\nAnd you should get a response something like this:\n$ git commit -m \"Initial commit\"\n[main (root-commit) 0f0a604] Initial commit\n 6 files changed, 176 insertions(+)\n create mode 100644 .gitignore\n create mode 100644 _quarto.yml\n create mode 100644 about.qmd\n create mode 100644 git-project-test.Rproj\n create mode 100644 index.qmd\n create mode 100644 styles.css\n\nRun git status again to see the changes:\ngit status\n\nYou’ll get a response that there are no new changes to consider committing.\n$ git status\nOn branch main\nnothing to commit, working tree clean\n\n4.9.1 More about status\nTo be clear, we didn’t need to run git status so many times through that process, but doing so gives you insight into how your files are being tracked. It’s a good habit to get into.",
-    "crumbs": [
-      "Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
-    ]
-  },
-  {
-    "objectID": "git-project.html#git-remote-connecting-to-github",
-    "href": "git-project.html#git-remote-connecting-to-github",
-    "title": "4  Git basics",
-    "section": "4.10 git remote: Connecting to Github",
-    "text": "4.10 git remote: Connecting to Github\nNow, at this point our own computer has a history of our files, but we want to push that history to Github so we can share it with others. We need to connect our local repo to a remote repo on Github.\n\nGo to Github.com\nLog in to your account.\nClick the + in the upper right corner and select New repository.\nName the repository the same as your project folder, like git-project-test.\nClick Create repository.",
-    "crumbs": [
-      "Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git basics</span>"
-    ]
-  },
-  {
-    "objectID": "git-gui-r.html",
-    "href": "git-gui-r.html",
+    "objectID": "gui-rstudio.html",
+    "href": "gui-rstudio.html",
     "title": "5  Git GUI in RStudio",
     "section": "",
     "text": "One trick you might have to do to get the Git GUI to work within R Studio:\nMake a change and get everything ready to push to Github.\nAs you are doing so, make sure you use the -u flag to push:\ngit push -u origin main\nOnce you’ve done this, Quit and relaunch RStudio and your project and it should the Pull/Push buttons should work.",
@@ -234,7 +201,7 @@
     "href": "resources.html",
     "title": "Appendix A — Resources",
     "section": "",
-    "text": "This book is a work in progress. I actually wanted to point to existing resources instead of writing a new one, but I found I wanted to be more opinionated with the workflow I want students to use.\nThat said, here are the resources I’m working from, which might also be useful to students.\n\nHappy Git and Github for the useR by Jenny Bryant is a great on working with Git/Github and RStudio.\nThe first four chapters of my book Intro to Coding for Journalists were not written with RStudio in mind, but it is a beginner look at Terminal, Git and Github. Once understood, moving that knowledge into RStudio isn’t too much of a stretch.\nAnother way to go about it is to start with Github’s Docs. It’s comprehensive, but it’s a lot. There is way more than the basic minimum knowledge there.",
+    "text": "This book is a work in progress. I actually wanted to point to existing resources instead of writing a new one, but I found I wanted to be more opinionated with the workflow I want students to use.\nThat said, here are the resources I’m working from, which might also be useful to students.\n\nHappy Git and Github for the useR by Jenny Bryant is a great on working with Git/Github and RStudio.\nThe first four chapters of my book Intro to Coding for Journalists were not written with RStudio in mind, but it is a beginner look at Terminal, Git and Github. Once understood, moving that knowledge into RStudio isn’t too much of a stretch.\nAnother way to go about it is to start with Github’s Docs. It’s comprehensive, but it’s a lot. There is way more than the basic minimum knowledge there.\n\nIf you can stand some adult language, the site oh $4it git is actually useful.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Resources</span>"

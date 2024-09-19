@@ -24,32 +24,7 @@ Let's start a new R project and create a Github repository for it. We'll use the
     - When you name the project, use lowercase letters with dashes for spaces, like `git-test-project`.
 2. Open the project in RStudio.
 
-## Setting a new output directory
-
-Typically when you Render a Quarto Website, it stores the HTML files in a folder called `_site`. We want to adjust the _quarto.yml file to use a different folder that allows us to publish our site to Github Pages.
-
-1. Open the `_quarto.yml` file in the project folder.
-2. Add the following output-dir line as shown below:
-
-    ```yaml
-    project:
-      type: website
-      output-dir: docs
-    ```
-Now when we Render our site, it will put all those files into a folder called `docs`.
-
-## The git cycle
-
-When we add files to our git history, there are a couple of steps.
-
-- We first have to tell git to track the folder. We do this only once using `git init`.
-- We designate which files we to track by "adding" them to _stage_ using `git add`. Stage is a weird term, but it basically means the list of files that are ready to be saved to the history. We often add all our files, but sometimes we want to just save specific ones.
-- When we are ready to save that change to the history, we "commit" it using `git commit`. It's required that we add a short message about why we are committing to our history at this point.
-- When we are ready to send all our changes and history to Github, we "push" them using `git push`.
-
-Other than initializing, you repeat these steps often, especially `git add` and `git commit`.
-
-## Adding .gitignore
+### Adding .gitignore
 
 By default, git will track all the files in your project folder, even those that are hidden from view and don't really have bearing on your project. We can tell git to ignore these files by creating a `.gitignore` file in the project folder.
 
@@ -78,6 +53,32 @@ As you build the file, you tell the website which programming language and such 
 9. Save the file and close it.
 
 We commented out this `docs/` line because we **don't** want to ignore that folder. We are going to purposefully use the docs folder later to publish our work on Github. This will make more sense later.
+
+### Setting a new output directory
+
+> I MIGHT MOVE THIS TO SOMEPLACE ELSE AS IT ISN'T THAT IMPORTANT NOW. THAT SAID, WE JUST ADJUSTED THE GITIGNRE TO HANDLE IT?
+
+Typically when you Render a Quarto Website, it stores the HTML files in a folder called `_site`. We want to adjust the _quarto.yml file to use a different folder that allows us to publish our site to Github Pages.
+
+1. Open the `_quarto.yml` file in the project folder.
+2. Add the following output-dir line as shown below:
+
+    ```yaml
+    project:
+      type: website
+      output-dir: docs
+    ```
+Now when we Render our site, it will put all those files into a folder called `docs`.
+## The git cycle
+
+When we add files to our git history, there are a couple of steps.
+
+- We first have to tell git to track the folder. We do this only once using `git init`.
+- We designate which files we to track by "adding" them to _stage_ using `git add`. Stage is a weird term, but it basically means the list of files that are ready to be saved to the history. We often add all our files, but sometimes we want to just save specific ones.
+- When we are ready to save that change to the history, we "commit" it using `git commit`. It's required that we add a short message about why we are committing to our history at this point.
+- When we are ready to send all our changes and history to Github, we "push" them using `git push`.
+
+Other than initializing, you repeat these steps often, especially `git add` and `git commit`.
 
 ## git init: Initialize a repo
 

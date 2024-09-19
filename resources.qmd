@@ -9,3 +9,6 @@ That said, here are the resources I'm working from, which might also be useful t
 - [Happy Git and Github for the useR](https://happygitwithr.com/) by Jenny Bryant is a great on working with Git/Github and RStudio.
 - The first four chapters of my book [Intro to Coding for Journalists](https://utdata.github.io/icj-class/) were not written with RStudio in mind, but it is a beginner look at Terminal, Git and Github. Once understood, moving that knowledge into RStudio isn't too much of a stretch. 
 - Another way to go about it is to start with [Github's Docs](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git). It's comprehensive, but it's a lot. There is way more than the basic minimum knowledge there.
+
+If you can stand some adult language, the site [oh $4it git](https://ohshitgit.com/) is actually useful.
+

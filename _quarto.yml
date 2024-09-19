@@ -8,15 +8,17 @@ book:
   date: "September 2024"
   chapters:
     - index.qmd
+    - part: "Terminal"
+      chapters:
+      - terminal.qmd
     - part: "Installation"
       chapters:
       - installation.qmd
       - setup.qmd
     - part: "Basics"
       chapters:
-      - terminal.qmd
-      - git-project.qmd
-      - git-gui-r.qmd
+      - basics.qmd
+      - gui-rstudio.qmd
       - collaborating.qmd
   appendices:
     - resources.qmd

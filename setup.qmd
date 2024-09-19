@@ -4,7 +4,6 @@ title: "Setup"
 
 The process of configuring Git and GitHub is a one-time setup and it can be a little esoteric. There will be a part where we describe to Git who you are, and then another to set up authentication to Github.
 
-
 ## Configure git
 
 Here we'll update some settings within git on your machine.
@@ -40,59 +39,42 @@ First we'll [set your user.name](https://help.github.com/en/github/using-git/set
 
 ## SSH Keys
 
-There are a couple of ways to authenticate with Github from your computer. The book [Happy Git with R](https://happygitwithr.com/https-pat) recommends using personal access tokens and I think that is fine, but I prefer the one-and-done nature of SSH keys.
+There are a couple of ways to authenticate with Github from your computer. The book [Happy Git with R](https://happygitwithr.com/https-pat) recommends using personal access tokens and I think that is fine, but I prefer the one-and-done nature of SSH keys, so that is the method we will use.
 
-::: callout-important
-If you have ever set up SSH keys before, find the instructor. (If you don't understand that sentence, you likely haven't.)
-:::
+1. After making sure git is installed, launch RStudio. (If it was already open, quit and re-launch it.)
+2. Go to the menu Tools > Global Options, then click on the Git/SVN tab.
+3. Check the **Enable version control interface for RStudio** button.
+4. There should already be a path included in the Make sure the path to the git executable is correct. 
+    - If it is not, try quitting RStudio and relaunching it and do this step again.
+    - If it is still not there, talk to the prof. We'll find it.
 
-We're going to create a special file on your computer so that your machine can connect to your GitHub account. (GitHub doesn't like sending your password around). It will seem complicated, but it's not really.
+![Git/SVN window](images/git-set-ssh.png)
 
-These directions come from  ([macOS](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac) |  [Windows](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows)) but use the steps below as they are streamlined.
+### Create a new SSH key
 
-- During this process, you'll be asked to save the location of the rsa_id. **Just hit return to save the default location.**
-- You'll also be asked to set a password for the file. **JUST LEAVE THE PASSWORD BLANK** and hit return. It will ask you a couple of times.
-- At the end of the installation, it will give a path to the rsa_id file. We might need to open this file in the next step to copy it. Ask for help at this step.
+If you SSH Key path was already filled then you can skip to the next step.
 
-1. In your terminal, run the following command **but with your email**:
+If you've never used SSH keys before, you'll have to create one, but RStudio makes that fairly painless.
 
-    ```bash
-    ssh-keygen -t ed25519 -C "your_email@example.com"
-    ```
+1. Click on the **Create RSA Key** button.
+2. You should be able to leave all the defaults as they are. **Leave the optional Passphrase field blank.**
+3. Click Create.
+4. You should see a message that says "Key Created Successfully" and it might show you a pretty picture. Click OK.
 
-1. When it prompts you about a location, **JUST HIT RETURN** to accept the default.
-1. when it prompts you for a passphrase, **JUST HIT RETURN** to leave it blank.
-
-You should get a nice little art looking return on your terminal, eventually.
-
-What those steps did is create a file on your computer and put inside of it a bunch of random characters.
-
-To "copy" the contents of this file, the command differs between macOS and Windows:
-
-::: {.panel-tabset}
-
-### macOS
-
-4. Once you are through the steps above, do the following command:
-
-```bash
-pbcopy < ~/.ssh/id_ed25519.pub
-```
-
-### Windows
-
-4. Once you are through the steps above, do the following command:
-
-```bash
-clip < ~/.ssh/id_ed25519.pub
-```
-:::
-
-This copies the contents of that file you created to your clipboard. It's like opening the file and copying the contents.
+![SSH Key Creation window](images/ssh-create-key.png)
 
 ## Saving SSH key in Github
 
 Now we'll save the contents of that secret file on your computer into your Github account so Github "knows" about your computer.
+
+First we need access to your "Public" key:
+
+1. In the RStudio Git/SVN window, click on the **View public key** button.
+2. This will open a new window with the contents of your public key.
+
+![Public key example](images/ssh-public-key.png)
+
+You'll want access to copy that key to paste into Github in the next step:
 
 1. Go to [github.com](https://github.com/) and click your user icon and choose **Settings**.
 2. In the user settings sidebar on the left, click **SSH and GPG keys**.
@@ -100,7 +82,7 @@ Now we'll save the contents of that secret file on your computer into your Githu
 4. In the "Title" field, add a descriptive label for the new key. Name it after your computer, like "Personal MacBook Air" or something.
 5. In the "Key" field, so Command-V to paste your key into the box.
 
-It will look something like this (but the contents will be different):
+It will look something like this:
 
 ![Saving the key](images/git-adding-key.png)
 
@@ -111,7 +93,7 @@ Almost done!
 
 ### Test Github connection
 
-1. From your Terminal, do the following command:
+1. From your Terminal in RStudio, do the following command:
 
 ```bash
 ssh -T git@github.com
