@@ -311,7 +311,7 @@
     "href": "collaborating.html",
     "title": "6  Collaborating",
     "section": "",
-    "text": "Here we need to talk about branches, pull requests, merge conflicts and those types of things.",
+    "text": "Here we need to talk about branches, pull requests, merge conflicts and those types of things.\nGet it:\ngit clone git@github.com:utdata/git-for-r.git\nBranch:\nbut\ngit checkout -b branchname\nMove to a branch:\ngit checkout branchname\nThen git cycle as normal.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Collaborating</span>"

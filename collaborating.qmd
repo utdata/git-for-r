@@ -4,3 +4,24 @@ title: "Collaborating"
 
 Here we need to talk about branches, pull requests, merge conflicts and those types of things.
 
+Get it:
+
+```bash
+git clone git@github.com:utdata/git-for-r.git
+```
+
+Branch:
+
+but 
+
+```bash
+git checkout -b branchname
+```
+
+Move to a branch:
+
+```bash
+git checkout branchname
+```
+
+Then git cycle as normal.
