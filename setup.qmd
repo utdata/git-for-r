@@ -36,6 +36,14 @@ First we'll [set your user.name](https://help.github.com/en/github/using-git/set
     
     You won't get a response unless there was a problem.
 
+1. In your terminal, run this:
+
+    ```bash
+    git config --global pull.ff only
+    ```
+
+    This sets a behaivor that is too complicated to explain now, but comes recommended in this [very long but thorough explanation](https://stackoverflow.com/questions/71768999/how-to-merge-when-you-get-error-hint-you-have-divergent-branches-and-need-to-s/71774640#71774640).
+
 
 ## SSH Keys
 

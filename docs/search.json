@@ -190,7 +190,7 @@
     "href": "setup.html#configure-git",
     "title": "3  Setup",
     "section": "",
-    "text": "In your Terminal, do this but use your name in quotes instead of “Mona Lisa”:\ngit config --global user.name \"Mona Lisa\"\nNow we’ll set your user.email.\nIn your Terminal do this but use your email:\ngit config --global user.email \"email@example.com\"\nYou will want to use the same email when you create your GitHub account.\nLastly we’ll set git to name your default branch “main” instead of “master” as this is a new standard.\nIn your terminal, run this:\ngit config --global init.defaultBranch main\nYou won’t get a response unless there was a problem.",
+    "text": "In your Terminal, do this but use your name in quotes instead of “Mona Lisa”:\ngit config --global user.name \"Mona Lisa\"\nNow we’ll set your user.email.\nIn your Terminal do this but use your email:\ngit config --global user.email \"email@example.com\"\nYou will want to use the same email when you create your GitHub account.\nLastly we’ll set git to name your default branch “main” instead of “master” as this is a new standard.\nIn your terminal, run this:\ngit config --global init.defaultBranch main\nYou won’t get a response unless there was a problem.\nIn your terminal, run this:\ngit config --global pull.ff only\nThis sets a behaivor that is too complicated to explain now, but comes recommended in this very long but thorough explanation.",
     "crumbs": [
       "Installation",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Setup</span>"
