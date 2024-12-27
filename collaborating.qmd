@@ -25,3 +25,37 @@ git checkout branchname
 ```
 
 Then git cycle as normal.
+
+## Troubleshooting
+
+Possible solutions to when things go awry.
+
+### Your local changes to the following files would be overwritten by merge
+
+When you try to pull a remote branch to your local computer, sometimes you have conflicts on your local machines. There are a number of different paths you can take based on the circumstances.
+
+#### If your local branch is different
+
+You might have changes on your local computer that are not important and what you really want it to pull the remote branch and throw away what you have locally. If so, you can "stash" these changes to a temporary file and then pull the remote branch.
+
+You might see:
+
+```bash
+error: Your local changes to the following files would be overwritten by merge:
+        [A list of files]
+Please commit your changes or stash them before you merge.
+```
+
+Your choices are:
+
+1. Your local changes might be important and you want to keep them. You can commit your local changes and then try to pull again. You might get merge conflicts and then you deal with those. These steps are handled *elsewhere*. I SHOULD ADD A LINK AT SOME POINT.
+2. Your local changes are irrelevant and what you want is just to start anew with the remote branch. You can "stash" your local changes to a temporary space and then pull the origin branch to start from there.
+
+To stash and move on:
+
+1. In your Terminal, do `git stash` to send your local changes to a temporary space. (You can learn more about [`git stash` here](https://git-scm.com/docs/git-stash).)
+2. Try `git pull origin [branch]` again and you should be able to pull the most recent online version.
+
+
+
+

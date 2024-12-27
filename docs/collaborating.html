@@ -238,7 +238,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link active" data-scroll-target="#troubleshooting"><span class="header-section-number">6.1</span> Troubleshooting</a>
+  <ul class="collapse">
+  <li><a href="#your-local-changes-to-the-following-files-would-be-overwritten-by-merge" id="toc-your-local-changes-to-the-following-files-would-be-overwritten-by-merge" class="nav-link" data-scroll-target="#your-local-changes-to-the-following-files-would-be-overwritten-by-merge"><span class="header-section-number">6.1.1</span> Your local changes to the following files would be overwritten by merge</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -271,8 +280,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Move to a branch:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout branchname</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Then git cycle as normal.</p>
+<section id="troubleshooting" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">6.1</span> Troubleshooting</h2>
+<p>Possible solutions to when things go awry.</p>
+<section id="your-local-changes-to-the-following-files-would-be-overwritten-by-merge" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="your-local-changes-to-the-following-files-would-be-overwritten-by-merge"><span class="header-section-number">6.1.1</span> Your local changes to the following files would be overwritten by merge</h3>
+<p>When you try to pull a remote branch to your local computer, sometimes you have conflicts on your local machines. There are a number of different paths you can take based on the circumstances.</p>
+<section id="if-your-local-branch-is-different" class="level4" data-number="6.1.1.1">
+<h4 data-number="6.1.1.1" class="anchored" data-anchor-id="if-your-local-branch-is-different"><span class="header-section-number">6.1.1.1</span> If your local branch is different</h4>
+<p>You might have changes on your local computer that are not important and what you really want it to pull the remote branch and throw away what you have locally. If so, you can “stash” these changes to a temporary file and then pull the remote branch.</p>
+<p>You might see:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">error:</span> Your local changes to the following files would be overwritten by merge:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        <span class="ex">[A</span> list of files]</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Please</span> commit your changes or stash them before you merge.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Your choices are:</p>
+<ol type="1">
+<li>Your local changes might be important and you want to keep them. You can commit your local changes and then try to pull again. You might get merge conflicts and then you deal with those. These steps are handled <em>elsewhere</em>. I SHOULD ADD A LINK AT SOME POINT.</li>
+<li>Your local changes are irrelevant and what you want is just to start anew with the remote branch. You can “stash” your local changes to a temporary space and then pull the origin branch to start from there.</li>
+</ol>
+<p>To stash and move on:</p>
+<ol type="1">
+<li>In your Terminal, do <code>git stash</code> to send your local changes to a temporary space. (You can learn more about <a href="https://git-scm.com/docs/git-stash"><code>git stash</code> here</a>.)</li>
+<li>Try <code>git pull origin [branch]</code> again and you should be able to pull the most recent online version.</li>
+</ol>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

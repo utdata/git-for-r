@@ -311,7 +311,18 @@
     "href": "collaborating.html",
     "title": "6  Collaborating",
     "section": "",
-    "text": "Here we need to talk about branches, pull requests, merge conflicts and those types of things.\nGet it:\ngit clone git@github.com:utdata/git-for-r.git\nBranch:\nbut\ngit checkout -b branchname\nMove to a branch:\ngit checkout branchname\nThen git cycle as normal.",
+    "text": "6.1 Troubleshooting\nPossible solutions to when things go awry.",
+    "crumbs": [
+      "Basics",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Collaborating</span>"
+    ]
+  },
+  {
+    "objectID": "collaborating.html#troubleshooting",
+    "href": "collaborating.html#troubleshooting",
+    "title": "6  Collaborating",
+    "section": "",
+    "text": "6.1.1 Your local changes to the following files would be overwritten by merge\nWhen you try to pull a remote branch to your local computer, sometimes you have conflicts on your local machines. There are a number of different paths you can take based on the circumstances.\n\n6.1.1.1 If your local branch is different\nYou might have changes on your local computer that are not important and what you really want it to pull the remote branch and throw away what you have locally. If so, you can “stash” these changes to a temporary file and then pull the remote branch.\nYou might see:\nerror: Your local changes to the following files would be overwritten by merge:\n        [A list of files]\nPlease commit your changes or stash them before you merge.\nYour choices are:\n\nYour local changes might be important and you want to keep them. You can commit your local changes and then try to pull again. You might get merge conflicts and then you deal with those. These steps are handled elsewhere. I SHOULD ADD A LINK AT SOME POINT.\nYour local changes are irrelevant and what you want is just to start anew with the remote branch. You can “stash” your local changes to a temporary space and then pull the origin branch to start from there.\n\nTo stash and move on:\n\nIn your Terminal, do git stash to send your local changes to a temporary space. (You can learn more about git stash here.)\nTry git pull origin [branch] again and you should be able to pull the most recent online version.",
     "crumbs": [
       "Basics",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Collaborating</span>"
