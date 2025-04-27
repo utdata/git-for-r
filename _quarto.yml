@@ -1,27 +1,29 @@
 project:
   type: book
   output-dir: docs
-
+  
 book:
   title: "Git for R"
   author: "Christian McDonald"
   date: "September 2024"
   chapters:
     - index.qmd
-    - part: "Terminal"
+    - part: "Intro to Terminal"
       chapters:
-      - terminal.qmd
-    - part: "Installation"
+      - terminal/terminal.qmd
+    - part: "Intro to Git"
       chapters:
-      - installation.qmd
-      - setup.qmd
-    - part: "Basics"
-      chapters:
-      - basics.qmd
-      - gui-rstudio.qmd
-      - collaborating.qmd
-  appendices:
-    - resources.qmd
+       - intro-to-git/00-introduction.qmd
+       - intro-to-git/01-why-git-github.qmd
+       - intro-to-git/02-project-setup.qmd
+       - intro-to-git/03-create-project.qmd
+       - intro-to-git/04-git-status.qmd
+       - intro-to-git/05-gitignore.qmd
+       - intro-to-git/06-stage-commit.qmd
+       - intro-to-git/07-push-to-github.qmd
+       - intro-to-git/08-edit-stage-commit-push.qmd
+       - intro-to-git/09-collaboration-basics.qmd
+       - intro-to-git/10-final-tips.qmd
 
 format:
   html:

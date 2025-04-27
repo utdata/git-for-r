@@ -1,0 +1,3 @@
+## Create a New Git-Enabled Quarto Project
+
+(instructions to create a new project)
