@@ -1,3 +1,0 @@
-## Push the Initial Commit to GitHub
-
-(connect remote and push)

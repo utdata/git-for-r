@@ -1,0 +1,124 @@
+# Making and pushing changes
+
+## 🎯 Goal
+
+By the end of this chapter, you’ll know how to:
+
+-   Make a meaningful change to your project
+
+-   Stage and commit that change using Git
+
+-   Push the change to GitHub to save your work.
+
+You’ll also practice writing good commit messages and checking your work.
+
+------------------------------------------------------------------------
+
+## 🛠️ Step 1: Make a Small Change
+
+Let’s open your Quarto file you made in Chapter 1 (e.g., `01-index.qmd`) and make a couple changes.
+
+Replace the auto-generated text and code blocks in the file with the following
+
+``` bash
+---
+title: "Intro to Git"
+format: html
+---
+
+# Summary
+
+Here is a summary of the `mtcars` dataset.
+```
+
+Under the summary header and description, add a code chunk with the following:
+
+``` bash
+summary(mtcars)
+```
+
+Save the file. Now check the status in your Terminal again by running:
+
+``` bash
+git status
+```
+
+You'll see something like as a Terminal response:
+
+```         
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   01-index.qmd
+```
+
+**Let's break this down** :
+
+The red text tells us that Git sees something was modified in your 01-index.qmd. It's under the `Changes not staged for commit:` section, which tells us that Git hasn’t *staged* it yet (so it won’t be saved in the next commit).
+
+------------------------------------------------------------------------
+
+## 📥 Step 3: Stage the Change
+
+We want to tell Git, “Hey, save this file in the next snapshot.”
+
+We'll do this by **adding** the modified file to the snapshot. We can do that by running:
+
+``` bash
+git add 01-index.qmd
+```
+
+Now, check the status again.
+
+``` bash
+git status
+```
+
+Now you'll see your file in green and following message:
+
+```         
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+  modified:   01-index.qmd`
+```
+
+🎉 Great! The change is now **staged**.
+
+------------------------------------------------------------------------
+
+## Step 4: Commit the Change
+
+Now, we'll save the snapshot (in Git's memory). When we do so, we'll want to include a descriptive **commit message** noting what we changed.
+
+Type something like the following and git enter
+
+`git commit -m "Add summary of mtcars dataset"`
+
+A few best practices for commit messages:
+
+✅ Use present tense: `"Add summary of..."`, not `"Added..."`\
+✅ Keep it short but descriptive\
+✅ Think: “What changed in this version?”
+
+🕵️‍♀️ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or you need to go back to a prior version, commit messages will help your retrace your steps.
+
+------------------------------------------------------------------------
+
+## ☁️ Step 5: Push It to GitHub
+
+Now, we'll send the snapshot from your computer to GitHub by running:
+
+``` bash
+git push
+```
+
+Now go to your repository on [GitHub.com](https://github.com/) — you’ll see your commit listed under the **Commits** tab and your file under **Code**!
+
+::: callout-note
+You may be wondering why our push command is shorter than it was last time. In our last push, we needed to connect our remote main branch to the remote Github repository. Since we're already connected our Quarto project to Github and set our branch to main, we can just use the `git push` command now.
+:::
+
+> 💡 GitHub is now your project’s **cloud backup and collaboration hub**.

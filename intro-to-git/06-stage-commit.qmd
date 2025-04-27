@@ -1,3 +1,0 @@
-## Stage and Commit the Initial Files
-
-(commands for git add and git commit)

@@ -1,3 +1,0 @@
-## Make a Change, Stage It, Commit It, and Push It
-
-(exercise flow)

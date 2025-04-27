@@ -1,0 +1,100 @@
+# Making a repository
+
+> 🎯 Goal: By the end of this chapter, you’ll have a brand-new RStudio project tracked by Git.
+
+------------------------------------------------------------------------
+
+## Step 1: Create a new RStudio Project
+
+Open RStudio and make a new Quarto project by going to:
+
+``` bash
+File → New Project → New Directory → Quarto Project
+```
+
+In the project wizard, do the following:
+
+1.  Select `New directory` in **Create Project.**
+
+2.  Select `Quarto project` as the **Project Type**.
+
+3.  Give your directory a descriptive name like `my-first-git-project`.
+
+4.  Check the `Create project as a subdirectory of` to make sure you're creating your project in the directory where you keep your class or coding projects (ideally a projects folder inside your home directory).
+
+5.  Finallay, click **Create Project.**
+
+You’ll now have a project with a `.qmd` file (Quarto), and RStudio will open into a new window for this project.
+
+------------------------------------------------------------------------
+
+### Exercise 1: Run a Quarto File
+
+Before we get into Git, let’s test Quarto by creating a new file.
+
+1.  Click the new file icon at the top left of R Studio and click "**Quarto document...**" (or go to File \> New File \> Quarto document...)
+2.  Add a title like "Intro to Git", and click **Create**
+3.  Save the file and name it something like `01-index.qmd` when prompted
+4.  Click **Render** in the top bar
+
+You should see an HTML preview with sample content. Great! You’re ready to start version-controlling this project.
+
+------------------------------------------------------------------------
+
+## Step 2: Initialize Git for the Project
+
+If we want Git to start watching our files and keeping track of our changes, we have to make sure Git is connected to our project. To do this, we need **initialize** git inside of our Quarto project. 
+
+To initialize Git in your Quarto project, Click the `Terminal` tab in RStudio (usually lower-left)
+
+Inside Terminal, type the following command and run it (by hitting enter):
+
+``` bash
+git init
+```
+
+In basic terms, this tells Git "I want you to start tracking this folder.”
+
+If it works, you’ll see Terminal respond with something like:
+
+`Initialized empty Git repository in /Users/yourname/my-quarto-project/.git/`
+
+------------------------------------------------------------------------
+
+## 🗂️ Step 3: Tell Git What Files to Track
+Now that we've let Git know that we want it to start watching our project, we'll also need to tell git what files we would like it to keep track of. 
+
+First, let’s ask Git what it "sees" in our project folder by running:
+
+``` bash
+git status
+```
+
+Terminal will return something like the following as a response:
+
+```         
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .Rproj.user/
+        .quarto/
+        _quarto.yml
+        my-first-git-project.Rproj
+        my-first-git-project.html
+        my-first-git-project.qmd
+        my-first-git-project_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+**Now, let's breakdown what this all means:**
+
+1.  **On branch main**: You're working on the `main` branch — the default starting line of development.
+2.  **No commits yet**: This means Git is ready, but you haven’t saved any versions yet.
+3.  **Untracked Files**: These are files Git sees in your folder, but it’s not saving changes to them yet. They're marked in **red** in the terminal and the RStudio Git tab.
+
+In the next step, we'll learn how to tell Git what files we'd like it to track and which files to ignore.
+

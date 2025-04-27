@@ -1,3 +1,0 @@
-## Collaborating with Others
-
-(branches, merging, resolving conflicts)

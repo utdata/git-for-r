@@ -1,4 +1,4 @@
-# Getting Started with Git, GitHub, and RStudio
+# Installation and setup
 
 > 🎯 Goal: By the end of this chapter, you'll have Git and GitHub set up and be ready to create a version-controlled project in RStudio.
 

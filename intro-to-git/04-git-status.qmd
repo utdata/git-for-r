@@ -1,3 +1,0 @@
-## View Git Status
-
-(use git status and explain its output)

@@ -1,3 +1,0 @@
-## 🔐 Appendix: Setting Up GitHub Access Tokens
-
-(steps to create a GitHub PAT)
