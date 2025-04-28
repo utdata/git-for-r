@@ -1,0 +1,113 @@
+# Welcome to the Terminal
+
+**First things first:**  
+
+If you've never opened a Terminal window before, you’re not alone — and you're in the right place. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.
+
+You don’t need to memorize anything right now. You don’t need to be a "tech wizard." You just need a little curiosity.
+
+Let's get started!
+
+Time to enter the Matrix, Neo.
+
+[Insert Matrix meme here]
+
+---
+
+## **What is the Terminal, Anyway?**
+
+Think of the Terminal as _text messaging your computer_.
+
+Instead of clicking buttons or opening folders with a mouse or trackpad, you type **commands**. Your computer reads your text and immediately does what you ask.
+
+For example:
+
+- You can ask the computer to list all the files in a folder.
+    
+- You can ask it to create a new folder.
+    
+- You can even install programs, move files around, or automate tasks — all by typing a few words.
+    
+
+The Terminal might look a little old-school, but it’s still one of the most powerful tools you can learn.  
+(And yes — people who work with code, data, security, and tech use it all the time.)
+
+---
+
+## **How to Open the Terminal**
+
+Here’s how to find it on your computer:
+
+- **Mac**:  
+    Press `Command + Space`, type **Terminal**, and hit `Enter`.
+    
+- **Windows**:  
+    Open the **Start Menu**, search for **Terminal** or **PowerShell**, and open it.  
+    (There’s also something called "Command Prompt" — close enough for now.)
+    
+- **Linux**:  
+    Press `Ctrl + Alt + T` — it’s probably already installed!
+    
+
+**Tip:** If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)
+
+---
+
+## **Your First Command: Saying Hello to the Terminal**
+
+Let’s try your first real command: finding out _where_ you are.
+
+In the Terminal window, type:
+
+```pwd``` 
+
+(Then press `Enter`.)
+
+You should see something like:
+
+`/Users/yourname`
+
+or
+
+`C:\Users\yourname`
+
+Depending on your system, the path may look a little different — and that's OK.
+
+**What just happened?**
+
+- `pwd` stands for "**print working directory**."
+    
+- It simply asks: _Where am I right now in the computer’s folder system?_
+    
+- The answer is your current folder — usually your "home" area when you first open the Terminal.
+
+
+---
+
+## **Quick Tips Before You Move On**
+
+- **Command Case Matters**: `pwd` is _not_ the same as `PWD`.
+    
+- **Press Enter**: Every command you type needs an `Enter` to run.
+    
+- **You Can’t Break It Easily**: Typing `pwd` won't hurt your computer.  
+    (In fact, almost everything we’ll do today is safe.)
+    
+
+---
+
+# ✅ **Checkpoint**
+
+**You’ve now:**
+
+- Opened the Terminal.
+    
+- Typed and ran your first command.
+    
+- Seen your computer respond back.
+    
+
+You're officially no longer a Terminal beginner. 🙌
+
+Next up, we’ll learn how to _move around_ inside your computer using simple commands.  
+Ready? Let’s go! [[Terminal Chapter 2]] 

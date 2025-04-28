@@ -6,9 +6,16 @@ book:
   title: "Git for R"
   author: "Christian McDonald"
   date: "September 2024"
+        
   chapters:
     - index.qmd
+    - part: "Intro to Terminal"
+    - text: "---"
+    - part: "Introduction"
+      chapters:
+      - terminal/00-introduction.qmd
     - part: "Intro to Git"
+    - text: "---"
     - part: "Installation"
       chapters:
       - intro-to-git/00-introduction.qmd
