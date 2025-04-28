@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Add a .gitignore File – Git for R</title>
+<title>6&nbsp; Gitignore files – Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/00-introduction.html">Intro to Git</a></li><li class="breadcrumb-item"><a href="../intro-to-git/05-gitignore.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Add a .gitignore File</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/02-making-a-repo.html">Git basics</a></li><li class="breadcrumb-item"><a href="../intro-to-git/05-gitignore.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Gitignore files</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,26 +114,13 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Intro to Terminal</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../terminal/terminal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Using a Terminal</span></span></a>
-  </div>
-</li>
-      </ul>
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Intro to Git</span></span>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Intro to Git</span></a>
+ <span class="menu-text">Installation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -142,67 +129,78 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/00-introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to Git</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro-to-git/01-why-git-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Why Git and GitHub</span></span></a>
+  <a href="../intro-to-git/01-install-and-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Git basics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro-to-git/02-setup-tools.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Setup: Tools You’ll Need</span></span></a>
+  <a href="../intro-to-git/02-making-a-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/03-create-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Create a New Git-Enabled Quarto Project</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Connecting your project to Git</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/04-git-status.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">View Git Status</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">View Git Status</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/05-gitignore.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Add a .gitignore File</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Gitignore files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/06-stage-commit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Stage and Commit the Initial Files</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Stage and Commit the Initial Files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/07-push-to-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Push the Initial Commit to GitHub</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Push the Initial Commit to GitHub</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/08-edit-stage-commit-push.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Make a Change, Stage It, Commit It, and Push It</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Make a Change, Stage It, Commit It, and Push It</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/09-collaboration-basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Collaborating with Others</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Collaborating with Others</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/10-final-tips.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Final Tips, Troubleshooting, and What’s Next</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Final Tips, Troubleshooting, and What’s Next</span></span></a>
   </div>
 </li>
       </ul>
@@ -212,15 +210,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#add-a-.gitignore-file" id="toc-add-a-.gitignore-file" class="nav-link active" data-scroll-target="#add-a-.gitignore-file"><span class="header-section-number">6.1</span> Add a .gitignore File</a>
+  <ul class="collapse">
+  <li><a href="#introducing-.gitignore" id="toc-introducing-.gitignore" class="nav-link" data-scroll-target="#introducing-.gitignore"><span class="header-section-number">6.1.1</span> 🙈 Introducing <code>.gitignore</code></a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/00-introduction.html">Intro to Git</a></li><li class="breadcrumb-item"><a href="../intro-to-git/05-gitignore.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Add a .gitignore File</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/02-making-a-repo.html">Git basics</a></li><li class="breadcrumb-item"><a href="../intro-to-git/05-gitignore.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Gitignore files</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Add a .gitignore File</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Gitignore files</span></h1>
 </div>
 
 
@@ -237,9 +244,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>(explanation and example)</p>
+<section id="add-a-.gitignore-file" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="add-a-.gitignore-file"><span class="header-section-number">6.1</span> Add a .gitignore File</h2>
+<section id="whoa-why-is-.html-showing-up" class="level4" data-number="6.1.0.1">
+<h4 data-number="6.1.0.1" class="anchored" data-anchor-id="whoa-why-is-.html-showing-up"><span class="header-section-number">6.1.0.1</span> 🔍 Whoa — why is <code>.html</code> showing up?</h4>
+<p>Good question! That <code>.html</code> file is the <strong>rendered output</strong> from Quarto. It changes every time you click “Render,” and you usually don’t want to save it in Git. It’s like saving every draft printout of a paper — not helpful.</p>
+</section>
+<section id="introducing-.gitignore" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="introducing-.gitignore"><span class="header-section-number">6.1.1</span> 🙈 Introducing <code>.gitignore</code></h3>
+<p>In a GitHub project, there are several types of files and directories that you typically want to want to keep <em>out</em> of our repositories to keep things clean, secure, and easy to manage. What you ignore will depend on the type of project and the coding languages you’re using, but all Github projects use a file called <code>.gitignore</code> to let Git know <strong>what to ignore</strong>.</p>
+<p>For R and Quarto projects, this will include the following files types: 1. <strong>Session and history files</strong>: .Rhistory, .RData, .Rproj.user/ 2. <strong>Knitting files</strong>: <em>.utf8.md,</em> .knit.md 3. <strong>Output/render folders</strong>: *_files/ ,_site/, _book/ 4. <strong>Editor and IDE Config Files</strong> <code>.Rproj.user/</code></p>
+<p>Let’s make a <code>.gitignore</code> now using the command line. Type the following code into the Terminal to make your new file using the touch command:</p>
+<p><code>touch .gitignore</code></p>
+<p>Then open <code>.gitignore</code> in the <strong>Files pane</strong> in RStudio. If you don’t see the <code>.gitignore</code> in your file pane, you may need to refresh by clicking the icon at the top right of the file pane.</p>
+<p>Once you have your blank <code>.gitignore</code> file open, add the following lines:</p>
+<pre><code>*.html 
+_site/ 
+.Rproj.user/</code></pre>
+<p>Let’s break down what each of these mean:</p>
+<ol type="1">
+<li><code>*.html</code> : Ignore all <code>.html</code> files (rendered outputs)</li>
+<li><code>_site/</code>: Ignore the entire contents of the <code>_site</code> folder</li>
+<li><code>.Rproj.user/</code>: Ignore the hidden RStudio files</li>
+</ol>
+<p>Save the file, then check your Git status again:</p>
+<p><code>git status</code></p>
+<p>Now the <code>.html</code> file should be gone from the list of red files Git “sees” because we’ve told it to ignore these types of files. ✨</p>
+<p>Before moving forward, let’s add a few more things to the <code>.gitignore</code> to cover all our bases.</p>
+<p>Copy and paste the following code into your .gitignore file.</p>
+<pre><code># R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Quarto
+*.html
+*_files/
+*.utf8.md
+*.knit.md
+_site/
+_book/
+
+# System
+.DS_Store</code></pre>
+<p>Save and close the file.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -644,12 +696,12 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../intro-to-git/04-git-status.html" class="pagination-link" aria-label="View Git Status">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">View Git Status</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">View Git Status</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../intro-to-git/06-stage-commit.html" class="pagination-link" aria-label="Stage and Commit the Initial Files">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Stage and Commit the Initial Files</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Stage and Commit the Initial Files</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

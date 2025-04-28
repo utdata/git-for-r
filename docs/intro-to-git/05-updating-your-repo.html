@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Christian McDonald">
-<meta name="dcterms.date" content="2024-09-01">
 
-<title>Git for R</title>
+<title>6&nbsp; Making and pushing changes – Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./intro-to-git/00-introduction.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../intro-to-git/04-pushing-to-github.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -83,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About this book</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/02-making-a-repo.html">Git basics</a></li><li class="breadcrumb-item"><a href="../intro-to-git/05-updating-your-repo.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -98,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Git for R</a> 
+      <a href="../">Git for R</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -110,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About this book</span></a>
   </div>
 </li>
@@ -129,13 +162,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/00-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro-to-git/00-introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/01-install-and-setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro-to-git/01-install-and-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
@@ -152,56 +185,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/02-making-a-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Make your first Github project</span></span></a>
+  <a href="../intro-to-git/02-making-a-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/03-create-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Connecting your project to Git</span></span></a>
+  <a href="../intro-to-git/03-add-files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/04-git-status.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">View Git Status</span></span></a>
+  <a href="../intro-to-git/04-pushing-to-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/05-gitignore.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Add a .gitignore File</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/06-stage-commit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Stage and Commit the Initial Files</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/07-push-to-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Push the Initial Commit to GitHub</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/08-edit-stage-commit-push.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Make a Change, Stage It, Commit It, and Push It</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/09-collaboration-basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Collaborating with Others</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/10-final-tips.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Final Tips, Troubleshooting, and What’s Next</span></span></a>
+  <a href="../intro-to-git/05-updating-your-repo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
   </div>
 </li>
       </ul>
@@ -216,35 +219,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#about-this-book" id="toc-about-this-book" class="nav-link active" data-scroll-target="#about-this-book">About this book</a></li>
+  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal"><span class="header-section-number">6.1</span> 🎯 Goal</a></li>
+  <li><a href="#step-1-make-a-small-change" id="toc-step-1-make-a-small-change" class="nav-link" data-scroll-target="#step-1-make-a-small-change"><span class="header-section-number">6.2</span> 🛠️ Step 1: Make a Small Change</a></li>
+  <li><a href="#step-3-stage-the-change" id="toc-step-3-stage-the-change" class="nav-link" data-scroll-target="#step-3-stage-the-change"><span class="header-section-number">6.3</span> 📥 Step 3: Stage the Change</a></li>
+  <li><a href="#step-4-commit-the-change" id="toc-step-4-commit-the-change" class="nav-link" data-scroll-target="#step-4-commit-the-change"><span class="header-section-number">6.4</span> Step 4: Commit the Change</a></li>
+  <li><a href="#step-5-push-it-to-github" id="toc-step-5-push-it-to-github" class="nav-link" data-scroll-target="#step-5-push-it-to-github"><span class="header-section-number">6.5</span> ☁️ Step 5: Push It to GitHub</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/02-making-a-repo.html">Git basics</a></li><li class="breadcrumb-item"><a href="../intro-to-git/05-updating-your-repo.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Git for R</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Christian McDonald </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 1, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -254,9 +249,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about-this-book" class="level1 unnumbered">
-<h1 class="unnumbered">About this book</h1>
-<p>I’m finding I’m not happy with existing resources on using Git with R, so I want to make a very opinionated guide specifically for my students.</p>
+<section id="goal" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="goal"><span class="header-section-number">6.1</span> 🎯 Goal</h2>
+<p>By the end of this chapter, you’ll know how to:</p>
+<ul>
+<li><p>Make a meaningful change to your project</p></li>
+<li><p>Stage and commit that change using Git</p></li>
+<li><p>Push the change to GitHub to save your work.</p></li>
+</ul>
+<p>You’ll also practice writing good commit messages and checking your work.</p>
+<hr>
+</section>
+<section id="step-1-make-a-small-change" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="step-1-make-a-small-change"><span class="header-section-number">6.2</span> 🛠️ Step 1: Make a Small Change</h2>
+<p>Let’s open your Quarto file you made in Chapter 1 (e.g., <code>01-index.qmd</code>) and make a couple changes.</p>
+<p>Replace the auto-generated text and code blocks in the file with the following</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">title:</span> <span class="st">"Intro to Git"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span> html</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Here</span> is a summary of the <span class="kw">`</span><span class="ex">mtcars</span><span class="kw">`</span> dataset.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Under the summary header and description, add a code chunk with the following:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">summary</span><span class="er">(</span><span class="ex">mtcars</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file. Now check the status in your Terminal again by running:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You’ll see something like as a Terminal response:</p>
+<pre><code>On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
+        modified:   01-index.qmd</code></pre>
+<p><strong>Let’s break this down</strong> :</p>
+<p>The red text tells us that Git sees something was modified in your 01-index.qmd. It’s under the <code>Changes not staged for commit:</code> section, which tells us that Git hasn’t <em>staged</em> it yet (so it won’t be saved in the next commit).</p>
+<hr>
+</section>
+<section id="step-3-stage-the-change" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="step-3-stage-the-change"><span class="header-section-number">6.3</span> 📥 Step 3: Stage the Change</h2>
+<p>We want to tell Git, “Hey, save this file in the next snapshot.”</p>
+<p>We’ll do this by <strong>adding</strong> the modified file to the snapshot. We can do that by running:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add 01-index.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, check the status again.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now you’ll see your file in green and following message:</p>
+<pre><code>Changes to be committed:
+  (use "git restore --staged &lt;file&gt;..." to unstage)
+  modified:   01-index.qmd`</code></pre>
+<p>🎉 Great! The change is now <strong>staged</strong>.</p>
+<hr>
+</section>
+<section id="step-4-commit-the-change" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="step-4-commit-the-change"><span class="header-section-number">6.4</span> Step 4: Commit the Change</h2>
+<p>Now, we’ll save the snapshot (in Git’s memory). When we do so, we’ll want to include a descriptive <strong>commit message</strong> noting what we changed.</p>
+<p>Type something like the following and git enter</p>
+<p><code>git commit -m "Add summary of mtcars dataset"</code></p>
+<p>A few best practices for commit messages:</p>
+<p>✅ Use present tense: <code>"Add summary of..."</code>, not <code>"Added..."</code><br>
+✅ Keep it short but descriptive<br>
+✅ Think: “What changed in this version?”</p>
+<p>🕵️‍♀️ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or you need to go back to a prior version, commit messages will help your retrace your steps.</p>
+<hr>
+</section>
+<section id="step-5-push-it-to-github" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="step-5-push-it-to-github"><span class="header-section-number">6.5</span> ☁️ Step 5: Push It to GitHub</h2>
+<p>Now, we’ll send the snapshot from your computer to GitHub by running:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now go to your repository on <a href="https://github.com/">GitHub.com</a> — you’ll see your commit listed under the <strong>Commits</strong> tab and your file under <strong>Code</strong>!</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may be wondering why our push command is shorter than it was last time. In our last push, we needed to connect our remote main branch to the remote Github repository. Since we’re already connected our Quarto project to Github and set our branch to main, we can just use the <code>git push</code> command now.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>💡 GitHub is now your project’s <strong>cloud backup and collaboration hub</strong>.</p>
+</blockquote>
 
 
 </section>
@@ -663,11 +741,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../intro-to-git/04-pushing-to-github.html" class="pagination-link" aria-label="Pushing to Github">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro-to-git/00-introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -8,22 +8,17 @@ book:
   date: "September 2024"
   chapters:
     - index.qmd
-    - part: "Intro to Terminal"
-      chapters:
-      - terminal/terminal.qmd
     - part: "Intro to Git"
+    - part: "Installation"
       chapters:
-       - intro-to-git/00-introduction.qmd
-       - intro-to-git/01-why-git-github.qmd
-       - intro-to-git/02-project-setup.qmd
-       - intro-to-git/03-create-project.qmd
-       - intro-to-git/04-git-status.qmd
-       - intro-to-git/05-gitignore.qmd
-       - intro-to-git/06-stage-commit.qmd
-       - intro-to-git/07-push-to-github.qmd
-       - intro-to-git/08-edit-stage-commit-push.qmd
-       - intro-to-git/09-collaboration-basics.qmd
-       - intro-to-git/10-final-tips.qmd
+      - intro-to-git/00-introduction.qmd
+      - intro-to-git/01-install-and-setup.qmd
+    - part: "Git basics"
+      chapters:
+       - intro-to-git/02-making-a-repo.qmd
+       - intro-to-git/03-add-files.qmd
+       - intro-to-git/04-pushing-to-github.qmd
+       - intro-to-git/05-updating-your-repo.qmd
 
 format:
   html:

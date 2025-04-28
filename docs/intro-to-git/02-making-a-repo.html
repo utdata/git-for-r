@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Christian McDonald">
-<meta name="dcterms.date" content="2024-09-01">
 
-<title>Git for R</title>
+<title>3&nbsp; Making a repository – Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./intro-to-git/00-introduction.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../intro-to-git/03-add-files.html" rel="next">
+<link href="../intro-to-git/01-install-and-setup.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -83,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About this book</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/02-making-a-repo.html">Git basics</a></li><li class="breadcrumb-item"><a href="../intro-to-git/02-making-a-repo.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making a repository</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -98,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Git for R</a> 
+      <a href="../">Git for R</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -110,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About this book</span></a>
   </div>
 </li>
@@ -129,13 +163,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/00-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro-to-git/00-introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/01-install-and-setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro-to-git/01-install-and-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
@@ -152,56 +186,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/02-making-a-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Make your first Github project</span></span></a>
+  <a href="../intro-to-git/02-making-a-repo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/03-create-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Connecting your project to Git</span></span></a>
+  <a href="../intro-to-git/03-add-files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/04-git-status.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">View Git Status</span></span></a>
+  <a href="../intro-to-git/04-pushing-to-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/05-gitignore.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Add a .gitignore File</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/06-stage-commit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Stage and Commit the Initial Files</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/07-push-to-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Push the Initial Commit to GitHub</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/08-edit-stage-commit-push.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Make a Change, Stage It, Commit It, and Push It</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/09-collaboration-basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Collaborating with Others</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/10-final-tips.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Final Tips, Troubleshooting, and What’s Next</span></span></a>
+  <a href="../intro-to-git/05-updating-your-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
   </div>
 </li>
       </ul>
@@ -216,35 +220,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#about-this-book" id="toc-about-this-book" class="nav-link active" data-scroll-target="#about-this-book">About this book</a></li>
+  <li><a href="#step-1-create-a-new-rstudio-project" id="toc-step-1-create-a-new-rstudio-project" class="nav-link active" data-scroll-target="#step-1-create-a-new-rstudio-project"><span class="header-section-number">3.1</span> Step 1: Create a new RStudio Project</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1-run-a-quarto-file" id="toc-exercise-1-run-a-quarto-file" class="nav-link" data-scroll-target="#exercise-1-run-a-quarto-file"><span class="header-section-number">3.1.1</span> Exercise 1: Run a Quarto File</a></li>
+  </ul></li>
+  <li><a href="#step-2-initialize-git-for-the-project" id="toc-step-2-initialize-git-for-the-project" class="nav-link" data-scroll-target="#step-2-initialize-git-for-the-project"><span class="header-section-number">3.2</span> Step 2: Initialize Git for the Project</a></li>
+  <li><a href="#step-3-tell-git-what-files-to-track" id="toc-step-3-tell-git-what-files-to-track" class="nav-link" data-scroll-target="#step-3-tell-git-what-files-to-track"><span class="header-section-number">3.3</span> 🗂️ Step 3: Tell Git What Files to Track</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/02-making-a-repo.html">Git basics</a></li><li class="breadcrumb-item"><a href="../intro-to-git/02-making-a-repo.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making a repository</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Git for R</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making a repository</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Christian McDonald </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 1, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -254,9 +251,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about-this-book" class="level1 unnumbered">
-<h1 class="unnumbered">About this book</h1>
-<p>I’m finding I’m not happy with existing resources on using Git with R, so I want to make a very opinionated guide specifically for my students.</p>
+<blockquote class="blockquote">
+<p>🎯 Goal: By the end of this chapter, you’ll have a brand-new RStudio project tracked by Git.</p>
+</blockquote>
+<hr>
+<section id="step-1-create-a-new-rstudio-project" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="step-1-create-a-new-rstudio-project"><span class="header-section-number">3.1</span> Step 1: Create a new RStudio Project</h2>
+<p>Open RStudio and make a new Quarto project by going to:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">File</span> → New Project → New Directory → Quarto Project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In the project wizard, do the following:</p>
+<ol type="1">
+<li><p>Select <code>New directory</code> in <strong>Create Project.</strong></p></li>
+<li><p>Select <code>Quarto project</code> as the <strong>Project Type</strong>.</p></li>
+<li><p>Give your directory a descriptive name like <code>my-first-git-project</code>.</p></li>
+<li><p>Check the <code>Create project as a subdirectory of</code> to make sure you’re creating your project in the directory where you keep your class or coding projects (ideally a projects folder inside your home directory).</p></li>
+<li><p>Finallay, click <strong>Create Project.</strong></p></li>
+</ol>
+<p>You’ll now have a project with a <code>.qmd</code> file (Quarto), and RStudio will open into a new window for this project.</p>
+<hr>
+<section id="exercise-1-run-a-quarto-file" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="exercise-1-run-a-quarto-file"><span class="header-section-number">3.1.1</span> Exercise 1: Run a Quarto File</h3>
+<p>Before we get into Git, let’s test Quarto by creating a new file.</p>
+<ol type="1">
+<li>Click the new file icon at the top left of R Studio and click “<strong>Quarto document…</strong>” (or go to File &gt; New File &gt; Quarto document…)</li>
+<li>Add a title like “Intro to Git”, and click <strong>Create</strong></li>
+<li>Save the file and name it something like <code>01-index.qmd</code> when prompted</li>
+<li>Click <strong>Render</strong> in the top bar</li>
+</ol>
+<p>You should see an HTML preview with sample content. Great! You’re ready to start version-controlling this project.</p>
+<hr>
+</section>
+</section>
+<section id="step-2-initialize-git-for-the-project" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="step-2-initialize-git-for-the-project"><span class="header-section-number">3.2</span> Step 2: Initialize Git for the Project</h2>
+<p>If we want Git to start watching our files and keeping track of our changes, we have to make sure Git is connected to our project. To do this, we need <strong>initialize</strong> git inside of our Quarto project.</p>
+<p>To initialize Git in your Quarto project, Click the <code>Terminal</code> tab in RStudio (usually lower-left)</p>
+<p>Inside Terminal, type the following command and run it (by hitting enter):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In basic terms, this tells Git “I want you to start tracking this folder.”</p>
+<p>If it works, you’ll see Terminal respond with something like:</p>
+<p><code>Initialized empty Git repository in /Users/yourname/my-quarto-project/.git/</code></p>
+<hr>
+</section>
+<section id="step-3-tell-git-what-files-to-track" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="step-3-tell-git-what-files-to-track"><span class="header-section-number">3.3</span> 🗂️ Step 3: Tell Git What Files to Track</h2>
+<p>Now that we’ve let Git know that we want it to start watching our project, we’ll also need to tell git what files we would like it to keep track of.</p>
+<p>First, let’s ask Git what it “sees” in our project folder by running:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Terminal will return something like the following as a response:</p>
+<pre><code>On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+        .Rproj.user/
+        .quarto/
+        _quarto.yml
+        my-first-git-project.Rproj
+        my-first-git-project.html
+        my-first-git-project.qmd
+        my-first-git-project_files/
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+<p><strong>Now, let’s breakdown what this all means:</strong></p>
+<ol type="1">
+<li><strong>On branch main</strong>: You’re working on the <code>main</code> branch — the default starting line of development.</li>
+<li><strong>No commits yet</strong>: This means Git is ready, but you haven’t saved any versions yet.</li>
+<li><strong>Untracked Files</strong>: These are files Git sees in your folder, but it’s not saving changes to them yet. They’re marked in <strong>red</strong> in the terminal and the RStudio Git tab.</li>
+</ol>
+<p>In the next step, we’ll learn how to tell Git what files we’d like it to track and which files to ignore.</p>
 
 
 </section>
@@ -663,10 +727,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../intro-to-git/01-install-and-setup.html" class="pagination-link" aria-label="Installation and setup">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installation and setup</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro-to-git/00-introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../intro-to-git/03-add-files.html" class="pagination-link" aria-label="Creating your first commit">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
