@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -206,11 +241,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-the-terminal-anyway" id="toc-what-is-the-terminal-anyway" class="nav-link active" data-scroll-target="#what-is-the-terminal-anyway"><span class="header-section-number">1.1</span> <strong>What is the Terminal, Anyway?</strong></a></li>
-  <li><a href="#how-to-open-the-terminal" id="toc-how-to-open-the-terminal" class="nav-link" data-scroll-target="#how-to-open-the-terminal"><span class="header-section-number">1.2</span> <strong>How to Open the Terminal</strong></a></li>
-  <li><a href="#your-first-command-saying-hello-to-the-terminal" id="toc-your-first-command-saying-hello-to-the-terminal" class="nav-link" data-scroll-target="#your-first-command-saying-hello-to-the-terminal"><span class="header-section-number">1.3</span> <strong>Your First Command: Saying Hello to the Terminal</strong></a></li>
-  <li><a href="#quick-tips-before-you-move-on" id="toc-quick-tips-before-you-move-on" class="nav-link" data-scroll-target="#quick-tips-before-you-move-on"><span class="header-section-number">1.4</span> <strong>Quick Tips Before You Move On</strong></a></li>
-  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">2</span> ✅ <strong>Checkpoint</strong></a></li>
+  <li><a href="#what-is-the-terminal-anyway" id="toc-what-is-the-terminal-anyway" class="nav-link active" data-scroll-target="#what-is-the-terminal-anyway"><span class="header-section-number">1.1</span> What is the Terminal, Anyway?</a></li>
+  <li><a href="#speaking-the-terminals-language" id="toc-speaking-the-terminals-language" class="nav-link" data-scroll-target="#speaking-the-terminals-language"><span class="header-section-number">1.2</span> Speaking the Terminal’s language</a></li>
+  <li><a href="#how-to-open-the-terminal" id="toc-how-to-open-the-terminal" class="nav-link" data-scroll-target="#how-to-open-the-terminal"><span class="header-section-number">1.3</span> How to Open the Terminal</a></li>
+  <li><a href="#your-first-command-saying-hello-to-the-terminal" id="toc-your-first-command-saying-hello-to-the-terminal" class="nav-link" data-scroll-target="#your-first-command-saying-hello-to-the-terminal"><span class="header-section-number">1.4</span> Your First Command: Saying Hello to the Terminal</a>
+  <ul class="collapse">
+  <li><a href="#your-first-command-saying-hello-to-the-terminal-1" id="toc-your-first-command-saying-hello-to-the-terminal-1" class="nav-link" data-scroll-target="#your-first-command-saying-hello-to-the-terminal-1"><span class="header-section-number">1.4.1</span> Your First Command: Saying Hello to the Terminal</a></li>
+  </ul></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">2</span> ✅ Checkpoint</a></li>
   </ul>
 </nav>
     </div>
@@ -237,28 +275,56 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><strong>First things first:</strong></p>
-<p>If you’ve never opened a Terminal window before, you’re not alone — and you’re in the right place. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.</p>
+<p>If you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.</p>
 <p>You don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.</p>
-<p>Let’s get started!</p>
 <p>Time to enter the Matrix, Neo.</p>
-<p>[Insert Matrix meme here]</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Digital_rain_animation_medium_letters_shine.gif" class="img-fluid figure-img"></p>
+<figcaption>Fun fact: the original design for the green “digital rain” animation used in the Matrix was based on scans of the creator’s wife’s Japanese cookbook.</figcaption>
+</figure>
+</div>
 <hr>
 <section id="what-is-the-terminal-anyway" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-the-terminal-anyway"><span class="header-section-number">1.1</span> <strong>What is the Terminal, Anyway?</strong></h2>
-<p>Think of the Terminal as <em>text messaging your computer</em>.</p>
-<p>Instead of clicking buttons or opening folders with a mouse or trackpad, you type <strong>commands</strong>. Your computer reads your text and immediately does what you ask.</p>
-<p>For example:</p>
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-the-terminal-anyway"><span class="header-section-number">1.1</span> What is the Terminal, Anyway?</h2>
+<p>Think of using the Terminal like dm’ing your computer.</p>
+<p>Instead of clicking buttons or opening folders with a mouse or trackpad, you type <strong>commands</strong> asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.</p>
+<p>The <strong>Terminal</strong> (on Mac) or <strong>Git Bash</strong> (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Terminology note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>People (including the authors of this guide) will use the term <strong>shell</strong> and <strong>terminal</strong> interchangeably. This means when we say “type into your shell” or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.</p>
+<p>Throughout this guide there will be several of these terminology notes to explain key terms – especially those used interchangeably – that may be confusing to new programmers. Knowing the language coders use frequently helps when reading documentation and when seeking help in online spaces like Stack Overflow.</p>
+</div>
+</div>
+<p>The Terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.</p>
+<p>Here’s just a few examples of what we can ask our computers to do using the Terminal:</p>
 <ul>
-<li><p>You can ask the computer to list all the files in a folder.</p></li>
-<li><p>You can ask it to create a new folder.</p></li>
-<li><p>You can even install programs, move files around, or automate tasks — all by typing a few words.</p></li>
+<li><p>List all the files in a folder</p></li>
+<li><p>Create a new folder</p></li>
+<li><p>Install programs</p></li>
+<li><p>Move files around</p></li>
+<li><p>Automate tasks</p></li>
 </ul>
-<p>The Terminal might look a little old-school, but it’s still one of the most powerful tools you can learn.<br>
-(And yes — people who work with code, data, security, and tech use it all the time.)</p>
+<p>We can do all of these things by typing just a few words. But to communicate effectively with our Terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.</p>
 <hr>
 </section>
-<section id="how-to-open-the-terminal" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="how-to-open-the-terminal"><span class="header-section-number">1.2</span> <strong>How to Open the Terminal</strong></h2>
+<section id="speaking-the-terminals-language" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="speaking-the-terminals-language"><span class="header-section-number">1.2</span> Speaking the Terminal’s language</h2>
+<p>The programming language we will use for our interactions in the Terminal is called <strong>Bash</strong>. Bash is a Unix-based program and most of the Internet runs on Unix (or Linux) computers.</p>
+<p>Macs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why Git and Git Bash were downloaded in the prerequisites – so we can all speak the same language, regardless of the machines we’re using.</p>
+<hr>
+</section>
+<section id="how-to-open-the-terminal" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="how-to-open-the-terminal"><span class="header-section-number">1.3</span> How to Open the Terminal</h2>
+<p>First things first, we need to actually <em>open</em> the Terminal on our machines.</p>
 <p>Here’s how to find it on your computer:</p>
 <ul>
 <li><p><strong>Mac</strong>:<br>
@@ -272,37 +338,62 @@ Press <code>Ctrl + Alt + T</code> — it’s probably already installed!</p></li
 <p><strong>Tip:</strong> If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)</p>
 <hr>
 </section>
-<section id="your-first-command-saying-hello-to-the-terminal" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="your-first-command-saying-hello-to-the-terminal"><span class="header-section-number">1.3</span> <strong>Your First Command: Saying Hello to the Terminal</strong></h2>
-<p>Let’s try your first real command: finding out <em>where</em> you are.</p>
-<p>In the Terminal window, type:</p>
-<p><code>pwd</code></p>
-<p>(Then press <code>Enter</code>.)</p>
-<p>You should see something like:</p>
+<section id="your-first-command-saying-hello-to-the-terminal" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="your-first-command-saying-hello-to-the-terminal"><span class="header-section-number">1.4</span> Your First Command: Saying Hello to the Terminal</h2>
+<p>Ok, now that the Terminal is open on your computer, let’s take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note for newer Mac users
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you launch the Terminal for the first time, you’ll probably see a prompt saying something like:</p>
+<pre><code>The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.</code></pre>
+<p><strong>DISREGARD THIS MESSAGE</strong>. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/terminal_launch copy.png" class="img-fluid figure-img"></p>
+<figcaption>When you launch Terminal for the first time, you’ll see some text like this.</figcaption>
+</figure>
+</div>
+<p><strong>Let’s breakdown a few things from the screenshot above:</strong></p>
+<ol type="1">
+<li>Computer name: the characters before the <code>~</code> are your computer name.</li>
+<li>Current directory: The <code>~</code> character is Terminal shorthand for your “base” directory on your computer. The value shown here will update as you move around to different folders on your computer.</li>
+<li>User name: The part immediatetely after the <code>~</code> is your username.</li>
+<li>Command prompt: Lastly we have the <code>$</code>. This is the “prompt” where you type commands.</li>
+</ol>
+<p>You type your commands AFTER the <code>$</code> and then hit <code>Return</code>/<code>Enter</code> on your keyboard to run or <strong>execute</strong> them. We’ll practice doing just that in the next section.</p>
+<section id="your-first-command-saying-hello-to-the-terminal-1" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="your-first-command-saying-hello-to-the-terminal-1"><span class="header-section-number">1.4.1</span> Your First Command: Saying Hello to the Terminal</h3>
+<p>Let’s try your first real command: finding out <em>where</em> you are using the command <code>pwd</code>.</p>
+<p>In the Terminal prompt (remember after the <code>$)</code>, type the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then press <code>Enter</code> to <em>run</em> the command.</p>
+<p>You should see Terminal respond with something like this:</p>
 <p><code>/Users/yourname</code></p>
-<p>or</p>
+<p>or this</p>
 <p><code>C:\Users\yourname</code></p>
 <p>Depending on your system, the path may look a little different — and that’s OK.</p>
-<p><strong>What just happened?</strong></p>
+<p><strong>So what just happened?</strong></p>
 <ul>
 <li><p><code>pwd</code> stands for “<strong>print working directory</strong>.”</p></li>
 <li><p>It simply asks: <em>Where am I right now in the computer’s folder system?</em></p></li>
-<li><p>The answer is your current folder — usually your “home” area when you first open the Terminal.</p></li>
+<li><p>Your computer provides the answer: your current folder — usually your “home” directory when you first open the Terminal.</p></li>
 </ul>
 <hr>
 </section>
-<section id="quick-tips-before-you-move-on" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="quick-tips-before-you-move-on"><span class="header-section-number">1.4</span> <strong>Quick Tips Before You Move On</strong></h2>
-<ul>
-<li><p><strong>Command Case Matters</strong>: <code>pwd</code> is <em>not</em> the same as <code>PWD</code>.</p></li>
-<li><p><strong>Press Enter</strong>: Every command you type needs an <code>Enter</code> to run.</p></li>
-<li><p><strong>You Can’t Break It Easily</strong>: Typing <code>pwd</code> won’t hurt your computer.<br>
-(In fact, almost everything we’ll do today is safe.)</p></li>
-</ul>
-<hr>
 </section>
 <section id="checkpoint" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> ✅ <strong>Checkpoint</strong></h1>
+<h1 data-number="2"><span class="header-section-number">2</span> ✅ Checkpoint</h1>
+<p>You’ve made it to the end of chapter 1. Good job!</p>
 <p><strong>You’ve now:</strong></p>
 <ul>
 <li><p>Opened the Terminal.</p></li>
@@ -310,8 +401,15 @@ Press <code>Ctrl + Alt + T</code> — it’s probably already installed!</p></li
 <li><p>Seen your computer respond back.</p></li>
 </ul>
 <p>You’re officially no longer a Terminal beginner. 🙌</p>
-<p>Next up, we’ll learn how to <em>move around</em> inside your computer using simple commands.<br>
-Ready? Let’s go! [[Terminal Chapter 2]]</p>
+<p><strong>A few quick Tips Before You Move On to the next chapter:</strong></p>
+<ol type="1">
+<li><strong>Command Case Matters in the Terminal</strong>: <code>pwd</code> is <em>not</em> the same as <code>PWD</code>.</li>
+<li><strong>Press Enter</strong>: Every command you type needs an <code>Enter</code> to run.</li>
+<li><strong>You can’t break things easily</strong>: Typing <code>pwd</code> won’t hurt your computer.<br>
+(In fact, almost everything we’ll do in this guide will be safe.)</li>
+</ol>
+<hr>
+<p>Next up, we’ll learn how to <em>move around</em> inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter: [[Terminal Chapter 2]]</p>
 
 
 </section>

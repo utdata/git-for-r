@@ -1,113 +1,160 @@
 # Welcome to the Terminal
 
-**First things first:**  
+**First things first:**
 
-If you've never opened a Terminal window before, you’re not alone — and you're in the right place. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.
+If you've never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.
 
 You don’t need to memorize anything right now. You don’t need to be a "tech wizard." You just need a little curiosity.
 
-Let's get started!
-
 Time to enter the Matrix, Neo.
 
-[Insert Matrix meme here]
+![Fun fact: the original design for the green "digital rain" animation used in the Matrix was based on scans of the creator's wife's Japanese cookbook.](https://upload.wikimedia.org/wikipedia/commons/c/cc/Digital_rain_animation_medium_letters_shine.gif)
 
----
+------------------------------------------------------------------------
 
-## **What is the Terminal, Anyway?**
+## What is the Terminal, Anyway?
 
-Think of the Terminal as _text messaging your computer_.
+Think of using the Terminal like dm'ing your computer.
 
-Instead of clicking buttons or opening folders with a mouse or trackpad, you type **commands**. Your computer reads your text and immediately does what you ask.
+Instead of clicking buttons or opening folders with a mouse or trackpad, you type **commands** asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.
 
-For example:
+The **Terminal** (on Mac) or **Git Bash** (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.
 
-- You can ask the computer to list all the files in a folder.
-    
-- You can ask it to create a new folder.
-    
-- You can even install programs, move files around, or automate tasks — all by typing a few words.
-    
+::: callout-note
+## Terminology note
 
-The Terminal might look a little old-school, but it’s still one of the most powerful tools you can learn.  
-(And yes — people who work with code, data, security, and tech use it all the time.)
+People (including the authors of this guide) will use the term **shell** and **terminal** interchangeably. This means when we say “type into your shell” or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.
 
----
+Throughout this guide there will be several of these terminology notes to explain key terms – especially those used interchangeably – that may be confusing to new programmers. Knowing the language coders use frequently helps when reading documentation and when seeking help in online spaces like Stack Overflow.
+:::
 
-## **How to Open the Terminal**
+The Terminal might look a little old-school (and let's be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.
+
+Here's just a few examples of what we can ask our computers to do using the Terminal:
+
+-   List all the files in a folder
+
+-   Create a new folder
+
+-   Install programs
+
+-   Move files around
+
+-   Automate tasks
+
+We can do all of these things by typing just a few words. But to communicate effectively with our Terminals, we have to learn "speak" its language. In this guide, you'll learn the basics of this language to get you started.
+
+------------------------------------------------------------------------
+
+## Speaking the Terminal's language
+
+The programming language we will use for our interactions in the Terminal is called **Bash**. Bash is a Unix-based program and most of the Internet runs on Unix (or Linux) computers.
+
+Macs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why Git and Git Bash were downloaded in the prerequisites -- so we can all speak the same language, regardless of the machines we're using.
+
+------------------------------------------------------------------------
+
+## How to Open the Terminal
+
+First things first, we need to actually *open* the Terminal on our machines.
 
 Here’s how to find it on your computer:
 
-- **Mac**:  
+-   **Mac**:\
     Press `Command + Space`, type **Terminal**, and hit `Enter`.
-    
-- **Windows**:  
-    Open the **Start Menu**, search for **Terminal** or **PowerShell**, and open it.  
+
+-   **Windows**:\
+    Open the **Start Menu**, search for **Terminal** or **PowerShell**, and open it.\
     (There’s also something called "Command Prompt" — close enough for now.)
-    
-- **Linux**:  
+
+-   **Linux**:\
     Press `Ctrl + Alt + T` — it’s probably already installed!
-    
 
 **Tip:** If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)
 
----
+------------------------------------------------------------------------
 
-## **Your First Command: Saying Hello to the Terminal**
+## Your First Command: Saying Hello to the Terminal
 
-Let’s try your first real command: finding out _where_ you are.
+Ok, now that the Terminal is open on your computer, let's take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.
 
-In the Terminal window, type:
+::: callout-caution
+## Note for newer Mac users
 
-```pwd``` 
+When you launch the Terminal for the first time, you'll probably see a prompt saying something like:
 
-(Then press `Enter`.)
+```         
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+```
 
-You should see something like:
+**DISREGARD THIS MESSAGE**. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.
+:::
+
+![When you launch Terminal for the first time, you'll see some text like this.](../images/terminal_launch%20copy.png)
+
+**Let's breakdown a few things from the screenshot above:**
+
+1.  Computer name: the characters before the `~` are your computer name.
+2.  Current directory: The `~` character is Terminal shorthand for your "base" directory on your computer. The value shown here will update as you move around to different folders on your computer.
+3.  User name: The part immediatetely after the `~` is your username.
+4.  Command prompt: Lastly we have the `$`. This is the “prompt” where you type commands.
+
+You type your commands AFTER the `$` and then hit `Return`/`Enter` on your keyboard to run or **execute** them. We'll practice doing just that in the next section.
+
+### Your First Command: Saying Hello to the Terminal
+
+Let’s try your first real command: finding out *where* you are using the command `pwd`.
+
+In the Terminal prompt (remember after the `$)`, type the following command:
+
+``` bash
+pwd
+```
+
+Then press `Enter` to *run* the command.
+
+You should see Terminal respond with something like this:
 
 `/Users/yourname`
 
-or
+or this
 
 `C:\Users\yourname`
 
 Depending on your system, the path may look a little different — and that's OK.
 
-**What just happened?**
+**So what just happened?**
 
-- `pwd` stands for "**print working directory**."
-    
-- It simply asks: _Where am I right now in the computer’s folder system?_
-    
-- The answer is your current folder — usually your "home" area when you first open the Terminal.
+-   `pwd` stands for "**print working directory**."
 
+-   It simply asks: *Where am I right now in the computer’s folder system?*
 
----
+-   Your computer provides the answer: your current folder — usually your "home" directory when you first open the Terminal.
 
-## **Quick Tips Before You Move On**
+------------------------------------------------------------------------
 
-- **Command Case Matters**: `pwd` is _not_ the same as `PWD`.
-    
-- **Press Enter**: Every command you type needs an `Enter` to run.
-    
-- **You Can’t Break It Easily**: Typing `pwd` won't hurt your computer.  
-    (In fact, almost everything we’ll do today is safe.)
-    
+# ✅ Checkpoint
 
----
-
-# ✅ **Checkpoint**
+You've made it to the end of chapter 1. Good job!
 
 **You’ve now:**
 
-- Opened the Terminal.
-    
-- Typed and ran your first command.
-    
-- Seen your computer respond back.
-    
+-   Opened the Terminal.
+
+-   Typed and ran your first command.
+
+-   Seen your computer respond back.
 
 You're officially no longer a Terminal beginner. 🙌
 
-Next up, we’ll learn how to _move around_ inside your computer using simple commands.  
-Ready? Let’s go! [[Terminal Chapter 2]] 
+**A few quick Tips Before You Move On to the next chapter:**
+
+1. **Command Case Matters in the Terminal**: `pwd` is *not* the same as `PWD`.
+1. **Press Enter**: Every command you type needs an `Enter` to run.
+1.  **You can’t break things easily**: Typing `pwd` won't hurt your computer.\
+    (In fact, almost everything we’ll do in this guide will be safe.)
+
+------------------------------------------------------------------------
+
+Next up, we’ll learn how to *move around* inside your computer using simple commands. Whenever you're ready, proceed to the next chapter: \[\[Terminal Chapter 2\]\]

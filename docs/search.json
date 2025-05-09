@@ -322,7 +322,7 @@
     "href": "terminal/00-introduction.html",
     "title": "1  Welcome to the Terminal",
     "section": "",
-    "text": "1.1 What is the Terminal, Anyway?\nFirst things first:\nIf you’ve never opened a Terminal window before, you’re not alone — and you’re in the right place. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.\nYou don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.\nLet’s get started!\nTime to enter the Matrix, Neo.\n[Insert Matrix meme here]\nThink of the Terminal as text messaging your computer.\nInstead of clicking buttons or opening folders with a mouse or trackpad, you type commands. Your computer reads your text and immediately does what you ask.\nFor example:\nThe Terminal might look a little old-school, but it’s still one of the most powerful tools you can learn.\n(And yes — people who work with code, data, security, and tech use it all the time.)",
+    "text": "1.1 What is the Terminal, Anyway?\nFirst things first:\nIf you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.\nYou don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.\nTime to enter the Matrix, Neo.\nThink of using the Terminal like dm’ing your computer.\nInstead of clicking buttons or opening folders with a mouse or trackpad, you type commands asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.\nThe Terminal (on Mac) or Git Bash (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.\nThe Terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.\nHere’s just a few examples of what we can ask our computers to do using the Terminal:\nWe can do all of these things by typing just a few words. But to communicate effectively with our Terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to the Terminal</span>"
@@ -333,7 +333,7 @@
     "href": "terminal/00-introduction.html#what-is-the-terminal-anyway",
     "title": "1  Welcome to the Terminal",
     "section": "",
-    "text": "You can ask the computer to list all the files in a folder.\nYou can ask it to create a new folder.\nYou can even install programs, move files around, or automate tasks — all by typing a few words.",
+    "text": "Terminology note\n\n\n\nPeople (including the authors of this guide) will use the term shell and terminal interchangeably. This means when we say “type into your shell” or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.\nThroughout this guide there will be several of these terminology notes to explain key terms – especially those used interchangeably – that may be confusing to new programmers. Knowing the language coders use frequently helps when reading documentation and when seeking help in online spaces like Stack Overflow.\n\n\n\n\n\nList all the files in a folder\nCreate a new folder\nInstall programs\nMove files around\nAutomate tasks",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to the Terminal</span>"
@@ -343,8 +343,8 @@
     "objectID": "terminal/00-introduction.html#how-to-open-the-terminal",
     "href": "terminal/00-introduction.html#how-to-open-the-terminal",
     "title": "1  Welcome to the Terminal",
-    "section": "1.2 How to Open the Terminal",
-    "text": "1.2 How to Open the Terminal\nHere’s how to find it on your computer:\n\nMac:\nPress Command + Space, type Terminal, and hit Enter.\nWindows:\nOpen the Start Menu, search for Terminal or PowerShell, and open it.\n(There’s also something called “Command Prompt” — close enough for now.)\nLinux:\nPress Ctrl + Alt + T — it’s probably already installed!\n\nTip: If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)",
+    "section": "1.3 How to Open the Terminal",
+    "text": "1.3 How to Open the Terminal\nFirst things first, we need to actually open the Terminal on our machines.\nHere’s how to find it on your computer:\n\nMac:\nPress Command + Space, type Terminal, and hit Enter.\nWindows:\nOpen the Start Menu, search for Terminal or PowerShell, and open it.\n(There’s also something called “Command Prompt” — close enough for now.)\nLinux:\nPress Ctrl + Alt + T — it’s probably already installed!\n\nTip: If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to the Terminal</span>"
@@ -354,8 +354,8 @@
     "objectID": "terminal/00-introduction.html#your-first-command-saying-hello-to-the-terminal",
     "href": "terminal/00-introduction.html#your-first-command-saying-hello-to-the-terminal",
     "title": "1  Welcome to the Terminal",
-    "section": "1.3 Your First Command: Saying Hello to the Terminal",
-    "text": "1.3 Your First Command: Saying Hello to the Terminal\nLet’s try your first real command: finding out where you are.\nIn the Terminal window, type:\npwd\n(Then press Enter.)\nYou should see something like:\n/Users/yourname\nor\nC:\\Users\\yourname\nDepending on your system, the path may look a little different — and that’s OK.\nWhat just happened?\n\npwd stands for “print working directory.”\nIt simply asks: Where am I right now in the computer’s folder system?\nThe answer is your current folder — usually your “home” area when you first open the Terminal.",
+    "section": "1.4 Your First Command: Saying Hello to the Terminal",
+    "text": "1.4 Your First Command: Saying Hello to the Terminal\nOk, now that the Terminal is open on your computer, let’s take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.\n\n\n\n\n\n\nNote for newer Mac users\n\n\n\nWhen you launch the Terminal for the first time, you’ll probably see a prompt saying something like:\nThe default interactive shell is now zsh.\nTo update your account to use zsh, please run `chsh -s /bin/zsh`.\nDISREGARD THIS MESSAGE. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.\n\n\n\n\n\nWhen you launch Terminal for the first time, you’ll see some text like this.\n\n\nLet’s breakdown a few things from the screenshot above:\n\nComputer name: the characters before the ~ are your computer name.\nCurrent directory: The ~ character is Terminal shorthand for your “base” directory on your computer. The value shown here will update as you move around to different folders on your computer.\nUser name: The part immediatetely after the ~ is your username.\nCommand prompt: Lastly we have the $. This is the “prompt” where you type commands.\n\nYou type your commands AFTER the $ and then hit Return/Enter on your keyboard to run or execute them. We’ll practice doing just that in the next section.\n\n1.4.1 Your First Command: Saying Hello to the Terminal\nLet’s try your first real command: finding out where you are using the command pwd.\nIn the Terminal prompt (remember after the $), type the following command:\npwd\nThen press Enter to run the command.\nYou should see Terminal respond with something like this:\n/Users/yourname\nor this\nC:\\Users\\yourname\nDepending on your system, the path may look a little different — and that’s OK.\nSo what just happened?\n\npwd stands for “print working directory.”\nIt simply asks: Where am I right now in the computer’s folder system?\nYour computer provides the answer: your current folder — usually your “home” directory when you first open the Terminal.",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to the Terminal</span>"
@@ -365,8 +365,19 @@
     "objectID": "terminal/00-introduction.html#quick-tips-before-you-move-on",
     "href": "terminal/00-introduction.html#quick-tips-before-you-move-on",
     "title": "1  Welcome to the Terminal",
-    "section": "1.4 Quick Tips Before You Move On",
-    "text": "1.4 Quick Tips Before You Move On\n\nCommand Case Matters: pwd is not the same as PWD.\nPress Enter: Every command you type needs an Enter to run.\nYou Can’t Break It Easily: Typing pwd won’t hurt your computer.\n(In fact, almost everything we’ll do today is safe.)",
+    "section": "1.5 Quick Tips Before You Move On",
+    "text": "1.5 Quick Tips Before You Move On\n\nCommand Case Matters in the Terminal: pwd is not the same as PWD.\nPress Enter: Every command you type needs an Enter to run.\nYou Can’t Break It Easily: Typing pwd won’t hurt your computer.\n(In fact, almost everything we’ll do today is safe.)",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to the Terminal</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/00-introduction.html#speaking-the-terminals-language",
+    "href": "terminal/00-introduction.html#speaking-the-terminals-language",
+    "title": "1  Welcome to the Terminal",
+    "section": "1.2 Speaking the Terminal’s language",
+    "text": "1.2 Speaking the Terminal’s language\nThe programming language we will use for our interactions in the Terminal is called Bash. Bash is a Unix-based program and most of the Internet runs on Unix (or Linux) computers.\nMacs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why Git and Git Bash were downloaded in the prerequisites – so we can all speak the same language, regardless of the machines we’re using.",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome to the Terminal</span>"
