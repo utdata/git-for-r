@@ -388,7 +388,7 @@
     "href": "terminal/01-moving-around.html",
     "title": "2  Moving Around in the Terminal",
     "section": "",
-    "text": "2.1 What’s in This Folder? (ls)\nNow that you know where you are (pwd), it’s time to explore what’s around you. Specifically, we’ll start by moving between different folders on your computer.\nIn the Terminal world, folders are usually called directories. (You’ll hear both words out in the world — they mean the same thing.)\nIf you want to see what’s inside the current directory, you use the ls command.\nAs we said in Chapter 1, the Terminal lets you interact with files the same way you would with File Explorer on Windows and Finder on a Mac — except you’ll be using text instead of clicking.\nWhen your first launch terminal, you’ll see a ~ (called a tilde), which lets you know you’re in your base or home directory. We want to ask the Terminal to tell us what is inside this home directory.\nTo do that, type the following command:\nand press Enter to run the command.\nTerminal will respond to your command with a list of files and folders like this:\nOr it might be different depending on what’s in your computer’s home folder.\nIn any case, the list of directories returned by Terminal will match the folders you would see if you clicked on your home directory in the Finder on a Mac or in File Explorer on a Windows machine. For example, the list of folders listed in the example response above matches what we see in our home directory using Finder below.\nQuick Recap: What does ls stand for?",
+    "text": "2.1 What’s in This Folder? (ls)\nNow that you know where you are (pwd), it’s time to explore what’s around you. Specifically, we’ll start by moving between different folders on your computer.\nIf you want to see what’s inside the current directory, you use the ls command.\nAs we said in Chapter 1, the Terminal lets you interact with files the same way you would with File Explorer on Windows and Finder on a Mac — except you’ll be using text instead of clicking.\nWhen your first launch terminal, you’ll see a ~ (called a tilde), which lets you know you’re in your base or home directory. We want to ask the Terminal to tell us what is inside this home directory.\nTo do that, type the following command:\nand press Enter to run the command.\nTerminal will respond to your command with a list of files and folders like this:\nOr it might be different depending on what’s in your computer’s home folder.\nIn any case, the list of directories returned by Terminal will match the folders you would see if you clicked on your home directory in the Finder on a Mac or in File Explorer on a Windows machine. For example, the list of folders listed in the example response above matches what we see in our home directory using Finder below.\nQuick Recap: What does ls stand for?",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving Around in the Terminal</span>"
@@ -513,6 +513,61 @@
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving Around in the Terminal</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html",
+    "href": "terminal/02-making-files-folders.html",
+    "title": "3  Making and managing folder",
+    "section": "",
+    "text": "3.1 Creating a Folder (mkdir)\nNow that you can move around the Terminal like a pro, it’s time to create your own stuff.\nIn this chapter, we’ll learn to make new folders and files. We’ll also learn how to move or delete them.\nLet’s say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you’d do something like right click and hit New Folder, then you’d need to fill out your folder name in the prompt next to the new folder.\nTo do this from the command line, we do all of this in a single prompt using the mkdir command.\nIf you ran the following command (don’t do this):\nThis would create a folder called my_new_folder inside whatever directory you’re inside in the Terminal.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html#creating-a-folder-mkdir",
+    "href": "terminal/02-making-files-folders.html#creating-a-folder-mkdir",
+    "title": "3  Making and managing folder",
+    "section": "",
+    "text": "mkdir stands for make directory.\n\n\nmkdir my_new_folder\n\n\n3.1.1 📝 Mini excercise: make a directory\nNow, try the mkdir command out on your own by making a new directory inside your home directory (~).\n\nCheck you’re in your home directory (Hint: you can get back to your home directory by running cd)\nType and run: mkdir terminal_practice in your command prompt\nRun the ls command to make sure it worked, You should see your new directory listed in the Terminal response.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html#creating-a-file-touch",
+    "href": "terminal/02-making-files-folders.html#creating-a-file-touch",
+    "title": "3  Making and managing folder",
+    "section": "3.2 Creating a File (touch)",
+    "text": "3.2 Creating a File (touch)\nLike folders, we can also make new files from the command line using the touch command.\n\nUnlike other commands we’ve learned, touch isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️\n\nFor example, if you ran the following command:\ntouch notes.txt\nThis creates a new, empty file called notes.txt.\n\nNote: Windows users may need to use:\n\n\nbash echo.&gt; notes.txt\nor bash New-Item notes.txt\n(Depending on if you’re using PowerShell.)\n\n\n3.2.1 📝 Mini excercise: make a file\nNow, try the touch command out on your own by making a new file inside your new terminal_practice folder.\n\nMove into your new folder: run the command cd terminal_practice to move into your new folder.\nMake a new filer: Type and run the command touch terminal-file.txt.\nCheck your work: Run the ls command to list the files in your folder. You should see a single file listed in the Terminal response called terminal-file.txt.\n\n\nCopying Files and Folders (cp)\ncp notes.txt copy_of_notes.txt\nNow you have two files: the original and a copy.\n\n##Moving or Renaming Files (mv)**\nTo move (or rename) a file:\nmv notes.txt my_new_folder/\nThis moves notes.txt into the folder my_new_folder.\nIf you just want to rename a file:\nmv oldname.txt newname.txt\n\n##Deleting Files and Folders (rm)\nTo delete a file:\nrm copy_of_notes.txt\nCareful! When you delete something from the Terminal, it doesn’t go to the Trash — it’s gone.\nTo delete a folder and everything inside it:\nrm -r my_new_folder\nThe -r here is called a flag.\nIt stands for “recursive” — it tells rm to delete not just the folder, but also anything inside it.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html#youll-get-used-to-them-quickly",
+    "href": "terminal/02-making-files-folders.html#youll-get-used-to-them-quickly",
+    "title": "3  Making and managing folder",
+    "section": "4.1 You’ll get used to them quickly!",
+    "text": "4.1 You’ll get used to them quickly!",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html#hint-you-can-get-back-to-your-home-directory-by-running-cd",
+    "href": "terminal/02-making-files-folders.html#hint-you-can-get-back-to-your-home-directory-by-running-cd",
+    "title": "3  Making and managing folder",
+    "section": "3.2 Hint: you can get back to your home directory by running cd",
+    "text": "3.2 Hint: you can get back to your home directory by running cd",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   }
 ]

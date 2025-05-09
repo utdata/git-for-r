@@ -4,7 +4,11 @@ title: "Moving Around in the Terminal"
 
 Now that you know where you *are* (`pwd`), it's time to explore what's *around* you. Specifically, we'll start by moving between different folders on your computer.
 
+::: callout-note
+## Terminology note
+
 In the Terminal world, folders are usually called **directories**. (You’ll hear both words out in the world — they mean the same thing.)
+:::
 
 ------------------------------------------------------------------------
 

@@ -1,0 +1,130 @@
+---
+title: "Making and managing folder"
+---
+
+Now that you can move around the Terminal like a pro, it’s time to **create your own stuff**.
+
+In this chapter, we'll learn to make new folders and files. We'll also learn how to move or delete them.
+
+---
+
+## Creating a Folder (`mkdir`)
+
+Let's say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you'd do something like right click and hit `New Folder`, then you'd need to fill out your folder name in the prompt next to the new folder. 
+
+To do this from the command line, we do all of this in a single prompt using the `mkdir` command.
+
+>  `mkdir` stands for **make directory**.
+
+If you ran the following command (don't do this):
+
+``` bash 
+mkdir my_new_folder
+```
+
+This would create a folder called `my_new_folder` inside whatever directory you're inside in the Terminal.
+
+### 📝 Mini excercise: make a directory
+
+Now, try the `mkdir` command out on your own by making a new directory inside your home directory (`~`).
+
+1. Check you're in your home directory (Hint: you can get back to your home directory by running `cd`)
+1. Type and run: `mkdir terminal_practice` in your command prompt
+1. Run the `ls` command to make sure it worked, You should see your new directory listed in the Terminal response. 
+
+---
+
+## Creating a File (`touch`)
+
+Like folders, we can also make new files from the command line using the `touch` command. 
+
+> Unlike other commands we've learned, `touch` isn't shorthand for anything. It's just the name of the command to make a new, empty file in Bash 🤷‍♀️
+
+For example, if you ran the following command:
+
+``` bash
+touch notes.txt
+```
+
+This creates a new, empty file called `notes.txt`.
+
+> **Note:** Windows users may need to use:
+
+> ``` bash echo.> notes.txt```
+> 
+> or
+> ``` bash New-Item notes.txt```
+> 
+> (Depending on if you're using PowerShell.)
+
+### 📝 Mini excercise: make a file
+
+Now, try the `touch` command out on your own by making a new file inside your new `terminal_practice` folder.
+
+1. **Move into your new folder:** run the command `cd terminal_practice` to move into your new folder.
+1. **Make a new filer:** Type and run the command `touch terminal-file.txt`.
+1. **Check your work:** Run the `ls` command to list the files in your folder. You should see a single file listed in the Terminal response called `terminal-file.txt`. 
+
+---
+
+Copying Files and Folders (`cp`)
+
+`cp notes.txt copy_of_notes.txt`
+
+Now you have two files: the original and a copy.
+
+---
+
+##Moving or Renaming Files (`mv`)**
+
+To move (or rename) a file:
+
+`mv notes.txt my_new_folder/`
+
+This moves `notes.txt` into the folder `my_new_folder`.
+
+If you just want to **rename** a file:
+
+`mv oldname.txt newname.txt`
+
+---
+
+##Deleting Files and Folders (`rm`)
+
+To delete a file:
+
+`rm copy_of_notes.txt`
+
+**Careful!** When you delete something from the Terminal, it doesn't go to the Trash — it's gone.
+
+To delete a folder and everything inside it:
+
+`rm -r my_new_folder`
+
+The `-r` here is called a **flag**.  
+It stands for "**recursive**" — it tells `rm` to delete not just the folder, but also anything inside it.
+
+---
+
+# Quick Note About Flags 🏳️
+
+**Flags** are **extra options** you can add to commands to change how they behave.
+
+- They're usually a **dash** plus **one or two letters**.
+    
+- Example: `-r` means "recursive" for `rm`.
+    
+- You can combine flags too (like `-rf` for `rm -r -f`, meaning "recursive" and "force delete").
+    
+
+You'll see flags often, and they give you **more control** over what the command does.
+
+Examples:
+
+- `ls -l` → shows a detailed list.
+    
+- `cp -r folder1/ folder2/` → copies a folder and its contents.
+    
+
+You'll get used to them quickly!
+---
