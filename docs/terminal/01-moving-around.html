@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Welcome and launch – Git for R</title>
+<title>2&nbsp; Moving Around in the Terminal – Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../terminal/01-moving-around.html" rel="next">
+<link href="../terminal/00-introduction.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/00-introduction.html">Introduction</a></li><li class="breadcrumb-item"><a href="../terminal/00-introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/00-introduction.html">Introduction</a></li><li class="breadcrumb-item"><a href="../terminal/01-moving-around.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,14 +163,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../terminal/00-introduction.html" class="sidebar-item-text sidebar-link active">
+  <a href="../terminal/00-introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../terminal/01-moving-around.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2: Moving Around in the Terminal</span></span></a>
+  <a href="../terminal/01-moving-around.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,23 +248,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-the-terminal-anyway" id="toc-what-is-the-terminal-anyway" class="nav-link active" data-scroll-target="#what-is-the-terminal-anyway"><span class="header-section-number">1.1</span> What is the Terminal, Anyway?</a></li>
-  <li><a href="#speaking-the-terminals-language" id="toc-speaking-the-terminals-language" class="nav-link" data-scroll-target="#speaking-the-terminals-language"><span class="header-section-number">1.2</span> Speaking the Terminal’s language</a></li>
-  <li><a href="#how-to-open-the-terminal" id="toc-how-to-open-the-terminal" class="nav-link" data-scroll-target="#how-to-open-the-terminal"><span class="header-section-number">1.3</span> How to Open the Terminal</a></li>
-  <li><a href="#your-first-command-saying-hello-to-the-terminal" id="toc-your-first-command-saying-hello-to-the-terminal" class="nav-link" data-scroll-target="#your-first-command-saying-hello-to-the-terminal"><span class="header-section-number">1.4</span> Your First Command: Saying Hello to the Terminal</a>
-  <ul class="collapse">
-  <li><a href="#your-first-command-saying-hello-to-the-terminal-1" id="toc-your-first-command-saying-hello-to-the-terminal-1" class="nav-link" data-scroll-target="#your-first-command-saying-hello-to-the-terminal-1"><span class="header-section-number">1.4.1</span> Your First Command: Saying Hello to the Terminal</a></li>
-  </ul></li>
-  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">2</span> ✅ Checkpoint</a></li>
+  <li><a href="#whats-in-this-folder-ls" id="toc-whats-in-this-folder-ls" class="nav-link active" data-scroll-target="#whats-in-this-folder-ls"><span class="header-section-number">2.1</span> What’s in This Folder? (<code>ls</code>)</a></li>
+  <li><a href="#moving-around-cd" id="toc-moving-around-cd" class="nav-link" data-scroll-target="#moving-around-cd"><span class="header-section-number">2.2</span> Moving Around (<code>cd</code>)</a></li>
+  <li><a href="#how-can-you-tell-where-you-are-now-pwd" id="toc-how-can-you-tell-where-you-are-now-pwd" class="nav-link" data-scroll-target="#how-can-you-tell-where-you-are-now-pwd"><span class="header-section-number">2.3</span> How Can You Tell Where You Are Now? (<code>pwd</code>)</a></li>
+  <li><a href="#going-back-up-cd-.." id="toc-going-back-up-cd-.." class="nav-link" data-scroll-target="#going-back-up-cd-.."><span class="header-section-number">2.4</span> Going Back Up (<code>cd ..</code>)</a></li>
+  <li><a href="#extra-special-shortcuts" id="toc-extra-special-shortcuts" class="nav-link" data-scroll-target="#extra-special-shortcuts"><span class="header-section-number">2.5</span> Extra: Special Shortcuts</a></li>
+  <li><a href="#mini-exercise" id="toc-mini-exercise" class="nav-link" data-scroll-target="#mini-exercise"><span class="header-section-number">2.6</span> 📝 Mini Exercise</a></li>
+  <li><a href="#pro-tip-speed-up-with-tab-completion" id="toc-pro-tip-speed-up-with-tab-completion" class="nav-link" data-scroll-target="#pro-tip-speed-up-with-tab-completion"><span class="header-section-number">3</span> 🔥 Pro Tip: Speed Up with Tab Completion</a></li>
+  <li><a href="#chapter-recap" id="toc-chapter-recap" class="nav-link" data-scroll-target="#chapter-recap"><span class="header-section-number">4</span> 🎯 Chapter recap</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/00-introduction.html">Introduction</a></li><li class="breadcrumb-item"><a href="../terminal/00-introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/00-introduction.html">Introduction</a></li><li class="breadcrumb-item"><a href="../terminal/01-moving-around.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></h1>
 </div>
 
 
@@ -281,142 +281,147 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>First things first:</strong></p>
-<p>If you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.</p>
-<p>You don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.</p>
-<p>Time to enter the Matrix, Neo.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Digital_rain_animation_medium_letters_shine.gif" class="img-fluid figure-img"></p>
-<figcaption>Fun fact: the original design for the green “digital rain” animation used in the Matrix was based on scans of the creator’s wife’s Japanese cookbook.</figcaption>
-</figure>
-</div>
+<p>Now that you know where you <em>are</em> (<code>pwd</code>), it’s time to explore what’s <em>around</em> you. Specifically, we’ll start by moving between different folders on your computer.</p>
+<p>In the Terminal world, folders are usually called <strong>directories</strong>. (You’ll hear both words out in the world — they mean the same thing.)</p>
 <hr>
-<section id="what-is-the-terminal-anyway" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-the-terminal-anyway"><span class="header-section-number">1.1</span> What is the Terminal, Anyway?</h2>
-<p>Think of using the Terminal like dm’ing your computer.</p>
-<p>Instead of clicking buttons or opening folders with a mouse or trackpad, you type <strong>commands</strong> asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.</p>
-<p>The <strong>Terminal</strong> (on Mac) or <strong>Git Bash</strong> (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Terminology note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>People (including the authors of this guide) will use the term <strong>shell</strong> and <strong>terminal</strong> interchangeably. This means when we say “type into your shell” or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.</p>
-<p>Throughout this guide there will be several of these terminology notes to explain key terms – especially those used interchangeably – that may be confusing to new programmers. Knowing the language coders use frequently helps when reading documentation and when seeking help in online spaces like Stack Overflow.</p>
-</div>
-</div>
-<p>The Terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.</p>
-<p>Here’s just a few examples of what we can ask our computers to do using the Terminal:</p>
+<section id="whats-in-this-folder-ls" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="whats-in-this-folder-ls"><span class="header-section-number">2.1</span> What’s in This Folder? (<code>ls</code>)</h2>
+<p>If you want to <em>see</em> what’s inside the current directory, you use the <code>ls</code> command.</p>
+<p>As we said in Chapter 1, the Terminal lets you interact with files the same way you would with <strong>File Explorer</strong> on Windows and <strong>Finder</strong> on a Mac — except you’ll be using text instead of clicking.</p>
+<p>When your first launch terminal, you’ll see a <code>~</code> (called a tilde), which lets you know you’re in your base or home directory. We want to ask the Terminal to tell us what is inside this home directory.</p>
+<p>To do that, type the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and press <code>Enter</code> to run the command.</p>
+<p>Terminal will <em>respond</em> to your command with a list of files and folders like this:</p>
+<pre><code>_projects Desktop       Downloads   Movies      Pictures
+Documents   Library     Music       Public </code></pre>
+<p>Or it might be different depending on what’s in your computer’s home folder.</p>
+<p>In any case, the list of directories returned by Terminal will match the folders you would see if you clicked on your home directory in the Finder on a Mac or in File Explorer on a Windows machine. For example, the list of folders listed in the example response above matches what we see in our home directory using Finder below.</p>
+<p><img src="../images/home-directory.png" class="img-fluid" alt="An example of folders in a home directory on a Mac."><strong>Quick Recap: What does <code>ls</code> stand for?</strong></p>
 <ul>
-<li><p>List all the files in a folder</p></li>
-<li><p>Create a new folder</p></li>
-<li><p>Install programs</p></li>
-<li><p>Move files around</p></li>
-<li><p>Automate tasks</p></li>
+<li><p>It’s short for “<strong>list</strong>.”</p></li>
+<li><p>It literally says, “List what’s here.”</p></li>
 </ul>
-<p>We can do all of these things by typing just a few words. But to communicate effectively with our Terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.</p>
 <hr>
 </section>
-<section id="speaking-the-terminals-language" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="speaking-the-terminals-language"><span class="header-section-number">1.2</span> Speaking the Terminal’s language</h2>
-<p>The programming language we will use for our interactions in the Terminal is called <strong>Bash</strong>. Bash is a Unix-based program and most of the Internet runs on Unix (or Linux) computers.</p>
-<p>Macs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why Git and Git Bash were downloaded in the prerequisites – so we can all speak the same language, regardless of the machines we’re using.</p>
+<section id="moving-around-cd" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="moving-around-cd"><span class="header-section-number">2.2</span> Moving Around (<code>cd</code>)</h2>
+<p>Seeing what’s around is nice — but what if you want to <em>go into</em> one of those folders?</p>
+<p>Use the <code>cd</code> command, shorthand for “change directory”.</p>
+<p>Suppose you see a folder called <code>Documents</code>.</p>
+<p>To do so, type the following command in your Terminal:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Documents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and press <code>Enter</code>.</p>
+<p>Now you’re inside the <code>Documents</code> directory!</p>
 <hr>
 </section>
-<section id="how-to-open-the-terminal" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="how-to-open-the-terminal"><span class="header-section-number">1.3</span> How to Open the Terminal</h2>
-<p>First things first, we need to actually <em>open</em> the Terminal on our machines.</p>
-<p>Here’s how to find it on your computer:</p>
-<ul>
-<li><p><strong>Mac</strong>:<br>
-Press <code>Command + Space</code>, type <strong>Terminal</strong>, and hit <code>Enter</code>.</p></li>
-<li><p><strong>Windows</strong>:<br>
-Open the <strong>Start Menu</strong>, search for <strong>Terminal</strong> or <strong>PowerShell</strong>, and open it.<br>
-(There’s also something called “Command Prompt” — close enough for now.)</p></li>
-<li><p><strong>Linux</strong>:<br>
-Press <code>Ctrl + Alt + T</code> — it’s probably already installed!</p></li>
-</ul>
-<p><strong>Tip:</strong> If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)</p>
+<section id="how-can-you-tell-where-you-are-now-pwd" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="how-can-you-tell-where-you-are-now-pwd"><span class="header-section-number">2.3</span> How Can You Tell Where You Are Now? (<code>pwd</code>)</h2>
+<p>There are a couple ways to make sure you are where you <em>think</em> you are in the Terminal.</p>
+<p>The first is to look at the command prompt line inside your Terminal window again. You should see something like:</p>
+<p><code>Anas-MacBook-Air:Documents ana$</code></p>
+<p>In the current directory space (where there used to be a <code>~</code>), you should now see the name of the <code>Documents</code> folder. Remember if you’re ever unsure <em>where</em> you are, Terminal will tell you in the prompt!</p>
+<p>If you’re still not sure, remember you can use your new friend the <code>pwd</code> command from Chapter 1 by typing:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Terminal should now show something like:</p>
+<p><code>/Users/yourname/Documents</code></p>
+<p>or</p>
+<p><code>C:\Users\yourname\Documents</code></p>
+<p>Nice job — you just moved between directories!</p>
+<p>Now let’s try sending the <code>ls</code> command again by typing:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and hitting <code>Enter</code>.</p>
+<p>You should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your <code>Documents</code> folder.</p>
 <hr>
 </section>
-<section id="your-first-command-saying-hello-to-the-terminal" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="your-first-command-saying-hello-to-the-terminal"><span class="header-section-number">1.4</span> Your First Command: Saying Hello to the Terminal</h2>
-<p>Ok, now that the Terminal is open on your computer, let’s take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.</p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note for newer Mac users
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>When you launch the Terminal for the first time, you’ll probably see a prompt saying something like:</p>
-<pre><code>The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.</code></pre>
-<p><strong>DISREGARD THIS MESSAGE</strong>. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.</p>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/terminal_launch copy.png" class="img-fluid figure-img"></p>
-<figcaption>When you launch Terminal for the first time, you’ll see some text like this.</figcaption>
-</figure>
-</div>
-<p><strong>Let’s breakdown a few things from the screenshot above:</strong></p>
+<section id="going-back-up-cd-.." class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="going-back-up-cd-.."><span class="header-section-number">2.4</span> Going Back Up (<code>cd ..</code>)</h2>
+<p>Ok now that we’ve moved <em>into</em> folders, what if you want to go <em>back</em> to the folder you came from?</p>
+<p>To go back up, type and run the following command:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The two dots <code>..</code> simply mean “the folder above this one.”</p>
+<p>If you run the <code>pwd</code> command again, you’ll see you’re back to where you started!</p>
+<hr>
+</section>
+<section id="extra-special-shortcuts" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="extra-special-shortcuts"><span class="header-section-number">2.5</span> Extra: Special Shortcuts</h2>
+<p>Here are a few handy shortcuts you’ll want to remember:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>cd</code></td>
+<td>Go back to your <strong>home</strong> directory.</td>
+</tr>
+<tr class="even">
+<td><code>cd ..</code></td>
+<td>Move <strong>up one</strong> directory.</td>
+</tr>
+<tr class="odd">
+<td><code>cd foldername</code></td>
+<td>Move <strong>into</strong> a folder.</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>Tip:</strong> If the folder name has spaces (like <code>My Documents</code>), put it in quotes:</p>
+<p><code>cd "My Documents"</code></p>
+</blockquote>
+<p>Or use a backslash to “escape” the space:</p>
+<p><code>cd My\ Documents</code></p>
+<p>Like we mentioned before, Terminal is particular about the <em>way</em> you speak to it. For it to understand you, you’ve got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like <code>snake_case</code> or <code>kebab-case</code> will help you work more efficiently.</p>
+<hr>
+</section>
+<section id="mini-exercise" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="mini-exercise"><span class="header-section-number">2.6</span> 📝 Mini Exercise</h2>
+<p><strong>Own your own, try this:</strong></p>
 <ol type="1">
-<li>Computer name: the characters before the <code>~</code> are your computer name.</li>
-<li>Current directory: The <code>~</code> character is Terminal shorthand for your “base” directory on your computer. The value shown here will update as you move around to different folders on your computer.</li>
-<li>User name: The part immediatetely after the <code>~</code> is your username.</li>
-<li>Command prompt: Lastly we have the <code>$</code>. This is the “prompt” where you type commands.</li>
+<li><p>Open your Terminal.</p></li>
+<li><p>Type <code>pwd</code> to see where you are.</p></li>
+<li><p>Use <code>ls</code> to list what’s inside.</p></li>
+<li><p>Pick a folder you see (not your Documents folder).</p></li>
+<li><p><code>cd</code> into that folder.</p></li>
+<li><p>Use <code>pwd</code> again to check that you moved.</p></li>
+<li><p><code>cd ..</code> to come back up.</p></li>
 </ol>
-<p>You type your commands AFTER the <code>$</code> and then hit <code>Return</code>/<code>Enter</code> on your keyboard to run or <strong>execute</strong> them. We’ll practice doing just that in the next section.</p>
-<section id="your-first-command-saying-hello-to-the-terminal-1" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="your-first-command-saying-hello-to-the-terminal-1"><span class="header-section-number">1.4.1</span> Your First Command: Saying Hello to the Terminal</h3>
-<p>Let’s try your first real command: finding out <em>where</em> you are using the command <code>pwd</code>.</p>
-<p>In the Terminal prompt (remember after the <code>$)</code>, type the following command:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Then press <code>Enter</code> to <em>run</em> the command.</p>
-<p>You should see Terminal respond with something like this:</p>
-<p><code>/Users/yourname</code></p>
-<p>or this</p>
-<p><code>C:\Users\yourname</code></p>
-<p>Depending on your system, the path may look a little different — and that’s OK.</p>
-<p><strong>So what just happened?</strong></p>
-<ul>
-<li><p><code>pwd</code> stands for “<strong>print working directory</strong>.”</p></li>
-<li><p>It simply asks: <em>Where am I right now in the computer’s folder system?</em></p></li>
-<li><p>Your computer provides the answer: your current folder — usually your “home” directory when you first open the Terminal.</p></li>
-</ul>
+<p>Take your time. Play around.<br>
+If you get lost, just type:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>to jump back to your home directory.</p>
 <hr>
 </section>
-</section>
-<section id="checkpoint" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> ✅ Checkpoint</h1>
-<p>You’ve made it to the end of chapter 1. Good job!</p>
-<p><strong>You’ve now:</strong></p>
+<section id="pro-tip-speed-up-with-tab-completion" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 🔥 Pro Tip: Speed Up with Tab Completion</h1>
+<p>Ok, now that you’ve got some practice typing things into Terminal, we’ll let you in on a big time-saver: when you start typing a folder name, you don’t have to type the whole thing.</p>
+<p>Hit the <code>Tab</code> key after typing part of your folder name and the Terminal will <em>try</em> to <strong>auto-complete</strong> it for you.</p>
+<p>See it for yourself by typing:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>then press <code>Tab</code>.</p>
 <ul>
-<li><p>Opened the Terminal.</p></li>
-<li><p>Typed and ran your first command.</p></li>
-<li><p>Seen your computer respond back.</p></li>
+<li>If there’s a <code>Documents</code> folder, Terminal will fill in the rest automatically!</li>
 </ul>
-<p>You’re officially no longer a Terminal beginner. 🙌</p>
-<p><strong>A few quick Tips Before You Move On to the next chapter:</strong></p>
-<ol type="1">
-<li><strong>Command Case Matters in the Terminal</strong>: <code>pwd</code> is <em>not</em> the same as <code>PWD</code>.</li>
-<li><strong>Press Enter</strong>: Every command you type needs an <code>Enter</code> to run.</li>
-<li><strong>You can’t break things easily</strong>: Typing <code>pwd</code> won’t hurt your computer.<br>
-(In fact, almost everything we’ll do in this guide will be safe.)</li>
-</ol>
+<p>Huge time saver.</p>
+<p>Remember, you’ll still need to hit Enter to run the command and move into the Documents folder though.</p>
 <hr>
-<p>Next up, we’ll learn how to <em>move around</em> inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter: [[Terminal Chapter 2]]</p>
+</section>
+<section id="chapter-recap" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> 🎯 Chapter recap</h1>
+<p>Good job! In this chapter you’ve learned:</p>
+<ul>
+<li><p>How to see what’s inside a folder (<code>ls</code>)</p></li>
+<li><p>How to move into a folder (<code>cd foldername</code>)</p></li>
+<li><p>How to move back up (<code>cd ..</code>)</p></li>
+<li><p>How to use <code>Tab</code> to speed things up</p></li>
+</ul>
+<p>At this point you’ve started to learn some of the basics of “speaking” Bash.</p>
+<p><strong>Next up:</strong></p>
+<p>We’ll learn how to create your own files and folders in the Terminal.</p>
+<hr>
 
 
 </section>
@@ -823,11 +828,11 @@ To update your account to use zsh, please run `chsh -s /bin/zsh`.</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../terminal/00-introduction.html" class="pagination-link" aria-label="Welcome and launch">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../terminal/01-moving-around.html" class="pagination-link" aria-label="Chapter 2: Moving Around in the Terminal">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 2: Moving Around in the Terminal</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

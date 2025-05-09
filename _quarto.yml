@@ -14,6 +14,7 @@ book:
     - part: "Introduction"
       chapters:
       - terminal/00-introduction.qmd
+      - terminal/01-moving-around.qmd
     - part: "Intro to Git"
     - text: "---"
     - part: "Installation"

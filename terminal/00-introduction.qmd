@@ -1,4 +1,7 @@
-# Welcome to the Terminal
+---
+title: "Welcome and launch"
+---
+
 
 **First things first:**
 
