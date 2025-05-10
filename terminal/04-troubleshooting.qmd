@@ -1,0 +1,82 @@
+---
+title: "Troubleshooting"
+---
+
+In this final chapter, let's touch quickly on navigating common issues you might run into using the Terminal. 
+
+## Common pitfalls and errors
+
+Here's a quick rundown of the most common problems and errors you'll run into using the command line. Even experienced developers run into these issues, so learning what they mean will go a long way when troubleshooting.
+
+-   **Command not found?**
+    You might have a typo or the program isn’t installed.
+    
+-   **No such file or directory?**
+    You're trying to access a file/path that doesn't exist. Check that the file exists and that your spelled it correctly. 
+
+-   **Permission denied?**\
+    You tried to do something you don't have permission to do. Check your file/repo permissions. 
+    
+-   **Syntax error**               
+    You typed a command in a way the shell doesn't understand. Check that your syntax is correct and error-free.
+
+-   **Stuck in a weird app inside Terminal?**\
+    Try pressing `Ctrl + C` or `Ctrl + D` to exit.
+
+For more common issues and how to fix them, see the `common errors` table in the Glossary at the end of this guide.
+
+## How to Get Out of VIM
+
+Every new command line user shares one panic-inducing experience at one point or another: accidentally opening VIM and not knowing *how to get out of it*. 
+
+In this section, we'll briefly walk you through what VIM **is** and how to **exit it** so you don't panic when this (inevitably) happens to you.
+
+**What is VIM?**
+
+
+VIM is a text editor built into most Unix systems, including macOS and Linux. It's used by developers to edit code and configuration files, but it works very differently from regular text editors.
+
+If you accidentally open something in vim (for example, by running git commit without a message), it might look like you're stuck. But don’t worry — here’s how to exit safely.
+
+**How to Exit VIM**
+
+If you **don’t** want to save any changes - most common:
+
+1.  Press `Esc` (to make sure you're not in input mode)
+
+2.  Type `:q!` (to "quit and ignore changes")
+
+3.  Hit **`Enter`** / `return` (to exit)
+
+If You **do** want to save changes - less common:
+
+1.  Press `Esc`
+
+2.  Type `:wq` (to "write and quit").
+
+3.  Press `Enter` / `return`
+
+## 🎉 Final Words
+
+Congratulations! You've made it to the end of the Intro to Terminal guide. 
+
+You’ve now learned:
+
+-   How to open the Terminal
+
+-   How to move around
+
+-   How to create and manage files and folders
+
+-   How to read and use simple flags
+
+-   How to fix common mistakes
+
+You’ve built a *real foundation* for anything else you’ll learn later — whether that’s coding, scripting, data science, or just being more powerful with your own computer.
+
+**Remember: the Terminal is your friend.**\
+Keep practicing — the more you use it, the more natural it will feel.
+
+Good job! 🚀
+
+------------------------------------------------------------------------

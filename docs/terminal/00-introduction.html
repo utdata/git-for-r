@@ -179,6 +179,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminal/04-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminal/05-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Glossary: quick reference</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -198,13 +216,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/00-introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/01-install-and-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -221,25 +239,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/02-making-a-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/03-add-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/04-pushing-to-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/05-updating-your-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
   </div>
 </li>
       </ul>
@@ -290,6 +308,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>First things first:</strong></p>
 <p>If you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.</p>
 <p>You don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.</p>
+<p><strong>A few important things before you get started:</strong></p>
+<ol type="1">
+<li><strong>Type your commands:</strong> Getting used to writing in the command line is key to learning and remembering common commands. Though many of the code blocks in this books allow you to copy the code inside, please try to type it yourself (at least on the first try). You can always copy if you run into errors.</li>
+<li><strong>Mini exercises:</strong> There will be small exercises throughout this guide to reinforce learning and get you more comfortable working in the Terminal. Learning to code is largely done through <em>doing</em>, so we highly recommend you take the time to do them.</li>
+<li><strong>Terminology notes:</strong> Throughout this guide, there will be several callout boxes titled “terminology notes”. These callouts will be used to explain key terms – especially those used interchangeably – that may be confusing to new programmers. We recommend you take the time to read them because knowing the language coders use will help when reading documentation and when seeking help in online spaces like Stack Overflow.</li>
+</ol>
 <p>Time to enter the Matrix, Neo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -301,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-is-the-terminal-anyway" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="what-is-the-terminal-anyway"><span class="header-section-number">1.1</span> What is the Terminal, Anyway?</h2>
 <p>Think of using the Terminal like dm’ing your computer.</p>
-<p>Instead of clicking buttons or opening folders with a mouse or trackpad, you type <strong>commands</strong> asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.</p>
+<p>Instead of clicking buttons or opening folders with a mouse or trackpad, you type <strong>commands</strong> in the <strong>command line</strong> asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.</p>
 <p>The <strong>Terminal</strong> (on Mac) or <strong>Git Bash</strong> (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -313,8 +337,14 @@ Terminology note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>People (including the authors of this guide) will use the term <strong>shell</strong> and <strong>terminal</strong> interchangeably. This means when we say “type into your shell” or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.</p>
-<p>Throughout this guide there will be several of these terminology notes to explain key terms – especially those used interchangeably – that may be confusing to new programmers. Knowing the language coders use frequently helps when reading documentation and when seeking help in online spaces like Stack Overflow.</p>
+<p>People (including the authors of this guide) will use the term <strong>shell</strong> and <strong>terminal</strong> and <em>command line</em> interchangeably. This means when we say “type into your shell”, “in your command line”, or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.</p>
+<p>In reality, there are some nuances:</p>
+<ol type="1">
+<li>The <strong>terminal</strong> opens a window.</li>
+<li>Inside that, a <strong>shell</strong> runs.</li>
+<li>You interact with it through the <strong>command line</strong> interface.</li>
+</ol>
+<p>In practical terms, just know they usually mean the same thing out in the wild.</p>
 </div>
 </div>
 <p>The Terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.</p>

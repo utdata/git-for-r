@@ -2,12 +2,17 @@
 title: "Welcome and launch"
 ---
 
-
 **First things first:**
 
 If you've never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.
 
 You don’t need to memorize anything right now. You don’t need to be a "tech wizard." You just need a little curiosity.
+
+**A few important things before you get started:**
+
+1.  **Type your commands:** Getting used to writing in the command line is key to learning and remembering common commands. Though many of the code blocks in this books allow you to copy the code inside, please try to type it yourself (at least on the first try). You can always copy if you run into errors.
+2.  **Mini exercises:** There will be small exercises throughout this guide to reinforce learning and get you more comfortable working in the Terminal. Learning to code is largely done through *doing*, so we highly recommend you take the time to do them.
+3.  **Terminology notes:** Throughout this guide, there will be several callout boxes titled "terminology notes". These callouts will be used to explain key terms – especially those used interchangeably – that may be confusing to new programmers. We recommend you take the time to read them because knowing the language coders use will help when reading documentation and when seeking help in online spaces like Stack Overflow.
 
 Time to enter the Matrix, Neo.
 
@@ -19,16 +24,22 @@ Time to enter the Matrix, Neo.
 
 Think of using the Terminal like dm'ing your computer.
 
-Instead of clicking buttons or opening folders with a mouse or trackpad, you type **commands** asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.
+Instead of clicking buttons or opening folders with a mouse or trackpad, you type **commands** in the **command line** asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.
 
 The **Terminal** (on Mac) or **Git Bash** (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.
 
 ::: callout-note
 ## Terminology note
 
-People (including the authors of this guide) will use the term **shell** and **terminal** interchangeably. This means when we say “type into your shell” or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.
+People (including the authors of this guide) will use the term **shell** and **terminal** and *command line* interchangeably. This means when we say “type into your shell”, "in your command line", or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.
 
-Throughout this guide there will be several of these terminology notes to explain key terms – especially those used interchangeably – that may be confusing to new programmers. Knowing the language coders use frequently helps when reading documentation and when seeking help in online spaces like Stack Overflow.
+In reality, there are some nuances:
+
+1.  The **terminal** opens a window.
+2.  Inside that, a **shell** runs.
+3.  You interact with it through the **command line** interface.
+
+In practical terms, just know they usually mean the same thing out in the wild.
 :::
 
 The Terminal might look a little old-school (and let's be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.
@@ -153,9 +164,9 @@ You're officially no longer a Terminal beginner. 🙌
 
 **A few quick Tips Before You Move On to the next chapter:**
 
-1. **Command Case Matters in the Terminal**: `pwd` is *not* the same as `PWD`.
-1. **Press Enter**: Every command you type needs an `Enter` to run.
-1.  **You can’t break things easily**: Typing `pwd` won't hurt your computer.\
+1.  **Command Case Matters in the Terminal**: `pwd` is *not* the same as `PWD`.
+2.  **Press Enter**: Every command you type needs an `Enter` to run.
+3.  **You can’t break things easily**: Typing `pwd` won't hurt your computer.\
     (In fact, almost everything we’ll do in this guide will be safe.)
 
 ------------------------------------------------------------------------

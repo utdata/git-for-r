@@ -322,7 +322,7 @@
     "href": "terminal/00-introduction.html",
     "title": "1  Welcome and launch",
     "section": "",
-    "text": "1.1 What is the Terminal, Anyway?\nFirst things first:\nIf you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.\nYou don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.\nTime to enter the Matrix, Neo.\nThink of using the Terminal like dm’ing your computer.\nInstead of clicking buttons or opening folders with a mouse or trackpad, you type commands asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.\nThe Terminal (on Mac) or Git Bash (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.\nThe Terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.\nHere’s just a few examples of what we can ask our computers to do using the Terminal:\nWe can do all of these things by typing just a few words. But to communicate effectively with our Terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.",
+    "text": "1.1 What is the Terminal, Anyway?\nFirst things first:\nIf you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.\nYou don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.\nA few important things before you get started:\nTime to enter the Matrix, Neo.\nThink of using the Terminal like dm’ing your computer.\nInstead of clicking buttons or opening folders with a mouse or trackpad, you type commands in the command line asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.\nThe Terminal (on Mac) or Git Bash (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.\nThe Terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.\nHere’s just a few examples of what we can ask our computers to do using the Terminal:\nWe can do all of these things by typing just a few words. But to communicate effectively with our Terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
@@ -333,7 +333,7 @@
     "href": "terminal/00-introduction.html#what-is-the-terminal-anyway",
     "title": "1  Welcome and launch",
     "section": "",
-    "text": "Terminology note\n\n\n\nPeople (including the authors of this guide) will use the term shell and terminal interchangeably. This means when we say “type into your shell” or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.\nThroughout this guide there will be several of these terminology notes to explain key terms – especially those used interchangeably – that may be confusing to new programmers. Knowing the language coders use frequently helps when reading documentation and when seeking help in online spaces like Stack Overflow.\n\n\n\n\n\nList all the files in a folder\nCreate a new folder\nInstall programs\nMove files around\nAutomate tasks",
+    "text": "Terminology note\n\n\n\nPeople (including the authors of this guide) will use the term shell and terminal and command line interchangeably. This means when we say “type into your shell”, “in your command line”, or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.\nIn reality, there are some nuances:\n\nThe terminal opens a window.\nInside that, a shell runs.\nYou interact with it through the command line interface.\n\nIn practical terms, just know they usually mean the same thing out in the wild.\n\n\n\n\n\nList all the files in a folder\nCreate a new folder\nInstall programs\nMove files around\nAutomate tasks",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
@@ -645,6 +645,204 @@
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving Around in the Terminal</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/03-tips-tricks.html",
+    "href": "terminal/03-tips-tricks.html",
+    "title": "4  Command line tips and tricks",
+    "section": "",
+    "text": "4.1 Command History\nIn this brief chapter, we’ll touch on a few things that should help you work quicker in the Terminal. We’ll also touch on navigating common issues you’ll probably run into.\nThe command line keeps a history of the commands you give it. Much like scrolling back up through the messages in a conversation on your phone, you can “scroll up” through the conversation you’ve had with the Terminal (only withe Terminal, you’ll only see the messages you sent).\nHow to view your command history:\nTo see prior commands you’ve written, just press the up arrow ↑ on your keyboard. Each press will take you to the prior command in your history.\nTo get back to an empty prompt, scroll back down using the down arrow ↓\nYou can re-run any command that pops up simply by hitting the Enter / return key on your keyboard. No need to re-type things!\nWhy this is useful\nIn programming, we often repeat commands quite frequently (think about how often you re-run your notebook code in R-Studio, for example).\nHaving a command history is helpful because it:",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/03-tips-tricks.html#canceling-a-command",
+    "href": "terminal/03-tips-tricks.html#canceling-a-command",
+    "title": "4  Command line tips and tricks",
+    "section": "4.2 Canceling a Command",
+    "text": "4.2 Canceling a Command\nOne of the scariest things for new Terminal users happens when you run something you didn’t mean to.\nIf you realize you made a mistake while a command is running, press:\nCtrl + C\nThis cancels the running command and brings you back to the prompt.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/03-tips-tricks.html#tab-completion-again-because-its-that-good",
+    "href": "terminal/03-tips-tricks.html#tab-completion-again-because-its-that-good",
+    "title": "4  Command line tips and tricks",
+    "section": "4.3 Tab Completion (Again, Because It’s That Good)",
+    "text": "4.3 Tab Completion (Again, Because It’s That Good)\nRemember: start typing a folder or file name, press Tab, and Terminal finishes it for you if possible.\nSaves time and typos!",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/03-tips-tricks.html#installing-software",
+    "href": "terminal/03-tips-tricks.html#installing-software",
+    "title": "4  Command line tips and tricks",
+    "section": "4.4 Installing Software",
+    "text": "4.4 Installing Software\nLater on, you’ll learn about package managers that make installing programs super easy from the Terminal.\nFor now, just know these examples:\n\nMac: brew install something\nLinux: apt install something\nWindows: choco install something\n\n(We’ll leave installations for a future guide, so you don’t get overwhelmed.)",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/04-troubleshooting.html",
+    "href": "terminal/04-troubleshooting.html",
+    "title": "5  Troubleshooting",
+    "section": "",
+    "text": "5.1 Common pitfalls and errors\nIn this final chapter, let’s touch quickly on navigating common issues you might run into using the Terminal.\nHere’s a quick rundown of the most common problems and errors you’ll run into using the command line. Even experienced developers run into these issues, so learning what they mean will go a long way when troubleshooting.\nFor more common issues and how to fix them, see the common errors table in the Glossary at the end of this guide.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/04-troubleshooting.html#how-to-get-out-of-vim",
+    "href": "terminal/04-troubleshooting.html#how-to-get-out-of-vim",
+    "title": "5  Troubleshooting",
+    "section": "5.2 How to Get Out of VIM",
+    "text": "5.2 How to Get Out of VIM\nEvery new command line user shares one panic-inducing experience at one point or another: accidentally opening VIM and not knowing how to get out of it.\nIn this section, we’ll briefly walk you through what VIM is and how to exit it so you don’t panic when this (inevitably) happens to you.\nWhat is VIM?\nVIM is a text editor built into most Unix systems, including macOS and Linux. It’s used by developers to edit code and configuration files, but it works very differently from regular text editors.\nIf you accidentally open something in vim (for example, by running git commit without a message), it might look like you’re stuck. But don’t worry — here’s how to exit safely.\nHow to Exit VIM\nIf you don’t want to save any changes - most common:\n\nPress Esc (to make sure you’re not in input mode)\nType :q! (to “quit and ignore changes”)\nHit Enter / return (to exit)\n\nIf You do want to save changes - less common:\n\nPress Esc\nType :wq (to “write and quit”).\nPress Enter / return",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/03-tips-tricks.html#command-history",
+    "href": "terminal/03-tips-tricks.html#command-history",
+    "title": "4  Command line tips and tricks",
+    "section": "",
+    "text": "Saves time – You can quickly repeat or modify previous commands with the ↑ key instead of retyping them.\nReduces mistakes – Reusing known-good commands lowers the chance of typos or syntax errors.\nAids learning – You can review what you’ve done, which helps you remember your steps and can help with troubleshooting if something goes wrong.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/03-tips-tricks.html#tab-completion",
+    "href": "terminal/03-tips-tricks.html#tab-completion",
+    "title": "4  Command line tips and tricks",
+    "section": "4.3 Tab Completion",
+    "text": "4.3 Tab Completion\nYou read about this in Chapter 2, but it’s worth mentioning again because it’s that good.\nRemember: start typing a folder or file name, press Tab, and Terminal finishes it for you if possible.\nSaves time and typos!\nIf there’s more than one similarly-named files in your folder, you may have to type more characters to get to the one you want.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/04-troubleshooting.html#common-pitfalls-and-errors",
+    "href": "terminal/04-troubleshooting.html#common-pitfalls-and-errors",
+    "title": "5  Troubleshooting",
+    "section": "",
+    "text": "Command not found? You might have a typo or the program isn’t installed.\nNo such file or directory? You’re trying to access a file/path that doesn’t exist. Check that the file exists and that your spelled it correctly.\nPermission denied?\nYou tried to do something you don’t have permission to do. Check your file/repo permissions.\nSyntax error\nYou typed a command in a way the shell doesn’t understand. Check that your syntax is correct and error-free.\nStuck in a weird app inside Terminal?\nTry pressing Ctrl + C or Ctrl + D to exit.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/05-glossary.html",
+    "href": "terminal/05-glossary.html",
+    "title": "6  Glossary: quick reference",
+    "section": "",
+    "text": "6.1 Terminology",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/05-glossary.html#troubleshooting-common-errors",
+    "href": "terminal/05-glossary.html#troubleshooting-common-errors",
+    "title": "6  Cheat sheets",
+    "section": "",
+    "text": "❌ Error\n📖 What It Means\n💡 Fix\n\n\n\n\ncommand not found\nYou typed a command the shell doesn’t recognize\nCheck for typos or whether the tool is installed\n\n\nNo such file or directory\nYou’re trying to access a file/path that doesn’t exist\nUse ls to explore and make sure the path is correct\n\n\nPermission denied\nYou tried to do something you don’t have permission for\nUse sudo (if appropriate), or check file permissions\n\n\nIs a directory\nYou tried to treat a directory like a file\nDouble-check what kind of thing you’re trying to use\n\n\nNot a directory\nYou tried to treat a file like a folder\nUse ls -l to see what’s a file vs folder\n\n\nSyntax error\nYou typed a command in a way the shell can’t parse\nReview the correct syntax, especially quotes or flags\n\n\nKilled or Terminated\nThe OS stopped a program (often for high memory/CPU usage)\nTry a smaller task or check system limits\n\n\nGetting stuck in VIM\nYou opened something in vim and can’t exit\nPress Esc, then :q!, then Enter to quit",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cheat sheets</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/05-glossary.html#common-errors",
+    "href": "terminal/05-glossary.html#common-errors",
+    "title": "6  Glossary: quick reference",
+    "section": "6.3 Common errors",
+    "text": "6.3 Common errors\n\n\n\n\n\n\n\n\n❌ Error\n📖 What It Means\n💡 Fix\n\n\n\n\ncommand not found\nYou typed a command the shell doesn’t recognize\nCheck for typos or whether the tool is installed\n\n\nNo such file or directory\nYou’re trying to access a file/path that doesn’t exist\nUse ls to explore and make sure the path is correct\n\n\nPermission denied\nYou tried to do something you don’t have permission for\nUse sudo (if appropriate), or check file permissions\n\n\nIs a directory\nYou tried to treat a directory like a file\nDouble-check what kind of thing you’re trying to use\n\n\nNot a directory\nYou tried to treat a file like a folder\nUse ls -l to see what’s a file vs folder\n\n\nSyntax error\nYou typed a command in a way the shell can’t parse\nReview the correct syntax, especially quotes or flags\n\n\nKilled or Terminated\nThe OS stopped a program (often for high memory/CPU usage)\nTry a smaller task or check system limits\n\n\nGetting stuck in VIM\nYou opened something in vim and can’t exit\nPress Esc, then :q!, then Enter to quit",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/04-troubleshooting.html#final-words",
+    "href": "terminal/04-troubleshooting.html#final-words",
+    "title": "5  Troubleshooting",
+    "section": "5.3 🎉 Final Words",
+    "text": "5.3 🎉 Final Words\nCongratulations! You’ve made it to the end of the Intro to Terminal guide.\nYou’ve now learned:\n\nHow to open the Terminal\nHow to move around\nHow to create and manage files and folders\nHow to read and use simple flags\nHow to fix common mistakes\n\nYou’ve built a real foundation for anything else you’ll learn later — whether that’s coding, scripting, data science, or just being more powerful with your own computer.\nRemember: the Terminal is your friend.\nKeep practicing — the more you use it, the more natural it will feel.\nGood job! 🚀",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/05-glossary.html#command-line-cheat-sheet",
+    "href": "terminal/05-glossary.html#command-line-cheat-sheet",
+    "title": "6  Glossary: quick reference",
+    "section": "",
+    "text": "Term\nMeaning\n\n\n\n\nTerminal\nText-based way to control your computer\n\n\nDirectory (Folder)\nA container for files\n\n\nPath\nThe location of a file or folder\n\n\nFlag\nExtra option for a command\n\n\npwd\nShow current directory (path)\n\n\nls\nList files and folders\n\n\nls -l\nList with detailed info\n\n\ncd foldername\nChange into a folder\n\n\ncd ..\nMove up one folder\n\n\nmkdir name\nMake a new folder\n\n\ntouch name.txt\nCreate a blank file\n\n\ncp old new\nCopy a file\n\n\nmv old new\nMove or rename a file\n\n\nrm file\nDelete a file\n\n\nrm -r folder\nDelete a folder and its contents\n\n\nCtrl + C\nCancel a running command\n\n\nTab\nAutocomplete file/folder names",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/05-glossary.html#reference",
+    "href": "terminal/05-glossary.html#reference",
+    "title": "6  Glossary: quick reference",
+    "section": "",
+    "text": "Term\nMeaning\n\n\n\n\nTerminal\nText-based way to control your computer\n\n\nDirectory (Folder)\nA container for files\n\n\nPath\nThe location of a file or folder\n\n\nFlag\nExtra option for a command\n\n\npwd\nShow current directory (path)\n\n\nls\nList files and folders\n\n\nls -l\nList with detailed info\n\n\ncd foldername\nChange into a folder\n\n\ncd ..\nMove up one folder\n\n\nmkdir name\nMake a new folder\n\n\ntouch name.txt\nCreate a blank file\n\n\ncp old new\nCopy a file\n\n\nmv old new\nMove or rename a file\n\n\nrm file\nDelete a file\n\n\nrm -r folder\nDelete a folder and its contents\n\n\nCtrl + C\nCancel a running command\n\n\nTab\nAutocomplete file/folder names",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/05-glossary.html#terminology-reference",
+    "href": "terminal/05-glossary.html#terminology-reference",
+    "title": "6  Glossary: quick reference",
+    "section": "",
+    "text": "📓 Term\n📖 What It Means\n\n\n\n\nTerminal\nText-based way to control your computer\n\n\nDirectory (Folder)\nA container for files\n\n\nPath\nThe location of a file or folder\n\n\nFlag\nExtra option for a command",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/05-glossary.html#common-commands",
+    "href": "terminal/05-glossary.html#common-commands",
+    "title": "6  Glossary: quick reference",
+    "section": "6.2 Common commands",
+    "text": "6.2 Common commands\n\n\n\n📝 Command\n️💬 Action\n\n\n\n\npwd\nShow current directory (path)\n\n\nls\nList files and folders\n\n\nls -l\nList with detailed info\n\n\ncd foldername\nChange into a folder\n\n\ncd ..\nMove up one folder\n\n\nmkdir name\nMake a new folder\n\n\ntouch name.txt\nCreate a blank file\n\n\ncp old new\nCopy a file\n\n\nmv old new\nMove or rename a file\n\n\nrm file\nDelete a file\n\n\nrm -r folder\nDelete a folder and its contents\n\n\nCtrl + C\nCancel a running command\n\n\nTab\nAutocomplete file/folder names",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/05-glossary.html#terminology",
+    "href": "terminal/05-glossary.html#terminology",
+    "title": "6  Glossary: quick reference",
+    "section": "",
+    "text": "📓 Term\n📖 What It Means\n\n\n\n\nCommand line\nThe interface where you type and run text commands\n\n\nShell\nThe program that interprets your commands and runs them (e.g. bash, zsh)\n\n\nTerminal\nThe user interface that displays the shell and lets you interact with it. Examples: Terminal (Mac), Git Bash (Windows)\n\n\nDirectory (Folder)\nA container for files\n\n\nPath\nThe location of a file or folder\n\n\nFlag\nExtra option for a command",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
     ]
   }
 ]

@@ -17,6 +17,8 @@ book:
       - terminal/01-moving-around.qmd
       - terminal/02-making-files-folders.qmd
       - terminal/03-tips-tricks.qmd
+      - terminal/04-troubleshooting.qmd
+      - terminal/05-glossary.qmd
     - part: "Intro to Git"
     - text: "---"
     - part: "Installation"
