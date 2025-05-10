@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Command line tips and tricks – Git for R</title>
+<title>9&nbsp; Installation and setup – Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../terminal/04-troubleshooting.html" rel="next">
-<link href="../terminal/02-making-files-folders.html" rel="prev">
+<link href="../intro-to-git/03-making-a-repo.html" rel="next">
+<link href="../intro-to-git/01-introduction-to-git.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html">Part 3: Tips, tricks, troubleshooting</a></li><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/00-introduction.html">Installation</a></li><li class="breadcrumb-item"><a href="../intro-to-git/02-install-and-setup.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Installation and setup</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -169,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link active">
+  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
   </div>
 </li>
@@ -216,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro-to-git/02-install-and-setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro-to-git/02-install-and-setup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
@@ -233,14 +268,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro-to-git/03-make-git-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Make our Git project</span></span></a>
+  <a href="../intro-to-git/03-making-a-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/04-add-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,19 +302,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#command-history" id="toc-command-history" class="nav-link active" data-scroll-target="#command-history"><span class="header-section-number">4.1</span> Command History</a></li>
-  <li><a href="#canceling-a-command" id="toc-canceling-a-command" class="nav-link" data-scroll-target="#canceling-a-command"><span class="header-section-number">4.2</span> Canceling a Command</a></li>
-  <li><a href="#tab-completion" id="toc-tab-completion" class="nav-link" data-scroll-target="#tab-completion"><span class="header-section-number">4.3</span> Tab Completion</a></li>
-  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">4.4</span> 🎯 Checkpoint</a></li>
+  <li><a href="#step-1-install-the-tools" id="toc-step-1-install-the-tools" class="nav-link active" data-scroll-target="#step-1-install-the-tools"><span class="header-section-number">9.1</span> Step 1: Install the Tools</a></li>
+  <li><a href="#step-2-set-up-git-in-the-terminal" id="toc-step-2-set-up-git-in-the-terminal" class="nav-link" data-scroll-target="#step-2-set-up-git-in-the-terminal"><span class="header-section-number">9.2</span> Step 2: Set Up Git in the Terminal</a></li>
+  <li><a href="#mini-exercise-confirm-your-git-setup" id="toc-mini-exercise-confirm-your-git-setup" class="nav-link" data-scroll-target="#mini-exercise-confirm-your-git-setup"><span class="header-section-number">9.3</span> 📝 Mini exercise: Confirm Your Git Setup</a></li>
+  <li><a href="#what-do-these-flags-mean" id="toc-what-do-these-flags-mean" class="nav-link" data-scroll-target="#what-do-these-flags-mean"><span class="header-section-number">9.4</span> 🧠 What Do These Flags Mean?</a></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">9.5</span> 🎯 Checkpoint</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html">Part 3: Tips, tricks, troubleshooting</a></li><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/00-introduction.html">Installation</a></li><li class="breadcrumb-item"><a href="../intro-to-git/02-install-and-setup.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Installation and setup</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Installation and setup</span></h1>
 </div>
 
 
@@ -296,48 +332,115 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In this brief chapter, we’ll touch on a few things that should help you work quicker in the Terminal. We’ll also touch on navigating common issues you’ll probably run into.</p>
-<section id="command-history" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="command-history"><span class="header-section-number">4.1</span> Command History</h2>
-<p>The command line keeps a history of the commands you give it. Much like scrolling back up through the messages in a conversation on your phone, you can “scroll up” through the conversation you’ve had with the Terminal (only withe Terminal, you’ll only see the messages <em>you</em> sent).</p>
-<p><strong>How to view your command history:</strong></p>
-<p>To see prior commands you’ve written, just press the <strong>up arrow</strong> <code>↑</code> on your keyboard. Each press will take you to the prior command in your history.</p>
-<p>To get back to an empty prompt, scroll back down using the <strong>down arrow</strong> <code>↓</code></p>
-<p>You can re-run any command that pops up simply by hitting the <code>Enter</code> / <code>return</code> key on your keyboard. No need to re-type things!</p>
-<p><strong>Why this is useful</strong></p>
-<p>In programming, we often repeat commands quite frequently (think about how often you re-run your notebook code in R-Studio, for example).</p>
-<p>Having a command history is helpful because it:</p>
-<ul>
-<li><p><strong>Saves time</strong> – You can quickly repeat or modify previous commands with the ↑ key instead of retyping them.</p></li>
-<li><p><strong>Reduces mistakes</strong> – Reusing known-good commands lowers the chance of typos or syntax errors.</p></li>
-<li><p><strong>Aids learning</strong> – You can review what you’ve done, which helps you remember your steps and can help with troubleshooting if something goes wrong.</p></li>
-</ul>
-</section>
-<section id="canceling-a-command" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="canceling-a-command"><span class="header-section-number">4.2</span> Canceling a Command</h2>
-<p>One of the scariest things for new Terminal users happens when you run something you didn’t mean to.</p>
-<p>If you realize you made a mistake while a command is <strong>running</strong>, press:</p>
-<p><code>Ctrl + C</code></p>
-<p>This <strong>cancels</strong> the running command and brings you back to the prompt.</p>
-</section>
-<section id="tab-completion" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="tab-completion"><span class="header-section-number">4.3</span> Tab Completion</h2>
-<p>You read about this in Chapter 2, but it’s worth mentioning again because it’s that good.</p>
-<p>Remember: start typing a folder or file name, press <code>Tab</code>, and Terminal finishes it for you if possible.</p>
-<p>Saves time and typos!</p>
-<p>If there’s more than one similarly-named files in your folder, you may have to type more characters to get to the one you want.</p>
-</section>
-<section id="checkpoint" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">4.4</span> 🎯 Checkpoint</h2>
-<p>In this chapter you’ve learned:</p>
-<ul>
-<li>How to view your command history</li>
-<li>How to cancel a command</li>
-<li>How to use tab to auto-complete file and folder names</li>
-</ul>
+<blockquote class="blockquote">
+<p>🎯 Goal: By the end of this chapter, you’ll have Git and GitHub set up and be ready to create a version-controlled project in RStudio.</p>
+</blockquote>
+<section id="step-1-install-the-tools" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="step-1-install-the-tools"><span class="header-section-number">9.1</span> Step 1: Install the Tools</h2>
+<p>Before we can get started, we’ll need to make sure that our computers (often referred to as our <strong>local machines)</strong> are set up correctly. Let’s do that by completing the following steps:</p>
+<ol type="1">
+<li><p><strong>Install Git</strong></p>
+<ol type="1">
+<li>Go to: <a href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a></li>
+<li>Download and install Git</li>
+<li>Default install settings are fine</li>
+</ol></li>
+<li><p><strong>Sign up for a Github account:</strong></p>
+<ol type="1">
+<li>Go to: <a href="https://github.com" class="uri">https://github.com</a></li>
+<li>Click <strong>Sign up</strong></li>
+<li>Choose a username and email you’ll remember (you’ll use this in Git config)</li>
+</ol></li>
+</ol>
 <hr>
-<p><strong>Next up:</strong></p>
-<p>We’ll learn how about some common command line issues and how troubleshoot when you run into them.</p>
+</section>
+<section id="step-2-set-up-git-in-the-terminal" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="step-2-set-up-git-in-the-terminal"><span class="header-section-number">9.2</span> Step 2: Set Up Git in the Terminal</h2>
+<p>After installing Git, you’ll need to configure it with your <strong>username</strong> and <strong>email</strong>.</p>
+<ul>
+<li><p><strong>Git usernames:</strong> Usernames are what git uses to associate your work with <em>your identity</em>.</p></li>
+<li><p><strong>Git email:</strong> The email you used to setup your Github account.</p></li>
+</ul>
+<p><strong>Step 1: Start a new Terminal session in RStudio</strong></p>
+<p>Click on the <strong>Terminal</strong> tab and a new session will be created (if there isn’t one already). The Terminal tab is located next to the Console tab.</p>
+<ul>
+<li>Tip: If can’t find the Terminal tab, go to <code>Tools &gt; Terminal &gt; Move Focus to Terminal</code> .</li>
+</ul>
+<p><strong>Step 2: Set your Git username</strong></p>
+<p>Run the following command from your Terminal, replacing “Your Name” with the username you’d like to use (including the quotation marks):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Check to see if you successfully set your name by running:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config user.name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You should see a Terminal response message with the username you entered. If you didn’t get the response expected, then try again. Remember, be careful about punctuation.</p>
+<p>Once you have your username set properly, we’ll set your email.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember, the username you set here will be <strong>visible</strong> (<em>read: public</em>) in any future commits you push to GitHub. If you choose to use a nickname or alias instead of your real name, keep it professional enough that you wouldn’t mind a future employer or colleague seeing it if you needed to share your work.</p>
+</div>
+</div>
+<p><strong>Step 3: Setting your git email</strong></p>
+<p>The email you enter needs to <strong>match the one you used to setup your Github account.</strong> If it doesn’t, you’ll run into permissions issues later.</p>
+<p>Set your user email by running the following command, replacing “your.email@example.com” with your Github email (including the quotation marks):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your git email should be the same as the one you use on GitHub so your commits will be linked correctly</p>
+</div>
+</div>
+</section>
+<section id="mini-exercise-confirm-your-git-setup" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="mini-exercise-confirm-your-git-setup"><span class="header-section-number">9.3</span> 📝 Mini exercise: Confirm Your Git Setup</h2>
+<p>In RStudio’s Terminal tab, type and execute the following command:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You should see something like:</p>
+<pre><code>git version 2.42.0</code></pre>
+<p>Then check your Git config:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Look for your name and email in the list. If you see them, you’re all set! ✅</p>
+<p>If not, go back and run:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Run <code>git config --list</code> and make sure both of these are correct before moving on.</p>
+</section>
+<section id="what-do-these-flags-mean" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="what-do-these-flags-mean"><span class="header-section-number">9.4</span> 🧠 What Do These Flags Mean?</h2>
+<p>Let’s break down some of the options you’ve used:</p>
+<ul>
+<li><p><code>--global</code>: This means “apply this setting for all projects on my computer.”<br>
+You usually only need to set your name and email globally once.</p></li>
+<li><p><code>--list</code>: This tells Git to “show me my current configuration.”</p></li>
+</ul>
+</section>
+<section id="checkpoint" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">9.5</span> 🎯 Checkpoint</h2>
+<p>In this chapter you:</p>
+<ul>
+<li>Downloaded Git</li>
+<li>Setup your Github account</li>
+<li>Set your Git username (with an appropriate name or alias)</li>
+<li>Set your Git email (using the email on your account Github account)</li>
+</ul>
+<p>Now that Git is configured, you’re ready to create your first project.</p>
+<hr>
+<p><strong>Next up</strong></p>
+<p>In the next chapter, we’ll walk you through creating a new Quarto project with Git tracking from the start using the terminal.</p>
 
 
 </section>
@@ -744,13 +847,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../terminal/02-making-files-folders.html" class="pagination-link" aria-label="Making and managing folder">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span>
+      <a href="../intro-to-git/01-introduction-to-git.html" class="pagination-link" aria-label="Introduction to version control">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to version control</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../terminal/04-troubleshooting.html" class="pagination-link" aria-label="Troubleshooting">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../intro-to-git/03-making-a-repo.html" class="pagination-link" aria-label="Making a repository">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Making a repository</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

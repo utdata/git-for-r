@@ -180,6 +180,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminal/04-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminal/05-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Glossary: quick reference</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -199,13 +217,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/00-introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/01-install-and-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -222,25 +240,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/02-making-a-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/03-add-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/04-pushing-to-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/05-updating-your-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
   </div>
 </li>
       </ul>
@@ -302,7 +320,6 @@ Terminology note
 <p>In the Terminal world, folders are usually called <strong>directories</strong>. (You’ll hear both words out in the world — they mean the same thing.)</p>
 </div>
 </div>
-<hr>
 <section id="whats-in-this-folder-ls" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="whats-in-this-folder-ls"><span class="header-section-number">2.1</span> What’s in This Folder? (<code>ls</code>)</h2>
 <p>If you want to <em>see</em> what’s inside the current directory, you use the <code>ls</code> command.</p>
@@ -321,7 +338,6 @@ Documents   Library     Music       Public </code></pre>
 <li><p>It’s short for “<strong>list</strong>.”</p></li>
 <li><p>It literally says, “List what’s here.”</p></li>
 </ul>
-<hr>
 </section>
 <section id="moving-around-cd" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="moving-around-cd"><span class="header-section-number">2.2</span> Moving Around (<code>cd</code>)</h2>
@@ -332,7 +348,6 @@ Documents   Library     Music       Public </code></pre>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Documents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and press <code>Enter</code>.</p>
 <p>Now you’re inside the <code>Documents</code> directory!</p>
-<hr>
 </section>
 <section id="how-can-you-tell-where-you-are-now-pwd" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="how-can-you-tell-where-you-are-now-pwd"><span class="header-section-number">2.3</span> How Can You Tell Where You Are Now? (<code>pwd</code>)</h2>
@@ -351,7 +366,6 @@ Documents   Library     Music       Public </code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and hitting <code>Enter</code>.</p>
 <p>You should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your <code>Documents</code> folder.</p>
-<hr>
 </section>
 <section id="going-back-up-cd-.." class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="going-back-up-cd-.."><span class="header-section-number">2.4</span> Going Back Up (<code>cd ..</code>)</h2>
@@ -360,7 +374,6 @@ Documents   Library     Music       Public </code></pre>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The two dots <code>..</code> simply mean “the folder above this one.”</p>
 <p>If you run the <code>pwd</code> command again, you’ll see you’re back to where you started!</p>
-<hr>
 </section>
 <section id="extra-special-shortcuts" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="extra-special-shortcuts"><span class="header-section-number">2.5</span> Extra: Special Shortcuts</h2>
@@ -394,7 +407,6 @@ Documents   Library     Music       Public </code></pre>
 <p>Or use a backslash to “escape” the space:</p>
 <p><code>cd My\ Documents</code></p>
 <p>Like we mentioned before, Terminal is particular about the <em>way</em> you speak to it. For it to understand you, you’ve got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like <code>snake_case</code> or <code>kebab-case</code> will help you work more efficiently.</p>
-<hr>
 </section>
 <section id="mini-exercise" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="mini-exercise"><span class="header-section-number">2.6</span> 📝 Mini Exercise</h2>
@@ -412,7 +424,6 @@ Documents   Library     Music       Public </code></pre>
 If you get lost, just type:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>to jump back to your home directory.</p>
-<hr>
 </section>
 <section id="pro-tip-speed-up-with-tab-completion" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="pro-tip-speed-up-with-tab-completion"><span class="header-section-number">2.7</span> 🔥 Pro Tip: Speed Up with Tab Completion</h2>
@@ -426,7 +437,6 @@ If you get lost, just type:</p>
 </ul>
 <p>Huge time saver.</p>
 <p>Remember, you’ll still need to hit Enter to run the command and move into the Documents folder though.</p>
-<hr>
 </section>
 <section id="checkpoint" class="level2" data-number="2.8">
 <h2 data-number="2.8" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">2.8</span> 🎯 Checkpoint</h2>
@@ -438,9 +448,9 @@ If you get lost, just type:</p>
 <li><p>How to use <code>Tab</code> to speed things up</p></li>
 </ul>
 <p>At this point you’ve started to learn some of the basics of “speaking” Bash.</p>
+<hr>
 <p><strong>Next up:</strong></p>
 <p>We’ll learn how to create your own files and folders in the Terminal.</p>
-<hr>
 
 
 </section>

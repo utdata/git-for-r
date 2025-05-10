@@ -4,7 +4,7 @@ title: "Command line tips and tricks"
 
 In this brief chapter, we'll touch on a few things that should help you work quicker in the Terminal. We'll also touch on navigating common issues you'll probably run into.
 
-## **Command History**
+## Command History
 
 The command line keeps a history of the commands you give it. Much like scrolling back up through the messages in a conversation on your phone, you can "scroll up" through the conversation you've had with the Terminal (only withe Terminal, you'll only see the messages *you* sent).
 
@@ -28,9 +28,8 @@ Having a command history is helpful because it:
 
 -   **Aids learning** – You can review what you've done, which helps you remember your steps and can help with troubleshooting if something goes wrong.
 
-------------------------------------------------------------------------
 
-## **Canceling a Command**
+## Canceling a Command
 
 One of the scariest things for new Terminal users happens when you run something you didn't mean to.
 
@@ -40,75 +39,27 @@ If you realize you made a mistake while a command is **running**, press:
 
 This **cancels** the running command and brings you back to the prompt.
 
-------------------------------------------------------------------------
 
-## **Tab Completion**
+## Tab Completion
 
 You read about this in Chapter 2, but it's worth mentioning again because it's that good.
 
-Remember: start typing a folder or file name, press `Tab`, and Terminal finishes it for you if possible.\
+Remember: start typing a folder or file name, press `Tab`, and Terminal finishes it for you if possible.
+
 Saves time and typos!
 
 If there's more than one similarly-named files in your folder, you may have to type more characters to get to the one you want.
 
-------------------------------------------------------------------------
+## 🎯 Checkpoint
 
-# **Chapter 5: Common Pitfalls and How to Recover**
+In this chapter you've learned:
 
--   **Command not found?**\
-    You might have a typo or the program isn’t installed.
+- How to view your command history
+- How to cancel a command 
+- How to use tab to auto-complete file and folder names
 
--   **Permission denied?**\
-    You might need to add `sudo` before your command (but **be careful** — `sudo` gives superpowers that can break things).
+---
 
--   **Stuck in a weird app inside Terminal?**\
-    Try pressing `Ctrl + C` or `Ctrl + D` to exit.
+**Next up:**
 
-------------------------------------------------------------------------
-
-# **Glossary and Quick Reference 📚**
-
-| Term               | Meaning                                 |
-|--------------------|-----------------------------------------|
-| Terminal           | Text-based way to control your computer |
-| Directory (Folder) | A container for files                   |
-| Path               | The location of a file or folder        |
-| Flag               | Extra option for a command              |
-| `pwd`              | Show current directory (path)           |
-| `ls`               | List files and folders                  |
-| `ls -l`            | List with detailed info                 |
-| `cd foldername`    | Change into a folder                    |
-| `cd ..`            | Move up one folder                      |
-| `mkdir name`       | Make a new folder                       |
-| `touch name.txt`   | Create a blank file                     |
-| `cp old new`       | Copy a file                             |
-| `mv old new`       | Move or rename a file                   |
-| `rm file`          | Delete a file                           |
-| `rm -r folder`     | Delete a folder and its contents        |
-| `Ctrl + C`         | Cancel a running command                |
-| Tab                | Autocomplete file/folder names          |
-
-------------------------------------------------------------------------
-
-# 🎉 **Final Words**
-
-You’ve now learned:
-
--   How to open the Terminal
-
--   How to move around
-
--   How to create and manage files and folders
-
--   How to read and use simple flags
-
--   How to fix common mistakes
-
-You’ve built a *real foundation* for anything else you’ll learn later — whether that’s coding, scripting, data science, cybersecurity, or just being more powerful with your own computer.
-
-**The Terminal is your friend.**\
-Keep practicing — the more you use it, the more natural it will feel.
-
-Good job! 🚀
-
-------------------------------------------------------------------------
+We'll learn how about some common command line issues and how troubleshoot when you run into them. 

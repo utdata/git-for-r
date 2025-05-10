@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Command line tips and tricks – Git for R</title>
+<title>8&nbsp; Introduction to version control – Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../terminal/04-troubleshooting.html" rel="next">
-<link href="../terminal/02-making-files-folders.html" rel="prev">
+<link href="../intro-to-git/02-install-and-setup.html" rel="next">
+<link href="../intro-to-git/00-introduction.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html">Part 3: Tips, tricks, troubleshooting</a></li><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/00-introduction.html">Installation</a></li><li class="breadcrumb-item"><a href="../intro-to-git/01-introduction-to-git.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to version control</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link active">
+  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
   </div>
 </li>
@@ -210,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro-to-git/01-introduction-to-git.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro-to-git/01-introduction-to-git.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to version control</span></span></a>
   </div>
 </li>
@@ -233,14 +233,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro-to-git/03-make-git-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Make our Git project</span></span></a>
+  <a href="../intro-to-git/03-making-a-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/04-add-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,19 +267,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#command-history" id="toc-command-history" class="nav-link active" data-scroll-target="#command-history"><span class="header-section-number">4.1</span> Command History</a></li>
-  <li><a href="#canceling-a-command" id="toc-canceling-a-command" class="nav-link" data-scroll-target="#canceling-a-command"><span class="header-section-number">4.2</span> Canceling a Command</a></li>
-  <li><a href="#tab-completion" id="toc-tab-completion" class="nav-link" data-scroll-target="#tab-completion"><span class="header-section-number">4.3</span> Tab Completion</a></li>
-  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">4.4</span> 🎯 Checkpoint</a></li>
+  <li><a href="#introduction-to-version-control" id="toc-introduction-to-version-control" class="nav-link active" data-scroll-target="#introduction-to-version-control"><span class="header-section-number">8.1</span> Introduction to Version control</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html">Part 3: Tips, tricks, troubleshooting</a></li><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/00-introduction.html">Installation</a></li><li class="breadcrumb-item"><a href="../intro-to-git/01-introduction-to-git.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to version control</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to version control</span></h1>
 </div>
 
 
@@ -296,48 +293,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In this brief chapter, we’ll touch on a few things that should help you work quicker in the Terminal. We’ll also touch on navigating common issues you’ll probably run into.</p>
-<section id="command-history" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="command-history"><span class="header-section-number">4.1</span> Command History</h2>
-<p>The command line keeps a history of the commands you give it. Much like scrolling back up through the messages in a conversation on your phone, you can “scroll up” through the conversation you’ve had with the Terminal (only withe Terminal, you’ll only see the messages <em>you</em> sent).</p>
-<p><strong>How to view your command history:</strong></p>
-<p>To see prior commands you’ve written, just press the <strong>up arrow</strong> <code>↑</code> on your keyboard. Each press will take you to the prior command in your history.</p>
-<p>To get back to an empty prompt, scroll back down using the <strong>down arrow</strong> <code>↓</code></p>
-<p>You can re-run any command that pops up simply by hitting the <code>Enter</code> / <code>return</code> key on your keyboard. No need to re-type things!</p>
-<p><strong>Why this is useful</strong></p>
-<p>In programming, we often repeat commands quite frequently (think about how often you re-run your notebook code in R-Studio, for example).</p>
-<p>Having a command history is helpful because it:</p>
+<p>In this chapter, we’ll talk about the benefits of using version control to track changes in your coding projects. We’ll also explain how Git and Github allow store versions of our projects online so we can collaborate with others.</p>
+<section id="introduction-to-version-control" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="introduction-to-version-control"><span class="header-section-number">8.1</span> Introduction to Version control</h2>
+<p><strong>What is version control?</strong><br>
+Version control is a system that helps you track and manage changes to files over time. It lets you save different versions of your work, go back to earlier versions if you make a mistake, and work with other people without overwriting each other’s changes.</p>
+<p>Imagine you’re writing a paper. Every time you make a big edit, you save a new copy: <code>paper_v1.docx</code>, <code>paper_v2.docx</code>, <code>paper_final.docx</code>, etc.</p>
+<p>It’s easy to see how it could become difficult to keep track of which version was which using this kind of a system. Now imagine how much messier and unwieldy it could be trying to keep track of different versions of an R project with changes in multiple <code>.qmd</code> file —&gt; enter version control.</p>
+<p><strong>Version control</strong> keeps track of these different versions for you. Have you ever used the <code>versions</code> feature in Google docs when working on an article draft? Then you’ve interacted with version control.</p>
+<p><strong>What is Git?</strong></p>
+<p>To keep track of versions of coding projects, programmers use a <strong>version control tool</strong> called Git. It runs on your computer and helps you:</p>
 <ul>
-<li><p><strong>Saves time</strong> – You can quickly repeat or modify previous commands with the ↑ key instead of retyping them.</p></li>
-<li><p><strong>Reduces mistakes</strong> – Reusing known-good commands lowers the chance of typos or syntax errors.</p></li>
-<li><p><strong>Aids learning</strong> – You can review what you’ve done, which helps you remember your steps and can help with troubleshooting if something goes wrong.</p></li>
+<li><p>Track changes you make to your project files.</p></li>
+<li><p>Save “snapshots” (called <strong>commits</strong>) of your project over time.</p></li>
+<li><p>Go back to an earlier snapshot if needed.</p></li>
+<li><p>See what exactly <em>changed</em> between versions.</p></li>
+<li><p>Work with teammates without messing up each others’ work.</p></li>
 </ul>
-</section>
-<section id="canceling-a-command" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="canceling-a-command"><span class="header-section-number">4.2</span> Canceling a Command</h2>
-<p>One of the scariest things for new Terminal users happens when you run something you didn’t mean to.</p>
-<p>If you realize you made a mistake while a command is <strong>running</strong>, press:</p>
-<p><code>Ctrl + C</code></p>
-<p>This <strong>cancels</strong> the running command and brings you back to the prompt.</p>
-</section>
-<section id="tab-completion" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="tab-completion"><span class="header-section-number">4.3</span> Tab Completion</h2>
-<p>You read about this in Chapter 2, but it’s worth mentioning again because it’s that good.</p>
-<p>Remember: start typing a folder or file name, press <code>Tab</code>, and Terminal finishes it for you if possible.</p>
-<p>Saves time and typos!</p>
-<p>If there’s more than one similarly-named files in your folder, you may have to type more characters to get to the one you want.</p>
-</section>
-<section id="checkpoint" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">4.4</span> 🎯 Checkpoint</h2>
-<p>In this chapter you’ve learned:</p>
+<p>You can think of Git like the “save game” feature on a video game. Instead of saving the progress of your character in your game, Git saves your progress in your coding files. But just like in many games, we have to tell Git <em>when</em> and <em>how</em> to save a new version.</p>
+<p>This is where Github comes in.</p>
+<p><strong>What is Github?</strong></p>
+<p>GitHub is a <strong>website</strong> that hosts Git repositories (your project + its history) online.</p>
+<p>Github lets you:</p>
 <ul>
-<li>How to view your command history</li>
-<li>How to cancel a command</li>
-<li>How to use tab to auto-complete file and folder names</li>
+<li><p>Store your Git project safely in the cloud.</p></li>
+<li><p>Share your project with others.</p></li>
+<li><p>Collaborate with other people (even if they are far away).</p></li>
+<li><p>Keep a backup in case your computer crashes.</p></li>
+</ul>
+<p>If Git is a notebook where you track all your work, GitHub is like an online library where you can store a copy of that notebook — and invite others to read it or even help you write in it.</p>
+<p><strong>To recap:</strong></p>
+<ul>
+<li><p><strong>Version control:</strong> Describes the system of tracking changes to your files over time so you can revisit or undo edits, collaborate with others, and keep a history of your work.</p></li>
+<li><p><strong>Git:</strong> a version control <strong>tool</strong> you use on your computer to track changes.</p></li>
+<li><p><strong>GitHub:</strong> a website where you can upload (and share) your Git projects.</p></li>
 </ul>
 <hr>
 <p><strong>Next up:</strong></p>
-<p>We’ll learn how about some common command line issues and how troubleshoot when you run into them.</p>
+<p>We’ll get our computers and accounts setup to use Git.</p>
 
 
 </section>
@@ -744,13 +737,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../terminal/02-making-files-folders.html" class="pagination-link" aria-label="Making and managing folder">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span>
+      <a href="../intro-to-git/00-introduction.html" class="pagination-link" aria-label="Welcome">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Welcome</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../terminal/04-troubleshooting.html" class="pagination-link" aria-label="Troubleshooting">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../intro-to-git/02-install-and-setup.html" class="pagination-link" aria-label="Installation and setup">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Installation and setup</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

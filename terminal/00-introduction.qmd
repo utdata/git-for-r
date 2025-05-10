@@ -148,7 +148,7 @@ Depending on your system, the path may look a little different — and that's OK
 
 ------------------------------------------------------------------------
 
-# ✅ Checkpoint
+## 🎯 Checkpoint
 
 You've made it to the end of chapter 1. Good job!
 
@@ -171,4 +171,6 @@ You're officially no longer a Terminal beginner. 🙌
 
 ------------------------------------------------------------------------
 
-Next up, we’ll learn how to *move around* inside your computer using simple commands. Whenever you're ready, proceed to the next chapter: \[\[Terminal Chapter 2\]\]
+**Next up:**
+
+We’ll learn how to *move around* inside your computer using simple commands. Whenever you're ready, proceed to the next chapter.

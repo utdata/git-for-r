@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Command line tips and tricks – Git for R</title>
+<title>13&nbsp; Updating files – Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../terminal/04-troubleshooting.html" rel="next">
-<link href="../terminal/02-making-files-folders.html" rel="prev">
+<link href="../intro-to-git/05-pushing-to-github.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html">Part 3: Tips, tricks, troubleshooting</a></li><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/03-make-git-project.html">Git basics</a></li><li class="breadcrumb-item"><a href="../intro-to-git/06-updating-your-repo.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Updating files</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -169,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link active">
+  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
   </div>
 </li>
@@ -251,8 +285,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro-to-git/06-updating-your-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
+  <a href="../intro-to-git/06-updating-your-repo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Updating files</span></span></a>
   </div>
 </li>
       </ul>
@@ -267,19 +301,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#command-history" id="toc-command-history" class="nav-link active" data-scroll-target="#command-history"><span class="header-section-number">4.1</span> Command History</a></li>
-  <li><a href="#canceling-a-command" id="toc-canceling-a-command" class="nav-link" data-scroll-target="#canceling-a-command"><span class="header-section-number">4.2</span> Canceling a Command</a></li>
-  <li><a href="#tab-completion" id="toc-tab-completion" class="nav-link" data-scroll-target="#tab-completion"><span class="header-section-number">4.3</span> Tab Completion</a></li>
-  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">4.4</span> 🎯 Checkpoint</a></li>
+  <li><a href="#make-a-small-change" id="toc-make-a-small-change" class="nav-link active" data-scroll-target="#make-a-small-change"><span class="header-section-number">13.1</span> Make a Small Change</a></li>
+  <li><a href="#stage-the-change" id="toc-stage-the-change" class="nav-link" data-scroll-target="#stage-the-change"><span class="header-section-number">13.2</span> Stage the Change</a></li>
+  <li><a href="#commit-the-change" id="toc-commit-the-change" class="nav-link" data-scroll-target="#commit-the-change"><span class="header-section-number">13.3</span> Commit the Change</a></li>
+  <li><a href="#push-it-to-github" id="toc-push-it-to-github" class="nav-link" data-scroll-target="#push-it-to-github"><span class="header-section-number">13.4</span> Push It to GitHub</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html">Part 3: Tips, tricks, troubleshooting</a></li><li class="breadcrumb-item"><a href="../terminal/03-tips-tricks.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../intro-to-git/03-make-git-project.html">Git basics</a></li><li class="breadcrumb-item"><a href="../intro-to-git/06-updating-your-repo.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Updating files</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Updating files</span></h1>
 </div>
 
 
@@ -296,48 +330,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In this brief chapter, we’ll touch on a few things that should help you work quicker in the Terminal. We’ll also touch on navigating common issues you’ll probably run into.</p>
-<section id="command-history" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="command-history"><span class="header-section-number">4.1</span> Command History</h2>
-<p>The command line keeps a history of the commands you give it. Much like scrolling back up through the messages in a conversation on your phone, you can “scroll up” through the conversation you’ve had with the Terminal (only withe Terminal, you’ll only see the messages <em>you</em> sent).</p>
-<p><strong>How to view your command history:</strong></p>
-<p>To see prior commands you’ve written, just press the <strong>up arrow</strong> <code>↑</code> on your keyboard. Each press will take you to the prior command in your history.</p>
-<p>To get back to an empty prompt, scroll back down using the <strong>down arrow</strong> <code>↓</code></p>
-<p>You can re-run any command that pops up simply by hitting the <code>Enter</code> / <code>return</code> key on your keyboard. No need to re-type things!</p>
-<p><strong>Why this is useful</strong></p>
-<p>In programming, we often repeat commands quite frequently (think about how often you re-run your notebook code in R-Studio, for example).</p>
-<p>Having a command history is helpful because it:</p>
+<blockquote class="blockquote">
+<p>🎯 Goal: By the end of this chapter, you’ll know how to:</p>
 <ul>
-<li><p><strong>Saves time</strong> – You can quickly repeat or modify previous commands with the ↑ key instead of retyping them.</p></li>
-<li><p><strong>Reduces mistakes</strong> – Reusing known-good commands lowers the chance of typos or syntax errors.</p></li>
-<li><p><strong>Aids learning</strong> – You can review what you’ve done, which helps you remember your steps and can help with troubleshooting if something goes wrong.</p></li>
+<li><p>Make a meaningful change to your project</p></li>
+<li><p>Stage and commit that change using Git</p></li>
+<li><p>Push the change to GitHub to save your work.</p></li>
 </ul>
+</blockquote>
+<p>You’ll also practice writing good commit messages and checking your work.</p>
+<section id="make-a-small-change" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="make-a-small-change"><span class="header-section-number">13.1</span> Make a Small Change</h2>
+<p>Let’s open your Quarto file you made in Chapter 1 (e.g., <code>01-index.qmd</code>) and make a couple changes.</p>
+<p>Replace the auto-generated text and code blocks in the file with the following</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">title:</span> <span class="st">"Intro to Git"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span> html</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Here</span> is a summary of the <span class="kw">`</span><span class="ex">mtcars</span><span class="kw">`</span> dataset.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Under the summary header and description, add a code chunk with the following:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">summary</span><span class="er">(</span><span class="ex">mtcars</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Save the file. Now check the status in your Terminal again by running:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You’ll see something like as a Terminal response:</p>
+<pre><code>On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git restore &lt;file&gt;..." to discard changes in working directory)
+        modified:   01-index.qmd</code></pre>
+<p><strong>Let’s break this down</strong> :</p>
+<p>The red text tells us that Git sees something was modified in your 01-index.qmd. It’s under the <code>Changes not staged for commit:</code> section, which tells us that Git hasn’t <em>staged</em> it yet (so it won’t be saved in the next commit).</p>
 </section>
-<section id="canceling-a-command" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="canceling-a-command"><span class="header-section-number">4.2</span> Canceling a Command</h2>
-<p>One of the scariest things for new Terminal users happens when you run something you didn’t mean to.</p>
-<p>If you realize you made a mistake while a command is <strong>running</strong>, press:</p>
-<p><code>Ctrl + C</code></p>
-<p>This <strong>cancels</strong> the running command and brings you back to the prompt.</p>
+<section id="stage-the-change" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="stage-the-change"><span class="header-section-number">13.2</span> Stage the Change</h2>
+<p>We want to tell Git, “Hey, save this file in the next snapshot.”</p>
+<p>We’ll do this by <strong>adding</strong> the modified file to the snapshot. We can do that by running:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add 01-index.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now, check the status again.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now you’ll see your file in green and following message:</p>
+<pre><code>Changes to be committed:
+  (use "git restore --staged &lt;file&gt;..." to unstage)
+  modified:   01-index.qmd`</code></pre>
+<p>🎉 Great! The change is now <strong>staged</strong>.</p>
 </section>
-<section id="tab-completion" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="tab-completion"><span class="header-section-number">4.3</span> Tab Completion</h2>
-<p>You read about this in Chapter 2, but it’s worth mentioning again because it’s that good.</p>
-<p>Remember: start typing a folder or file name, press <code>Tab</code>, and Terminal finishes it for you if possible.</p>
-<p>Saves time and typos!</p>
-<p>If there’s more than one similarly-named files in your folder, you may have to type more characters to get to the one you want.</p>
+<section id="commit-the-change" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="commit-the-change"><span class="header-section-number">13.3</span> Commit the Change</h2>
+<p>Now, we’ll save the snapshot (in Git’s memory). When we do so, we’ll want to include a descriptive <strong>commit message</strong> noting what we changed.</p>
+<p>Type something like the following and git enter</p>
+<p><code>git commit -m "Add summary of mtcars dataset"</code></p>
+<p>A few best practices for commit messages:</p>
+<p>✅ Use present tense: <code>"Add summary of..."</code>, not <code>"Added..."</code><br>
+✅ Keep it short but descriptive<br>
+✅ Think: “What changed in this version?”</p>
+<p>🕵️‍♀️ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or you need to go back to a prior version, commit messages will help your retrace your steps.</p>
 </section>
-<section id="checkpoint" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">4.4</span> 🎯 Checkpoint</h2>
-<p>In this chapter you’ve learned:</p>
-<ul>
-<li>How to view your command history</li>
-<li>How to cancel a command</li>
-<li>How to use tab to auto-complete file and folder names</li>
-</ul>
-<hr>
-<p><strong>Next up:</strong></p>
-<p>We’ll learn how about some common command line issues and how troubleshoot when you run into them.</p>
+<section id="push-it-to-github" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="push-it-to-github"><span class="header-section-number">13.4</span> Push It to GitHub</h2>
+<p>Now, we’ll send the snapshot from your computer to GitHub by running:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now go to your repository on Github — you’ll see your commit listed under the <strong>Commits</strong> tab and your file under <strong>Code</strong>!</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may be wondering why our push command is shorter than it was last time. In our last push, we needed to connect our remote main branch to the remote Github repository. Since we’re already connected our Quarto project to Github and set our branch to main, we can just use the <code>git push</code> command now.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>💡 GitHub is now your project’s <strong>cloud backup and collaboration hub</strong>.</p>
+</blockquote>
 
 
 </section>
@@ -744,14 +817,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../terminal/02-making-files-folders.html" class="pagination-link" aria-label="Making and managing folder">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span>
+      <a href="../intro-to-git/05-pushing-to-github.html" class="pagination-link" aria-label="Pushing to Github">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../terminal/04-troubleshooting.html" class="pagination-link" aria-label="Troubleshooting">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

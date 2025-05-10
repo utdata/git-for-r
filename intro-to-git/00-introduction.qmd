@@ -1,66 +1,21 @@
-# Introduction
-
-::: {.callout-note title="Who is this for?"}
-This guide is for students who know some R and want to learn Git and GitHub to manage and collaborate on R projects (especially Quarto ones). It assumes little to no terminal experience but will encourage building confidence over time by interacting with Github through the command line.
-:::
-
-# Introduction to Version control
-
-**What is version control?**  
-Version control is a system that helps you track and manage changes to files over time. It lets you save different versions of your work, go back to earlier versions if you make a mistake, and work with other people without overwriting each other’s changes.
-
-**Imagine** you're writing a paper. Every time you make a big edit, you save a new copy: `paper_v1.docx`, `paper_v2.docx`, `paper_final.docx`, etc. 
-
-Version control keeps track of these versions for you. Have you ever used the `versions` feature in Google docs when working on an article draft? Then you've interacted with version control. 
-
-**What is Git?** 
-
-To keep track of versions of coding projects, programmers use a **version control tool** called Git. It runs on your computer and helps you:
-
-- Track changes you make to your project files.
-    
-- Save "snapshots" (called **commits**) of your project over time.
-    
-- Go back to an earlier snapshot if needed.
-    
-- See what exactly changed between versions.
-    
-- Work with teammates without messing up each others' work.
-    
-You can think of Git like a very smart "save game" system for your projects. Unlike in Google docs, our versions aren't automatically saved for us. We have to tell our computers *when* and *how* to save a new version.
-
-**How GitHub fits into this:**  
-GitHub is a **website** that hosts Git repositories (your project + its history) online.  
-
-It lets you:
-
-- Store your Git project safely in the cloud.
-    
-- Share your project with others.
-    
-- Collaborate with other people (even if they are far away).
-    
-- Keep a backup in case your computer crashes.
-    
-
-If Git is your notebook where you track all your work, GitHub is like an online library where you can store a copy of your notebook — and invite others to read it or even help you write it.
-
+---
+title: "Welcome"
 ---
 
-**In short:**
+Welcome to the **Intro to Git** guide! We hope this guide will be a resource for you to learn the basics of working with version control for the first time.
 
-- **Git =** tool you use on your computer to track changes.
-    
-- **GitHub =** website where you can upload (and share) your Git projects.
+## Who is this guide for?
 
+This guide is for students who know some R and want to learn Git and GitHub to manage and collaborate on R projects (especially Quarto ones). It assumes little-to-no hands-on terminal experience but will encourage building confidence over time by interacting with Github through the command line.
 
-## Prerequisites:
+Students who are brand new to the Terminal may also find it helpful to go through the **Intro to Terminal** section of this book before working through this guide.
+
+## Prerequisites
 
 Before we move on to working with Git and Github, we need to make sure you have what you need to successfully complete the exercises in this guide. The guide assumes you already have the following installed on your computer:
 
-1.  R 
+1.  R
 2.  RStudio
 3.  Quarto
 
 If you are missing any these, please go to the links listed and make sure to install before moving on to the next chapter!
-

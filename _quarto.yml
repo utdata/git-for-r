@@ -11,26 +11,32 @@ book:
     - index.qmd
     - part: "Intro to Terminal"
     - text: "---"
-    - part: "Introduction"
+    - part: "Part 1: Introduction"
       chapters:
       - terminal/00-introduction.qmd
+    - part: "Part 2: Terminal basics"
+      chapters:
       - terminal/01-moving-around.qmd
       - terminal/02-making-files-folders.qmd
+    - part: "Part 3: Tips, tricks, troubleshooting"
+      chapters:
       - terminal/03-tips-tricks.qmd
       - terminal/04-troubleshooting.qmd
       - terminal/05-glossary.qmd
+    - text: "---"
     - part: "Intro to Git"
     - text: "---"
     - part: "Installation"
       chapters:
       - intro-to-git/00-introduction.qmd
-      - intro-to-git/01-install-and-setup.qmd
+      - intro-to-git/01-introduction-to-git.qmd
+      - intro-to-git/02-install-and-setup.qmd
     - part: "Git basics"
       chapters:
-       - intro-to-git/02-making-a-repo.qmd
-       - intro-to-git/03-add-files.qmd
-       - intro-to-git/04-pushing-to-github.qmd
-       - intro-to-git/05-updating-your-repo.qmd
+       - intro-to-git/03-make-git-project.qmd
+       - intro-to-git/04-add-files.qmd
+       - intro-to-git/05-pushing-to-github.qmd
+       - intro-to-git/06-updating-your-repo.qmd
 
 format:
   html:

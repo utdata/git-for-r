@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../terminal/03-tips-tricks.html" rel="next">
 <link href="../terminal/01-moving-around.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -179,6 +180,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminal/04-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminal/05-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Glossary: quick reference</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -198,13 +217,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/00-introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/01-install-and-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -221,25 +240,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/02-making-a-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Making a repository</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/03-add-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/04-pushing-to-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/05-updating-your-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
   </div>
 </li>
       </ul>
@@ -297,7 +316,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Now that you can move around the Terminal like a pro, it’s time to <strong>create your own stuff</strong>.</p>
 <p>In this chapter, we’ll learn to make new folders and files. We’ll also learn how to move or delete them.</p>
-<hr>
 <section id="creating-a-folder-mkdir" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="creating-a-folder-mkdir"><span class="header-section-number">3.1</span> Creating a Folder (<code>mkdir</code>)</h2>
 <p>Let’s say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you’d do something like right click and hit <code>New Folder</code>, then you’d need to fill out your folder name in the prompt next to the new folder.</p>
@@ -316,7 +334,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Type and run: <code>mkdir terminal_practice</code> in your command prompt</li>
 <li>Run the <code>ls</code> command to make sure it worked, You should see your new directory listed in the Terminal response.</li>
 </ol>
-<hr>
 </section>
 </section>
 <section id="creating-a-file-touch" class="level2" data-number="3.2">
@@ -344,7 +361,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Make a new file:</strong> Type and run the command <code>touch terminal-file.txt</code>.</li>
 <li><strong>Check your work:</strong> Run the <code>ls</code> command to list the files in your folder. You should see a single file listed in the Terminal response called <code>terminal-file.txt</code>.</li>
 </ol>
-<hr>
 </section>
 </section>
 <section id="copying-files-and-folders-cp" class="level2" data-number="3.3">
@@ -365,7 +381,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you run <code>ls</code> again, you should now you have two files: the original (<code>notes.txt</code>) and the new copy (<code>copy_of_notes.txt</code>).</p>
 <p>As we said before, the <code>cp</code> command can also copy whole directories. However, it’s a little more nuanced. If you’d like to learn more about copying folders, please see appendix XXX.</p>
 <p>📍 A note about destination folders: Bash will check to see if the folder you gave it <em>already exists</em>. If it doesn’t, Bash will <em>create</em> the new folder for you and place the file inside of it.</p>
-<hr>
 </section>
 <section id="moving-or-renaming-files-mv" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="moving-or-renaming-files-mv"><span class="header-section-number">3.4</span> Moving or Renaming Files (<code>mv</code>)**</h2>
@@ -381,8 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We’ll practice the two ways to use the <code>mv</code> command in the next exercise.</p>
 <section id="mini-exercise-move-and-rename-a-file" class="level3" data-number="3.4.1">
 <h3 data-number="3.4.1" class="anchored" data-anchor-id="mini-exercise-move-and-rename-a-file"><span class="header-section-number">3.4.1</span> 📝 Mini exercise: move and rename a file</h3>
-<section id="part-1-move-the-file" class="level4" data-number="3.4.1.1">
-<h4 data-number="3.4.1.1" class="anchored" data-anchor-id="part-1-move-the-file"><span class="header-section-number">3.4.1.1</span> Part 1: move the file</h4>
+<p><strong>Part 1:</strong> move a file</p>
 <ol type="1">
 <li><strong>Make new subdirectory:</strong> run the command <code>mkdir my_new_folder</code> to make a new folder in your <code>terminal_practice</code> directory.</li>
 <li><strong>Peek at our files:</strong> run <code>ls</code> to look at the files inside your <code>terminal_practice</code> folder to make sure the new folder is there.</li>
@@ -390,15 +404,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Check that it worked:</strong> run <code>ls</code> to look at the files inside your <code>terminal_practice</code> folder. You should still see a new folder called `<code>my_new_folder</code> but you should <em>not</em> see the copy of your notes file.</li>
 <li><strong>Locate your notes copy file:</strong> run <code>cd my_new_folder</code> to move into your new folder. Then run <code>ls</code> to peek at the files. You should see your copy of the notes file listed.</li>
 </ol>
-</section>
-<section id="part-2-rename-the-file" class="level4" data-number="3.4.1.2">
-<h4 data-number="3.4.1.2" class="anchored" data-anchor-id="part-2-rename-the-file"><span class="header-section-number">3.4.1.2</span> Part 2: rename the file</h4>
+<p><strong>Part 2:</strong> rename a file</p>
 <ol type="1">
 <li><strong>Rename your notes copy file:</strong> From <em>inside</em> your new folder, rename the copy of your notes file by running the following command: <code>mv copy_of_notes.txt notes_new.txt</code></li>
 <li><strong>Check that it worked:</strong> run <code>ls</code> to look at your files. You should see the copy of your notes files, but now with a new name</li>
 </ol>
-<hr>
-</section>
 </section>
 </section>
 <section id="deleting-files-and-folders-rm" class="level2" data-number="3.5">
@@ -409,12 +419,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <p>This command does require some <strong>caution</strong> because when you delete something from the Terminal, it doesn’t go to the Trash — <strong>it’s gone</strong>.</p>
 <p><strong>Syntax of the <code>rm</code> command:</strong></p>
-<p>Deleting single files:</p>
+<p>Deleting a single file:</p>
 <p><code>rm name_file_to_delete</code></p>
 <p>Deleting a folder (and <em>everything inside it)</em>:</p>
 <p><code>rm -r folder_to_delete</code></p>
 <p><em>📍 Note: The <code>-r</code> here is called a <strong>flag</strong>.</em> It stands for “<strong>recursive</strong>” — it tells <code>rm</code> to delete not just the folder, but also anything inside it. We’ll talk a little more about flags in the next section.</p>
-<hr>
 </section>
 <section id="quick-note-about-flags" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="quick-note-about-flags"><span class="header-section-number">3.6</span> Quick Note About Flags 🏳️</h2>
@@ -431,7 +440,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Terminal will respond with detailed information about <strong>each</strong> file and folder in your directory. See the screenshot below for more information about each detail field.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/ls-flag-example.png" class="img-fluid figure-img"></p>
+<p><img src="../images/ls-flag-example.png" class="img-fluid figure-img"></p>
 <figcaption>Breakdown of each file detail in the <code>-l</code> flag Terminal response</figcaption>
 </figure>
 </div>
@@ -446,6 +455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>How to move and rename files (<code>mv..</code>)</p></li>
 <li><p>How flags can be used to power-up commands</p></li>
 </ul>
+<hr>
 <p><strong>Next up:</strong></p>
 <p>We’ll learn some key tips and tricks to make your command line workflow more efficient.</p>
 
@@ -859,6 +869,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../terminal/03-tips-tricks.html" class="pagination-link" aria-label="Command line tips and tricks">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

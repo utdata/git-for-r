@@ -1,0 +1,148 @@
+---
+title: "Pushing to Github"
+---
+
+# Pushing to Github
+
+> 🎯 Goal: By the end of this chapter, you’ll know how to connect your
+> Git project to Github and push your first commit.
+
+Now that your project has been committed locally, let’s put it on GitHub
+so you can back it up and collaborate with others.
+
+## Create a Repository on GitHub
+
+1.  Go to [github.com](https://github.com) and log in.
+
+2.  Click the **+** in the upper right corner → choose **"New
+    repository"**.
+
+3.  Complete the form by doing the following:
+
+    -   Fill in the **Repository name** field, using the same name as
+        your project folder (e.g. `my-quarto-project`)
+
+    -   Leave **Description** blank for now
+
+    -   Leave the box **unchecked** that says "Initialize this
+        repository with a README" (We can add this on our own later)
+
+    -   Click **Create repository**
+
+You’ll now see a page with instructions on how to connect your local
+folder to this GitHub repository.
+
+In the **Quick setup — if you’ve done this kind of thing before** box:
+
+1.  Click the copy button next to the SSH URL box.
+
+## Connect Your Local Git Project to GitHub
+
+Navigate to the `Terminal` tab inside your RStudio Quarto project.
+
+**Step 1: Add our remote project:**
+
+Type the following command, making sure there's a space after 'origin':
+
+``` bash
+git remote add origin 
+```
+
+then paste the URL you copied from github.
+
+Your complete command should look something like this:
+
+``` bash
+git remote add origin git@github.com:your-name/your-repo-name.git
+```
+
+Run the command by hitting `enter`.
+
+**Step 2: set our branch to main**
+
+Now we'll set our main branch name to `main` by running:
+
+``` bash
+git branch -M main
+```
+
+**Step 3: set our branch to main**
+
+Lastly, we'll push our main branch to Github by running:
+
+``` bash
+git push -u origin main
+```
+
+## Quick Recap: What Do These Commands Do?
+
+Ok, we just did a lot there. Let's pause for a moment and breakdown
+everything we just did:
+
+-   `git remote add origin ...`: Tells Git where your online repository
+    lives (on GitHub).
+-   `git branch -M main`: Renames your current branch to `main`
+    (standard practice on GitHub).
+-   `git push -u origin main`: up a link between your local `main`
+    branch and the `main` branch on GitHub. "Pushing" uploaded your
+    local commits (the ones we did in the last section) to GitHub.
+
+In short, these steps connected your local project to your Github
+repository, then saved the snapshot you took to the cloud. We also won't
+have to repeat these exact steps ever again when saving snapshots in the
+future.
+
+🎉 Congratulations: you now have your first live project is on GitHub!
+
+------------------------------------------------------------------------
+
+## 📝 Mini exercise: Explore Your GitHub Project
+
+Go to your repository page on GitHub (or refresh the page if you still
+have it open from before).
+
+You should see all your project files, including `.qmd`, `.gitignore`,
+etc.
+
+Pay attention to what's showing in the file list. You'll see some
+helpful information about the project, including:
+
+1.  Which user made the most recent commit
+
+2.  The commit message
+
+3.  The commit number
+
+4.  The timestamp of the commit In the file list
+
+5.  The commit message and timestamp from the most recent update made to
+    each file or folder.
+
+::: callout-note
+Not **every** file will update with each git push. Git only keeps track
+of *changes* to files. If you made no edits to a file in a commit, it
+won't change. Timestamps will help you track when updates were last made
+different parts of your project!
+:::
+
+## 🎯 Checkpoint
+
+At this point in the guide, you've learned how to:
+
+-   Create a new RStudio project
+
+-   Turn on Git tracking with `git init`
+
+-   Ignore files (`.gitignore`)
+
+-   Stage and commit changes (`git add` and `git commit`)
+
+-   Connect your local project to GitHub
+
+-   Push your first commit
+
+---
+**Next up:**
+
+we’ll learn how to **make changes**, **track versions**, and
+**collaborate** like pros.

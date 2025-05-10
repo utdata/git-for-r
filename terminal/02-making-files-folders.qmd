@@ -6,8 +6,6 @@ Now that you can move around the Terminal like a pro, it’s time to **create yo
 
 In this chapter, we'll learn to make new folders and files. We'll also learn how to move or delete them.
 
-------------------------------------------------------------------------
-
 ## Creating a Folder (`mkdir`)
 
 Let's say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you'd do something like right click and hit `New Folder`, then you'd need to fill out your folder name in the prompt next to the new folder.
@@ -31,8 +29,6 @@ Now, try the `mkdir` command out on your own by making a new directory inside yo
 1.  Check you're in your home directory (Hint: you can get back to your home directory by running `cd`)
 2.  Type and run: `mkdir terminal_practice` in your command prompt
 3.  Run the `ls` command to make sure it worked, You should see your new directory listed in the Terminal response.
-
-------------------------------------------------------------------------
 
 ## Creating a File (`touch`)
 
@@ -64,8 +60,6 @@ Now, try the `touch` command on your own by making a new file inside your new `t
 2.  **Make a new file:** Type and run the command `touch terminal-file.txt`.
 3.  **Check your work:** Run the `ls` command to list the files in your folder. You should see a single file listed in the Terminal response called `terminal-file.txt`.
 
-------------------------------------------------------------------------
-
 ## Copying Files and Folders (`cp`)
 
 We can also make duplicate files or folders from command line using the `cp` command.
@@ -95,8 +89,6 @@ As we said before, the `cp` command can also copy whole directories. However, it
 
 📍 A note about destination folders: Bash will check to see if the folder you gave it *already exists*. If it doesn't, Bash will *create* the new folder for you and place the file inside of it.
 
-------------------------------------------------------------------------
-
 ## Moving or Renaming Files (`mv`)\*\*
 
 Moving files or folders from command line is also easy using the `mv` command. The command can also by used to **rename** files, depending on the syntax you use.
@@ -121,7 +113,7 @@ We'll practice the two ways to use the `mv` command in the next exercise.
 
 ### 📝  Mini exercise: move and rename a file
 
-#### Part 1: move the file
+**Part 1:** move a file
 
 1.  **Make new subdirectory:** run the command `mkdir my_new_folder` to make a new folder in your `terminal_practice` directory.
 2.  **Peek at our files:** run `ls` to look at the files inside your `terminal_practice` folder to make sure the new folder is there.
@@ -129,12 +121,10 @@ We'll practice the two ways to use the `mv` command in the next exercise.
 4.  **Check that it worked:** run `ls` to look at the files inside your `terminal_practice` folder. You should still see a new folder called \``my_new_folder` but you should *not* see the copy of your notes file.
 5.  **Locate your notes copy file:** run `cd my_new_folder` to move into your new folder. Then run `ls` to peek at the files. You should see your copy of the notes file listed.
 
-#### Part 2: rename the file
+**Part 2:** rename a file
 
 1.  **Rename your notes copy file:** From *inside* your new folder, rename the copy of your notes file by running the following command: `mv copy_of_notes.txt notes_new.txt`
 2.  **Check that it worked:** run `ls` to look at your files. You should see the copy of your notes files, but now with a new name
-
-------------------------------------------------------------------------
 
 ## Deleting Files and Folders (`rm`)
 
@@ -146,7 +136,7 @@ This command does require some **caution** because when you delete something fro
 
 **Syntax of the `rm` command:**
 
-Deleting single files:
+Deleting a single file:
 
 `rm name_file_to_delete`
 
@@ -155,8 +145,6 @@ Deleting a folder (and *everything inside it)*:
 `rm -r folder_to_delete`
 
 *📍 Note: The `-r` here is called a **flag**.* It stands for "**recursive**" — it tells `rm` to delete not just the folder, but also anything inside it. We'll talk a little more about flags in the next section.
-
-------------------------------------------------------------------------
 
 ## Quick Note About Flags 🏳️
 
@@ -180,7 +168,7 @@ ls -l
 
 Terminal will respond with detailed information about **each** file and folder in your directory. See the screenshot below for more information about each detail field.
 
-![Breakdown of each file detail in the `-l` flag Terminal response ](images/ls-flag-example.png)
+![Breakdown of each file detail in the `-l` flag Terminal response ](../images/ls-flag-example.png)
 
 ## 🎯 Checkpoint
 
@@ -196,6 +184,7 @@ Phew. In this chapter you've learned *a lot*:
 
 -   How flags can be used to power-up commands
 
+---
 
 **Next up:**
 

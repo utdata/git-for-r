@@ -10,8 +10,6 @@ Now that you know where you *are* (`pwd`), it's time to explore what's *around* 
 In the Terminal world, folders are usually called **directories**. (You’ll hear both words out in the world — they mean the same thing.)
 :::
 
-------------------------------------------------------------------------
-
 ## What’s in This Folder? (`ls`)
 
 If you want to *see* what's inside the current directory, you use the `ls` command.
@@ -45,8 +43,6 @@ In any case, the list of directories returned by Terminal will match the folders
 
 -   It literally says, "List what’s here."
 
-------------------------------------------------------------------------
-
 ## Moving Around (`cd`)
 
 Seeing what's around is nice — but what if you want to *go into* one of those folders?
@@ -64,8 +60,6 @@ cd Documents
 and press `Enter`.
 
 Now you’re inside the `Documents` directory!
-
-------------------------------------------------------------------------
 
 ## How Can You Tell Where You Are Now? (`pwd`)
 
@@ -103,8 +97,6 @@ and hitting `Enter`.
 
 You should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your `Documents` folder.
 
-------------------------------------------------------------------------
-
 ## Going Back Up (`cd ..`)
 
 Ok now that we've moved *into* folders, what if you want to go *back* to the folder you came from?
@@ -118,8 +110,6 @@ cd ..
 The two dots `..` simply mean "the folder above this one."
 
 If you run the `pwd` command again, you'll see you're back to where you started!
-
-------------------------------------------------------------------------
 
 ## Extra: Special Shortcuts
 
@@ -140,8 +130,6 @@ Or use a backslash to "escape" the space:
 `cd My\ Documents`
 
 Like we mentioned before, Terminal is particular about the *way* you speak to it. For it to understand you, you've got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like `snake_case` or `kebab-case` will help you work more efficiently. 
-
-------------------------------------------------------------------------
 
 ## 📝 Mini Exercise
 
@@ -170,8 +158,6 @@ cd
 
 to jump back to your home directory.
 
-------------------------------------------------------------------------
-
 ## 🔥 Pro Tip: Speed Up with Tab Completion
 
 Ok, now that you've got some practice typing things into Terminal, we'll let you in on a big time-saver: when you start typing a folder name, you don't have to type the whole thing.
@@ -191,8 +177,6 @@ Huge time saver.
 
 Remember, you'll still need to hit Enter to run the command and move into the Documents folder though.
 
-------------------------------------------------------------------------
-
 ## 🎯 Checkpoint
 
 In this chapter you've learned:
@@ -205,10 +189,10 @@ In this chapter you've learned:
 
 -   How to use `Tab` to speed things up
 
-At this point you've started to learn some of the basics of "speaking" Bash. 
+At this point you've started to learn some of the basics of "speaking" Bash.
+
+---
 
 **Next up:**
 
 We'll learn how to create your own files and folders in the Terminal.
-
-------------------------------------------------------------------------

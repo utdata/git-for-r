@@ -1,0 +1,132 @@
+# Installation and setup
+
+> 🎯 Goal: By the end of this chapter, you'll have Git and GitHub set up and be ready to create a version-controlled project in RStudio.
+
+## Step 1: Install the Tools
+
+Before we can get started, we'll need to make sure that our computers (often referred to as our **local machines)** are set up correctly. Let's do that by completing the following steps:
+
+1.  **Install Git**
+
+    1.  Go to: <https://git-scm.com/downloads>
+    2.  Download and install Git
+    3.  Default install settings are fine
+
+2.  **Sign up for a Github account:**
+
+    1.  Go to: <https://github.com>
+    2.  Click **Sign up**
+    3.  Choose a username and email you’ll remember (you’ll use this in Git config)
+
+------------------------------------------------------------------------
+
+## Step 2: Set Up Git in the Terminal
+
+After installing Git, you’ll need to configure it with your **username** and **email**.
+
+-   **Git usernames:** Usernames are what git uses to associate your work with *your identity*.
+
+-   **Git email:** The email you used to setup your Github account.
+
+**Step 1: Start a new Terminal session in RStudio**
+
+Click on the **Terminal** tab and a new session will be created (if there isn’t one already). The Terminal tab is located next to the Console tab.
+
+-   Tip: If can't find the Terminal tab, go to `Tools > Terminal > Move Focus to Terminal` .
+
+**Step 2: Set your Git username**
+
+Run the following command from your Terminal, replacing "Your Name" with the username you'd like to use (including the quotation marks):
+
+``` bash
+git config --global user.name "Your Name"
+```
+
+Check to see if you successfully set your name by running:
+
+``` bash
+git config user.name
+```
+
+You should see a Terminal response message with the username you entered. If you didn't get the response expected, then try again. Remember, be careful about punctuation.
+
+Once you have your username set properly, we'll set your email.
+
+::: callout-caution
+Remember, the username you set here will be **visible** (*read: public*) in any future commits you push to GitHub. If you choose to use a nickname or alias instead of your real name, keep it professional enough that you wouldn't mind a future employer or colleague seeing it if you needed to share your work.
+:::
+
+**Step 3: Setting your git email**
+
+The email you enter needs to **match the one you used to setup your Github account.** If it doesn't, you'll run into permissions issues later.
+
+Set your user email by running the following command, replacing "your.email\@example.com" with your Github email (including the quotation marks):
+
+``` bash
+git config --global user.email "your.email@example.com"
+```
+
+::: callout-important
+Your git email should be the same as the one you use on GitHub so your commits will be linked correctly
+:::
+
+## 📝 Mini exercise: Confirm Your Git Setup
+
+In RStudio’s Terminal tab, type and execute the following command:
+
+``` bash
+git --version
+```
+
+You should see something like:
+
+```         
+git version 2.42.0
+```
+
+Then check your Git config:
+
+```bash
+git config --list
+```
+
+Look for your name and email in the list. If you see them, you're all set! ✅
+
+If not, go back and run:
+
+``` bash
+git config --global user.name "Your Name"
+```
+and 
+
+```bash
+git config --global user.email "your.email@example.com"
+```
+
+Run `git config --list` and make sure both of these are correct before moving on.
+
+## 🧠 What Do These Flags Mean?
+
+Let’s break down some of the options you've used:
+
+-   `--global`: This means “apply this setting for all projects on my computer.”\
+    You usually only need to set your name and email globally once.
+
+-   `--list`: This tells Git to “show me my current configuration.”
+
+## 🎯 Checkpoint
+
+In this chapter you:
+
+-   Downloaded Git
+-   Setup your Github account
+-   Set your Git username (with an appropriate name or alias)
+-   Set your Git email (using the email on your account Github account)
+
+Now that Git is configured, you're ready to create your first project.
+
+------------------------------------------------------------------------
+
+**Next up**
+
+In the next chapter, we’ll walk you through creating a new Quarto project with Git tracking from the start using the terminal.
