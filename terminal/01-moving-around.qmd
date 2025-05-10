@@ -172,7 +172,7 @@ to jump back to your home directory.
 
 ------------------------------------------------------------------------
 
-# 🔥 Pro Tip: Speed Up with Tab Completion
+## 🔥 Pro Tip: Speed Up with Tab Completion
 
 Ok, now that you've got some practice typing things into Terminal, we'll let you in on a big time-saver: when you start typing a folder name, you don't have to type the whole thing.
 
@@ -193,9 +193,9 @@ Remember, you'll still need to hit Enter to run the command and move into the Do
 
 ------------------------------------------------------------------------
 
-# 🎯 Chapter recap
+## 🎯 Checkpoint
 
-Good job! In this chapter you've learned:
+In this chapter you've learned:
 
 -   How to see what’s inside a folder (`ls`)
 

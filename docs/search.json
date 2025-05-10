@@ -542,7 +542,7 @@
     "href": "terminal/02-making-files-folders.html#creating-a-file-touch",
     "title": "3  Making and managing folder",
     "section": "3.2 Creating a File (touch)",
-    "text": "3.2 Creating a File (touch)\nLike folders, we can also make new files from the command line using the touch command.\n\nUnlike other commands we’ve learned, touch isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️\n\nFor example, if you ran the following command:\ntouch notes.txt\nThis creates a new, empty file called notes.txt.\n\nNote: Windows users may need to use:\n\n\nbash echo.&gt; notes.txt\nor bash New-Item notes.txt\n(Depending on if you’re using PowerShell.)\n\n\n3.2.1 📝 Mini excercise: make a file\nNow, try the touch command out on your own by making a new file inside your new terminal_practice folder.\n\nMove into your new folder: run the command cd terminal_practice to move into your new folder.\nMake a new filer: Type and run the command touch terminal-file.txt.\nCheck your work: Run the ls command to list the files in your folder. You should see a single file listed in the Terminal response called terminal-file.txt.\n\n\nCopying Files and Folders (cp)\ncp notes.txt copy_of_notes.txt\nNow you have two files: the original and a copy.\n\n##Moving or Renaming Files (mv)**\nTo move (or rename) a file:\nmv notes.txt my_new_folder/\nThis moves notes.txt into the folder my_new_folder.\nIf you just want to rename a file:\nmv oldname.txt newname.txt\n\n##Deleting Files and Folders (rm)\nTo delete a file:\nrm copy_of_notes.txt\nCareful! When you delete something from the Terminal, it doesn’t go to the Trash — it’s gone.\nTo delete a folder and everything inside it:\nrm -r my_new_folder\nThe -r here is called a flag.\nIt stands for “recursive” — it tells rm to delete not just the folder, but also anything inside it.",
+    "text": "3.2 Creating a File (touch)\nLike folders, we can also make new files from the command line using the touch command.\n\nUnlike other commands we’ve learned, touch isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️\n\nFor example, if you ran the following command:\ntouch example.txt\nThis creates a new, empty file called example.txt.\n\nNote: Windows users may need to use:\n\n\nbash echo.&gt; emample.txt\nor bash New-Item example.txt\n(Depending on if you’re using PowerShell.)\n\n\n3.2.1 📝 Mini excercise: make a file\nNow, try the touch command on your own by making a new file inside your new terminal_practice folder.\n\nMove into your new folder: run the command cd terminal_practice to move into your new folder.\nMake a new file: Type and run the command touch terminal-file.txt.\nCheck your work: Run the ls command to list the files in your folder. You should see a single file listed in the Terminal response called terminal-file.txt.",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
@@ -568,6 +568,83 @@
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html#copying-files-and-folders-cp",
+    "href": "terminal/02-making-files-folders.html#copying-files-and-folders-cp",
+    "title": "3  Making and managing folder",
+    "section": "3.3 Copying Files and Folders (cp)",
+    "text": "3.3 Copying Files and Folders (cp)\nWe can also make duplicate files or folders from command line using the cp command.\n\ncp is shorthand for “copy”\n\nSyntax of the cp command\ncp source_file_folder destination_file_folder\nThe cp command takes at least two arguments in its arguments:\n\nSource file or folder: the file or folder you want to copy\nDestination file or folder: the name you’d like the copy of the file or folder to be called\n\nTry running the following inside your terminal_practice folder:\ncp notes.txt copy_of_notes.txt\nIf you run ls again, you should now you have two files: the original (notes.txt) and the new copy (copy_of_notes.txt).\nAs we said before, the cp command can also copy whole directories. However, it’s a little more nuanced. If you’d like to learn more about copying folders, please see appendix XXX.\n📍 A note about destination folders: Bash will check to see if the folder you gave it already exists. If it doesn’t, Bash will create the new folder for you and place the file inside of it.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html#moving-or-renaming-files-mv",
+    "href": "terminal/02-making-files-folders.html#moving-or-renaming-files-mv",
+    "title": "3  Making and managing folder",
+    "section": "3.4 Moving or Renaming Files (mv)**",
+    "text": "3.4 Moving or Renaming Files (mv)**\nMoving files or folders from command line is also easy using the mv command. The command can also by used to rename files, depending on the syntax you use.\n\nmv is shorthand for “move”\n\nSyntax of the mv command\nTo move a file’s location, use the following syntax:\nmv source_file destination_folder\nIf you just want to rename a file, use the following syntax:\nmv oldname.txt newname.txt\nWe’ll practice the two ways to use the mv command in the next exercise.\n\n3.4.1 📝 Mini exercise: move and rename a file\n\n3.4.1.1 Part 1: move the file\n\nMake new subdirectory: run the command mkdir my_new_folder to make a new folder in your terminal_practice directory.\nPeek at our files: run ls to look at the files inside your terminal_practice folder to make sure the new folder is there.\nMove your notes.txt file: Move the copy of your notes files into the new sub-folder in your directory by running the following command: mv copy_of_notes.txt my_new_folder/\nCheck that it worked: run ls to look at the files inside your terminal_practice folder. You should still see a new folder called `my_new_folder but you should not see the copy of your notes file.\nLocate your notes copy file: run cd my_new_folder to move into your new folder. Then run ls to peek at the files. You should see your copy of the notes file listed.\n\n\n\n3.4.1.2 Part 2: rename the file\n\nRename your notes copy file: From inside your new folder, rename the copy of your notes file by running the following command: mv copy_of_notes.txt notes_new.txt\nCheck that it worked: run ls to look at your files. You should see the copy of your notes files, but now with a new name",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html#deleting-files-and-folders-rm",
+    "href": "terminal/02-making-files-folders.html#deleting-files-and-folders-rm",
+    "title": "3  Making and managing folder",
+    "section": "3.5 Deleting Files and Folders (rm)",
+    "text": "3.5 Deleting Files and Folders (rm)\nYou can also use the command line to delete files and folders on your machine using the rm command.\n\nrm is shorthand for “remove”\n\nThis command does require some caution because when you delete something from the Terminal, it doesn’t go to the Trash — it’s gone.\nSyntax of the rm command:\nDeleting single files:\nrm name_file_to_delete\nDeleting a folder (and everything inside it):\nrm -r folder_to_delete\n📍 Note: The -r here is called a flag. It stands for “recursive” — it tells rm to delete not just the folder, but also anything inside it. We’ll talk a little more about flags in the next section.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html#checkpoint",
+    "href": "terminal/02-making-files-folders.html#checkpoint",
+    "title": "3  Making and managing folder",
+    "section": "3.7 🎯 Checkpoint",
+    "text": "3.7 🎯 Checkpoint\nPhew. In this chapter you’ve learned a lot:\n\nHow to create a new folder/directory (mkdir)\nHow to create a new file (touch file_name)\nHow to copy files (cp ..)\nHow to move and rename files (mv..)\nHow flags can be used to power-up commands\n\nNext up:\nWe’ll learn some key tips and tricks to make your command line workflow more efficient.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/02-making-files-folders.html#quick-note-about-flags",
+    "href": "terminal/02-making-files-folders.html#quick-note-about-flags",
+    "title": "3  Making and managing folder",
+    "section": "3.6 Quick Note About Flags 🏳️",
+    "text": "3.6 Quick Note About Flags 🏳️\nFlags are extra options you can add to commands to change how they behave.\n\nThey’re usually a dash plus one or two letters. (Example: -r means “recursive” for rm)\nYou can combine flags too (like -rf for rm -r -f, meaning “recursive” and “force delete”).\n\nYou’ll see flags often out in the wild. As you use the command line more, you’ll start to use more of these flags in your workflow to give you more control over what your commands do. For now, just know when you see something starting with a dash, it’s probably a flag to add a little extra to the primary command.\nOptional exercise:\nIf you want, try one out yourself now by using the -l flag along with the ls command.The flag tells the command line, “give me more information about each file in my directory”.\nRun the following command:\nls -l \nTerminal will respond with detailed information about each file and folder in your directory. See the screenshot below for more information about each detail field.\n\n\n\nBreakdown of each file detail in the -l flag Terminal response",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/01-moving-around.html#pro-tip-speed-up-with-tab-completion",
+    "href": "terminal/01-moving-around.html#pro-tip-speed-up-with-tab-completion",
+    "title": "2  Moving Around in the Terminal",
+    "section": "2.7 🔥 Pro Tip: Speed Up with Tab Completion",
+    "text": "2.7 🔥 Pro Tip: Speed Up with Tab Completion\nOk, now that you’ve got some practice typing things into Terminal, we’ll let you in on a big time-saver: when you start typing a folder name, you don’t have to type the whole thing.\nHit the Tab key after typing part of your folder name and the Terminal will try to auto-complete it for you.\nSee it for yourself by typing:\ncd Doc\nthen press Tab.\n\nIf there’s a Documents folder, Terminal will fill in the rest automatically!\n\nHuge time saver.\nRemember, you’ll still need to hit Enter to run the command and move into the Documents folder though.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving Around in the Terminal</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/01-moving-around.html#checkpoint",
+    "href": "terminal/01-moving-around.html#checkpoint",
+    "title": "2  Moving Around in the Terminal",
+    "section": "2.8 🎯 Checkpoint",
+    "text": "2.8 🎯 Checkpoint\nIn this chapter you’ve learned:\n\nHow to see what’s inside a folder (ls)\nHow to move into a folder (cd foldername)\nHow to move back up (cd ..)\nHow to use Tab to speed things up\n\nAt this point you’ve started to learn some of the basics of “speaking” Bash.\nNext up:\nWe’ll learn how to create your own files and folders in the Terminal.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving Around in the Terminal</span>"
     ]
   }
 ]

@@ -262,10 +262,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#mini-excercise-make-a-file" id="toc-mini-excercise-make-a-file" class="nav-link" data-scroll-target="#mini-excercise-make-a-file"><span class="header-section-number">3.2.1</span> 📝 Mini excercise: make a file</a></li>
   </ul></li>
-  <li><a href="#quick-note-about-flags" id="toc-quick-note-about-flags" class="nav-link" data-scroll-target="#quick-note-about-flags"><span class="header-section-number">4</span> Quick Note About Flags 🏳️</a>
+  <li><a href="#copying-files-and-folders-cp" id="toc-copying-files-and-folders-cp" class="nav-link" data-scroll-target="#copying-files-and-folders-cp"><span class="header-section-number">3.3</span> Copying Files and Folders (<code>cp</code>)</a></li>
+  <li><a href="#moving-or-renaming-files-mv" id="toc-moving-or-renaming-files-mv" class="nav-link" data-scroll-target="#moving-or-renaming-files-mv"><span class="header-section-number">3.4</span> Moving or Renaming Files (<code>mv</code>)**</a>
   <ul class="collapse">
-  <li><a href="#youll-get-used-to-them-quickly" id="toc-youll-get-used-to-them-quickly" class="nav-link" data-scroll-target="#youll-get-used-to-them-quickly"><span class="header-section-number">4.1</span> You’ll get used to them quickly!</a></li>
+  <li><a href="#mini-exercise-move-and-rename-a-file" id="toc-mini-exercise-move-and-rename-a-file" class="nav-link" data-scroll-target="#mini-exercise-move-and-rename-a-file"><span class="header-section-number">3.4.1</span> 📝 Mini exercise: move and rename a file</a></li>
   </ul></li>
+  <li><a href="#deleting-files-and-folders-rm" id="toc-deleting-files-and-folders-rm" class="nav-link" data-scroll-target="#deleting-files-and-folders-rm"><span class="header-section-number">3.5</span> Deleting Files and Folders (<code>rm</code>)</a></li>
+  <li><a href="#quick-note-about-flags" id="toc-quick-note-about-flags" class="nav-link" data-scroll-target="#quick-note-about-flags"><span class="header-section-number">3.6</span> Quick Note About Flags 🏳️</a></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">3.7</span> 🎯 Checkpoint</a></li>
   </ul>
 </nav>
     </div>
@@ -322,66 +326,130 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Unlike other commands we’ve learned, <code>touch</code> isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️</p>
 </blockquote>
 <p>For example, if you ran the following command:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> notes.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This creates a new, empty file called <code>notes.txt</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> example.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This creates a new, empty file called <code>example.txt</code>.</p>
 <blockquote class="blockquote">
 <p><strong>Note:</strong> Windows users may need to use:</p>
 </blockquote>
 <blockquote class="blockquote">
-<p><code>bash echo.&gt; notes.txt</code></p>
-<p>or <code>bash New-Item notes.txt</code></p>
+<p><code>bash echo.&gt; emample.txt</code></p>
+<p>or <code>bash New-Item example.txt</code></p>
 <p>(Depending on if you’re using PowerShell.)</p>
 </blockquote>
 <section id="mini-excercise-make-a-file" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="mini-excercise-make-a-file"><span class="header-section-number">3.2.1</span> 📝 Mini excercise: make a file</h3>
-<p>Now, try the <code>touch</code> command out on your own by making a new file inside your new <code>terminal_practice</code> folder.</p>
+<p>Now, try the <code>touch</code> command on your own by making a new file inside your new <code>terminal_practice</code> folder.</p>
 <ol type="1">
 <li><strong>Move into your new folder:</strong> run the command <code>cd terminal_practice</code> to move into your new folder.</li>
-<li><strong>Make a new filer:</strong> Type and run the command <code>touch terminal-file.txt</code>.</li>
+<li><strong>Make a new file:</strong> Type and run the command <code>touch terminal-file.txt</code>.</li>
 <li><strong>Check your work:</strong> Run the <code>ls</code> command to list the files in your folder. You should see a single file listed in the Terminal response called <code>terminal-file.txt</code>.</li>
 </ol>
 <hr>
-<p>Copying Files and Folders (<code>cp</code>)</p>
-<p><code>cp notes.txt copy_of_notes.txt</code></p>
-<p>Now you have two files: the original and a copy.</p>
+</section>
+</section>
+<section id="copying-files-and-folders-cp" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="copying-files-and-folders-cp"><span class="header-section-number">3.3</span> Copying Files and Folders (<code>cp</code>)</h2>
+<p>We can also make duplicate files or folders from command line using the <code>cp</code> command.</p>
+<blockquote class="blockquote">
+<p><code>cp</code> is shorthand for “copy”</p>
+</blockquote>
+<p><strong>Syntax of the <code>cp</code> command</strong></p>
+<pre><code>cp source_file_folder destination_file_folder</code></pre>
+<p>The <code>cp</code> command takes at least two arguments in its arguments:</p>
+<ol type="1">
+<li><strong>Source file or folder:</strong> the file or folder you want to copy</li>
+<li><strong>Destination file or folder:</strong> the name you’d like the copy of the file or folder to be called</li>
+</ol>
+<p>Try running the following inside your <code>terminal_practice</code> folder:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> notes.txt copy_of_notes.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you run <code>ls</code> again, you should now you have two files: the original (<code>notes.txt</code>) and the new copy (<code>copy_of_notes.txt</code>).</p>
+<p>As we said before, the <code>cp</code> command can also copy whole directories. However, it’s a little more nuanced. If you’d like to learn more about copying folders, please see appendix XXX.</p>
+<p>📍 A note about destination folders: Bash will check to see if the folder you gave it <em>already exists</em>. If it doesn’t, Bash will <em>create</em> the new folder for you and place the file inside of it.</p>
 <hr>
-<p>##Moving or Renaming Files (<code>mv</code>)**</p>
-<p>To move (or rename) a file:</p>
-<p><code>mv notes.txt my_new_folder/</code></p>
-<p>This moves <code>notes.txt</code> into the folder <code>my_new_folder</code>.</p>
-<p>If you just want to <strong>rename</strong> a file:</p>
-<p><code>mv oldname.txt newname.txt</code></p>
-<hr>
-<p>##Deleting Files and Folders (<code>rm</code>)</p>
-<p>To delete a file:</p>
-<p><code>rm copy_of_notes.txt</code></p>
-<p><strong>Careful!</strong> When you delete something from the Terminal, it doesn’t go to the Trash — it’s gone.</p>
-<p>To delete a folder and everything inside it:</p>
-<p><code>rm -r my_new_folder</code></p>
-<p>The <code>-r</code> here is called a <strong>flag</strong>.<br>
-It stands for “<strong>recursive</strong>” — it tells <code>rm</code> to delete not just the folder, but also anything inside it.</p>
+</section>
+<section id="moving-or-renaming-files-mv" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="moving-or-renaming-files-mv"><span class="header-section-number">3.4</span> Moving or Renaming Files (<code>mv</code>)**</h2>
+<p>Moving files or folders from command line is also easy using the <code>mv</code> command. The command can also by used to <strong>rename</strong> files, depending on the syntax you use.</p>
+<blockquote class="blockquote">
+<p><code>mv</code> is shorthand for “move”</p>
+</blockquote>
+<p><strong>Syntax of the <code>mv</code> command</strong></p>
+<p>To <strong>move a file’s location</strong>, use the following syntax:</p>
+<pre><code>mv source_file destination_folder</code></pre>
+<p>If you just want to <strong>rename</strong> a file, use the following syntax:</p>
+<pre><code>mv oldname.txt newname.txt</code></pre>
+<p>We’ll practice the two ways to use the <code>mv</code> command in the next exercise.</p>
+<section id="mini-exercise-move-and-rename-a-file" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="mini-exercise-move-and-rename-a-file"><span class="header-section-number">3.4.1</span> 📝 Mini exercise: move and rename a file</h3>
+<section id="part-1-move-the-file" class="level4" data-number="3.4.1.1">
+<h4 data-number="3.4.1.1" class="anchored" data-anchor-id="part-1-move-the-file"><span class="header-section-number">3.4.1.1</span> Part 1: move the file</h4>
+<ol type="1">
+<li><strong>Make new subdirectory:</strong> run the command <code>mkdir my_new_folder</code> to make a new folder in your <code>terminal_practice</code> directory.</li>
+<li><strong>Peek at our files:</strong> run <code>ls</code> to look at the files inside your <code>terminal_practice</code> folder to make sure the new folder is there.</li>
+<li><strong>Move your <code>notes.txt</code> file:</strong> Move the copy of your notes files into the new sub-folder in your directory by running the following command: <code>mv copy_of_notes.txt my_new_folder/</code></li>
+<li><strong>Check that it worked:</strong> run <code>ls</code> to look at the files inside your <code>terminal_practice</code> folder. You should still see a new folder called `<code>my_new_folder</code> but you should <em>not</em> see the copy of your notes file.</li>
+<li><strong>Locate your notes copy file:</strong> run <code>cd my_new_folder</code> to move into your new folder. Then run <code>ls</code> to peek at the files. You should see your copy of the notes file listed.</li>
+</ol>
+</section>
+<section id="part-2-rename-the-file" class="level4" data-number="3.4.1.2">
+<h4 data-number="3.4.1.2" class="anchored" data-anchor-id="part-2-rename-the-file"><span class="header-section-number">3.4.1.2</span> Part 2: rename the file</h4>
+<ol type="1">
+<li><strong>Rename your notes copy file:</strong> From <em>inside</em> your new folder, rename the copy of your notes file by running the following command: <code>mv copy_of_notes.txt notes_new.txt</code></li>
+<li><strong>Check that it worked:</strong> run <code>ls</code> to look at your files. You should see the copy of your notes files, but now with a new name</li>
+</ol>
 <hr>
 </section>
 </section>
-<section id="quick-note-about-flags" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Quick Note About Flags 🏳️</h1>
+</section>
+<section id="deleting-files-and-folders-rm" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="deleting-files-and-folders-rm"><span class="header-section-number">3.5</span> Deleting Files and Folders (<code>rm</code>)</h2>
+<p>You can also use the command line to delete files and folders on your machine using the <code>rm</code> command.</p>
+<blockquote class="blockquote">
+<p><code>rm</code> is shorthand for “remove”</p>
+</blockquote>
+<p>This command does require some <strong>caution</strong> because when you delete something from the Terminal, it doesn’t go to the Trash — <strong>it’s gone</strong>.</p>
+<p><strong>Syntax of the <code>rm</code> command:</strong></p>
+<p>Deleting single files:</p>
+<p><code>rm name_file_to_delete</code></p>
+<p>Deleting a folder (and <em>everything inside it)</em>:</p>
+<p><code>rm -r folder_to_delete</code></p>
+<p><em>📍 Note: The <code>-r</code> here is called a <strong>flag</strong>.</em> It stands for “<strong>recursive</strong>” — it tells <code>rm</code> to delete not just the folder, but also anything inside it. We’ll talk a little more about flags in the next section.</p>
+<hr>
+</section>
+<section id="quick-note-about-flags" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="quick-note-about-flags"><span class="header-section-number">3.6</span> Quick Note About Flags 🏳️</h2>
 <p><strong>Flags</strong> are <strong>extra options</strong> you can add to commands to change how they behave.</p>
 <ul>
-<li><p>They’re usually a <strong>dash</strong> plus <strong>one or two letters</strong>.</p></li>
-<li><p>Example: <code>-r</code> means “recursive” for <code>rm</code>.</p></li>
+<li><p>They’re usually a <strong>dash</strong> plus <strong>one or two letters</strong>. (Example: <code>-r</code> means “recursive” for <code>rm</code>)</p></li>
 <li><p>You can combine flags too (like <code>-rf</code> for <code>rm -r -f</code>, meaning “recursive” and “force delete”).</p></li>
 </ul>
-<p>You’ll see flags often, and they give you <strong>more control</strong> over what the command does.</p>
-<p>Examples:</p>
-<ul>
-<li><p><code>ls -l</code> → shows a detailed list.</p></li>
-<li><p><code>cp -r folder1/ folder2/</code> → copies a folder and its contents.</p></li>
-</ul>
-<section id="youll-get-used-to-them-quickly" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="youll-get-used-to-them-quickly"><span class="header-section-number">4.1</span> You’ll get used to them quickly!</h2>
-
-
+<p>You’ll see flags often out in the wild. As you use the command line more, you’ll start to use more of these flags in your workflow to give you <strong>more control</strong> over what your commands do. For now, just know when you see something starting with a dash, it’s probably a flag to add a little extra to the primary command.</p>
+<p><strong>Optional exercise:</strong></p>
+<p>If you want, try one out yourself now by using the <code>-l</code> flag along with the <code>ls</code> command.The flag tells the command line, “give me more information about each file in my directory”.</p>
+<p>Run the following command:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Terminal will respond with detailed information about <strong>each</strong> file and folder in your directory. See the screenshot below for more information about each detail field.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ls-flag-example.png" class="img-fluid figure-img"></p>
+<figcaption>Breakdown of each file detail in the <code>-l</code> flag Terminal response</figcaption>
+</figure>
+</div>
 </section>
+<section id="checkpoint" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">3.7</span> 🎯 Checkpoint</h2>
+<p>Phew. In this chapter you’ve learned <em>a lot</em>:</p>
+<ul>
+<li><p>How to create a new folder/directory (<code>mkdir</code>)</p></li>
+<li><p>How to create a new file (<code>touch file_name</code>)</p></li>
+<li><p>How to copy files (<code>cp ..</code>)</p></li>
+<li><p>How to move and rename files (<code>mv..</code>)</p></li>
+<li><p>How flags can be used to power-up commands</p></li>
+</ul>
+<p><strong>Next up:</strong></p>
+<p>We’ll learn some key tips and tricks to make your command line workflow more efficient.</p>
+
+
 </section>
 
 </main> <!-- /main -->

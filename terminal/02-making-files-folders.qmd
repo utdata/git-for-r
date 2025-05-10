@@ -6,19 +6,19 @@ Now that you can move around the Terminal like a pro, it’s time to **create yo
 
 In this chapter, we'll learn to make new folders and files. We'll also learn how to move or delete them.
 
----
+------------------------------------------------------------------------
 
 ## Creating a Folder (`mkdir`)
 
-Let's say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you'd do something like right click and hit `New Folder`, then you'd need to fill out your folder name in the prompt next to the new folder. 
+Let's say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you'd do something like right click and hit `New Folder`, then you'd need to fill out your folder name in the prompt next to the new folder.
 
 To do this from the command line, we do all of this in a single prompt using the `mkdir` command.
 
->  `mkdir` stands for **make directory**.
+> `mkdir` stands for **make directory**.
 
 If you ran the following command (don't do this):
 
-``` bash 
+``` bash
 mkdir my_new_folder
 ```
 
@@ -28,103 +28,175 @@ This would create a folder called `my_new_folder` inside whatever directory you'
 
 Now, try the `mkdir` command out on your own by making a new directory inside your home directory (`~`).
 
-1. Check you're in your home directory (Hint: you can get back to your home directory by running `cd`)
-1. Type and run: `mkdir terminal_practice` in your command prompt
-1. Run the `ls` command to make sure it worked, You should see your new directory listed in the Terminal response. 
+1.  Check you're in your home directory (Hint: you can get back to your home directory by running `cd`)
+2.  Type and run: `mkdir terminal_practice` in your command prompt
+3.  Run the `ls` command to make sure it worked, You should see your new directory listed in the Terminal response.
 
----
+------------------------------------------------------------------------
 
 ## Creating a File (`touch`)
 
-Like folders, we can also make new files from the command line using the `touch` command. 
+Like folders, we can also make new files from the command line using the `touch` command.
 
 > Unlike other commands we've learned, `touch` isn't shorthand for anything. It's just the name of the command to make a new, empty file in Bash 🤷‍♀️
 
 For example, if you ran the following command:
 
 ``` bash
-touch notes.txt
+touch example.txt
 ```
 
-This creates a new, empty file called `notes.txt`.
+This creates a new, empty file called `example.txt`.
 
 > **Note:** Windows users may need to use:
 
-> ``` bash echo.> notes.txt```
-> 
-> or
-> ``` bash New-Item notes.txt```
-> 
+> `bash echo.> emample.txt`
+>
+> or `bash New-Item example.txt`
+>
 > (Depending on if you're using PowerShell.)
 
 ### 📝 Mini excercise: make a file
 
-Now, try the `touch` command out on your own by making a new file inside your new `terminal_practice` folder.
+Now, try the `touch` command on your own by making a new file inside your new `terminal_practice` folder.
 
-1. **Move into your new folder:** run the command `cd terminal_practice` to move into your new folder.
-1. **Make a new filer:** Type and run the command `touch terminal-file.txt`.
-1. **Check your work:** Run the `ls` command to list the files in your folder. You should see a single file listed in the Terminal response called `terminal-file.txt`. 
+1.  **Move into your new folder:** run the command `cd terminal_practice` to move into your new folder.
+2.  **Make a new file:** Type and run the command `touch terminal-file.txt`.
+3.  **Check your work:** Run the `ls` command to list the files in your folder. You should see a single file listed in the Terminal response called `terminal-file.txt`.
 
----
+------------------------------------------------------------------------
 
-Copying Files and Folders (`cp`)
+## Copying Files and Folders (`cp`)
 
-`cp notes.txt copy_of_notes.txt`
+We can also make duplicate files or folders from command line using the `cp` command.
 
-Now you have two files: the original and a copy.
+> `cp` is shorthand for "copy"
 
----
+**Syntax of the `cp` command**
 
-##Moving or Renaming Files (`mv`)**
+```         
+cp source_file_folder destination_file_folder
+```
 
-To move (or rename) a file:
+The `cp` command takes at least two arguments in its arguments:
 
-`mv notes.txt my_new_folder/`
+1.  **Source file or folder:** the file or folder you want to copy
+2.  **Destination file or folder:** the name you'd like the copy of the file or folder to be called
 
-This moves `notes.txt` into the folder `my_new_folder`.
+Try running the following inside your `terminal_practice` folder:
 
-If you just want to **rename** a file:
+``` bash
+cp notes.txt copy_of_notes.txt
+```
 
-`mv oldname.txt newname.txt`
+If you run `ls` again, you should now you have two files: the original (`notes.txt`) and the new copy (`copy_of_notes.txt`).
 
----
+As we said before, the `cp` command can also copy whole directories. However, it's a little more nuanced. If you'd like to learn more about copying folders, please see appendix XXX.
 
-##Deleting Files and Folders (`rm`)
+📍 A note about destination folders: Bash will check to see if the folder you gave it *already exists*. If it doesn't, Bash will *create* the new folder for you and place the file inside of it.
 
-To delete a file:
+------------------------------------------------------------------------
 
-`rm copy_of_notes.txt`
+## Moving or Renaming Files (`mv`)\*\*
 
-**Careful!** When you delete something from the Terminal, it doesn't go to the Trash — it's gone.
+Moving files or folders from command line is also easy using the `mv` command. The command can also by used to **rename** files, depending on the syntax you use.
 
-To delete a folder and everything inside it:
+> `mv` is shorthand for "move"
 
-`rm -r my_new_folder`
+**Syntax of the `mv` command**
 
-The `-r` here is called a **flag**.  
-It stands for "**recursive**" — it tells `rm` to delete not just the folder, but also anything inside it.
+To **move a file's location**, use the following syntax:
 
----
+```         
+mv source_file destination_folder
+```
 
-# Quick Note About Flags 🏳️
+If you just want to **rename** a file, use the following syntax:
+
+```         
+mv oldname.txt newname.txt
+```
+
+We'll practice the two ways to use the `mv` command in the next exercise.
+
+### 📝  Mini exercise: move and rename a file
+
+#### Part 1: move the file
+
+1.  **Make new subdirectory:** run the command `mkdir my_new_folder` to make a new folder in your `terminal_practice` directory.
+2.  **Peek at our files:** run `ls` to look at the files inside your `terminal_practice` folder to make sure the new folder is there.
+3.  **Move your `notes.txt` file:** Move the copy of your notes files into the new sub-folder in your directory by running the following command: `mv copy_of_notes.txt my_new_folder/`
+4.  **Check that it worked:** run `ls` to look at the files inside your `terminal_practice` folder. You should still see a new folder called \``my_new_folder` but you should *not* see the copy of your notes file.
+5.  **Locate your notes copy file:** run `cd my_new_folder` to move into your new folder. Then run `ls` to peek at the files. You should see your copy of the notes file listed.
+
+#### Part 2: rename the file
+
+1.  **Rename your notes copy file:** From *inside* your new folder, rename the copy of your notes file by running the following command: `mv copy_of_notes.txt notes_new.txt`
+2.  **Check that it worked:** run `ls` to look at your files. You should see the copy of your notes files, but now with a new name
+
+------------------------------------------------------------------------
+
+## Deleting Files and Folders (`rm`)
+
+You can also use the command line to delete files and folders on your machine using the `rm` command.
+
+> `rm` is shorthand for "remove"
+
+This command does require some **caution** because when you delete something from the Terminal, it doesn't go to the Trash — **it's gone**.
+
+**Syntax of the `rm` command:**
+
+Deleting single files:
+
+`rm name_file_to_delete`
+
+Deleting a folder (and *everything inside it)*:
+
+`rm -r folder_to_delete`
+
+*📍 Note: The `-r` here is called a **flag**.* It stands for "**recursive**" — it tells `rm` to delete not just the folder, but also anything inside it. We'll talk a little more about flags in the next section.
+
+------------------------------------------------------------------------
+
+## Quick Note About Flags 🏳️
 
 **Flags** are **extra options** you can add to commands to change how they behave.
 
-- They're usually a **dash** plus **one or two letters**.
-    
-- Example: `-r` means "recursive" for `rm`.
-    
-- You can combine flags too (like `-rf` for `rm -r -f`, meaning "recursive" and "force delete").
-    
+-   They're usually a **dash** plus **one or two letters**. (Example: `-r` means "recursive" for `rm`)
 
-You'll see flags often, and they give you **more control** over what the command does.
+-   You can combine flags too (like `-rf` for `rm -r -f`, meaning "recursive" and "force delete").
 
-Examples:
+You'll see flags often out in the wild. As you use the command line more, you'll start to use more of these flags in your workflow to give you **more control** over what your commands do. For now, just know when you see something starting with a dash, it's probably a flag to add a little extra to the primary command.
 
-- `ls -l` → shows a detailed list.
-    
-- `cp -r folder1/ folder2/` → copies a folder and its contents.
-    
+**Optional exercise:**
 
-You'll get used to them quickly!
----
+If you want, try one out yourself now by using the `-l` flag along with the `ls` command.The flag tells the command line, "give me more information about each file in my directory".
+
+Run the following command:
+
+``` bash
+ls -l 
+```
+
+Terminal will respond with detailed information about **each** file and folder in your directory. See the screenshot below for more information about each detail field.
+
+![Breakdown of each file detail in the `-l` flag Terminal response ](images/ls-flag-example.png)
+
+## 🎯 Checkpoint
+
+Phew. In this chapter you've learned *a lot*:
+
+-   How to create a new folder/directory (`mkdir`)
+
+-   How to create a new file (`touch file_name`)
+
+-   How to copy files (`cp ..`)
+
+-   How to move and rename files (`mv..`)
+
+-   How flags can be used to power-up commands
+
+
+**Next up:**
+
+We'll learn some key tips and tricks to make your command line workflow more efficient.
