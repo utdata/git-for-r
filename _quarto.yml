@@ -42,8 +42,10 @@ book:
       - intro-to-git/07-setup-and-basic-workflow.qmd
       - intro-to-git/08-dealing-with-conflicts.qmd
       - intro-to-git/09-working-with-branches.qmd
-    - part: "Troubleshooting"
+      - intro-to-git/10-pull-requests.qmd
+    - part: "Appendices"
       chapters:
+      - intro-to-git/quick-reference.qmd
       - intro-to-git/troubleshooting.qmd
 
 format:

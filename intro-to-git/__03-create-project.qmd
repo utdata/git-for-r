@@ -1,3 +1,0 @@
-## Connecting your project to Git
-
-(instructions to create a new project)
