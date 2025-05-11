@@ -95,10 +95,12 @@ nothing added to commit but untracked files present (use "git add" to track)
 ## 🎯 Checkpoint
 
 In this chapter you've:
+
  - Made a new git project
  - Initialized git inside your project
 
--- 
+---
+
 **Next up**
 
 In the next step, we'll learn how to tell Git what files we'd like it to track and which files to ignore. Then we'll take our first "snapshot" of our project.
