@@ -37,6 +37,9 @@ book:
        - intro-to-git/04-add-files.qmd
        - intro-to-git/05-pushing-to-github.qmd
        - intro-to-git/06-updating-your-repo.qmd
+    - part: "Part 3: Troubleshooting"
+      chapters:
+      - intro-to-git/troubleshooting.qmd
 
 format:
   html:

@@ -1,0 +1,138 @@
+---
+title: "Troubleshooting"
+---
+
+Even experienced developers forget a command or hit a weird error sometimes. You *will* mess up Git at some point. That’s part of the learning process!
+
+Here’s how to recover from common problems and feel less stuck.
+
+------------------------------------------------------------------------
+
+## Common scenarios and fixes
+
+### "I forgot to add a file before committing"
+
+If you made a commit but forgot a file you meant to include:
+
+Step 1: Stage the missing file:
+
+``` bash
+git add missed_file.qmd
+```
+
+Step 2: Amend your last commit:
+
+``` bash
+git commit --amend
+```
+
+This opens your text editor so you can update the message or leave it the same. Git will include the new file in the same commit.
+
+### "I made a change I don't want anymore"
+
+**Scenario 1:** you changed a file but **haven’t committed** it yet:
+
+``` bash
+git restore filename.qmd
+```
+
+This resets the file to how it was in your last commit.
+
+**Scenario 2:** If the file is **staged**, unstage it first:
+
+``` bash
+git restore --staged filename.qmd
+```
+
+Then run the regular restore command.
+
+------------------------------------------------------------------------
+
+### "I committed the wrong thing"
+
+You can undo the most recent commit **(without losing your changes)**:
+
+``` bash
+git reset --soft HEAD~1
+```
+
+Now your changes are back in the staging area. Fix what you need, and recommit.
+
+If you want to **undo the commit and all your changes**:
+
+``` bash
+git reset --hard HEAD~1
+```
+
+⚠️ This will delete your work — only use this if you're really sure!
+
+------------------------------------------------------------------------
+
+### "I can't push because 'tip of your current branch is behind'"
+
+This means someone else pushed changes to GitHub before you.
+
+To fix it:
+
+``` bash
+git pull --rebase
+```
+
+This fetches the new work and replays your changes on top of it. If there’s a conflict, Git will pause and ask you to resolve it. Once done, run:
+
+``` bash
+git add . git rebase --continue
+```
+
+Then push again:
+
+``` bash
+git push
+```
+
+------------------------------------------------------------------------
+
+### "GitHub is asking for my username and password"
+
+Remember: GitHub no longer supports password login for Git. You need to use a **Personal Access Token (PAT)** instead. See the **Appendix** for a step-by-step guide to setting that up.
+
+------------------------------------------------------------------------
+
+### "My commit history is messy and I want to clean it up"
+
+For beginners, this might be more advanced — but worth knowing exists!
+
+You can squash commits (combine several into one), rename them, and more with:
+
+``` bash
+git rebase -i HEAD~N
+```
+
+Replace `N` with how many commits back you want to edit (e.g., `HEAD~3` for your last 3 commits).
+
+
+## Other Handy Commands
+
+-   View commit history:
+
+    ``` bash
+    git log
+    ```
+
+-   View a compact history:
+
+  ``` bash
+  git log --oneline
+  ```
+
+-   Undo staging:
+
+    ``` bash
+    git restore --staged filename.qmd
+    ```
+
+-   See all branches:
+
+    ``` bash
+    git branch
+    ```
