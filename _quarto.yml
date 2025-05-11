@@ -37,10 +37,12 @@ book:
        - intro-to-git/04-add-files.qmd
        - intro-to-git/05-pushing-to-github.qmd
        - intro-to-git/06-updating-your-repo.qmd
-    - part: "Advanced: collaboration and workflows"
+    - part: "Advanced: collaborating with others"
       chapters:
-      - intro-to-git/07-collaborating.qmd
-    - part: "Part 3:Tip, tricks, troubleshooting"
+      - intro-to-git/07-setup-and-basic-workflow.qmd
+      - intro-to-git/08-dealing-with-conflicts.qmd
+      - intro-to-git/09-working-with-branches.qmd
+    - part: "Troubleshooting"
       chapters:
       - intro-to-git/troubleshooting.qmd
 

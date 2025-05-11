@@ -1,0 +1,159 @@
+---
+title: "Working with feature branches"
+---
+
+In Git, a **branch** is like a parallel universe for your code. You can work on a new idea or fix a bug *without messing up the main project*. When you're ready, you bring your changes back to the main line with a **merge**.
+
+## Why Use Branches?
+
+Let’s say you're working with teammates. One of you is writing the introduction, another is cleaning the data, and a third is building plots.
+
+If you all worked on the `main` branch at the same time, you’d constantly bump into each other — accidentally overwriting work or creating conflicts. Branches let everyone work on their own part of the project safely.
+
+## 🌱 Step 1: Create a New Branch
+
+In your terminal, run the following command to see a list of the branches that exist in your project:
+
+``` bash
+git branch
+```
+
+You'll likely just see the `main` branch with an `*` symbol next to it. The asterisk tells you this is the branch you are **currently working on** in Git.
+
+Now, let’s say you wanted to try a new plot, but you weren't sure if you're ready to use this in the full project. You'd like some room to experiment a bit before fully committing your work to the main project. This is where a **feature branch** comes in.
+
+To make a new branch, run the following command in the terminal:
+
+``` bash
+git checkout -b plot-experiment
+```
+
+You should see a response in the terminal saying something like:
+
+> *Switched to a new branch 'plot-experiment'*
+
+This command did two things:
+
+1.  `checkout`: switched to another branch
+
+2.  `-b plot-experiment`: created a new branch called `plot-experiment`
+
+Now you’re in a new “sandbox” that’s separate from your `main` branch in Git.
+
+To confirm that, run:
+
+``` bash
+git branch
+```
+
+You’ll see something like:
+
+```         
+*plot-experiment
+main
+```
+
+Remember, the `*` shows your current branch. So you're now on `plot-experiment`.
+
+## Step 2: Make and Commit Changes on the New Branch
+
+Now that you're on our feature branch (which is an exact clone of our main branch at the time it is created), we can begin to safely experiment. You can make changes to our branch without worrying about messing up your work on our `main` branch.
+
+Let's try adding some new files to test this out:
+
+1.  Make a new quarto file called `01-plot.qmd`
+2.  Inside the file, make a new code block cell add the following code:
+
+```         
+library(tidyverse)
+
+ggplot(mtcars, aes(x=hp, y=mpg, color=cyl)) +
+    geom_point(size=3)
+```
+
+3.  Run the cell, to generate a simple ggplot() scatterplot.
+4.  Save the file.
+
+Now, add the new plot file to git, by completing the normal Git workflow steps:
+
+1.  Run `git status` to see what's changed.
+2.  Type and run `git add 01-plot.qmd` to tell Git to start tracking your new file.
+3.  Run `git status` again to make sure your new file showing under *"changes to be committed".*
+4.  Run: `git commit -m "Add experimental plot"` to take a snapshot of your changes.
+
+You’ve saved the change **only** to `plot-experiment`, not to `main`. You're ready to push your new branch to Github.
+
+## Step 3: Push the Branch to GitHub
+
+Once you've committed some changes on your branch, you'll probably want to back up your work by pushing it to Github.
+
+The syntax to add a new branch to your repo is just like it was when we added our main branch:
+
+``` bash
+git push -u origin branch-name
+```
+
+This command does two things:
+
+1.  **Creates** the new branch on GitHub
+2.  **Links** your local branch to it.
+
+So if you wanted to add your new `plot-experiment` branch, for example, you'd type and run:
+
+``` bash
+git push -u origin plot-experiment
+```
+
+Terminal would show a response like:
+
+> *To github.com:username/my-git-quarto-project.git* \[new branch\] plot-experiment -\> plot-experiment branch 'plot-experiment' set up to track 'origin/plot-experiment'.\*
+
+You’ll now see the branch listed in your GitHub repo.
+
+![Github will display new feature branches in your repository](../images/github-branch.png)
+
+## Merging back into `main`
+
+Once you’re happy with your branch changes, you can merge them back into `main` to incorporate them into your project.
+
+**Step 1: switch back to `main`**
+
+Run the following to get back to your main branch:
+
+``` bash
+git checkout main
+```
+
+If you run `git branch` again, the asterisk should show next to `main` again.
+
+
+
+**Heads-up:** if you've still got your `01-plot.qmd` file open in R Studio when you switch back to your main branch, you'll get a pop-up telling you that the plot file has been deleted (see screenshot). That's because the file doesn't exist *yet* on the `main` branch. Hit the blue `Yes` button in the pop to close the file. Don't worry though, the file *still* exists on your plot-experiment branch because you made a snapshot of your work with your git commit.🤠
+
+![RStudio may show a warning when switching branches](../images/feature-branch-missing-file.png)
+
+Ok, now that we're on a `main` branch, we want to bring in the changes from `plot-experiment`.
+
+**Step 2: merge the feature branch *into* main**
+
+Type and run:
+
+``` bash
+git merge plot-experiment
+```
+
+This pulls the changes from your **feature branch** into the **main project.**
+
+If everything goes smoothly, you’ll see a message like:
+
+`Updating abc1234..def5678 Fast-forward  myfile.qmd | 10 ++++++++++  1 file changed, 10 insertions(+)`
+
+> Note: If Git can’t automatically combine changes, you’ll get a **merge conflict**. If this happens, you'll need to resolve the issues following the steps in the last chapter.
+
+In your R Studio file pane, you should now see the `01-plot.qmd` file listed (you may need to refresh).
+
+------------------------------------------------------------------------
+
+**Next up**
+
+Now that you understand the basics of how to make feature branches and have an baseline understanding of how merging works, we'll show you how to use Github's **pull request** feature to review changes and get feedback (the workflow we'd recommend).
