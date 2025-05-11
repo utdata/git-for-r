@@ -1,5 +1,7 @@
 ---
 title: "Updating files"
+execute:
+  echo: false
 ---
 
 > 🎯 Goal: By the end of this chapter, you’ll know how to:
@@ -16,9 +18,9 @@ You’ll also practice writing good commit messages and checking your work.
 
 Let’s open your Quarto file you made in Chapter 1 (e.g., `01-index.qmd`) and make a couple changes.
 
-Replace the auto-generated text and code blocks in the file with the following
+Replace the auto-generated text and code blocks in the file with the following:
 
-``` bash
+``` {.bash include="false"}
 ---
 title: "Intro to Git"
 format: html
@@ -29,19 +31,21 @@ format: html
 Here is a summary of the `mtcars` dataset.
 ```
 
-Under the summary header and description, add a code chunk with the following:
+Under the summary header and description, add a **new code block** with the following:
 
 ``` bash
 summary(mtcars)
 ```
 
-Save the file. Now check the status in your Terminal again by running:
+Then save the file.
+
+Now check the status in your Terminal again by running:
 
 ``` bash
 git status
 ```
 
-You'll see something like as a Terminal response:
+The Terminal should respond with something like this:
 
 ```         
 On branch main
@@ -55,25 +59,28 @@ Changes not staged for commit:
 
 **Let's break this down** :
 
-The red text tells us that Git sees something was modified in your 01-index.qmd. It's under the `Changes not staged for commit:` section, which tells us that Git hasn’t *staged* it yet (so it won’t be saved in the next commit).
+1.  The red text tells us that Git *sees* that something was modified in your `01-index.qmd`.
+2.  It's under the `Changes not staged for commit:` section, which tells us that Git hasn’t *staged* it yet (so it won’t be saved in the next commit).
 
 ## Stage the Change
 
-We want to tell Git, “Hey, save this file in the next snapshot.”
+Now that you know Git sees the change, you need to tell Git, “Hey, save this file in the next snapshot.”
 
-We'll do this by **adding** the modified file to the snapshot. We can do that by running:
+You'll do this by adding — or **staging** — the modified file for your next commit.
+
+To stage your changed file, run:
 
 ``` bash
 git add 01-index.qmd
 ```
 
-Now, check the status again.
+Now, check your Git status again.
 
 ``` bash
 git status
 ```
 
-Now you'll see your file in green and following message:
+You should see your 01-index.qmd file in green, along with following message:
 
 ```         
 Changes to be committed:
@@ -81,36 +88,85 @@ Changes to be committed:
   modified:   01-index.qmd`
 ```
 
-🎉 Great! The change is now **staged**.
+🎉 Great! Your changed file is now **staged** and ready to **commit**.
 
-## Commit the Change
+## Commit your change
 
-Now, we'll save the snapshot (in Git's memory). When we do so, we'll want to include a descriptive **commit message** noting what we changed.
+Now, we'll save the snapshot of our updated file in Git's memory. When we do so, we'll want to include a descriptive **commit message** noting what we changed. Git commits always need a message attached to them.
 
-Type something like the following and git enter
+**A few best practices to keep in mind with commit messages:**
 
-`git commit -m "Add summary of mtcars dataset"`
+1.  Use present tense: `"Add summary of..."`, not `"Added..."`
+2.  Keep it short but descriptive
+3.  Think: “What changed in this version?”, write that in the message.
 
-A few best practices for commit messages:
+✅ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or if you need to go back to a prior version, commit messages will help your retrace your steps.
 
-✅ Use present tense: `"Add summary of..."`, not `"Added..."`\
-✅ Keep it short but descriptive\
-✅ Think: “What changed in this version?”
+With those things in mind, practice writing a descriptive commit message with your change to the `01-index.qmd`.
 
-🕵️‍♀️ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or you need to go back to a prior version, commit messages will help your retrace your steps.
+Type something like the following and hit enter:
 
-## Push It to GitHub
+``` bash
+git commit -m "Add summary of mtcars dataset"
+```
 
-Now, we'll send the snapshot from your computer to GitHub by running:
+Terminal will respond with a summary of insertions and deletions in your file.
+
+**A quick word of caution about the `-m` flag and Vim**
+
+Git commits **always** need a message attached to them. The `-m` flag tells the command line that we'll be writing our message *inline* with our command.
+
+If you forget to include that message flag, the Terminal will open its default text editor called Vim. If you find yourself in this scenario and don't know how to get out, there's a section on [getting out of Vim](../terminal/04-troubleshooting.html#how-to-get-out-of-vim) in our Terminal Guide.
+
+## Push your commit to GitHub
+
+Now, that our changes are **staged** and **commited,** we'll send the snapshot from your computer to GitHub by **pushing** our changes.
+
+Push your new commit by running:
 
 ``` bash
 git push
 ```
 
-Now go to your repository on Github — you’ll see your commit listed under the **Commits** tab and your file under **Code**!
+Now go to your repository on Github — you’ll see your commit listed under the **Commits** tab and your file under the `<>Code`tab! (You may need to refresh)
 
 ::: callout-note
-You may be wondering why our push command is shorter than it was last time. In our last push, we needed to connect our remote main branch to the remote Github repository. Since we're already connected our Quarto project to Github and set our branch to main, we can just use the `git push` command now.
+You may be wondering why this push command was shorter than it was last time. In your last push, you needed to connect local project (the one on your computer) to the remote repository on Github and set your main branch.
+
+Since you already connected your Quarto project to Github and set our branch to main, you can just use the `git push` command now.
 :::
 
-> 💡 GitHub is now your project’s **cloud backup and collaboration hub**.
+## Git workflow best practices
+
+Before we move on, here's a few key best practices to keep in mind as you're getting used to working in Git:
+
+1.  **Commit early, commit often:** Save your work frequently in small, logical chunks. This makes changes easier to track, understand, and roll back.
+
+2.  **Write clear commit messages:** Use concise, meaningful messages that explain why the change was made. (e.g., Fix typo in introduction, not just update)
+
+3.  **Check status regularly**: Run `git status` often to see what’s changed and what’s staged.
+
+4.  **Stage changes selectively:** Use `git add <filename>` (instead of `git add .`) when you want more control over what goes into each commit.
+
+
+## 🎯 Checkpoint
+
+In this chapter, you learned the basic git workflow:
+
+-   Make a change to your local project
+
+-   Stage the changes in git (`git add ..`)
+
+-   Take a snapshot of the changed files (`git commit -m ...`)
+
+-   Push the changes to Github (`git push`)
+
+-   Best practices to keep things clean and manageable
+
+This is the cycle you will repeat over and over again as you work on coding projects using git.
+
+--- 
+
+**Next up:**
+
+we’ll learn how to **make changes**, **track versions**, and **collaborate** like pros.
