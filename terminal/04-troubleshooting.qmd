@@ -25,20 +25,20 @@ Here's a quick rundown of the most common problems and errors you'll run into us
 
 For more common issues and how to fix them, see the `common errors` table in the Glossary at the end of this guide.
 
-## How to Get Out of VIM
+## How to Get Out of Vim
 
-Every new command line user shares one panic-inducing experience at one point or another: accidentally opening VIM and not knowing *how to get out of it*. 
+Every new command line user shares one panic-inducing experience at one point or another: accidentally opening Vim and not knowing *how to get out of it*. 
 
-In this section, we'll briefly walk you through what VIM **is** and how to **exit it** so you don't panic when this (inevitably) happens to you.
+In this section, we'll briefly walk you through what Vim **is** and how to **exit it** so you don't panic when this (inevitably) happens to you.
 
-**What is VIM?**
+**What is Vim?**
 
 
-VIM is a text editor built into most Unix systems, including macOS and Linux. It's used by developers to edit code and configuration files, but it works very differently from regular text editors.
+Vim is a text editor built into most Unix systems, including macOS and Linux. It's used by developers to edit code and configuration files, but it works very differently from regular text editors.
 
-If you accidentally open something in vim (for example, by running git commit without a message), it might look like you're stuck. But don’t worry — here’s how to exit safely.
+If you accidentally open something in Vim (for example, by running git commit without a message), it might look like you're stuck. But don’t worry — here’s how to exit safely.
 
-**How to Exit VIM**
+**How to Exit Vim**
 
 If you **don’t** want to save any changes - most common:
 
