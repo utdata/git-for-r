@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../intro-to-git/07-setup-and-basic-workflow.html" rel="next">
 <link href="../intro-to-git/05-pushing-to-github.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -291,6 +292,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Advanced: collaborating with others</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/07-setup-and-basic-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/08-dealing-with-conflicts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dealing with conflicts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/09-working-with-branches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/10-pull-requests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/quick-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quick reference</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -303,8 +362,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#make-a-small-change" id="toc-make-a-small-change" class="nav-link active" data-scroll-target="#make-a-small-change"><span class="header-section-number">13.1</span> Make a Small Change</a></li>
   <li><a href="#stage-the-change" id="toc-stage-the-change" class="nav-link" data-scroll-target="#stage-the-change"><span class="header-section-number">13.2</span> Stage the Change</a></li>
-  <li><a href="#commit-the-change" id="toc-commit-the-change" class="nav-link" data-scroll-target="#commit-the-change"><span class="header-section-number">13.3</span> Commit the Change</a></li>
-  <li><a href="#push-it-to-github" id="toc-push-it-to-github" class="nav-link" data-scroll-target="#push-it-to-github"><span class="header-section-number">13.4</span> Push It to GitHub</a></li>
+  <li><a href="#commit-your-change" id="toc-commit-your-change" class="nav-link" data-scroll-target="#commit-your-change"><span class="header-section-number">13.3</span> Commit your change</a></li>
+  <li><a href="#push-your-commit-to-github" id="toc-push-your-commit-to-github" class="nav-link" data-scroll-target="#push-your-commit-to-github"><span class="header-section-number">13.4</span> Push your commit to GitHub</a></li>
+  <li><a href="#git-workflow-best-practices" id="toc-git-workflow-best-practices" class="nav-link" data-scroll-target="#git-workflow-best-practices"><span class="header-section-number">13.5</span> Git workflow best practices</a></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">13.6</span> 🎯 Checkpoint</a></li>
   </ul>
 </nav>
     </div>
@@ -342,8 +403,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="make-a-small-change" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="make-a-small-change"><span class="header-section-number">13.1</span> Make a Small Change</h2>
 <p>Let’s open your Quarto file you made in Chapter 1 (e.g., <code>01-index.qmd</code>) and make a couple changes.</p>
-<p>Replace the auto-generated text and code blocks in the file with the following</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">---</span></span>
+<p>Replace the auto-generated text and code blocks in the file with the following:</p>
+<div class="sourceCode" id="cb1" data-include="false"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">title:</span> <span class="st">"Intro to Git"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">format:</span> html</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">---</span></span>
@@ -351,11 +412,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Here</span> is a summary of the <span class="kw">`</span><span class="ex">mtcars</span><span class="kw">`</span> dataset.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Under the summary header and description, add a code chunk with the following:</p>
+<p>Under the summary header and description, add a <strong>new code block</strong> with the following:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">summary</span><span class="er">(</span><span class="ex">mtcars</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Save the file. Now check the status in your Terminal again by running:</p>
+<p>Then save the file.</p>
+<p>Now check the status in your Terminal again by running:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You’ll see something like as a Terminal response:</p>
+<p>The Terminal should respond with something like this:</p>
 <pre><code>On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -364,37 +426,49 @@ Changes not staged for commit:
   (use "git restore &lt;file&gt;..." to discard changes in working directory)
         modified:   01-index.qmd</code></pre>
 <p><strong>Let’s break this down</strong> :</p>
-<p>The red text tells us that Git sees something was modified in your 01-index.qmd. It’s under the <code>Changes not staged for commit:</code> section, which tells us that Git hasn’t <em>staged</em> it yet (so it won’t be saved in the next commit).</p>
+<ol type="1">
+<li>The red text tells us that Git <em>sees</em> that something was modified in your <code>01-index.qmd</code>.</li>
+<li>It’s under the <code>Changes not staged for commit:</code> section, which tells us that Git hasn’t <em>staged</em> it yet (so it won’t be saved in the next commit).</li>
+</ol>
 </section>
 <section id="stage-the-change" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="stage-the-change"><span class="header-section-number">13.2</span> Stage the Change</h2>
-<p>We want to tell Git, “Hey, save this file in the next snapshot.”</p>
-<p>We’ll do this by <strong>adding</strong> the modified file to the snapshot. We can do that by running:</p>
+<p>Now that you know Git sees the change, you need to tell Git, “Hey, save this file in the next snapshot.”</p>
+<p>You’ll do this by adding — or <strong>staging</strong> — the modified file for your next commit.</p>
+<p>To stage your changed file, run:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add 01-index.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now, check the status again.</p>
+<p>Now, check your Git status again.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now you’ll see your file in green and following message:</p>
+<p>You should see your 01-index.qmd file in green, along with following message:</p>
 <pre><code>Changes to be committed:
   (use "git restore --staged &lt;file&gt;..." to unstage)
   modified:   01-index.qmd`</code></pre>
-<p>🎉 Great! The change is now <strong>staged</strong>.</p>
+<p>🎉 Great! Your changed file is now <strong>staged</strong> and ready to <strong>commit</strong>.</p>
 </section>
-<section id="commit-the-change" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="commit-the-change"><span class="header-section-number">13.3</span> Commit the Change</h2>
-<p>Now, we’ll save the snapshot (in Git’s memory). When we do so, we’ll want to include a descriptive <strong>commit message</strong> noting what we changed.</p>
-<p>Type something like the following and git enter</p>
-<p><code>git commit -m "Add summary of mtcars dataset"</code></p>
-<p>A few best practices for commit messages:</p>
-<p>✅ Use present tense: <code>"Add summary of..."</code>, not <code>"Added..."</code><br>
-✅ Keep it short but descriptive<br>
-✅ Think: “What changed in this version?”</p>
-<p>🕵️‍♀️ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or you need to go back to a prior version, commit messages will help your retrace your steps.</p>
+<section id="commit-your-change" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="commit-your-change"><span class="header-section-number">13.3</span> Commit your change</h2>
+<p>Now, we’ll save the snapshot of our updated file in Git’s memory. When we do so, we’ll want to include a descriptive <strong>commit message</strong> noting what we changed. Git commits always need a message attached to them.</p>
+<p><strong>A few best practices to keep in mind with commit messages:</strong></p>
+<ol type="1">
+<li>Use present tense: <code>"Add summary of..."</code>, not <code>"Added..."</code></li>
+<li>Keep it short but descriptive</li>
+<li>Think: “What changed in this version?”, write that in the message.</li>
+</ol>
+<p>✅ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or if you need to go back to a prior version, commit messages will help your retrace your steps.</p>
+<p>With those things in mind, practice writing a descriptive commit message with your change to the <code>01-index.qmd</code>.</p>
+<p>Type something like the following and hit enter:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add summary of mtcars dataset"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Terminal will respond with a summary of insertions and deletions in your file.</p>
+<p><strong>A quick word of caution about the <code>-m</code> flag and Vim</strong></p>
+<p>Git commits <strong>always</strong> need a message attached to them. The <code>-m</code> flag tells the command line that we’ll be writing our message <em>inline</em> with our command.</p>
+<p>If you forget to include that message flag, the Terminal will open its default text editor called Vim. If you find yourself in this scenario and don’t know how to get out, there’s a section on <a href="../terminal/04-troubleshooting.html#how-to-get-out-of-vim">getting out of Vim</a> in our Terminal Guide.</p>
 </section>
-<section id="push-it-to-github" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="push-it-to-github"><span class="header-section-number">13.4</span> Push It to GitHub</h2>
-<p>Now, we’ll send the snapshot from your computer to GitHub by running:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now go to your repository on Github — you’ll see your commit listed under the <strong>Commits</strong> tab and your file under <strong>Code</strong>!</p>
+<section id="push-your-commit-to-github" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="push-your-commit-to-github"><span class="header-section-number">13.4</span> Push your commit to GitHub</h2>
+<p>Now, that our changes are <strong>staged</strong> and <strong>commited,</strong> we’ll send the snapshot from your computer to GitHub by <strong>pushing</strong> our changes.</p>
+<p>Push your new commit by running:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now go to your repository on Github — you’ll see your commit listed under the <strong>Commits</strong> tab and your file under the <code>&lt;&gt;Code</code>tab! (You may need to refresh)</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -405,12 +479,35 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You may be wondering why our push command is shorter than it was last time. In our last push, we needed to connect our remote main branch to the remote Github repository. Since we’re already connected our Quarto project to Github and set our branch to main, we can just use the <code>git push</code> command now.</p>
+<p>You may be wondering why this push command was shorter than it was last time. In your last push, you needed to connect local project (the one on your computer) to the remote repository on Github and set your main branch.</p>
+<p>Since you already connected your Quarto project to Github and set our branch to main, you can just use the <code>git push</code> command now.</p>
 </div>
 </div>
-<blockquote class="blockquote">
-<p>💡 GitHub is now your project’s <strong>cloud backup and collaboration hub</strong>.</p>
-</blockquote>
+</section>
+<section id="git-workflow-best-practices" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="git-workflow-best-practices"><span class="header-section-number">13.5</span> Git workflow best practices</h2>
+<p>Before we move on, here’s a few key best practices to keep in mind as you’re getting used to working in Git:</p>
+<ol type="1">
+<li><p><strong>Commit early, commit often:</strong> Save your work frequently in small, logical chunks. This makes changes easier to track, understand, and roll back.</p></li>
+<li><p><strong>Write clear commit messages:</strong> Use concise, meaningful messages that explain why the change was made. (e.g., Fix typo in introduction, not just update)</p></li>
+<li><p><strong>Check status regularly</strong>: Run <code>git status</code> often to see what’s changed and what’s staged.</p></li>
+<li><p><strong>Stage changes selectively:</strong> Use <code>git add &lt;filename&gt;</code> (instead of <code>git add .</code>) when you want more control over what goes into each commit.</p></li>
+</ol>
+</section>
+<section id="checkpoint" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">13.6</span> 🎯 Checkpoint</h2>
+<p>In this chapter, you learned the basic git workflow:</p>
+<ul>
+<li><p>Make a change to your local project</p></li>
+<li><p>Stage the changes in git (<code>git add ..</code>)</p></li>
+<li><p>Take a snapshot of the changed files (<code>git commit -m ...</code>)</p></li>
+<li><p>Push the changes to Github (<code>git push</code>)</p></li>
+<li><p>Best practices to keep things clean and manageable</p></li>
+</ul>
+<p>This is the cycle you will repeat over and over again as you work on coding projects using git.</p>
+<hr>
+<p><strong>Next up:</strong></p>
+<p>we’ll learn how to <strong>make changes</strong>, <strong>track versions</strong>, and <strong>collaborate</strong> like pros.</p>
 
 
 </section>
@@ -822,6 +919,9 @@ Note
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../intro-to-git/07-setup-and-basic-workflow.html" class="pagination-link" aria-label="Project setup and basic workflow">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

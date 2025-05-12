@@ -81,7 +81,7 @@ vignettes/*.pdf
 
 # pkgdown site
 ## Edited for UT Journalism
-# docs/
+docs/
 
 # translation temp files
 po/*~

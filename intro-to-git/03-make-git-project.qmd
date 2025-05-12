@@ -2,28 +2,30 @@
 title: "Make our Git project"
 ---
 
-> 🎯 Goal: By the end of this chapter, you’ll have a brand-new RStudio project tracked by Git.
+> 🎯 Goal: By the end of this chapter, you’ll have an RStudio Quarto project tracked by Git.
 
 ## Create a new RStudio Project
 
-Before you can add anything to Github, you need to create the Quarto project you'll be tracking.
+Before you can add anything to Github, you need a Quarto project to track.
 
-Make a new Quarto project in RStudio by going to:
+Follow the steps below to make a new Quarto project in RStudio:
 
-``` bash
-File → New Project → New Directory → Quarto Project
-```
+**Make a new Quarto project**
+
+Navigate to:
+
+- File → New Project → New Directory → Quarto Project
 
 In the "Create Quarto Project" window, do the following:
 
-1.  **Directory Name field:** Give your directory a descriptive name like `my-first-git-project`.
-2.  **Create project as a subdirectory of**: Mke sure you're creating your project in the directory where you keep your class or coding projects (ideally a `projects` folder inside your home directory).
-3.  **Checkboxes:** Make sure none of the boxes are checked.
+1. Give your directory a descriptive name like `my-first-git-project` in the  **Directory Name field**.
+2. Check the  **Create project as a subdirectory of** field to make sure you're creating your project in the folder where you keep your class or coding projects on your computer.
+3.  Make sure none of the boxes are checked.
 4.  Finally, click **Create Project.**
 
 You’ll now have a project with a `.qmd` file (Quarto).
 
-## Run a Quarto File
+## Run a Quarto File 
 
 Before we get into Git, let’s quickly make sure Quarto is working as expected by creating and rendering a new file.
 
@@ -36,31 +38,32 @@ A new browser window should open with an HTML preview of your file.
 
 Great! You’re ready to start version-controlling this project.
 
-## Initialize Git for the Project
+## Initialize Git in our Project
 
-If we want Git to start watching our files and keeping track of our changes, we have to make sure Git is connected to our project. To do this, we need to **initialize** git inside of our Quarto project.
+If we want Git to start watching our files and keeping track of our changes, we have to make sure Git is connected to our project. To do this, we need to **initialize** Git inside of our Quarto project.
 
-In basic terms, **initializing** tells Git "I want you to start tracking this folder.”
+In basic terms, initializing tells Git "I want you to start tracking this folder.”
 
-**Initialize Git in our new project:**
+**How to initialize Git in our new project:**
 
-To initialize Git in your Quarto project, Click the `Terminal` tab in RStudio (usually lower-left)
+1. Navigate to the `Terminal` tab in RStudio.
 
-Type the following command and run it (by hitting enter):
+2. In the terminal, run this:
 
-``` bash
-git init
-```
+    ``` bash
+    git init
+    ```
 
 If it works, you’ll see Terminal respond with something like:
 
 `Initialized empty Git repository in /Users/yourname/my-quarto-project/.git/`
 
-## Tell Git What Files to Track
+> **What's actually happening here?**
+This command creates a hidden folder called .git in the project folder. This folder contains all the information Git needs to track changes in our project.
 
-Now that we've let Git know that we want it to start *watching* our project, we'll also need to tell git *what files* we would like it to keep track of.
+## Ask Git what it sees (`git status`)
 
-First, let’s ask Git what it "sees" in our project folder by running the following command in the Terminal tab:
+Now that we've let Git know that we want it to start *watching* by initializing it in our project, we can check the status of our files by running the following command:
 
 ``` bash
 git status
@@ -88,16 +91,21 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 **Let's quickly breakdown what this all means:**
 
-1.  **On branch main**: You're working on the `main` branch — the default starting branch for development.
-2.  **No commits yet**: This means Git is ready, but you haven’t saved any versions yet.
-3.  **Untracked Files**: These are files Git sees in your folder, but it’s not saving changes to them yet. These files are marked in **red** in the terminal.
+1. "On branch main": You're working on the `main` branch — the default starting branch for development.
+
+2. "No commits yet": This means Git is ready, but you haven’t saved any versions yet.
+
+3. "Untracked Files": These are files Git sees in your folder, but it’s not saving changes to them yet. These files are marked in **red** in the terminal.
+
+The `git status` command should be used frequently in your git process to keep track of your progress and make sure you're where you think you are. 
 
 ## 🎯 Checkpoint
 
 In this chapter you've:
 
- - Made a new git project
- - Initialized git inside your project
+ - Made a new Quarto project
+ - Initialized Git inside your project (`git init`)
+ - Asked Git about the status of our project files (`git status`)
 
 ---
 

@@ -2,8 +2,6 @@
 title: "Pushing to Github"
 ---
 
-# Pushing to Github
-
 > 🎯 Goal: By the end of this chapter, you’ll know how to connect your
 > Git project to Github and push your first commit.
 

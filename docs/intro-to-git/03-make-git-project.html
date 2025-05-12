@@ -275,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/04-add-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -287,7 +287,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/06-updating-your-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Updating files</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Advanced: collaborating with others</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/07-setup-and-basic-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/08-dealing-with-conflicts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dealing with conflicts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/09-working-with-branches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/10-pull-requests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/quick-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quick reference</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
       </ul>
@@ -304,8 +362,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#create-a-new-rstudio-project" id="toc-create-a-new-rstudio-project" class="nav-link active" data-scroll-target="#create-a-new-rstudio-project"><span class="header-section-number">10.1</span> Create a new RStudio Project</a></li>
   <li><a href="#run-a-quarto-file" id="toc-run-a-quarto-file" class="nav-link" data-scroll-target="#run-a-quarto-file"><span class="header-section-number">10.2</span> Run a Quarto File</a></li>
-  <li><a href="#initialize-git-for-the-project" id="toc-initialize-git-for-the-project" class="nav-link" data-scroll-target="#initialize-git-for-the-project"><span class="header-section-number">10.3</span> Initialize Git for the Project</a></li>
-  <li><a href="#tell-git-what-files-to-track" id="toc-tell-git-what-files-to-track" class="nav-link" data-scroll-target="#tell-git-what-files-to-track"><span class="header-section-number">10.4</span> Tell Git What Files to Track</a></li>
+  <li><a href="#initialize-git-in-our-project" id="toc-initialize-git-in-our-project" class="nav-link" data-scroll-target="#initialize-git-in-our-project"><span class="header-section-number">10.3</span> Initialize Git in our Project</a></li>
+  <li><a href="#ask-git-what-it-sees-git-status" id="toc-ask-git-what-it-sees-git-status" class="nav-link" data-scroll-target="#ask-git-what-it-sees-git-status"><span class="header-section-number">10.4</span> Ask Git what it sees (<code>git status</code>)</a></li>
   <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">10.5</span> 🎯 Checkpoint</a></li>
   </ul>
 </nav>
@@ -333,18 +391,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <blockquote class="blockquote">
-<p>🎯 Goal: By the end of this chapter, you’ll have a brand-new RStudio project tracked by Git.</p>
+<p>🎯 Goal: By the end of this chapter, you’ll have an RStudio Quarto project tracked by Git.</p>
 </blockquote>
 <section id="create-a-new-rstudio-project" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="create-a-new-rstudio-project"><span class="header-section-number">10.1</span> Create a new RStudio Project</h2>
-<p>Before you can add anything to Github, you need to create the Quarto project you’ll be tracking.</p>
-<p>Make a new Quarto project in RStudio by going to:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">File</span> → New Project → New Directory → Quarto Project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Before you can add anything to Github, you need a Quarto project to track.</p>
+<p>Follow the steps below to make a new Quarto project in RStudio:</p>
+<p><strong>Make a new Quarto project</strong></p>
+<p>Navigate to:</p>
+<ul>
+<li>File → New Project → New Directory → Quarto Project</li>
+</ul>
 <p>In the “Create Quarto Project” window, do the following:</p>
 <ol type="1">
-<li><strong>Directory Name field:</strong> Give your directory a descriptive name like <code>my-first-git-project</code>.</li>
-<li><strong>Create project as a subdirectory of</strong>: Mke sure you’re creating your project in the directory where you keep your class or coding projects (ideally a <code>projects</code> folder inside your home directory).</li>
-<li><strong>Checkboxes:</strong> Make sure none of the boxes are checked.</li>
+<li>Give your directory a descriptive name like <code>my-first-git-project</code> in the <strong>Directory Name field</strong>.</li>
+<li>Check the <strong>Create project as a subdirectory of</strong> field to make sure you’re creating your project in the folder where you keep your class or coding projects on your computer.</li>
+<li>Make sure none of the boxes are checked.</li>
 <li>Finally, click <strong>Create Project.</strong></li>
 </ol>
 <p>You’ll now have a project with a <code>.qmd</code> file (Quarto).</p>
@@ -361,22 +423,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A new browser window should open with an HTML preview of your file.</p>
 <p>Great! You’re ready to start version-controlling this project.</p>
 </section>
-<section id="initialize-git-for-the-project" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="initialize-git-for-the-project"><span class="header-section-number">10.3</span> Initialize Git for the Project</h2>
-<p>If we want Git to start watching our files and keeping track of our changes, we have to make sure Git is connected to our project. To do this, we need to <strong>initialize</strong> git inside of our Quarto project.</p>
-<p>In basic terms, <strong>initializing</strong> tells Git “I want you to start tracking this folder.”</p>
-<p><strong>Initialize Git in our new project:</strong></p>
-<p>To initialize Git in your Quarto project, Click the <code>Terminal</code> tab in RStudio (usually lower-left)</p>
-<p>Type the following command and run it (by hitting enter):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="initialize-git-in-our-project" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="initialize-git-in-our-project"><span class="header-section-number">10.3</span> Initialize Git in our Project</h2>
+<p>If we want Git to start watching our files and keeping track of our changes, we have to make sure Git is connected to our project. To do this, we need to <strong>initialize</strong> Git inside of our Quarto project.</p>
+<p>In basic terms, initializing tells Git “I want you to start tracking this folder.”</p>
+<p><strong>How to initialize Git in our new project:</strong></p>
+<ol type="1">
+<li><p>Navigate to the <code>Terminal</code> tab in RStudio.</p></li>
+<li><p>In the terminal, run this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
 <p>If it works, you’ll see Terminal respond with something like:</p>
 <p><code>Initialized empty Git repository in /Users/yourname/my-quarto-project/.git/</code></p>
+<blockquote class="blockquote">
+<p><strong>What’s actually happening here?</strong> This command creates a hidden folder called .git in the project folder. This folder contains all the information Git needs to track changes in our project.</p>
+</blockquote>
 </section>
-<section id="tell-git-what-files-to-track" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="tell-git-what-files-to-track"><span class="header-section-number">10.4</span> Tell Git What Files to Track</h2>
-<p>Now that we’ve let Git know that we want it to start <em>watching</em> our project, we’ll also need to tell git <em>what files</em> we would like it to keep track of.</p>
-<p>First, let’s ask Git what it “sees” in our project folder by running the following command in the Terminal tab:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="ask-git-what-it-sees-git-status" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="ask-git-what-it-sees-git-status"><span class="header-section-number">10.4</span> Ask Git what it sees (<code>git status</code>)</h2>
+<p>Now that we’ve let Git know that we want it to start <em>watching</em> by initializing it in our project, we can check the status of our files by running the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Terminal will return something like the following as a response:</p>
 <pre><code>On branch main
 
@@ -395,15 +461,22 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 <p><strong>Let’s quickly breakdown what this all means:</strong></p>
 <ol type="1">
-<li><strong>On branch main</strong>: You’re working on the <code>main</code> branch — the default starting branch for development.</li>
-<li><strong>No commits yet</strong>: This means Git is ready, but you haven’t saved any versions yet.</li>
-<li><strong>Untracked Files</strong>: These are files Git sees in your folder, but it’s not saving changes to them yet. These files are marked in <strong>red</strong> in the terminal.</li>
+<li><p>“On branch main”: You’re working on the <code>main</code> branch — the default starting branch for development.</p></li>
+<li><p>“No commits yet”: This means Git is ready, but you haven’t saved any versions yet.</p></li>
+<li><p>“Untracked Files”: These are files Git sees in your folder, but it’s not saving changes to them yet. These files are marked in <strong>red</strong> in the terminal.</p></li>
 </ol>
+<p>The <code>git status</code> command should be used frequently in your git process to keep track of your progress and make sure you’re where you think you are.</p>
 </section>
 <section id="checkpoint" class="level2" data-number="10.5">
 <h2 data-number="10.5" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">10.5</span> 🎯 Checkpoint</h2>
-<p>In this chapter you’ve: - Made a new git project - Initialized git inside your project</p>
-<p>– <strong>Next up</strong></p>
+<p>In this chapter you’ve:</p>
+<ul>
+<li>Made a new Quarto project</li>
+<li>Initialized Git inside your project (<code>git init</code>)</li>
+<li>Asked Git about the status of our project files (<code>git status</code>)</li>
+</ul>
+<hr>
+<p><strong>Next up</strong></p>
 <p>In the next step, we’ll learn how to tell Git what files we’d like it to track and which files to ignore. Then we’ll take our first “snapshot” of our project.</p>
 
 
@@ -816,8 +889,8 @@ nothing added to commit but untracked files present (use "git add" to track)</co
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../intro-to-git/04-add-files.html" class="pagination-link" aria-label="Creating your first commit">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Creating your first commit</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../intro-to-git/04-add-files.html" class="pagination-link" aria-label="Add, ignore, and commit files">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

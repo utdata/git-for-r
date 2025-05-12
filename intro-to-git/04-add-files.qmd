@@ -26,15 +26,27 @@ Under `untracked files` you'll see a list like:
         my-first-git-project_files/
 ```
 
-Notice that `.html` file in the list. This `.html` file is the **rendered output** from Quarto, which changes every time you click “Render." We generally do not save these kinds of rendered files in our repositories since they change so frequently.
+Notice those `.html` files in the list? HTML files are the **rendered output** from Quarto, and they change every time you make a change and click “Render."
+
+Generally-speaking, we don't save these kinds of rendered files in our repositories because they change so frequently and can cause a lot of headaches during collaboration.
+
+There are some notable exceptions here...
+
+1. They're small, essential, and need to be *versioned* for a specific reason
+
+2. You're outputting human-readable deliverables (like a PDF report or documentation site)
+
+3. You're working on a static site or book.
+
+*Note for Crit: obviously let's chat about this part and addressing the Github pages thing...My general thought with teaching people about github is that we should try our best to teach them best practices before teaching them exceptions to rules because it will help them be better prepared for real-world dev environments*
 
 ## Introducing `.gitignore`
 
 In a Git project, there are several types of files and directories that you typically want to keep *out* of our repositories to keep things clean, secure, and easy to manage.
 
-What you ignore will depend on the type of project and the coding languages you're using, but all Github projects use a file called `.gitignore` to let Git know **what to ignore**.
+What you ignore will depend on the type of project and the coding languages you're using, but all Github projects use a file called `.gitignore` to let Git know **what it shouldn't be tracking** in the project.
 
-In general, the following kinds of files shouldn't be tracked in Github:
+In general, the following kinds of files *shouldn't* be tracked in Github:
 
 1.  **Sensitive files**: Files containing passwords or private information
 2.  **Big files**: Git isn't built to keep track of large files.
@@ -48,11 +60,13 @@ For R and Quarto projects, this will include the following common files types:
 
 Don't worry if you don't fully understand what all of these files are yet. The important thing here is to know is that there are things we *should* and *should not* upload to Git, and the way we keep the things we **don't want tracked** out of Github is by using a `.gitignore` file.
 
+We'll set one up for our new project in the next step.
+
 ## 📝 Exercise: Make a `.gitignore`
 
-Let’s make a `.gitignore` now using the command line using the `touch` command.
+Let’s make a `.gitignore` for your new Git project from the command line using the `touch` command.
 
-Type the following code into the Terminal:
+In the terminal, run:
 
 ``` bash
 touch .gitignore
@@ -60,7 +74,7 @@ touch .gitignore
 
 In the RStudio **Files** pane, click on the new `.gitignore` file to open it.
 
--   Tip: If you don't see the `.gitignore` in your file pane, you may need to refresh by clicking the refresh icon at the top right of the file pane.
+> Tip: If you don't see the `.gitignore` in your file pane, you may need to refresh by clicking the refresh icon at the top right of the file pane.
 
 Once you have your blank `.gitignore` file open, add the following lines and save the file:
 
@@ -82,7 +96,7 @@ Check your Git status again by running:
 git status
 ```
 
-Now the `.html` file should be gone from the list of red files Git "sees" because we've told it to ignore these types of files. ✨
+Remember when we ran git status before and saw our `.html` files? Now the `.html` files should be gone from the list of files Git "sees" because we've told it to ignore these types of files with the `*.html` line in our ignore file.
 
 Before moving forward, let's add a few more things to the `.gitignore` to cover some additional things we want to ignore (don't worry about understanding what all of these are right now).
 
@@ -108,7 +122,7 @@ _book/
 
 Save and close the file.
 
-## Add the Files You *Do* Want (Staging)
+## Staging: Adding the files you *do* want
 
 Now that we've told Git what we *don't* want to keep track of, we need to tell Git to track the rest of our files. We'll do that by using the `add` command.
 
@@ -139,7 +153,7 @@ Changes to be committed:
 
 Notice that the heading has changed to "Changes to be committed" and files are now shown in green. This is called **Staging**.
 
-## Take your first Snapshot (Commit)
+## Committing: take your first Snapshot
 
 Now that you've told Git which files you care about, it's time to take a "snapshot" of these files.
 

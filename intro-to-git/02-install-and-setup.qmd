@@ -2,9 +2,9 @@
 
 > 🎯 Goal: By the end of this chapter, you'll have Git and GitHub set up and be ready to create a version-controlled project in RStudio.
 
-## Step 1: Install the Tools
+## Install the Tools
 
-Before we can get started, we'll need to make sure that our computers (often referred to as our **local machines)** are set up correctly. Let's do that by completing the following steps:
+Before we can get started, we'll need to make sure that our computers (often referred to as our **local machines)** are have the tools we need. Let's do that by completing the following steps:
 
 1.  **Install Git**
 
@@ -18,25 +18,21 @@ Before we can get started, we'll need to make sure that our computers (often ref
     2.  Click **Sign up**
     3.  Choose a username and email you’ll remember (you’ll use this in Git config)
 
-------------------------------------------------------------------------
+## Configure Git
 
-## Step 2: Set Up Git in the Terminal
+After installing Git, you’ll need to go through the one-time process of configure it with your **username** and **email**.
 
-After installing Git, you’ll need to configure it with your **username** and **email**.
+**Step 1: Start a new terminal session in RStudio**
 
--   **Git usernames:** Usernames are what git uses to associate your work with *your identity*.
+Click on the **terminal** tab and a new session will be created (if there isn’t one already). The terminal tab is located next to the Console tab.
 
--   **Git email:** The email you used to setup your Github account.
-
-**Step 1: Start a new Terminal session in RStudio**
-
-Click on the **Terminal** tab and a new session will be created (if there isn’t one already). The Terminal tab is located next to the Console tab.
-
--   Tip: If can't find the Terminal tab, go to `Tools > Terminal > Move Focus to Terminal` .
+> Tip: If can't find the terminal tab, go to `Tools > Terminal > Move Focus to Terminal` .
 
 **Step 2: Set your Git username**
 
-Run the following command from your Terminal, replacing "Your Name" with the username you'd like to use (including the quotation marks):
+First, we'll [set your user.name](https://help.github.com/en/github/using-git/setting-your-username-in-git#setting-your-git-username-for-every-repository-on-your-computer) so Git knows who you are.
+
+Run the following command from your terminal, replacing "Your Name" with the username you'd like to use (including the quotation marks):
 
 ``` bash
 git config --global user.name "Your Name"
@@ -48,9 +44,9 @@ Check to see if you successfully set your name by running:
 git config user.name
 ```
 
-You should see a Terminal response message with the username you entered. If you didn't get the response expected, then try again. Remember, be careful about punctuation.
+You should see a terminal response with the username you entered.
 
-Once you have your username set properly, we'll set your email.
+If you didn't get the response expected, then try again. Remember, be careful about *punctuation*.
 
 ::: callout-caution
 Remember, the username you set here will be **visible** (*read: public*) in any future commits you push to GitHub. If you choose to use a nickname or alias instead of your real name, keep it professional enough that you wouldn't mind a future employer or colleague seeing it if you needed to share your work.
@@ -58,61 +54,104 @@ Remember, the username you set here will be **visible** (*read: public*) in any 
 
 **Step 3: Setting your git email**
 
+Now we'll [set your user.email](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address#setting-your-commit-email-address-in-git).
+
 The email you enter needs to **match the one you used to setup your Github account.** If it doesn't, you'll run into permissions issues later.
 
-Set your user email by running the following command, replacing "your.email\@example.com" with your Github email (including the quotation marks):
+1.  In your terminal, type and run the following command, but replace the email with **your email** (including the quotation marks):
 
-``` bash
-git config --global user.email "your.email@example.com"
-```
+    ``` bash
+    git config --global user.email "email@example.com"
+    ```
 
 ::: callout-important
-Your git email should be the same as the one you use on GitHub so your commits will be linked correctly
+Your git email should be the same as the one you use on GitHub so your commits will be linked correctly. If it doesn't match, you may run into permissions issues later on.
 :::
 
-## 📝 Mini exercise: Confirm Your Git Setup
+**Step 4: set your default branch**
 
-In RStudio’s Terminal tab, type and execute the following command:
+Lastly we'll set git to name your default branch "main" instead of "master" as this is a [new standard](https://sfconservancy.org/news/2020/jun/23/gitbranchname/).
+
+1.  In your terminal, run this:
+
+    ``` bash
+    git config --global init.defaultBranch main
+    ```
+
+    You won't get a response unless there was a problem.
+
+2.  In your terminal, run this:
+
+    ``` bash
+    git config --global pull.ff only
+    ```
+
+    This sets a behaivor that is too complicated to explain now, but comes recommended in this [very long but thorough explanation](https://stackoverflow.com/questions/71768999/how-to-merge-when-you-get-error-hint-you-have-divergent-branches-and-need-to-s/71774640#71774640).
+
+## Setup your SSH Keys
+
+There are a couple of ways to authenticate with Github from your computer. The book [Happy Git with R](https://happygitwithr.com/https-pat) recommends using personal access tokens and I think that is fine, but I prefer the one-and-done nature of SSH keys, so that is the method we will use.
+
+1.  After making sure git is installed, launch RStudio. (If it was already open, quit and re-launch it.)
+2.  Go to the menu Tools \> Global Options, then click on the Git/SVN tab.
+3.  Check the **Enable version control interface for RStudio** button.
+4.  There should already be a path included in the Make sure the path to the git executable is correct.
+    -   If it is not, try quitting RStudio and relaunching it and do this step again.
+    -   If it is still not there, talk to the prof. We'll find it.
+
+![Git/SVN window](../images/git-set-ssh.png)
+
+### Create a new SSH key
+
+If you SSH Key path was already filled then you can skip to the next step.
+
+If you've never used SSH keys before, you'll have to create one, but RStudio makes that fairly painless.
+
+1.  Click on the **Create RSA Key** button.
+2.  You should be able to leave all the defaults as they are. **Leave the optional Passphrase field blank.**
+3.  Click Create.
+4.  You should see a message that says "Key Created Successfully" and it might show you a pretty picture. Click OK.
+
+![SSH Key Creation window](../images/ssh-create-key.png)
+
+## Add SSH key in Github
+
+Now we'll save the contents of that secret file on your computer into your Github account so Github "knows" about your computer.
+
+First we need access to your "Public" key:
+
+1.  In the RStudio Git/SVN window, click on the **View public key** button.
+2.  This will open a new window with the contents of your public key.
+
+![Public key example](../images/ssh-public-key.png)
+
+You'll want access to copy that key to paste into Github in the next step:
+
+1.  Go to [github.com](https://github.com/) and click your user icon and choose **Settings**.
+2.  In the user settings sidebar on the left, click **SSH and GPG keys**.
+3.  Click **New SSH key** or **Add SSH key**.
+4.  In the "Title" field, add a descriptive label for the new key. Name it after your computer, like "Personal MacBook Air" or something.
+5.  In the "Key" field, so Command-V to paste your key into the box.
+
+It will look something like this:
+
+![Saving the key](../images/git-adding-key.png)
+
+Almost done!
+
+6.  Click Add SSH key.
+7.  If prompted, confirm your GitHub password.
+
+### Test Github connection
+
+1.  From your terminal in RStudio, do the following command:
 
 ``` bash
-git --version
+ssh -T git@github.com
 ```
 
-You should see something like:
-
-```         
-git version 2.42.0
-```
-
-Then check your Git config:
-
-```bash
-git config --list
-```
-
-Look for your name and email in the list. If you see them, you're all set! ✅
-
-If not, go back and run:
-
-``` bash
-git config --global user.name "Your Name"
-```
-and 
-
-```bash
-git config --global user.email "your.email@example.com"
-```
-
-Run `git config --list` and make sure both of these are correct before moving on.
-
-## 🧠 What Do These Flags Mean?
-
-Let’s break down some of the options you've used:
-
--   `--global`: This means “apply this setting for all projects on my computer.”\
-    You usually only need to set your name and email globally once.
-
--   `--list`: This tells Git to “show me my current configuration.”
+-   If you are asked about "RSA key fingerprint", type **yes** and hit return.
+-   In the end, you should have a success message like: "Hi username! You've successfully authenticated, but GitHub does not provide shell access." If you get that message, you are good!
 
 ## 🎯 Checkpoint
 
@@ -122,6 +161,7 @@ In this chapter you:
 -   Setup your Github account
 -   Set your Git username (with an appropriate name or alias)
 -   Set your Git email (using the email on your account Github account)
+-   Setup SSH Keys to authenticate with Github
 
 Now that Git is configured, you're ready to create your first project.
 

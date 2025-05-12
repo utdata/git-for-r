@@ -287,7 +287,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../intro-to-git/06-updating-your-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Making and pushing changes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Updating files</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Advanced: collaborating with others</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/07-setup-and-basic-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/08-dealing-with-conflicts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dealing with conflicts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/09-working-with-branches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/10-pull-requests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/quick-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quick reference</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro-to-git/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
       </ul>
@@ -305,8 +363,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ignoring-files" id="toc-ignoring-files" class="nav-link active" data-scroll-target="#ignoring-files"><span class="header-section-number">11.1</span> Ignoring files</a></li>
   <li><a href="#introducing-.gitignore" id="toc-introducing-.gitignore" class="nav-link" data-scroll-target="#introducing-.gitignore"><span class="header-section-number">11.2</span> Introducing <code>.gitignore</code></a></li>
   <li><a href="#exercise-make-a-.gitignore" id="toc-exercise-make-a-.gitignore" class="nav-link" data-scroll-target="#exercise-make-a-.gitignore"><span class="header-section-number">11.3</span> 📝 Exercise: Make a <code>.gitignore</code></a></li>
-  <li><a href="#add-the-files-you-do-want-staging" id="toc-add-the-files-you-do-want-staging" class="nav-link" data-scroll-target="#add-the-files-you-do-want-staging"><span class="header-section-number">11.4</span> Add the Files You <em>Do</em> Want (Staging)</a></li>
-  <li><a href="#take-your-first-snapshot-commit" id="toc-take-your-first-snapshot-commit" class="nav-link" data-scroll-target="#take-your-first-snapshot-commit"><span class="header-section-number">11.5</span> Take your first Snapshot (Commit)</a></li>
+  <li><a href="#staging-adding-the-files-you-do-want" id="toc-staging-adding-the-files-you-do-want" class="nav-link" data-scroll-target="#staging-adding-the-files-you-do-want"><span class="header-section-number">11.4</span> Staging: Adding the files you <em>do</em> want</a></li>
+  <li><a href="#committing-take-your-first-snapshot" id="toc-committing-take-your-first-snapshot" class="nav-link" data-scroll-target="#committing-take-your-first-snapshot"><span class="header-section-number">11.5</span> Committing: take your first Snapshot</a></li>
   <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">11.6</span> 🎯 Checkpoint</a></li>
   </ul>
 </nav>
@@ -349,13 +407,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         my-first-git-project.html
         my-first-git-project.qmd
         my-first-git-project_files/</code></pre>
-<p>Notice that <code>.html</code> file in the list. This <code>.html</code> file is the <strong>rendered output</strong> from Quarto, which changes every time you click “Render.” We generally do not save these kinds of rendered files in our repositories since they change so frequently.</p>
+<p>Notice those <code>.html</code> files in the list? HTML files are the <strong>rendered output</strong> from Quarto, and they change every time you make a change and click “Render.”</p>
+<p>Generally-speaking, we don’t save these kinds of rendered files in our repositories because they change so frequently and can cause a lot of headaches during collaboration.</p>
+<p>There are some notable exceptions here…</p>
+<ol type="1">
+<li><p>They’re small, essential, and need to be <em>versioned</em> for a specific reason</p></li>
+<li><p>You’re outputting human-readable deliverables (like a PDF report or documentation site)</p></li>
+<li><p>You’re working on a static site or book.</p></li>
+</ol>
+<p><em>Note for Crit: obviously let’s chat about this part and addressing the Github pages thing…My general thought with teaching people about github is that we should try our best to teach them best practices before teaching them exceptions to rules because it will help them be better prepared for real-world dev environments</em></p>
 </section>
 <section id="introducing-.gitignore" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="introducing-.gitignore"><span class="header-section-number">11.2</span> Introducing <code>.gitignore</code></h2>
 <p>In a Git project, there are several types of files and directories that you typically want to keep <em>out</em> of our repositories to keep things clean, secure, and easy to manage.</p>
-<p>What you ignore will depend on the type of project and the coding languages you’re using, but all Github projects use a file called <code>.gitignore</code> to let Git know <strong>what to ignore</strong>.</p>
-<p>In general, the following kinds of files shouldn’t be tracked in Github:</p>
+<p>What you ignore will depend on the type of project and the coding languages you’re using, but all Github projects use a file called <code>.gitignore</code> to let Git know <strong>what it shouldn’t be tracking</strong> in the project.</p>
+<p>In general, the following kinds of files <em>shouldn’t</em> be tracked in Github:</p>
 <ol type="1">
 <li><strong>Sensitive files</strong>: Files containing passwords or private information</li>
 <li><strong>Big files</strong>: Git isn’t built to keep track of large files.</li>
@@ -368,16 +434,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Editor and IDE Config Files</strong>: <code>.Rproj.user/</code></li>
 </ol>
 <p>Don’t worry if you don’t fully understand what all of these files are yet. The important thing here is to know is that there are things we <em>should</em> and <em>should not</em> upload to Git, and the way we keep the things we <strong>don’t want tracked</strong> out of Github is by using a <code>.gitignore</code> file.</p>
+<p>We’ll set one up for our new project in the next step.</p>
 </section>
 <section id="exercise-make-a-.gitignore" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="exercise-make-a-.gitignore"><span class="header-section-number">11.3</span> 📝 Exercise: Make a <code>.gitignore</code></h2>
-<p>Let’s make a <code>.gitignore</code> now using the command line using the <code>touch</code> command.</p>
-<p>Type the following code into the Terminal:</p>
+<p>Let’s make a <code>.gitignore</code> for your new Git project from the command line using the <code>touch</code> command.</p>
+<p>In the terminal, run:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> .gitignore</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In the RStudio <strong>Files</strong> pane, click on the new <code>.gitignore</code> file to open it.</p>
-<ul>
-<li>Tip: If you don’t see the <code>.gitignore</code> in your file pane, you may need to refresh by clicking the refresh icon at the top right of the file pane.</li>
-</ul>
+<blockquote class="blockquote">
+<p>Tip: If you don’t see the <code>.gitignore</code> in your file pane, you may need to refresh by clicking the refresh icon at the top right of the file pane.</p>
+</blockquote>
 <p>Once you have your blank <code>.gitignore</code> file open, add the following lines and save the file:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">*.html</span> </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">_site/</span> </span>
@@ -390,7 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Check your Git status again by running:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now the <code>.html</code> file should be gone from the list of red files Git “sees” because we’ve told it to ignore these types of files. ✨</p>
+<p>Remember when we ran git status before and saw our <code>.html</code> files? Now the <code>.html</code> files should be gone from the list of files Git “sees” because we’ve told it to ignore these types of files with the <code>*.html</code> line in our ignore file.</p>
 <p>Before moving forward, let’s add a few more things to the <code>.gitignore</code> to cover some additional things we want to ignore (don’t worry about understanding what all of these are right now).</p>
 <p>Copy and paste the following code into your .gitignore file.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R</span></span>
@@ -410,8 +477,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="ex">.DS_Store</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Save and close the file.</p>
 </section>
-<section id="add-the-files-you-do-want-staging" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="add-the-files-you-do-want-staging"><span class="header-section-number">11.4</span> Add the Files You <em>Do</em> Want (Staging)</h2>
+<section id="staging-adding-the-files-you-do-want" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="staging-adding-the-files-you-do-want"><span class="header-section-number">11.4</span> Staging: Adding the files you <em>do</em> want</h2>
 <p>Now that we’ve told Git what we <em>don’t</em> want to keep track of, we need to tell Git to track the rest of our files. We’ll do that by using the <code>add</code> command.</p>
 <p>Type the run the following command in your terminal:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -430,8 +497,8 @@ Changes to be committed:
         new file:   my-git-quarto-project.qmd</code></pre>
 <p>Notice that the heading has changed to “Changes to be committed” and files are now shown in green. This is called <strong>Staging</strong>.</p>
 </section>
-<section id="take-your-first-snapshot-commit" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="take-your-first-snapshot-commit"><span class="header-section-number">11.5</span> Take your first Snapshot (Commit)</h2>
+<section id="committing-take-your-first-snapshot" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="committing-take-your-first-snapshot"><span class="header-section-number">11.5</span> Committing: take your first Snapshot</h2>
 <p>Now that you’ve told Git which files you care about, it’s time to take a “snapshot” of these files.</p>
 <p>Run the following in your command line:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Initial commit: set up Quarto project"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
