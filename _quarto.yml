@@ -9,6 +9,7 @@ book:
         
   chapters:
     - index.qmd
+    - text: "---"  
     - part: "Intro to Terminal"
     - text: "---"
     - part: "Part 1: Introduction"
@@ -28,21 +29,21 @@ book:
     - text: "---"
     - part: "Installation"
       chapters:
-      - intro-to-git/00-introduction.qmd
-      - intro-to-git/01-introduction-to-git.qmd
-      - intro-to-git/02-install-and-setup.qmd
+      - intro-to-git/introduction.qmd
+      - intro-to-git/introduction-to-git.qmd
+      - intro-to-git/install-and-setup.qmd
     - part: "Git basics"
       chapters:
-       - intro-to-git/03-make-git-project.qmd
-       - intro-to-git/04-add-files.qmd
-       - intro-to-git/05-pushing-to-github.qmd
-       - intro-to-git/06-updating-your-repo.qmd
+       - intro-to-git/make-git-project.qmd
+       - intro-to-git/add-files.qmd
+       - intro-to-git/pushing-to-github.qmd
+       - intro-to-git/updating-your-repo.qmd
     - part: "Advanced: collaborating with others"
       chapters:
-      - intro-to-git/07-setup-and-basic-workflow.qmd
-      - intro-to-git/08-dealing-with-conflicts.qmd
-      - intro-to-git/09-working-with-branches.qmd
-      - intro-to-git/10-pull-requests.qmd
+      - intro-to-git/setup-and-basic-workflow.qmd
+      - intro-to-git/dealing-with-conflicts.qmd
+      - intro-to-git/working-with-branches.qmd
+      - intro-to-git/pull-requests.qmd
     - part: "Appendices"
       chapters:
       - intro-to-git/quick-reference.qmd

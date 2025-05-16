@@ -2109,5 +2109,401 @@
       "Git basics",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Add, ignore, and commit files</span>"
     ]
+  },
+  {
+    "objectID": "intro-to-git/install-and-setup.html",
+    "href": "intro-to-git/install-and-setup.html",
+    "title": "9  Installation and setup",
+    "section": "",
+    "text": "9.1 Install the Tools\nBefore we can get started, we’ll need to make sure that our computers (often referred to as our local machines) are have the tools we need. Let’s do that by completing the following steps:",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Installation and setup</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/install-and-setup.html#install-the-tools",
+    "href": "intro-to-git/install-and-setup.html#install-the-tools",
+    "title": "9  Installation and setup",
+    "section": "",
+    "text": "Install Git\n\nGo to: https://git-scm.com/downloads\nDownload and install Git\nDefault install settings are fine\n\nSign up for a Github account:\n\nGo to: https://github.com\nClick Sign up\nChoose a username and email you’ll remember (you’ll use this in Git config)",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Installation and setup</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/install-and-setup.html#configure-git",
+    "href": "intro-to-git/install-and-setup.html#configure-git",
+    "title": "9  Installation and setup",
+    "section": "9.2 Configure Git",
+    "text": "9.2 Configure Git\nAfter installing Git, you’ll need to go through the one-time process of configure it with your username and email.\nStep 1: Start a new terminal session in RStudio\nClick on the terminal tab and a new session will be created (if there isn’t one already). The terminal tab is located next to the Console tab.\n\nTip: If can’t find the terminal tab, go to Tools &gt; Terminal &gt; Move Focus to Terminal .\n\nStep 2: Set your Git username\nFirst, we’ll set your user.name so Git knows who you are.\nRun the following command from your terminal, replacing “Your Name” with the username you’d like to use (including the quotation marks):\ngit config --global user.name \"Your Name\"\nCheck to see if you successfully set your name by running:\ngit config user.name\nYou should see a terminal response with the username you entered.\nIf you didn’t get the response expected, then try again. Remember, be careful about punctuation.\n\n\n\n\n\n\nCaution\n\n\n\nRemember, the username you set here will be visible (read: public) in any future commits you push to GitHub. If you choose to use a nickname or alias instead of your real name, keep it professional enough that you wouldn’t mind a future employer or colleague seeing it if you needed to share your work.\n\n\nStep 3: Setting your git email\nNow we’ll set your user.email.\nThe email you enter needs to match the one you used to setup your Github account. If it doesn’t, you’ll run into permissions issues later.\n\nIn your terminal, type and run the following command, but replace the email with your email (including the quotation marks):\ngit config --global user.email \"email@example.com\"\n\n\n\n\n\n\n\nImportant\n\n\n\nYour git email should be the same as the one you use on GitHub so your commits will be linked correctly. If it doesn’t match, you may run into permissions issues later on.\n\n\nStep 4: set your default branch\nLastly we’ll set git to name your default branch “main” instead of “master” as this is a new standard.\n\nIn your terminal, run this:\ngit config --global init.defaultBranch main\nYou won’t get a response unless there was a problem.\nIn your terminal, run this:\ngit config --global pull.ff only\nThis sets a behaivor that is too complicated to explain now, but comes recommended in this very long but thorough explanation.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Installation and setup</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/install-and-setup.html#setup-your-ssh-keys",
+    "href": "intro-to-git/install-and-setup.html#setup-your-ssh-keys",
+    "title": "9  Installation and setup",
+    "section": "9.3 Setup your SSH Keys",
+    "text": "9.3 Setup your SSH Keys\nThere are a couple of ways to authenticate with Github from your computer. The book Happy Git with R recommends using personal access tokens and I think that is fine, but I prefer the one-and-done nature of SSH keys, so that is the method we will use.\n\nAfter making sure git is installed, launch RStudio. (If it was already open, quit and re-launch it.)\nGo to the menu Tools &gt; Global Options, then click on the Git/SVN tab.\nCheck the Enable version control interface for RStudio button.\nThere should already be a path included in the Make sure the path to the git executable is correct.\n\nIf it is not, try quitting RStudio and relaunching it and do this step again.\nIf it is still not there, talk to the prof. We’ll find it.\n\n\n\n\n\nGit/SVN window\n\n\n\n9.3.1 Create a new SSH key\nIf you SSH Key path was already filled then you can skip to the next step.\nIf you’ve never used SSH keys before, you’ll have to create one, but RStudio makes that fairly painless.\n\nClick on the Create RSA Key button.\nYou should be able to leave all the defaults as they are. Leave the optional Passphrase field blank.\nClick Create.\nYou should see a message that says “Key Created Successfully” and it might show you a pretty picture. Click OK.\n\n\n\n\nSSH Key Creation window",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Installation and setup</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/install-and-setup.html#add-ssh-key-in-github",
+    "href": "intro-to-git/install-and-setup.html#add-ssh-key-in-github",
+    "title": "9  Installation and setup",
+    "section": "9.4 Add SSH key in Github",
+    "text": "9.4 Add SSH key in Github\nNow we’ll save the contents of that secret file on your computer into your Github account so Github “knows” about your computer.\nFirst we need access to your “Public” key:\n\nIn the RStudio Git/SVN window, click on the View public key button.\nThis will open a new window with the contents of your public key.\n\n\n\n\nPublic key example\n\n\nYou’ll want access to copy that key to paste into Github in the next step:\n\nGo to github.com and click your user icon and choose Settings.\nIn the user settings sidebar on the left, click SSH and GPG keys.\nClick New SSH key or Add SSH key.\nIn the “Title” field, add a descriptive label for the new key. Name it after your computer, like “Personal MacBook Air” or something.\nIn the “Key” field, so Command-V to paste your key into the box.\n\nIt will look something like this:\n\n\n\nSaving the key\n\n\nAlmost done!\n\nClick Add SSH key.\nIf prompted, confirm your GitHub password.\n\n\n9.4.1 Test Github connection\n\nFrom your terminal in RStudio, do the following command:\n\nssh -T git@github.com\n\nIf you are asked about “RSA key fingerprint”, type yes and hit return.\nIn the end, you should have a success message like: “Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.” If you get that message, you are good!",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Installation and setup</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/install-and-setup.html#checkpoint",
+    "href": "intro-to-git/install-and-setup.html#checkpoint",
+    "title": "9  Installation and setup",
+    "section": "9.5 🎯 Checkpoint",
+    "text": "9.5 🎯 Checkpoint\nIn this chapter you:\n\nDownloaded Git\nSetup your Github account\nSet your Git username (with an appropriate name or alias)\nSet your Git email (using the email on your account Github account)\nSetup SSH Keys to authenticate with Github\n\nNow that Git is configured, you’re ready to create your first project.\n\nNext up\nIn the next chapter, we’ll walk you through creating a new Quarto project with Git tracking from the start using the terminal.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Installation and setup</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/introduction.html",
+    "href": "intro-to-git/introduction.html",
+    "title": "7  Welcome",
+    "section": "",
+    "text": "7.1 Who is this guide for?\nWelcome to the Intro to Git guide! We hope this guide will be a resource for you to learn the basics of working with version control for the first time.\nThis guide is for students who know some R and want to learn Git and GitHub to manage and collaborate on R projects (especially Quarto ones). It assumes little-to-no hands-on terminal experience but will encourage building confidence over time by interacting with Github through the command line.\nStudents who are brand new to the Terminal may also find it helpful to go through the Intro to Terminal section of this book before working through this guide.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/introduction.html#prerequisites",
+    "href": "intro-to-git/introduction.html#prerequisites",
+    "title": "7  Welcome",
+    "section": "7.2 Prerequisites",
+    "text": "7.2 Prerequisites\nBefore we move on to working with Git and Github, we need to make sure you have what you need to successfully complete the exercises in this guide. The guide assumes you already have the following installed on your computer:\n\nR\nRStudio\nQuarto\n\nIf you are missing any these, please go to the links listed and make sure to install before moving on to the next chapter!",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/introduction-to-git.html",
+    "href": "intro-to-git/introduction-to-git.html",
+    "title": "8  Introduction to version control",
+    "section": "",
+    "text": "8.1 Introduction to Version control\nIn this chapter, we’ll talk about the benefits of using version control to track changes in your coding projects. We’ll also explain how Git and Github allow store versions of our projects online so we can collaborate with others.\nWhat is version control?\nVersion control is a system that helps you track and manage changes to files over time. It lets you save different versions of your work, go back to earlier versions if you make a mistake, and work with other people without overwriting each other’s changes.\nImagine you’re writing a paper. Every time you make a big edit, you save a new copy: paper_v1.docx, paper_v2.docx, paper_final.docx, etc.\nIt’s easy to see how it could become difficult to keep track of which version was which using this kind of a system. Now imagine how much messier and unwieldy it could be trying to keep track of different versions of an R project with changes in multiple .qmd file —&gt; enter version control.\nVersion control keeps track of these different versions for you. Have you ever used the versions feature in Google docs when working on an article draft? Then you’ve interacted with version control.\nWhat is Git?\nTo keep track of versions of coding projects, programmers use a version control tool called Git. It runs on your computer and helps you:\nYou can think of Git like the “save game” feature on a video game. Instead of saving the progress of your character in your game, Git saves your progress in your coding files. But just like in many games, we have to tell Git when and how to save a new version.\nThis is where Github comes in.\nWhat is Github?\nGitHub is a website that hosts Git repositories (your project + its history) online.\nGithub lets you:\nIf Git is a notebook where you track all your work, GitHub is like an online library where you can store a copy of that notebook — and invite others to read it or even help you write in it.\nTo recap:\nNext up:\nWe’ll get our computers and accounts setup to use Git.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Introduction to version control</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/introduction-to-git.html#introduction-to-version-control",
+    "href": "intro-to-git/introduction-to-git.html#introduction-to-version-control",
+    "title": "8  Introduction to version control",
+    "section": "",
+    "text": "Track changes you make to your project files.\nSave “snapshots” (called commits) of your project over time.\nGo back to an earlier snapshot if needed.\nSee what exactly changed between versions.\nWork with teammates without messing up each others’ work.\n\n\n\n\n\n\n\nStore your Git project safely in the cloud.\nShare your project with others.\nCollaborate with other people (even if they are far away).\nKeep a backup in case your computer crashes.\n\n\n\n\nVersion control: Describes the system of tracking changes to your files over time so you can revisit or undo edits, collaborate with others, and keep a history of your work.\nGit: a version control tool you use on your computer to track changes.\nGitHub: a website where you can upload (and share) your Git projects.",
+    "crumbs": [
+      "Installation",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Introduction to version control</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/make-git-project.html",
+    "href": "intro-to-git/make-git-project.html",
+    "title": "10  Make our Git project",
+    "section": "",
+    "text": "10.1 Create a new RStudio Project\nBefore you can add anything to Github, you need a Quarto project to track.\nFollow the steps below to make a new Quarto project in RStudio:\nMake a new Quarto project\nNavigate to:\nIn the “Create Quarto Project” window, do the following:\nYou’ll now have a project with a .qmd file (Quarto).",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Make our Git project</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/make-git-project.html#create-a-new-rstudio-project",
+    "href": "intro-to-git/make-git-project.html#create-a-new-rstudio-project",
+    "title": "10  Make our Git project",
+    "section": "",
+    "text": "File → New Project → New Directory → Quarto Project\n\n\n\nGive your directory a descriptive name like my-first-git-project in the Directory Name field.\nCheck the Create project as a subdirectory of field to make sure you’re creating your project in the folder where you keep your class or coding projects on your computer.\nMake sure none of the boxes are checked.\nFinally, click Create Project.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Make our Git project</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/make-git-project.html#run-a-quarto-file",
+    "href": "intro-to-git/make-git-project.html#run-a-quarto-file",
+    "title": "10  Make our Git project",
+    "section": "10.2 Run a Quarto File",
+    "text": "10.2 Run a Quarto File\nBefore we get into Git, let’s quickly make sure Quarto is working as expected by creating and rendering a new file.\n\nClick the new file icon at the top left of R Studio and click “Quarto document…” (or go to File &gt; New File &gt; Quarto document…).\nAdd a title like “Intro to Git”, and click Create.\nSave the file, and name it something like 01-index.qmd when prompted.\nClick Render in the top bar.\n\nA new browser window should open with an HTML preview of your file.\nGreat! You’re ready to start version-controlling this project.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Make our Git project</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/make-git-project.html#initialize-git-in-our-project",
+    "href": "intro-to-git/make-git-project.html#initialize-git-in-our-project",
+    "title": "10  Make our Git project",
+    "section": "10.3 Initialize Git in our Project",
+    "text": "10.3 Initialize Git in our Project\nIf we want Git to start watching our files and keeping track of our changes, we have to make sure Git is connected to our project. To do this, we need to initialize Git inside of our Quarto project.\nIn basic terms, initializing tells Git “I want you to start tracking this folder.”\nHow to initialize Git in our new project:\n\nNavigate to the Terminal tab in RStudio.\nIn the terminal, run this:\ngit init\n\nIf it works, you’ll see Terminal respond with something like:\nInitialized empty Git repository in /Users/yourname/my-quarto-project/.git/\n\nWhat’s actually happening here? This command creates a hidden folder called .git in the project folder. This folder contains all the information Git needs to track changes in our project.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Make our Git project</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/make-git-project.html#ask-git-what-it-sees-git-status",
+    "href": "intro-to-git/make-git-project.html#ask-git-what-it-sees-git-status",
+    "title": "10  Make our Git project",
+    "section": "10.4 Ask Git what it sees (git status)",
+    "text": "10.4 Ask Git what it sees (git status)\nNow that we’ve let Git know that we want it to start watching by initializing it in our project, we can check the status of our files by running the following command:\ngit status\nTerminal will return something like the following as a response:\nOn branch main\n\nNo commits yet\n\nUntracked files:\n  (use \"git add &lt;file&gt;...\" to include in what will be committed)\n        .Rproj.user/\n        .quarto/\n        _quarto.yml\n        my-first-git-project.Rproj\n        my-first-git-project.html\n        my-first-git-project.qmd\n        my-first-git-project_files/\n\nnothing added to commit but untracked files present (use \"git add\" to track)\nLet’s quickly breakdown what this all means:\n\n“On branch main”: You’re working on the main branch — the default starting branch for development.\n“No commits yet”: This means Git is ready, but you haven’t saved any versions yet.\n“Untracked Files”: These are files Git sees in your folder, but it’s not saving changes to them yet. These files are marked in red in the terminal.\n\nThe git status command should be used frequently in your git process to keep track of your progress and make sure you’re where you think you are.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Make our Git project</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/make-git-project.html#checkpoint",
+    "href": "intro-to-git/make-git-project.html#checkpoint",
+    "title": "10  Make our Git project",
+    "section": "10.5 🎯 Checkpoint",
+    "text": "10.5 🎯 Checkpoint\nIn this chapter you’ve:\n\nMade a new Quarto project\nInitialized Git inside your project (git init)\nAsked Git about the status of our project files (git status)\n\n\nNext up\nIn the next step, we’ll learn how to tell Git what files we’d like it to track and which files to ignore. Then we’ll take our first “snapshot” of our project.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Make our Git project</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/add-files.html",
+    "href": "intro-to-git/add-files.html",
+    "title": "11  Add, ignore, and commit files",
+    "section": "",
+    "text": "11.1 Ignoring files\nIn our last chapter, we ran the git status command to tell us what Git sees within our project.\nLet’s take another look at those files now by re-running:\nUnder untracked files you’ll see a list like:\nNotice those .html files in the list? HTML files are the rendered output from Quarto, and they change every time you make a change and click “Render.”\nGenerally-speaking, we don’t save these kinds of rendered files in our repositories because they change so frequently and can cause a lot of headaches during collaboration.\nThere are some notable exceptions here…\nNote for Crit: obviously let’s chat about this part and addressing the Github pages thing…My general thought with teaching people about github is that we should try our best to teach them best practices before teaching them exceptions to rules because it will help them be better prepared for real-world dev environments",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Add, ignore, and commit files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/add-files.html#ignoring-files",
+    "href": "intro-to-git/add-files.html#ignoring-files",
+    "title": "11  Add, ignore, and commit files",
+    "section": "",
+    "text": "git status\n\n        .Rproj.user/\n        .quarto/\n        _quarto.yml\n        my-first-git-project.Rproj\n        my-first-git-project.html\n        my-first-git-project.qmd\n        my-first-git-project_files/\n\n\n\n\nThey’re small, essential, and need to be versioned for a specific reason\nYou’re outputting human-readable deliverables (like a PDF report or documentation site)\nYou’re working on a static site or book.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Add, ignore, and commit files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/add-files.html#introducing-.gitignore",
+    "href": "intro-to-git/add-files.html#introducing-.gitignore",
+    "title": "11  Add, ignore, and commit files",
+    "section": "11.2 Introducing .gitignore",
+    "text": "11.2 Introducing .gitignore\nIn a Git project, there are several types of files and directories that you typically want to keep out of our repositories to keep things clean, secure, and easy to manage.\nWhat you ignore will depend on the type of project and the coding languages you’re using, but all Github projects use a file called .gitignore to let Git know what it shouldn’t be tracking in the project.\nIn general, the following kinds of files shouldn’t be tracked in Github:\n\nSensitive files: Files containing passwords or private information\nBig files: Git isn’t built to keep track of large files.\n\nFor R and Quarto projects, this will include the following common files types:\n\nSession and history files: .Rhistory, .RData, .Rproj.user/\nKnitting files: .utf8.md, .knit.md\nOutput/render folders: *_files/ ,_site/, _book/\nEditor and IDE Config Files: .Rproj.user/\n\nDon’t worry if you don’t fully understand what all of these files are yet. The important thing here is to know is that there are things we should and should not upload to Git, and the way we keep the things we don’t want tracked out of Github is by using a .gitignore file.\nWe’ll set one up for our new project in the next step.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Add, ignore, and commit files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/add-files.html#exercise-make-a-.gitignore",
+    "href": "intro-to-git/add-files.html#exercise-make-a-.gitignore",
+    "title": "11  Add, ignore, and commit files",
+    "section": "11.3 📝 Exercise: Make a .gitignore",
+    "text": "11.3 📝 Exercise: Make a .gitignore\nLet’s make a .gitignore for your new Git project from the command line using the touch command.\nIn the terminal, run:\ntouch .gitignore\nIn the RStudio Files pane, click on the new .gitignore file to open it.\n\nTip: If you don’t see the .gitignore in your file pane, you may need to refresh by clicking the refresh icon at the top right of the file pane.\n\nOnce you have your blank .gitignore file open, add the following lines and save the file:\n*.html \n_site/ \n.Rproj.user/\nLet’s break down what each of these mean:\n\n*.html : Ignore all .html files (rendered outputs)\n_site/: Ignore the entire contents of the _site folder\n.Rproj.user/: Ignore the hidden RStudio files\n\nCheck your Git status again by running:\ngit status\nRemember when we ran git status before and saw our .html files? Now the .html files should be gone from the list of files Git “sees” because we’ve told it to ignore these types of files with the *.html line in our ignore file.\nBefore moving forward, let’s add a few more things to the .gitignore to cover some additional things we want to ignore (don’t worry about understanding what all of these are right now).\nCopy and paste the following code into your .gitignore file.\n# R\n.Rhistory\n.RData\n.Rproj.user/\n\n# Quarto\n*.html\n*_files/\n*.utf8.md\n*.knit.md\n_site/\n_book/\n\n# System\n.DS_Store\nSave and close the file.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Add, ignore, and commit files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/add-files.html#staging-adding-the-files-you-do-want",
+    "href": "intro-to-git/add-files.html#staging-adding-the-files-you-do-want",
+    "title": "11  Add, ignore, and commit files",
+    "section": "11.4 Staging: Adding the files you do want",
+    "text": "11.4 Staging: Adding the files you do want\nNow that we’ve told Git what we don’t want to keep track of, we need to tell Git to track the rest of our files. We’ll do that by using the add command.\nType the run the following command in your terminal:\ngit add .\nThe . after the add means “add everything in this folder” (ignoring anything listed in .gitignore.)\nRun git status again\nThe output should look something like this now:\nOn branch main\n\nNo commits yet\n\nChanges to be committed:\n  (use \"git rm --cached &lt;file&gt;...\" to unstage)\n        new file:   .gitignore\n        new file:   _quarto.yml\n        new file:   my-git-quarto-project.Rproj\n        new file:   my-git-quarto-project.qmd\nNotice that the heading has changed to “Changes to be committed” and files are now shown in green. This is called Staging.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Add, ignore, and commit files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/add-files.html#committing-take-your-first-snapshot",
+    "href": "intro-to-git/add-files.html#committing-take-your-first-snapshot",
+    "title": "11  Add, ignore, and commit files",
+    "section": "11.5 Committing: take your first Snapshot",
+    "text": "11.5 Committing: take your first Snapshot\nNow that you’ve told Git which files you care about, it’s time to take a “snapshot” of these files.\nRun the following in your command line:\ngit commit -m \"Initial commit: set up Quarto project\"",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Add, ignore, and commit files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/add-files.html#checkpoint",
+    "href": "intro-to-git/add-files.html#checkpoint",
+    "title": "11  Add, ignore, and commit files",
+    "section": "11.6 🎯 Checkpoint",
+    "text": "11.6 🎯 Checkpoint\nIn this chapter you:\n\nCreated a .gitignore file\nAdded the files you wanted to track (staged your files)\nTook your first project snapshot (committed your files)\n\nGreat job! You’ve saved the first version of your project locally (AKA on your computer). Now, the snapshot needs to be saved to a remote project (AKA Github).\n\nNext up\nYou’ll learn how to send this “snapshot” of our project to Github for safe keeping.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Add, ignore, and commit files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pushing-to-github.html",
+    "href": "intro-to-git/pushing-to-github.html",
+    "title": "12  Pushing to Github",
+    "section": "",
+    "text": "12.1 Create a Repository on GitHub\nNow that your project has been committed locally, let’s put it on GitHub so you can back it up and collaborate with others.\nYou’ll now see a page with instructions on how to connect your local folder to this GitHub repository.\nIn the Quick setup — if you’ve done this kind of thing before box:",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Pushing to Github</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pushing-to-github.html#create-a-repository-on-github",
+    "href": "intro-to-git/pushing-to-github.html#create-a-repository-on-github",
+    "title": "12  Pushing to Github",
+    "section": "",
+    "text": "Go to github.com and log in.\nClick the + in the upper right corner → choose “New repository”.\nComplete the form by doing the following:\n\nFill in the Repository name field, using the same name as your project folder (e.g. my-quarto-project)\nLeave Description blank for now\nLeave the box unchecked that says “Initialize this repository with a README” (We can add this on our own later)\nClick Create repository\n\n\n\n\n\nClick the copy button next to the SSH URL box.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Pushing to Github</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pushing-to-github.html#connect-your-local-git-project-to-github",
+    "href": "intro-to-git/pushing-to-github.html#connect-your-local-git-project-to-github",
+    "title": "12  Pushing to Github",
+    "section": "12.2 Connect Your Local Git Project to GitHub",
+    "text": "12.2 Connect Your Local Git Project to GitHub\nNavigate to the Terminal tab inside your RStudio Quarto project.\nStep 1: Add our remote project:\nType the following command, making sure there’s a space after ‘origin’:\ngit remote add origin \nthen paste the URL you copied from github.\nYour complete command should look something like this:\ngit remote add origin git@github.com:your-name/your-repo-name.git\nRun the command by hitting enter.\nStep 2: set our branch to main\nNow we’ll set our main branch name to main by running:\ngit branch -M main\nStep 3: set our branch to main\nLastly, we’ll push our main branch to Github by running:\ngit push -u origin main",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Pushing to Github</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pushing-to-github.html#quick-recap-what-do-these-commands-do",
+    "href": "intro-to-git/pushing-to-github.html#quick-recap-what-do-these-commands-do",
+    "title": "12  Pushing to Github",
+    "section": "12.3 Quick Recap: What Do These Commands Do?",
+    "text": "12.3 Quick Recap: What Do These Commands Do?\nOk, we just did a lot there. Let’s pause for a moment and breakdown everything we just did:\n\ngit remote add origin ...: Tells Git where your online repository lives (on GitHub).\ngit branch -M main: Renames your current branch to main (standard practice on GitHub).\ngit push -u origin main: up a link between your local main branch and the main branch on GitHub. “Pushing” uploaded your local commits (the ones we did in the last section) to GitHub.\n\nIn short, these steps connected your local project to your Github repository, then saved the snapshot you took to the cloud. We also won’t have to repeat these exact steps ever again when saving snapshots in the future.\n🎉 Congratulations: you now have your first live project is on GitHub!",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Pushing to Github</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pushing-to-github.html#mini-exercise-explore-your-github-project",
+    "href": "intro-to-git/pushing-to-github.html#mini-exercise-explore-your-github-project",
+    "title": "12  Pushing to Github",
+    "section": "12.4 📝 Mini exercise: Explore Your GitHub Project",
+    "text": "12.4 📝 Mini exercise: Explore Your GitHub Project\nGo to your repository page on GitHub (or refresh the page if you still have it open from before).\nYou should see all your project files, including .qmd, .gitignore, etc.\nPay attention to what’s showing in the file list. You’ll see some helpful information about the project, including:\n\nWhich user made the most recent commit\nThe commit message\nThe commit number\nThe timestamp of the commit In the file list\nThe commit message and timestamp from the most recent update made to each file or folder.\n\n\n\n\n\n\n\nNote\n\n\n\nNot every file will update with each git push. Git only keeps track of changes to files. If you made no edits to a file in a commit, it won’t change. Timestamps will help you track when updates were last made different parts of your project!",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Pushing to Github</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pushing-to-github.html#checkpoint",
+    "href": "intro-to-git/pushing-to-github.html#checkpoint",
+    "title": "12  Pushing to Github",
+    "section": "12.5 🎯 Checkpoint",
+    "text": "12.5 🎯 Checkpoint\nAt this point in the guide, you’ve learned how to:\n\nCreate a new RStudio project\nTurn on Git tracking with git init\nIgnore files (.gitignore)\nStage and commit changes (git add and git commit)\nConnect your local project to GitHub\nPush your first commit\n\n\nNext up:\nwe’ll learn how to make changes, track versions, and collaborate like pros.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Pushing to Github</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/updating-your-repo.html",
+    "href": "intro-to-git/updating-your-repo.html",
+    "title": "13  Updating files",
+    "section": "",
+    "text": "13.1 Make a Small Change\nYou’ll also practice writing good commit messages and checking your work.\nLet’s open your Quarto file you made in Chapter 1 (e.g., 01-index.qmd) and make a couple changes.\nReplace the auto-generated text and code blocks in the file with the following:\nUnder the summary header and description, add a new code block with the following:\nThen save the file.\nNow check the status in your Terminal again by running:\nThe Terminal should respond with something like this:\nLet’s break this down :",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/updating-your-repo.html#make-a-small-change",
+    "href": "intro-to-git/updating-your-repo.html#make-a-small-change",
+    "title": "13  Updating files",
+    "section": "",
+    "text": "---\ntitle: \"Intro to Git\"\nformat: html\n---\n\n# Summary\n\nHere is a summary of the `mtcars` dataset.\n\nsummary(mtcars)\n\n\ngit status\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git restore &lt;file&gt;...\" to discard changes in working directory)\n        modified:   01-index.qmd\n\n\nThe red text tells us that Git sees that something was modified in your 01-index.qmd.\nIt’s under the Changes not staged for commit: section, which tells us that Git hasn’t staged it yet (so it won’t be saved in the next commit).",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/updating-your-repo.html#stage-the-change",
+    "href": "intro-to-git/updating-your-repo.html#stage-the-change",
+    "title": "13  Updating files",
+    "section": "13.2 Stage the Change",
+    "text": "13.2 Stage the Change\nNow that you know Git sees the change, you need to tell Git, “Hey, save this file in the next snapshot.”\nYou’ll do this by adding — or staging — the modified file for your next commit.\nTo stage your changed file, run:\ngit add 01-index.qmd\nNow, check your Git status again.\ngit status\nYou should see your 01-index.qmd file in green, along with following message:\nChanges to be committed:\n  (use \"git restore --staged &lt;file&gt;...\" to unstage)\n  modified:   01-index.qmd`\n🎉 Great! Your changed file is now staged and ready to commit.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/updating-your-repo.html#commit-your-change",
+    "href": "intro-to-git/updating-your-repo.html#commit-your-change",
+    "title": "13  Updating files",
+    "section": "13.3 Commit your change",
+    "text": "13.3 Commit your change\nNow, we’ll save the snapshot of our updated file in Git’s memory. When we do so, we’ll want to include a descriptive commit message noting what we changed. Git commits always need a message attached to them.\nA few best practices to keep in mind with commit messages:\n\nUse present tense: \"Add summary of...\", not \"Added...\"\nKeep it short but descriptive\nThink: “What changed in this version?”, write that in the message.\n\n✅ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or if you need to go back to a prior version, commit messages will help your retrace your steps.\nWith those things in mind, practice writing a descriptive commit message with your change to the 01-index.qmd.\nType something like the following and hit enter:\ngit commit -m \"Add summary of mtcars dataset\"\nTerminal will respond with a summary of insertions and deletions in your file.\nA quick word of caution about the -m flag and Vim\nGit commits always need a message attached to them. The -m flag tells the command line that we’ll be writing our message inline with our command.\nIf you forget to include that message flag, the Terminal will open its default text editor called Vim. If you find yourself in this scenario and don’t know how to get out, there’s a section on getting out of Vim in our Terminal Guide.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/updating-your-repo.html#push-your-commit-to-github",
+    "href": "intro-to-git/updating-your-repo.html#push-your-commit-to-github",
+    "title": "13  Updating files",
+    "section": "13.4 Push your commit to GitHub",
+    "text": "13.4 Push your commit to GitHub\nNow, that our changes are staged and commited, we’ll send the snapshot from your computer to GitHub by pushing our changes.\nPush your new commit by running:\ngit push\nNow go to your repository on Github — you’ll see your commit listed under the Commits tab and your file under the &lt;&gt;Codetab! (You may need to refresh)\n\n\n\n\n\n\nNote\n\n\n\nYou may be wondering why this push command was shorter than it was last time. In your last push, you needed to connect local project (the one on your computer) to the remote repository on Github and set your main branch.\nSince you already connected your Quarto project to Github and set our branch to main, you can just use the git push command now.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/updating-your-repo.html#git-workflow-best-practices",
+    "href": "intro-to-git/updating-your-repo.html#git-workflow-best-practices",
+    "title": "13  Updating files",
+    "section": "13.5 Git workflow best practices",
+    "text": "13.5 Git workflow best practices\nBefore we move on, here’s a few key best practices to keep in mind as you’re getting used to working in Git:\n\nCommit early, commit often: Save your work frequently in small, logical chunks. This makes changes easier to track, understand, and roll back.\nWrite clear commit messages: Use concise, meaningful messages that explain why the change was made. (e.g., Fix typo in introduction, not just update)\nCheck status regularly: Run git status often to see what’s changed and what’s staged.\nStage changes selectively: Use git add &lt;filename&gt; (instead of git add .) when you want more control over what goes into each commit.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/updating-your-repo.html#checkpoint",
+    "href": "intro-to-git/updating-your-repo.html#checkpoint",
+    "title": "13  Updating files",
+    "section": "13.6 🎯 Checkpoint",
+    "text": "13.6 🎯 Checkpoint\nIn this chapter, you learned the basic git workflow:\n\nMake a change to your local project\nStage the changes in git (git add ..)\nTake a snapshot of the changed files (git commit -m ...)\nPush the changes to Github (git push)\nBest practices to keep things clean and manageable\n\nThis is the cycle you will repeat over and over again as you work on coding projects using git.\n\nNext up:\nwe’ll learn how to make changes, track versions, and collaborate like pros.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
+    ]
   }
 ]
