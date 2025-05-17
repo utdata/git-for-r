@@ -1,163 +1,134 @@
 ---
-title: "Pull requests [TK]"
+title: "Pull requests"
 ---
 
----
-title: "Working with feature branches"
----
+> 🎯 Goal: By the end of this chapter, you'll have understand the basic process of reviewing and merging pull requests in Github.
 
-In Git, a **branch** is like a parallel universe for your code. You can work on a new idea or fix a bug *without messing up the main project*. When you're ready, you bring your changes back to the main line with a **merge**.
+## Suggest and Review Changes with Pull Requests
 
-## Why Use Branches?
+**Pull Requests** (often abbreviated to just "PR" in the programming world) are GitHub’s way of saying, “Hey, I’ve made some changes. Can we look them over and maybe merge them into the main project?”
 
-Let’s say you're working with teammates. One of you is writing the introduction, another is cleaning the data, and a third is building plots.
+Even if you’re working solo, they’re a great habit because they give you a space to:
 
-If you all worked on the `main` branch at the same time, you’d constantly bump into each other — accidentally overwriting work or creating conflicts. Branches let everyone work on their own part of the project safely.
+-   Review your changes
 
-## 🌱 Step 1: Create a New Branch
+-   Track a discussion about them with your collaborators
 
-In your terminal, run the following command to see a list of the branches that exist in your project:
+-   Ensure everything looks good before merging
 
-``` bash
-git branch
-```
+We'll walk through the basic pull request workflow below.
 
-You'll likely just see the `main` branch with an `*` symbol next to it. The asterisk tells you this is the branch you are **currently working on** in Git.
+------------------------------------------------------------------------
 
-Now, let’s say you wanted to try a new plot, but you weren't sure if you're ready to use this in the full project. You'd like some room to experiment a bit before fully committing your work to the main project. This is where a **feature branch** comes in.
+### Step 1: Create a Branch and push to Github
 
-To make a new branch, run the following command in the terminal:
+First, make sure you’re on a new branch (just like we did in [Working with Feature Branches](/intro-to-git/working-with-branches.html))
 
 ``` bash
-git checkout -b plot-experiment
+git checkout -b improve-plot
 ```
 
-You should see a response in the terminal saying something like:
-
-> *Switched to a new branch 'plot-experiment'*
-
-This command did two things:
-
-1.  `checkout`: switched to another branch
-
-2.  `-b plot-experiment`: created a new branch called `plot-experiment`
-
-Now you’re in a new “sandbox” that’s separate from your `main` branch in Git.
-
-To confirm that, run:
+Make some edits (e.g., tweak a plot or add new text), then stage and commit:
 
 ``` bash
-git branch
+git add myfile.qmd` `git commit -m "Improve plot aesthetics"
 ```
 
-You’ll see something like:
-
-```         
-*plot-experiment
-main
-```
-
-Remember, the `*` shows your current branch. So you're now on `plot-experiment`.
-
-## Step 2: Make and Commit Changes on the New Branch
-
-Now that you're on our feature branch (which is an exact clone of our main branch at the time it is created), we can begin to safely experiment. You can make changes to our branch without worrying about messing up your work on our `main` branch.
-
-Let's try adding some new files to test this out:
-
-1.  Make a new quarto file called `01-plot.qmd`
-2.  Inside the file, make a new code block cell add the following code:
-
-```         
-library(tidyverse)
-
-ggplot(mtcars, aes(x=hp, y=mpg, color=cyl)) +
-    geom_point(size=3)
-```
-
-3.  Run the cell, to generate a simple ggplot() scatterplot.
-4.  Save the file.
-
-Now, add the new plot file to git, by completing the normal Git workflow steps:
-
-1.  Run `git status` to see what's changed.
-2.  Type and run `git add 01-plot.qmd` to tell Git to start tracking your new file.
-3.  Run `git status` again to make sure your new file showing under *"changes to be committed".*
-4.  Run: `git commit -m "Add experimental plot"` to take a snapshot of your changes.
-
-You’ve saved the change **only** to `plot-experiment`, not to `main`. You're ready to push your new branch to Github.
-
-## Step 3: Push the Branch to GitHub
-
-Once you've committed some changes on your branch, you'll probably want to back up your work by pushing it to Github.
-
-The syntax to add a new branch to your repo is just like it was when we added our main branch:
+Push the branch to GitHub:
 
 ``` bash
-git push -u origin branch-name
+git push -u origin improve-plot
 ```
 
-This command does two things:
+------------------------------------------------------------------------
 
-1.  **Creates** the new branch on GitHub
-2.  **Links** your local branch to it.
+### Step 2: Open a Pull Request (PR) on GitHub
 
-So if you wanted to add your new `plot-experiment` branch, for example, you'd type and run:
+Once your branch is on GitHub, you’ll see a banner like:
 
-``` bash
-git push -u origin plot-experiment
-```
+![Github repo Pull Request banner](../images/pr-banner-example.png)
 
-Terminal would show a response like:
+Click the blue “Compare & pull request” button!
 
-> *To github.com:username/my-git-quarto-project.git* \[new branch\] plot-experiment -\> plot-experiment branch 'plot-experiment' set up to track 'origin/plot-experiment'.\*
+> Tip: You can also find this button under the “Pull requests” tab at the top.
 
-You’ll now see the branch listed in your GitHub repo.
+On the **Open a pull request** page, do the following:
 
-![Github will display new feature branches in your repository](../images/github-branch.png)
+1.  **Review what’s changing:** underneath the form at the top of the page, Github will show you a list of commits and the files on the feature branch that are *different* than the `main` branch. These are the changes you will be merging into the main project. Before making the PR, you'll want to make sure that all the changes showing are intentional and ready to merge.
+2.  **Add a title description**: After confirming your changes are ready to merge, add a title to the PR and description with more details about what you're changing. The description and title should let others on your team know *exactly* what the changes are that they will be reviewing. See an example below.
 
-## Merging back into `main`
+> Note: Github has added a lot of features to help pre-fill out the title based on what it thinks your PR is. Sometimes it's accurate, sometimes it's not so always double-check.
 
-Once you’re happy with your branch changes, you can merge them back into `main` to incorporate them into your project.
+3.  Click the **Create pull request** button.
 
-**Step 1: switch back to `main`**
+Now others (or future you) can review the change.
 
-Run the following to get back to your main branch:
+![Pull request form](../images/pr-form-example.png)
+
+------------------------------------------------------------------------
+
+### 👀 Step 3: Review and Discuss
+
+
+
+If you're collaborating, your teammates can:
+
+-   Leave comments on specific lines
+
+-   Ask questions or suggest edits
+
+-   Approve or request changes
+
+Even if you’re working alone, reviewing your changes with “fresh eyes” before merging can help you catch mistakes.
+
+------------------------------------------------------------------------
+
+### ✅ Step 4: Merge the Pull Request
+
+Once everything looks good, click **Merge pull request** → **Confirm merge**
+
+GitHub combines the branch into `main`.
+
+Now go back to your project in R Studio, and run:
 
 ``` bash
 git checkout main
 ```
 
-If you run `git branch` again, the asterisk should show next to `main` again.
+Now that you're back on your main branch, you will also need to **"pull down"** the changes you made to your plot and merged into your main branch with your PR.
 
-
-
-**Heads-up:** if you've still got your `01-plot.qmd` file open in R Studio when you switch back to your main branch, you'll get a pop-up telling you that the plot file has been deleted (see screenshot). That's because the file doesn't exist *yet* on the `main` branch. Hit the blue `Yes` button in the pop to close the file. Don't worry though, the file *still* exists on your plot-experiment branch because you made a snapshot of your work with your git commit.🤠
-
-![RStudio may show a warning when switching branches](../images/feature-branch-missing-file.png)
-
-Ok, now that we're on a `main` branch, we want to bring in the changes from `plot-experiment`.
-
-**Step 2: merge the feature branch *into* main**
-
-Type and run:
+To pull the PR changes, run:
 
 ``` bash
-git merge plot-experiment
+git pull
 ```
 
-This pulls the changes from your **feature branch** into the **main project.**
+Now when you navigate to your `01-plot.qmd` file, you should see your plot improvements.
 
-If everything goes smoothly, you’ll see a message like:
+#### 🧹 Cleanup old branches
 
-`Updating abc1234..def5678 Fast-forward  myfile.qmd | 10 ++++++++++  1 file changed, 10 insertions(+)`
+Since we have merged our feature branch, let's remember to keep our repository clean by deleting the local and remote versions.
 
-> Note: If Git can’t automatically combine changes, you’ll get a **merge conflict**. If this happens, you'll need to resolve the issues following the steps in the last chapter.
+First, we'll delete the branch locally, by running:
 
-In your R Studio file pane, you should now see the `01-plot.qmd` file listed (you may need to refresh).
+``` bash        
+`git branch -d improve-plot`
+```
+
+Next, we'll delete the remote branch on Github, by running:
+
+``` bash       
+`git push origin --delete improve-plot`
+```
 
 ------------------------------------------------------------------------
 
-**Next up**
+### 💡 Remember: Keep your `main` branch up to date
 
-Now that you understand the basics of how to make feature branches and have an baseline understanding of how merging works, we'll show you how to use Github's **pull request** feature to review changes and get feedback (the workflow we'd recommend).
+After merging a PR (especially someone else’s), sync your local main branch:
+
+``` bash
+git checkout main git pull
+```
+
+Now you have all the latest changes from GitHub.

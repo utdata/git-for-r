@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Git for R",
     "section": "",
-    "text": "About this book\nI’m finding I’m not happy with existing resources on using Git with R, so I want to make a very opinionated guide specifically for my students.",
+    "text": "About this book\nIntro to Terminal and Git for R is a series of lessons and instructions used for courses in the School of Journalism and Media, Moody College of Communication at the University of Texas at Austin. This book is the brainchild of Associate Professor of Practice Christian McDonald, but has primarily been written by Anastasia Goodwin.",
     "crumbs": [
       "About this book"
     ]
@@ -2504,6 +2504,189 @@
     "crumbs": [
       "Git basics",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pull-requests.html",
+    "href": "intro-to-git/pull-requests.html",
+    "title": "17  Pull requests",
+    "section": "",
+    "text": "17.1 Suggest and Review Changes with Pull Requests\nPull Requests (often abbreviated to just “PR” in the programming world) are GitHub’s way of saying, “Hey, I’ve made some changes. Can we look them over and maybe merge them into the main project?”\nEven if you’re working solo, they’re a great habit because they give you a space to:\nWe’ll walk through the basic pull request workflow below.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Pull requests</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/setup-and-basic-workflow.html",
+    "href": "intro-to-git/setup-and-basic-workflow.html",
+    "title": "14  Project setup and basic workflow",
+    "section": "",
+    "text": "14.1 Setting up the shared Github project\nNow that you can push your changes to GitHub, it’s time to talk about how to collaborate with others on the same project.\nOne of the best things about using keeping your code in a Github repository is that it allows you to collaborate with other people on the same coding project. Now, to make this collaboration work smoothly, there are some best practices and processes you will need to follow.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Project setup and basic workflow</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/setup-and-basic-workflow.html#setting-up-the-shared-github-project",
+    "href": "intro-to-git/setup-and-basic-workflow.html#setting-up-the-shared-github-project",
+    "title": "14  Project setup and basic workflow",
+    "section": "",
+    "text": "14.1.1 Create the repo\nOnly one group member needs to create the GitHub repo (you already know how—see Push the Initial Commit to GitHub).\nOnce the repo is created, the owner can add team members.\nTo add team members, the owner will:\n\nGo to the repository on GitHub.\nClick Settings → Collaborators.\nAdd the teammate’s GitHub username.\n\n\nNote: This sends them an invitation. They must accept it before they can push changes.\n\n\n\n\n14.1.2 Step 2: The collaborator clones the repo\nOnce added as a collaborator, the second person can make a copy of the repo on their machine. This process of copying a repository onto your computer is called cloning in the Git world.\nWe’ll walk through how to clone a repo in a moment, but first, let’s make sure you know where you should clone things.\n\n14.1.2.1 Choose where to clone the repo\nUsing the cd command, navigate in your terminal to the folder where you keep your coding projects. For example, a good place for this might be in a projects folder inside your home directory or your Documents folder.\nIf you need to create a folder for your projects, you can do this in the terminal like this:\ncd ~              # Go to your home folder \nmkdir projects    # Make a folder called 'projects' (if it doesn't already exist) \ncd projects       # Move into that folder`\n\n\n14.1.2.2 Clone the repo\nNow that you’re in the right place, you’re ready to copy the repo onto your local machine following the steps below.\nIn Github:\n\nNavigate to the repo you want to clone.\nClick the big, blue &lt;&gt; CODE button (at the top right).\nNavigate to the SSH tab in the dropdown.\nYou will see a box with something like: git@github.com:username/repository-name. Click the icon next to this box to copy it to your clipboard.\n\nIn your Terminal window, type:\ngit clone \nthen paste the URL you copied from Github, making sure there is a space between the word “clone” and the URL.\nYour complete command should look something like:\ngit clone git@github.com:username/my-first-git-repo\nHit enter to run the command.\nThis creates a local folder with the repo’s contents and Git history within the projects folder on your computer.\nCheck to make sure this worked by running list (ls) command from inside the folder where you cloned your project.\nls\nYou should see the name of your newly-cloned repo in the list.\n\n\n\n14.1.3 Step 3: Everyone pulls before they work\nNow that you have the copy of your repo on your local machine, make sure you navigate into your project folder by running:\ncd folder_name\nBefore making changes in the project, always run:\ngit pull\nThis downloads any changes your teammate pushed to GitHub since you last worked.\n\n⚠️ Skipping git pull can lead to merge conflicts when Git sees two people changed the same thing differently.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Project setup and basic workflow</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/setup-and-basic-workflow.html#each-person-works-commits-and-pushes",
+    "href": "intro-to-git/setup-and-basic-workflow.html#each-person-works-commits-and-pushes",
+    "title": "14  Project setup and basic workflow",
+    "section": "14.2 Each Person Works, Commits, and Pushes",
+    "text": "14.2 Each Person Works, Commits, and Pushes\nWhen working collaboratively on a coding project, your team will follow the basic Git workflow to keep things smooth, clean, and easy to manage.\nThe basic Git workflow:\nYou and your teammates take turns:\n\nMaking changes locally to project files\nStaging and committing them (git add, git commit -m)\nPushing to GitHub (git push)\n\nAnd remember, every time you go to work on your project, you and your teammates should pull before making your own edits:\ngit pull",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Project setup and basic workflow</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/dealing-with-conflicts.html",
+    "href": "intro-to-git/dealing-with-conflicts.html",
+    "title": "15  Dealing with conflicts",
+    "section": "",
+    "text": "15.1 What if you both edit the same file?\nWhen you run git pull, Git will automatically try to merge your local changes with the most-recent version of the file on the Github repo.\nSometimes, two people (or even just you on two different branches) will make different changes to the same lines of a file.\nWhen you try to run git pull, Git gets confused and says:\nThis is called a merge conflict.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Dealing with conflicts</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/dealing-with-conflicts.html#what-if-you-both-edit-the-same-file",
+    "href": "intro-to-git/dealing-with-conflicts.html#what-if-you-both-edit-the-same-file",
+    "title": "15  Dealing with conflicts",
+    "section": "",
+    "text": "“I don’t know which version you want to keep — you have to decide.”\n\n\n\n\n15.1.1 What’s Really Happening?\nGit is trying to combine the changes from two versions of a file into one. Most of the time, if the changes are in different parts of the files, Git can handle it automatically.\nBut if two people made edits to the same part of a file (like the same sentence or section), Git doesn’t want to guess who’s right — so it stops and asks you to make the call.\nThink of it like this:\n\nYou’re merging two Word documents together.\nOne version says “The sky is blue.”\nThe other version says “The sky is purple.”\nGit says: “You can’t have both. Which one do you want?”\n\nIn Git world, this is a merge conflict, and Git needs your help to resolve it.\n\n\n15.1.2 How will Git let me know there’s a conflict?\nWhen Git encounters a merge conflict, two things will happen:\n\nIn your Terminal, you’ll see a message like:\n\nAuto-merging filename.qmd CONFLICT (content): Merge conflict in analysis.qmd Automatic merge failed; fix conflicts and then commit the result.\n\nIn the file with the conflict, Git will mark the conflicted lines like this:\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD This is your version. ======= This is your teammate’s version. &gt;&gt;&gt;&gt;&gt;&gt;&gt; abc123\n\nYou’ll need to manually choose which version (or both!) to keep and then commit the right changes to Git. We’ll walk you through the process of resolving these conflicts in the section below.\n\n\n\n15.1.3 Step-by-Step: Resolving a Merge Conflict\nLet’s say both you and a collaborator edited the same section of analysis.qmd and now Git is confused when you try to pull or merge.\nStep 1: See the Conflict\nWhen you run:\ngit pull\nGit might respond:\nAuto-merging analysis.qmd CONFLICT (content): Merge conflict in analysis.qmd Automatic merge failed; fix conflicts and then commit the result.\nStep 2: Open the Conflicted File\nOpen analysis.qmd in RStudio or your code editor. You’ll see something like:\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD The sky is blue. ======= The sky is purple. &gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/main\nThis is Git saying:\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD = your local version\n======= = the separator\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/main = the version from GitHub (or your teammate)\n\nIn other words:\n\nAnything between &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD and the ======= separator are your current changes.\nAnything between the ======= and &gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/main is what’s on the Github version.\n\nStep 3: Choose What to Keep\nDecide what version is correct. You can:\n\nKeep one\nCombine them\nRewrite it entirely\n\nThe sky is blue and sometimes purple at sunset.\nNote: make sure to delete the conflict markers (&lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, &gt;&gt;&gt;&gt;&gt;&gt;&gt;) when you’re done.\nStep 4: Mark the Conflict as Resolved\nOnce you’ve fixed the file, you need to tell Git it’s ready:\ngit add analysis.qmd\nStep 5: Commit the Merge\nNow complete the merge:\ngit commit -m \"Resolve merge conflict in analysis.qmd\"\n🎉 That’s it — you’ve handled a merge conflict like a pro.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Dealing with conflicts</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/dealing-with-conflicts.html#tips-for-smooth-collaboration",
+    "href": "intro-to-git/dealing-with-conflicts.html#tips-for-smooth-collaboration",
+    "title": "15  Dealing with conflicts",
+    "section": "15.2 Tips for Smooth Collaboration",
+    "text": "15.2 Tips for Smooth Collaboration\n\nCommunicate! Decide who is editing what and when.\nAlways git pull before you start working.\nCommit and push frequently — don’t wait until the end of the day.\nAvoid working on the same file at the same time.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Dealing with conflicts</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/working-with-branches.html",
+    "href": "intro-to-git/working-with-branches.html",
+    "title": "16  Working with feature branches",
+    "section": "",
+    "text": "16.1 Why Use Branches?\nIn Git, a branch is like a parallel universe for your code. You can work on a new idea or fix a bug without messing up the main project. When you’re ready, you bring your changes back to the main line with a merge.\nLet’s say you’re working with teammates. One of you is writing the introduction, another is cleaning the data, and a third is building plots.\nIf you all worked on the main branch at the same time, you’d constantly bump into each other — accidentally overwriting work or creating conflicts. Branches let everyone work on their own part of the project safely.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Working with feature branches</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/working-with-branches.html#step-1-create-a-new-branch",
+    "href": "intro-to-git/working-with-branches.html#step-1-create-a-new-branch",
+    "title": "16  Working with feature branches",
+    "section": "16.2 🌱 Step 1: Create a New Branch",
+    "text": "16.2 🌱 Step 1: Create a New Branch\nIn your terminal, run the following command to see a list of the branches that exist in your project:\ngit branch\nYou’ll likely just see the main branch with an * symbol next to it. The asterisk tells you this is the branch you are currently working on in Git.\nNow, let’s say you wanted to try a new plot, but you weren’t sure if you’re ready to use this in the full project. You’d like some room to experiment a bit before fully committing your work to the main project. This is where a feature branch comes in.\nTo make a new branch, run the following command in the terminal:\ngit checkout -b plot-experiment\nYou should see a response in the terminal saying something like:\n\nSwitched to a new branch ‘plot-experiment’\n\nThis command did two things:\n\ncheckout: switched to another branch\n-b plot-experiment: created a new branch called plot-experiment\n\nNow you’re in a new “sandbox” that’s separate from your main branch in Git.\nTo confirm that, run:\ngit branch\nYou’ll see something like:\n*plot-experiment\nmain\nRemember, the * shows your current branch. So you’re now on plot-experiment.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Working with feature branches</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/working-with-branches.html#step-2-make-and-commit-changes-on-the-new-branch",
+    "href": "intro-to-git/working-with-branches.html#step-2-make-and-commit-changes-on-the-new-branch",
+    "title": "16  Working with feature branches",
+    "section": "16.3 Step 2: Make and Commit Changes on the New Branch",
+    "text": "16.3 Step 2: Make and Commit Changes on the New Branch\nNow that you’re on our feature branch (which is an exact clone of our main branch at the time it is created), we can begin to safely experiment. You can make changes to our branch without worrying about messing up your work on our main branch.\nLet’s try adding some new files to test this out:\n\nMake a new quarto file called 01-plot.qmd\nInside the file, make a new code block cell add the following code:\n\nlibrary(tidyverse)\n\nggplot(mtcars, aes(x=hp, y=mpg, color=cyl)) +\n    geom_point(size=3)\n\nRun the cell, to generate a simple ggplot() scatterplot.\nSave the file.\n\nNow, add the new plot file to git, by completing the normal Git workflow steps:\n\nRun git status to see what’s changed.\nType and run git add 01-plot.qmd to tell Git to start tracking your new file.\nRun git status again to make sure your new file showing under “changes to be committed”.\nRun: git commit -m \"Add experimental plot\" to take a snapshot of your changes.\n\nYou’ve saved the change only to plot-experiment, not to main. You’re ready to push your new branch to Github.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Working with feature branches</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/working-with-branches.html#step-3-push-the-branch-to-github",
+    "href": "intro-to-git/working-with-branches.html#step-3-push-the-branch-to-github",
+    "title": "16  Working with feature branches",
+    "section": "16.4 Step 3: Push the Branch to GitHub",
+    "text": "16.4 Step 3: Push the Branch to GitHub\nOnce you’ve committed some changes on your branch, you’ll probably want to back up your work by pushing it to Github.\nThe syntax to add a new branch to your repo is just like it was when we added our main branch:\ngit push -u origin branch-name\nThis command does two things:\n\nCreates the new branch on GitHub\nLinks your local branch to it.\n\nSo if you wanted to add your new plot-experiment branch, for example, you’d type and run:\ngit push -u origin plot-experiment\nTerminal would show a response like:\n\nTo github.com:username/my-git-quarto-project.git [new branch] plot-experiment -&gt; plot-experiment branch ‘plot-experiment’ set up to track ‘origin/plot-experiment’.*\n\nYou’ll now see the branch listed in your GitHub repo.\n\n\n\nGithub will display new feature branches in your repository",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Working with feature branches</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/working-with-branches.html#merging-back-into-main",
+    "href": "intro-to-git/working-with-branches.html#merging-back-into-main",
+    "title": "16  Working with feature branches",
+    "section": "16.5 Merging back into main",
+    "text": "16.5 Merging back into main\nOnce you’re happy with your branch changes, you can merge them back into main to incorporate them into your project.\nStep 1: switch back to main\nRun the following to get back to your main branch:\ngit checkout main\nIf you run git branch again, the asterisk should show next to main again.\nHeads-up: if you’ve still got your 01-plot.qmd file open in R Studio when you switch back to your main branch, you’ll get a pop-up telling you that the plot file has been deleted (see screenshot). That’s because the file doesn’t exist yet on the main branch. Hit the blue Yes button in the pop to close the file. Don’t worry though, the file still exists on your plot-experiment branch because you made a snapshot of your work with your git commit.🤠\n\n\n\nRStudio may show a warning when switching branches\n\n\nOk, now that we’re on a main branch, we want to bring in the changes from plot-experiment.\nStep 2: merge the feature branch into main\nType and run:\ngit merge plot-experiment\nThis pulls the changes from your feature branch into the main project.\nIf everything goes smoothly, you’ll see a message like:\nUpdating abc1234..def5678 Fast-forward  myfile.qmd | 10 ++++++++++  1 file changed, 10 insertions(+)\n\nNote: If Git can’t automatically combine changes, you’ll get a merge conflict. If this happens, you’ll need to resolve the issues following the steps in the last chapter.\n\nIn your R Studio file pane, you should now see the 01-plot.qmd file listed (you may need to refresh).\n\nNext up\nNow that you understand the basics of how to make feature branches and have an baseline understanding of how merging works, we’ll show you how to use Github’s pull request feature to review changes and get feedback (the workflow we’d recommend).",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Working with feature branches</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pull-requests.html#suggest-and-review-changes-with-pull-requests",
+    "href": "intro-to-git/pull-requests.html#suggest-and-review-changes-with-pull-requests",
+    "title": "17  Pull requests",
+    "section": "",
+    "text": "Review your changes\nTrack a discussion about them with your collaborators\nEnsure everything looks good before merging\n\n\n\n\n17.1.1 Step 1: Create a Branch and push to Github\nFirst, make sure you’re on a new branch (just like we did in Working with Feature Branches)\ngit checkout -b improve-plot\nMake some edits (e.g., tweak a plot or add new text), then stage and commit:\ngit add myfile.qmd` `git commit -m \"Improve plot aesthetics\"\nPush the branch to GitHub:\ngit push -u origin improve-plot\n\n\n\n17.1.2 Step 2: Open a Pull Request (PR) on GitHub\nOnce your branch is on GitHub, you’ll see a banner like:\n\n\n\nGithub repo Pull Request banner\n\n\nClick the blue “Compare & pull request” button!\n\nTip: You can also find this button under the “Pull requests” tab at the top.\n\nOn the Open a pull request page, do the following:\n\nReview what’s changing: underneath the form at the top of the page, Github will show you a list of commits and the files on the feature branch that are different than the main branch. These are the changes you will be merging into the main project. Before making the PR, you’ll want to make sure that all the changes showing are intentional and ready to merge.\nAdd a title description: After confirming your changes are ready to merge, add a title to the PR and description with more details about what you’re changing. The description and title should let others on your team know exactly what the changes are that they will be reviewing. See an example below.\n\n\nNote: Github has added a lot of features to help pre-fill out the title based on what it thinks your PR is. Sometimes it’s accurate, sometimes it’s not so always double-check.\n\n\nClick the Create pull request button.\n\nNow others (or future you) can review the change.\n\n\n\nPull request form\n\n\n\n\n\n17.1.3 👀 Step 3: Review and Discuss\nIf you’re collaborating, your teammates can:\n\nLeave comments on specific lines\nAsk questions or suggest edits\nApprove or request changes\n\nEven if you’re working alone, reviewing your changes with “fresh eyes” before merging can help you catch mistakes.\n\n\n\n17.1.4 ✅ Step 4: Merge the Pull Request\nOnce everything looks good, click Merge pull request → Confirm merge\nGitHub combines the branch into main.\nNow go back to your project in R Studio, and run:\ngit checkout main\nNow that you’re back on your main branch, you will also need to “pull down” the changes you made to your plot and merged into your main branch with your PR.\nTo pull the PR changes, run:\ngit pull\nNow when you navigate to your 01-plot.qmd file, you should see your plot improvements.\n\n17.1.4.1 🧹 Cleanup old branches\nSince we have merged our feature branch, let’s remember to keep our repository clean by deleting the local and remote versions.\nFirst, we’ll delete the branch locally, by running:\n`git branch -d improve-plot`\nNext, we’ll delete the remote branch on Github, by running:\n`git push origin --delete improve-plot`\n\n\n\n\n17.1.5 💡 Remember: Keep your main branch up to date\nAfter merging a PR (especially someone else’s), sync your local main branch:\ngit checkout main git pull\nNow you have all the latest changes from GitHub.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Pull requests</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#some-words-from-the-authors",
+    "href": "index.html#some-words-from-the-authors",
+    "title": "Git for R",
+    "section": "Some words from the authors",
+    "text": "Some words from the authors\nThere is always more than one way to do things in coding. This book is a an opinionated collection of lessons intended to teach students new to programming how to get started using the command line and version control. We consider our audiences beginners, and strive to make steps as simple as possible, which means I may not go into detail about alternative (and possibly better) ways to accomplish tasks in favor of reducing options to simplify understanding. There are a multitude of other resources available to students once they advance beyond the materials in this book, and we strongly encourage Googling concepts for further learning. For our purposes, we stick to the basics in hopes it eliminates enough of the noise for our students to get their feet on the ground using these technologies.",
+    "crumbs": [
+      "About this book"
+    ]
+  },
+  {
+    "objectID": "index.html#conventions-and-styles-in-this-book",
+    "href": "index.html#conventions-and-styles-in-this-book",
+    "title": "Git for R",
+    "section": "Conventions and styles in this book",
+    "text": "Conventions and styles in this book\nWe hold the deep belief that “all ships rise with the tide” when members of the data journalism community learn together, and this book seeks to add to that mission. We’ve written this textbook in the first-person plural to foster a sense of collaboration and shared learning between the reader and the authors. By using pronouns like “we” and “our,” our guide invites students into a learning journey that feels supportive and inclusive, rather than distant or instructional. It reflects the idea that learning to code is not a solitary task, but a process that many people engage in together. Our aim for this guide is to help beginners feel less intimidated, encouraging them to see mistakes and discoveries as part of a shared experience, not personal failures.\nWe will try to be consistent in the way we write documentation and lessons, but we are human and sometimes we break my own rules. In general, keep the following in mind:\n\nThings to do\nThings to DO are in ordered lists:\n\nDo this thing.\nThen do this thing.\n\nExplanations are usually in text, like this very paragraph.\nSometimes details will be explained in lists:\n\nThis is the first thing I want you to know.\nThis is the second. You don’t have to DO these things, just know about them.\n\n\n\nCode blocks\nThis book often runs the code that is shown, so you’ll see the code and the result of that code below it.\n\n1 + 1\n\n[1] 2\n\n\n\nCopying code blocks\nWhen you see code in the instructions, you can roll your cursor over the right-corner and click on the copy icon to copy the code clock content to your clipboard.\n\nYou can then paste the code inside your coding program chunk.\nThat said, typing code yourself has many, many benefits. You learn better when you type yourself, make mistakes and have to fix them. I encourage you to always type short code snippets. Leave the copying to long ones.\n\n\nHidden code\nSometimes I want to include code in the book but not display it so you can try the to write the code yourself first. When I do this, it will look like this:\n\n\nClick here to show the code\n1 + 1\n\n\n[1] 2\n\n\nIf you click on the triangle or the words that follow, you’ll reveal the code. Click again to hide it.\n\n\nAnnotated code\nSometimes when I am explaining code it is helpful to match lines of code to the explanation about them, which I do through annotated code.\n\n1mtcars |&gt;\n2  head()\n\n\n1\n\nFirst I take the Motor Trend Car Road Tests data set AND THEN …\n\n2\n\nI pipe into the head() command, which gives us the “top” of the data.\n\n\n\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nWhen there are annotations like this you have to be careful if you are copying code from the book. Either copy it one line at a time or use the copy icon noted above.\n\n\nFenced code\nSometimes I need to show code chunk options that are added, like when explaining how to name chunks. In those cases, you may see the code chunk with all the tick marks, etc. like this:\n\n```{r block-named}\n1 + 1\n```\n\n[1] 2\n\n\nor\n\n```{r}\n#| label: block-named-yaml\n\n1 + 1\n```\n\n[1] 2\n\n\nYou can still copy/paste these blocks, but you’ll get the entire code block, not just the contents.\n\n\n\nNotes, some important\nI will use callouts to set off a less important aside:\n\n\n\n\n\n\nMarkdown was developed by JOHN GRUBER, as outlined on his Daring Fireball blog.\n\n\n\nBut sometimes those asides are important. I usually indicate that:\n\n\n\n\n\n\nImportant\n\n\n\nYou really should learn how to use Markdown as you will use it the whole semester, and hopefully for the rest of your life.",
+    "crumbs": [
+      "About this book"
+    ]
+  },
+  {
+    "objectID": "index.html#about-the-authors",
+    "href": "index.html#about-the-authors",
+    "title": "Git for R",
+    "section": "About the authors",
+    "text": "About the authors\n\nAnastasia Goodwin\nI am a former web developer and UX/UI designer turned data journalist. I work as a senior data journalist embedded with the Houston Chronicle’s education team where I cover everything from pre-K to higher education. I also sometimes have the privilege to teach sections of Reporting with Data at the University of Texas at Austin, where I also attended journalism school.\n\nEmail: ana.goodwin10@gmail.com\n\n\n\nChristian McDonald\nI’m a career journalist who most recently served as data and projects editor at the Austin American-Statesman before joining the University of Texas at Austin faculty full-time in fall 2018. I’ve taught data-related course at UT since 2013. I also serve as the innovation director of the Dallas Morning News Journalism Innovation Endowment.\n\nThe UT Data Github: utdata\nThreads: @critmcdonald | Mastodon crit | Bluesky: @crit\nEmail: christian.mcdonald@utexas.edu",
+    "crumbs": [
+      "About this book"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Git for R",
+    "section": "License",
+    "text": "License\nThis work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nLet’s just say this is free on the internet. I don’t make any money from it and you shouldn’t either.",
+    "crumbs": [
+      "About this book"
     ]
   }
 ]
