@@ -6,7 +6,16 @@ Now that you can push your changes to GitHub, it’s time to talk about how to *
 
 One of the best things about using keeping your code in a Github repository is that it allows you to collaborate with other people on the same coding project. Now, to make this collaboration work smoothly, there are some best practices and processes you will need to follow.
 
-------------------------------------------------------------------------
+## Basic Git workflow with a team
+
+When working in a Git project with other people, the collaboration process builds upon the basic workflow we laid out in the [Updating Your Repo](/intro-to-git/updating-your-repo.html) chapter. 
+
+![Each team member goes through the process of pushing their own changes and pulling their collaborator's changes from the shared source on Github](../images/collaboration-git-team-workflow-example.png) 
+Before working on your own changes in your local repo, you will **pull** down the most recent version of the Github project to make sure you're incorporating the most recent changes to the project. This helps you stay in sync with your team and prevents you from overwriting each others' work and creating major conflicts later.
+
+After grabbing the most recent version, each member of your team will then follow the basic git workflow of make changes to files on your local repositories, committing your changes, and pushing your changes to your shared remote project stored in Github.
+
+We'll go over the basics of setting up this kind of shared project below. 
 
 ## Setting up the shared Github project
 
