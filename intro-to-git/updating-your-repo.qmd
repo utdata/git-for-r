@@ -14,9 +14,31 @@ execute:
 
 You’ll also practice writing good commit messages and checking your work.
 
+## The basic git workflow
+
+Now that we have our **local** repository setup and connected to our **remote** repository on Github, let's briefly go over the basic Github workflow you will repeat over and over again as you work on your project.
+
+![The basic workflow you'll repeat when working with Github](../images/git-workflow-example.png) 
+
+The basic git workflow goes like this:
+
+1. You make changes to your local repository files.
+
+2. You take a snapshot of those changes by **committing** them on your local repo.
+
+3. You **push** those committed changes to Github to track.
+
+4. Before making more changes, you **pull** down the most recent changes from Github.
+
+5. Rinse and repeat.
+
+Some additional steps may be added if you begin using more advanced features in Git later on -- especially when working with a team -- but the basic steps outlined above will still apply even when working with more complicated workflows like feature branches and pull requests. 
+
+We'll practice this workflow in the sections below.
+
 ## Make a Small Change
 
-Let’s open your Quarto file you made in Chapter 1 (e.g., `01-index.qmd`) and make a couple changes.
+Let’s open the Quarto file you made in Chapter 1 (e.g., `01-index.qmd`) and make a couple changes.
 
 Replace the auto-generated text and code blocks in the file with the following:
 

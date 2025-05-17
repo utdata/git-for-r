@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Git for R",
+    "title": "Intro to Terminal & Git for R",
     "section": "",
     "text": "About this book\nIntro to Terminal and Git for R is a series of lessons and instructions used for courses in the School of Journalism and Media, Moody College of Communication at the University of Texas at Austin. This book is the brainchild of Associate Professor of Practice Christian McDonald, but has primarily been written by Anastasia Goodwin.",
     "crumbs": [
@@ -324,7 +324,7 @@
     "section": "",
     "text": "1.1 What is the Terminal, Anyway?\nFirst things first:\nIf you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.\nYou don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.\nA few important things before you get started:\nTime to enter the Matrix, Neo.\nThink of using the Terminal like dm’ing your computer.\nInstead of clicking buttons or opening folders with a mouse or trackpad, you type commands in the command line asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.\nThe Terminal (on Mac) or Git Bash (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.\nThe Terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.\nHere’s just a few examples of what we can ask our computers to do using the Terminal:\nWe can do all of these things by typing just a few words. But to communicate effectively with our Terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.",
     "crumbs": [
-      "Part 1: Introduction",
+      "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
     ]
   },
@@ -335,7 +335,7 @@
     "section": "",
     "text": "Terminology note\n\n\n\nPeople (including the authors of this guide) will use the term shell and terminal and command line interchangeably. This means when we say “type into your shell”, “in your command line”, or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.\nIn reality, there are some nuances:\n\nThe terminal opens a window.\nInside that, a shell runs.\nYou interact with it through the command line interface.\n\nIn practical terms, just know they usually mean the same thing out in the wild.\n\n\n\n\n\nList all the files in a folder\nCreate a new folder\nInstall programs\nMove files around\nAutomate tasks",
     "crumbs": [
-      "Part 1: Introduction",
+      "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
     ]
   },
@@ -346,7 +346,7 @@
     "section": "1.3 How to Open the Terminal",
     "text": "1.3 How to Open the Terminal\nFirst things first, we need to actually open the Terminal on our machines.\nHere’s how to find it on your computer:\n\nMac:\nPress Command + Space, type Terminal, and hit Enter.\nWindows:\nOpen the Start Menu, search for Terminal or PowerShell, and open it.\n(There’s also something called “Command Prompt” — close enough for now.)\nLinux:\nPress Ctrl + Alt + T — it’s probably already installed!\n\nTip: If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)",
     "crumbs": [
-      "Part 1: Introduction",
+      "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
     ]
   },
@@ -357,7 +357,7 @@
     "section": "1.4 Your First Command: Saying Hello to the Terminal",
     "text": "1.4 Your First Command: Saying Hello to the Terminal\nOk, now that the Terminal is open on your computer, let’s take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.\n\n\n\n\n\n\nNote for newer Mac users\n\n\n\nWhen you launch the Terminal for the first time, you’ll probably see a prompt saying something like:\nThe default interactive shell is now zsh.\nTo update your account to use zsh, please run `chsh -s /bin/zsh`.\nDISREGARD THIS MESSAGE. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.\n\n\n\n\n\nWhen you launch Terminal for the first time, you’ll see some text like this.\n\n\nLet’s breakdown a few things from the screenshot above:\n\nComputer name: the characters before the ~ are your computer name.\nCurrent directory: The ~ character is Terminal shorthand for your “base” directory on your computer. The value shown here will update as you move around to different folders on your computer.\nUser name: The part immediatetely after the ~ is your username.\nCommand prompt: Lastly we have the $. This is the “prompt” where you type commands.\n\nYou type your commands AFTER the $ and then hit Return/Enter on your keyboard to run or execute them. We’ll practice doing just that in the next section.\n\n1.4.1 Your First Command: Saying Hello to the Terminal\nLet’s try your first real command: finding out where you are using the command pwd.\nIn the Terminal prompt (remember after the $), type the following command:\npwd\nThen press Enter to run the command.\nYou should see Terminal respond with something like this:\n/Users/yourname\nor this\nC:\\Users\\yourname\nDepending on your system, the path may look a little different — and that’s OK.\nSo what just happened?\n\npwd stands for “print working directory.”\nIt simply asks: Where am I right now in the computer’s folder system?\nYour computer provides the answer: your current folder — usually your “home” directory when you first open the Terminal.",
     "crumbs": [
-      "Part 1: Introduction",
+      "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
     ]
   },
@@ -379,7 +379,7 @@
     "section": "1.2 Speaking the Terminal’s language",
     "text": "1.2 Speaking the Terminal’s language\nThe programming language we will use for our interactions in the Terminal is called Bash. Bash is a Unix-based program and most of the Internet runs on Unix (or Linux) computers.\nMacs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why Git and Git Bash were downloaded in the prerequisites – so we can all speak the same language, regardless of the machines we’re using.",
     "crumbs": [
-      "Part 1: Introduction",
+      "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
     ]
   },
@@ -852,7 +852,7 @@
     "section": "1.5 🎯 Checkpoint",
     "text": "1.5 🎯 Checkpoint\nYou’ve made it to the end of chapter 1. Good job!\nYou’ve now:\n\nOpened the Terminal.\nTyped and ran your first command.\nSeen your computer respond back.\n\nYou’re officially no longer a Terminal beginner. 🙌\nA few quick Tips Before You Move On to the next chapter:\n\nCommand Case Matters in the Terminal: pwd is not the same as PWD.\nPress Enter: Every command you type needs an Enter to run.\nYou can’t break things easily: Typing pwd won’t hurt your computer.\n(In fact, almost everything we’ll do in this guide will be safe.)\n\n\nNext up:\nWe’ll learn how to move around inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter.",
     "crumbs": [
-      "Part 1: Introduction",
+      "Introduction",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
     ]
   },
@@ -2434,7 +2434,7 @@
     "href": "intro-to-git/updating-your-repo.html",
     "title": "13  Updating files",
     "section": "",
-    "text": "13.1 Make a Small Change\nYou’ll also practice writing good commit messages and checking your work.\nLet’s open your Quarto file you made in Chapter 1 (e.g., 01-index.qmd) and make a couple changes.\nReplace the auto-generated text and code blocks in the file with the following:\nUnder the summary header and description, add a new code block with the following:\nThen save the file.\nNow check the status in your Terminal again by running:\nThe Terminal should respond with something like this:\nLet’s break this down :",
+    "text": "13.1 The basic git workflow\nYou’ll also practice writing good commit messages and checking your work.\nNow that we have our local repository setup and connected to our remote repository on Github, let’s briefly go over the basic Github workflow you will repeat over and over again as you work on your project.\nThe basic git workflow goes like this:\nSome additional steps may be added if you begin using more advanced features in Git later on – especially when working with a team – but the basic steps outlined above will still apply even when working with more complicated workflows like feature branches and pull requests.\nWe’ll practice this workflow in the sections below.",
     "crumbs": [
       "Git basics",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
@@ -2444,8 +2444,8 @@
     "objectID": "intro-to-git/updating-your-repo.html#make-a-small-change",
     "href": "intro-to-git/updating-your-repo.html#make-a-small-change",
     "title": "13  Updating files",
-    "section": "",
-    "text": "---\ntitle: \"Intro to Git\"\nformat: html\n---\n\n# Summary\n\nHere is a summary of the `mtcars` dataset.\n\nsummary(mtcars)\n\n\ngit status\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git restore &lt;file&gt;...\" to discard changes in working directory)\n        modified:   01-index.qmd\n\n\nThe red text tells us that Git sees that something was modified in your 01-index.qmd.\nIt’s under the Changes not staged for commit: section, which tells us that Git hasn’t staged it yet (so it won’t be saved in the next commit).",
+    "section": "13.2 Make a Small Change",
+    "text": "13.2 Make a Small Change\nLet’s open the Quarto file you made in Chapter 1 (e.g., 01-index.qmd) and make a couple changes.\nReplace the auto-generated text and code blocks in the file with the following:\n---\ntitle: \"Intro to Git\"\nformat: html\n---\n\n# Summary\n\nHere is a summary of the `mtcars` dataset.\nUnder the summary header and description, add a new code block with the following:\nsummary(mtcars)\nThen save the file.\nNow check the status in your Terminal again by running:\ngit status\nThe Terminal should respond with something like this:\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git restore &lt;file&gt;...\" to discard changes in working directory)\n        modified:   01-index.qmd\nLet’s break this down :\n\nThe red text tells us that Git sees that something was modified in your 01-index.qmd.\nIt’s under the Changes not staged for commit: section, which tells us that Git hasn’t staged it yet (so it won’t be saved in the next commit).",
     "crumbs": [
       "Git basics",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
@@ -2455,8 +2455,8 @@
     "objectID": "intro-to-git/updating-your-repo.html#stage-the-change",
     "href": "intro-to-git/updating-your-repo.html#stage-the-change",
     "title": "13  Updating files",
-    "section": "13.2 Stage the Change",
-    "text": "13.2 Stage the Change\nNow that you know Git sees the change, you need to tell Git, “Hey, save this file in the next snapshot.”\nYou’ll do this by adding — or staging — the modified file for your next commit.\nTo stage your changed file, run:\ngit add 01-index.qmd\nNow, check your Git status again.\ngit status\nYou should see your 01-index.qmd file in green, along with following message:\nChanges to be committed:\n  (use \"git restore --staged &lt;file&gt;...\" to unstage)\n  modified:   01-index.qmd`\n🎉 Great! Your changed file is now staged and ready to commit.",
+    "section": "13.3 Stage the Change",
+    "text": "13.3 Stage the Change\nNow that you know Git sees the change, you need to tell Git, “Hey, save this file in the next snapshot.”\nYou’ll do this by adding — or staging — the modified file for your next commit.\nTo stage your changed file, run:\ngit add 01-index.qmd\nNow, check your Git status again.\ngit status\nYou should see your 01-index.qmd file in green, along with following message:\nChanges to be committed:\n  (use \"git restore --staged &lt;file&gt;...\" to unstage)\n  modified:   01-index.qmd`\n🎉 Great! Your changed file is now staged and ready to commit.",
     "crumbs": [
       "Git basics",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
@@ -2466,8 +2466,8 @@
     "objectID": "intro-to-git/updating-your-repo.html#commit-your-change",
     "href": "intro-to-git/updating-your-repo.html#commit-your-change",
     "title": "13  Updating files",
-    "section": "13.3 Commit your change",
-    "text": "13.3 Commit your change\nNow, we’ll save the snapshot of our updated file in Git’s memory. When we do so, we’ll want to include a descriptive commit message noting what we changed. Git commits always need a message attached to them.\nA few best practices to keep in mind with commit messages:\n\nUse present tense: \"Add summary of...\", not \"Added...\"\nKeep it short but descriptive\nThink: “What changed in this version?”, write that in the message.\n\n✅ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or if you need to go back to a prior version, commit messages will help your retrace your steps.\nWith those things in mind, practice writing a descriptive commit message with your change to the 01-index.qmd.\nType something like the following and hit enter:\ngit commit -m \"Add summary of mtcars dataset\"\nTerminal will respond with a summary of insertions and deletions in your file.\nA quick word of caution about the -m flag and Vim\nGit commits always need a message attached to them. The -m flag tells the command line that we’ll be writing our message inline with our command.\nIf you forget to include that message flag, the Terminal will open its default text editor called Vim. If you find yourself in this scenario and don’t know how to get out, there’s a section on getting out of Vim in our Terminal Guide.",
+    "section": "13.4 Commit your change",
+    "text": "13.4 Commit your change\nNow, we’ll save the snapshot of our updated file in Git’s memory. When we do so, we’ll want to include a descriptive commit message noting what we changed. Git commits always need a message attached to them.\nA few best practices to keep in mind with commit messages:\n\nUse present tense: \"Add summary of...\", not \"Added...\"\nKeep it short but descriptive\nThink: “What changed in this version?”, write that in the message.\n\n✅ Good commit messages make it easier for you and others to pick up where you left off. If something breaks during an update or if you need to go back to a prior version, commit messages will help your retrace your steps.\nWith those things in mind, practice writing a descriptive commit message with your change to the 01-index.qmd.\nType something like the following and hit enter:\ngit commit -m \"Add summary of mtcars dataset\"\nTerminal will respond with a summary of insertions and deletions in your file.\nA quick word of caution about the -m flag and Vim\nGit commits always need a message attached to them. The -m flag tells the command line that we’ll be writing our message inline with our command.\nIf you forget to include that message flag, the Terminal will open its default text editor called Vim. If you find yourself in this scenario and don’t know how to get out, there’s a section on getting out of Vim in our Terminal Guide.",
     "crumbs": [
       "Git basics",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
@@ -2477,8 +2477,8 @@
     "objectID": "intro-to-git/updating-your-repo.html#push-your-commit-to-github",
     "href": "intro-to-git/updating-your-repo.html#push-your-commit-to-github",
     "title": "13  Updating files",
-    "section": "13.4 Push your commit to GitHub",
-    "text": "13.4 Push your commit to GitHub\nNow, that our changes are staged and commited, we’ll send the snapshot from your computer to GitHub by pushing our changes.\nPush your new commit by running:\ngit push\nNow go to your repository on Github — you’ll see your commit listed under the Commits tab and your file under the &lt;&gt;Codetab! (You may need to refresh)\n\n\n\n\n\n\nNote\n\n\n\nYou may be wondering why this push command was shorter than it was last time. In your last push, you needed to connect local project (the one on your computer) to the remote repository on Github and set your main branch.\nSince you already connected your Quarto project to Github and set our branch to main, you can just use the git push command now.",
+    "section": "13.5 Push your commit to GitHub",
+    "text": "13.5 Push your commit to GitHub\nNow, that our changes are staged and commited, we’ll send the snapshot from your computer to GitHub by pushing our changes.\nPush your new commit by running:\ngit push\nNow go to your repository on Github — you’ll see your commit listed under the Commits tab and your file under the &lt;&gt;Codetab! (You may need to refresh)\n\n\n\n\n\n\nNote\n\n\n\nYou may be wondering why this push command was shorter than it was last time. In your last push, you needed to connect local project (the one on your computer) to the remote repository on Github and set your main branch.\nSince you already connected your Quarto project to Github and set our branch to main, you can just use the git push command now.",
     "crumbs": [
       "Git basics",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
@@ -2488,8 +2488,8 @@
     "objectID": "intro-to-git/updating-your-repo.html#git-workflow-best-practices",
     "href": "intro-to-git/updating-your-repo.html#git-workflow-best-practices",
     "title": "13  Updating files",
-    "section": "13.5 Git workflow best practices",
-    "text": "13.5 Git workflow best practices\nBefore we move on, here’s a few key best practices to keep in mind as you’re getting used to working in Git:\n\nCommit early, commit often: Save your work frequently in small, logical chunks. This makes changes easier to track, understand, and roll back.\nWrite clear commit messages: Use concise, meaningful messages that explain why the change was made. (e.g., Fix typo in introduction, not just update)\nCheck status regularly: Run git status often to see what’s changed and what’s staged.\nStage changes selectively: Use git add &lt;filename&gt; (instead of git add .) when you want more control over what goes into each commit.",
+    "section": "13.6 Git workflow best practices",
+    "text": "13.6 Git workflow best practices\nBefore we move on, here’s a few key best practices to keep in mind as you’re getting used to working in Git:\n\nCommit early, commit often: Save your work frequently in small, logical chunks. This makes changes easier to track, understand, and roll back.\nWrite clear commit messages: Use concise, meaningful messages that explain why the change was made. (e.g., Fix typo in introduction, not just update)\nCheck status regularly: Run git status often to see what’s changed and what’s staged.\nStage changes selectively: Use git add &lt;filename&gt; (instead of git add .) when you want more control over what goes into each commit.",
     "crumbs": [
       "Git basics",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
@@ -2499,8 +2499,8 @@
     "objectID": "intro-to-git/updating-your-repo.html#checkpoint",
     "href": "intro-to-git/updating-your-repo.html#checkpoint",
     "title": "13  Updating files",
-    "section": "13.6 🎯 Checkpoint",
-    "text": "13.6 🎯 Checkpoint\nIn this chapter, you learned the basic git workflow:\n\nMake a change to your local project\nStage the changes in git (git add ..)\nTake a snapshot of the changed files (git commit -m ...)\nPush the changes to Github (git push)\nBest practices to keep things clean and manageable\n\nThis is the cycle you will repeat over and over again as you work on coding projects using git.\n\nNext up:\nwe’ll learn how to make changes, track versions, and collaborate like pros.",
+    "section": "13.7 🎯 Checkpoint",
+    "text": "13.7 🎯 Checkpoint\nIn this chapter, you learned the basic git workflow:\n\nMake a change to your local project\nStage the changes in git (git add ..)\nTake a snapshot of the changed files (git commit -m ...)\nPush the changes to Github (git push)\nBest practices to keep things clean and manageable\n\nThis is the cycle you will repeat over and over again as you work on coding projects using git.\n\nNext up:\nwe’ll learn how to make changes, track versions, and collaborate like pros.",
     "crumbs": [
       "Git basics",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
@@ -2652,9 +2652,9 @@
   {
     "objectID": "index.html#some-words-from-the-authors",
     "href": "index.html#some-words-from-the-authors",
-    "title": "Git for R",
+    "title": "Intro to Terminal & Git for R",
     "section": "Some words from the authors",
-    "text": "Some words from the authors\nThere is always more than one way to do things in coding. This book is a an opinionated collection of lessons intended to teach students new to programming how to get started using the command line and version control. We consider our audiences beginners, and strive to make steps as simple as possible, which means I may not go into detail about alternative (and possibly better) ways to accomplish tasks in favor of reducing options to simplify understanding. There are a multitude of other resources available to students once they advance beyond the materials in this book, and we strongly encourage Googling concepts for further learning. For our purposes, we stick to the basics in hopes it eliminates enough of the noise for our students to get their feet on the ground using these technologies.",
+    "text": "Some words from the authors\nThere is always more than one way to do things in coding. This book is an opinionated collection of lessons intended to teach students new to programming how to get started using the command line and version control. We consider our audiences beginners, and strive to make steps as simple as possible, which means we may not go into detail about alternative (and possibly better) ways to accomplish tasks in favor of reducing options to simplify understanding. For our purposes, we stick to the basics in hopes it eliminates enough of the noise for our students to get their feet on the ground using these technologies.\nThere are a multitude of other resources available to students once they advance beyond the materials in this book, and we strongly encourage them to Google and seek out additional information about the concepts covered in this guide for further learning.",
     "crumbs": [
       "About this book"
     ]
@@ -2662,7 +2662,7 @@
   {
     "objectID": "index.html#conventions-and-styles-in-this-book",
     "href": "index.html#conventions-and-styles-in-this-book",
-    "title": "Git for R",
+    "title": "Intro to Terminal & Git for R",
     "section": "Conventions and styles in this book",
     "text": "Conventions and styles in this book\nWe hold the deep belief that “all ships rise with the tide” when members of the data journalism community learn together, and this book seeks to add to that mission. We’ve written this textbook in the first-person plural to foster a sense of collaboration and shared learning between the reader and the authors. By using pronouns like “we” and “our,” our guide invites students into a learning journey that feels supportive and inclusive, rather than distant or instructional. It reflects the idea that learning to code is not a solitary task, but a process that many people engage in together. Our aim for this guide is to help beginners feel less intimidated, encouraging them to see mistakes and discoveries as part of a shared experience, not personal failures.\nWe will try to be consistent in the way we write documentation and lessons, but we are human and sometimes we break my own rules. In general, keep the following in mind:\n\nThings to do\nThings to DO are in ordered lists:\n\nDo this thing.\nThen do this thing.\n\nExplanations are usually in text, like this very paragraph.\nSometimes details will be explained in lists:\n\nThis is the first thing I want you to know.\nThis is the second. You don’t have to DO these things, just know about them.\n\n\n\nCode blocks\nThis book often runs the code that is shown, so you’ll see the code and the result of that code below it.\n\n1 + 1\n\n[1] 2\n\n\n\nCopying code blocks\nWhen you see code in the instructions, you can roll your cursor over the right-corner and click on the copy icon to copy the code clock content to your clipboard.\n\nYou can then paste the code inside your coding program chunk.\nThat said, typing code yourself has many, many benefits. You learn better when you type yourself, make mistakes and have to fix them. I encourage you to always type short code snippets. Leave the copying to long ones.\n\n\nHidden code\nSometimes I want to include code in the book but not display it so you can try the to write the code yourself first. When I do this, it will look like this:\n\n\nClick here to show the code\n1 + 1\n\n\n[1] 2\n\n\nIf you click on the triangle or the words that follow, you’ll reveal the code. Click again to hide it.\n\n\nAnnotated code\nSometimes when I am explaining code it is helpful to match lines of code to the explanation about them, which I do through annotated code.\n\n1mtcars |&gt;\n2  head()\n\n\n1\n\nFirst I take the Motor Trend Car Road Tests data set AND THEN …\n\n2\n\nI pipe into the head() command, which gives us the “top” of the data.\n\n\n\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nWhen there are annotations like this you have to be careful if you are copying code from the book. Either copy it one line at a time or use the copy icon noted above.\n\n\nFenced code\nSometimes I need to show code chunk options that are added, like when explaining how to name chunks. In those cases, you may see the code chunk with all the tick marks, etc. like this:\n\n```{r block-named}\n1 + 1\n```\n\n[1] 2\n\n\nor\n\n```{r}\n#| label: block-named-yaml\n\n1 + 1\n```\n\n[1] 2\n\n\nYou can still copy/paste these blocks, but you’ll get the entire code block, not just the contents.\n\n\n\nNotes, some important\nI will use callouts to set off a less important aside:\n\n\n\n\n\n\nMarkdown was developed by JOHN GRUBER, as outlined on his Daring Fireball blog.\n\n\n\nBut sometimes those asides are important. I usually indicate that:\n\n\n\n\n\n\nImportant\n\n\n\nYou really should learn how to use Markdown as you will use it the whole semester, and hopefully for the rest of your life.",
     "crumbs": [
@@ -2672,7 +2672,7 @@
   {
     "objectID": "index.html#about-the-authors",
     "href": "index.html#about-the-authors",
-    "title": "Git for R",
+    "title": "Intro to Terminal & Git for R",
     "section": "About the authors",
     "text": "About the authors\n\nAnastasia Goodwin\nI am a former web developer and UX/UI designer turned data journalist. I work as a senior data journalist embedded with the Houston Chronicle’s education team where I cover everything from pre-K to higher education. I also sometimes have the privilege to teach sections of Reporting with Data at the University of Texas at Austin, where I also attended journalism school.\n\nEmail: ana.goodwin10@gmail.com\n\n\n\nChristian McDonald\nI’m a career journalist who most recently served as data and projects editor at the Austin American-Statesman before joining the University of Texas at Austin faculty full-time in fall 2018. I’ve taught data-related course at UT since 2013. I also serve as the innovation director of the Dallas Morning News Journalism Innovation Endowment.\n\nThe UT Data Github: utdata\nThreads: @critmcdonald | Mastodon crit | Bluesky: @crit\nEmail: christian.mcdonald@utexas.edu",
     "crumbs": [
@@ -2682,11 +2682,33 @@
   {
     "objectID": "index.html#license",
     "href": "index.html#license",
-    "title": "Git for R",
+    "title": "Intro to Terminal & Git for R",
     "section": "License",
     "text": "License\nThis work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nLet’s just say this is free on the internet. I don’t make any money from it and you shouldn’t either.",
     "crumbs": [
       "About this book"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/make-git-project.html#the-basic-git-workflow",
+    "href": "intro-to-git/make-git-project.html#the-basic-git-workflow",
+    "title": "10  Make our Git project",
+    "section": "",
+    "text": "The basic workflow we’ll be learning in this guide",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Make our Git project</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/updating-your-repo.html#the-basic-git-workflow",
+    "href": "intro-to-git/updating-your-repo.html#the-basic-git-workflow",
+    "title": "13  Updating files",
+    "section": "",
+    "text": "The basic workflow you’ll repeat when working with Github\n\n\n\n\nYou make changes to your local repository files.\nYou take a snapshot of those changes by committing them on your local repo.\nYou push those committed changes to Github to track.\nBefore making more changes, you pull down the most recent changes from Github.\nRinse and repeat.",
+    "crumbs": [
+      "Git basics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Updating files</span>"
     ]
   }
 ]

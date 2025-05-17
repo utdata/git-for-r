@@ -3,7 +3,7 @@ project:
   output-dir: docs
   
 book:
-  title: "Git for R"
+  title: "Intro to Terminal & Git for R"
   author: "Anastasia Goodwin, edited by Christian McDonald"
   date: "May 2025"
         
@@ -12,14 +12,14 @@ book:
     - text: "---"  
     - part: "Intro to Terminal"
     - text: "---"
-    - part: "Part 1: Introduction"
+    - part: "Introduction"
       chapters:
       - terminal/00-introduction.qmd
-    - part: "Part 2: Terminal basics"
+    - part: "Terminal basics"
       chapters:
       - terminal/01-moving-around.qmd
       - terminal/02-making-files-folders.qmd
-    - part: "Part 3: Tips, tricks, troubleshooting"
+    - part: "Tips, tricks, troubleshooting"
       chapters:
       - terminal/03-tips-tricks.qmd
       - terminal/04-troubleshooting.qmd

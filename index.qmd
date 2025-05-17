@@ -12,7 +12,9 @@ Intro to Terminal and Git for R is a series of lessons and instructions used for
 
 ## Some words from the authors {.unnumbered}
 
-There is always more than one way to do things in coding. This book is a an opinionated collection of lessons intended to teach students new to programming how to get started using the command line and version control. We consider our audiences beginners, and strive to make steps as simple as possible, which means I may not go into detail about alternative (and possibly better) ways to accomplish tasks in favor of reducing options to simplify understanding. There are a multitude of other resources available to students once they advance beyond the materials in this book, and we strongly encourage Googling concepts for further learning. For our purposes, we stick to the basics in hopes it eliminates enough of the noise for our students to get their feet on the ground using these technologies. 
+There is always more than one way to do things in coding. This book is an **opinionated** collection of lessons intended to teach students new to programming how to get started using the command line and version control. We consider our audiences beginners, and strive to make steps as simple as possible, which means we may not go into detail about alternative (and possibly better) ways to accomplish tasks in favor of reducing options to simplify understanding. For our purposes, we stick to the basics in hopes it eliminates enough of the noise for our students to get their feet on the ground using these technologies. 
+
+There are a multitude of other resources available to students once they advance beyond the materials in this book, and we strongly encourage them to Google and seek out additional information about the concepts covered in this guide for further learning.
 
 ## Conventions and styles in this book {.unnumbered}
 
