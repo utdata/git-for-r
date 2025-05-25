@@ -4,7 +4,7 @@
     "href": "intro-to-git/introduction.html",
     "title": "7  Welcome",
     "section": "",
-    "text": "7.1 Who is this guide for?\nWelcome to the Intro to Git guide! We hope this guide will be a resource for you to learn the basics of working with version control for the first time.\nThis guide is for students who know some R and want to learn Git and GitHub to manage and collaborate on R projects (especially Quarto ones). It assumes little-to-no hands-on terminal experience but will encourage building confidence over time by interacting with Github through the command line.\nStudents who are brand new to the Terminal may also find it helpful to go through the Intro to Terminal section of this book before working through this guide.",
+    "text": "7.1 Who is this guide for?\nWelcome to the Intro to Git guide! We hope this guide will be a resource for you to learn the basics of working with version control for the first time.\nThis guide is for students who know some R and want to learn Git and GitHub to manage and collaborate on R projects (especially Quarto ones). It assumes little-to-no hands-on terminal experience but will encourage building confidence over time by interacting with Github through the command line.\nStudents who are brand new to the terminal may also find it helpful to go through the Intro to Terminal section of this book before working through this guide.",
     "crumbs": [
       "Installation",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Welcome</span>"
@@ -1363,7 +1363,7 @@
     "href": "terminal/troubleshooting.html",
     "title": "5  Troubleshooting",
     "section": "",
-    "text": "5.1 Common pitfalls and errors\nIn this final chapter, let’s touch quickly on navigating common issues you might run into using the Terminal.\nHere’s a quick rundown of the most common problems and errors you’ll run into using the command line. Even experienced developers run into these issues, so learning what they mean will go a long way when troubleshooting.\nFor more common issues and how to fix them, see the common errors table in the Glossary at the end of this guide.",
+    "text": "5.1 Common pitfalls and errors\nIn this final chapter, let’s touch quickly on navigating common issues you might run into using the terminal.\nHere’s a quick rundown of the most common problems and errors you’ll run into using the command line. Even experienced developers run into these issues, so learning what they mean will go a long way when troubleshooting.\nFor more common issues and how to fix them, see the Common errors table in the Glossary at the end of this guide.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
@@ -1374,7 +1374,7 @@
     "href": "terminal/troubleshooting.html#common-pitfalls-and-errors",
     "title": "5  Troubleshooting",
     "section": "",
-    "text": "Command not found? You might have a typo or the program isn’t installed.\nNo such file or directory? You’re trying to access a file/path that doesn’t exist. Check that the file exists and that your spelled it correctly.\nPermission denied?\nYou tried to do something you don’t have permission to do. Check your file/repo permissions.\nSyntax error\nYou typed a command in a way the shell doesn’t understand. Check that your syntax is correct and error-free.\nStuck in a weird app inside Terminal?\nTry pressing Ctrl + C or Ctrl + D to exit.",
+    "text": "Command not found? You might have a typo or the program isn’t installed.\nNo such file or directory? You’re trying to access a file/path that doesn’t exist. Check that the file exists and that you spelled it correctly.\nPermission denied?\nYou tried to do something you don’t have permission to do. Check your file/repo permissions.\nSyntax error\nYou typed a command in a way the shell doesn’t understand. Check that your syntax is correct and error-free.\nStuck in a weird app inside Terminal?\nTry pressing Ctrl + C or Ctrl + D to exit. (You may need to checkout “How to get out of Vim” below)",
     "crumbs": [
       "Tips, tricks, troubleshooting",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
@@ -1385,7 +1385,7 @@
     "href": "terminal/troubleshooting.html#how-to-get-out-of-vim",
     "title": "5  Troubleshooting",
     "section": "5.2 How to Get Out of Vim",
-    "text": "5.2 How to Get Out of Vim\nEvery new command line user shares one panic-inducing experience at one point or another: accidentally opening Vim and not knowing how to get out of it.\nIn this section, we’ll briefly walk you through what Vim is and how to exit it so you don’t panic when this (inevitably) happens to you.\nWhat is Vim?\nVim is a text editor built into most Unix systems, including macOS and Linux. It’s used by developers to edit code and configuration files, but it works very differently from regular text editors.\nIf you accidentally open something in Vim (for example, by running git commit without a message), it might look like you’re stuck. But don’t worry — here’s how to exit safely.\nHow to Exit Vim\nIf you don’t want to save any changes - most common:\n\nPress Esc (to make sure you’re not in input mode)\nType :q! (to “quit and ignore changes”)\nHit Enter / return (to exit)\n\nIf You do want to save changes - less common:\n\nPress Esc\nType :wq (to “write and quit”).\nPress Enter / return",
+    "text": "5.2 How to Get Out of Vim\nEvery new command line user shares one panic-inducing experience at one point or another: accidentally opening Vim and not knowing how to get out of it.\nIn this section, we’ll briefly walk you through what Vim is and how to exit it so you don’t panic when this (inevitably) happens to you.\nWhat is Vim?\nVim is a text editor built into most Unix systems, including macOS and Linux. It’s used by developers to edit code and configuration files, but it works very differently from regular text editors.\nIf you accidentally open something in Vim (for example, by running git commit without a message), it might look like you’re stuck. But don’t worry — here’s how to exit safely.\nHow to Exit Vim\nIf you don’t want to save any changes (most common):\n\nPress Esc - to make sure you’re not in input mode.\nType :q! - to “quit and ignore changes”.\nHit Enter / return - to exit.\n\nIf You do want to save changes (less common):\n\nPress Esc\nType :wq (to “write and quit”).\nPress Enter / return",
     "crumbs": [
       "Tips, tricks, troubleshooting",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
@@ -1396,7 +1396,7 @@
     "href": "terminal/troubleshooting.html#final-words",
     "title": "5  Troubleshooting",
     "section": "5.3 🎉 Final Words",
-    "text": "5.3 🎉 Final Words\nCongratulations! You’ve made it to the end of the Intro to Terminal guide.\nYou’ve now learned:\n\nHow to open the Terminal\nHow to move around\nHow to create and manage files and folders\nHow to read and use simple flags\nHow to fix common mistakes\n\nYou’ve built a real foundation for anything else you’ll learn later — whether that’s coding, scripting, data science, or just being more powerful with your own computer.\nRemember: the Terminal is your friend.\nKeep practicing — the more you use it, the more natural it will feel.\nGood job! 🚀",
+    "text": "5.3 🎉 Final Words\nCongratulations! You’ve made it to the end of the Intro to Terminal guide.\nYou’ve now learned:\n\nHow to open the Terminal\nHow to move around\nHow to create and manage files and folders\nHow to read and use simple flags\nHow to fix common mistakes\n\nYou’ve built a real foundation for anything else you’ll learn later — whether that’s coding, scripting, data science, or just being more powerful with your own computer.\nRemember: the terminal is your friend.\nKeep practicing — the more you use it, the more natural it will feel.\nGood job! 🚀",
     "crumbs": [
       "Tips, tricks, troubleshooting",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"

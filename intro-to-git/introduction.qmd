@@ -8,7 +8,7 @@ Welcome to the **Intro to Git** guide! We hope this guide will be a resource for
 
 This guide is for students who know some R and want to learn Git and GitHub to manage and collaborate on R projects (especially Quarto ones). It assumes little-to-no hands-on terminal experience but will encourage building confidence over time by interacting with Github through the command line.
 
-Students who are brand new to the Terminal may also find it helpful to go through the **Intro to Terminal** section of this book before working through this guide.
+Students who are brand new to the terminal may also find it helpful to go through the [**Intro to Terminal**](/terminal/introduction.html) section of this book before working through this guide.
 
 ## Prerequisites
 
