@@ -1,5 +1,5 @@
 ---
-title: "Moving Around in the Terminal"
+title: "Moving around in the terminal"
 ---
 
 Now that you know where you *are* (`pwd`), it's time to explore what's *around* you. Specifically, we'll start by moving between different folders on your computer.
@@ -7,24 +7,26 @@ Now that you know where you *are* (`pwd`), it's time to explore what's *around* 
 ::: callout-note
 ## Terminology note
 
-In the Terminal world, folders are usually called **directories**. (You’ll hear both words out in the world — they mean the same thing.)
+In the programming world, folders are usually called **directories**. You’ll hear both words out in the world — they mean the same thing.
 :::
 
-## What’s in This Folder? (`ls`)
+## What’s in this folder? (`ls`)
 
 If you want to *see* what's inside the current directory, you use the `ls` command.
 
-As we said in Chapter 1, the Terminal lets you interact with files the same way you would with **File Explorer** on Windows and **Finder** on a Mac — except you'll be using text instead of clicking.
+As we said in Chapter 1, the terminal lets you interact with files the same way you would with **File Explorer** on Windows and **Finder** on a Mac — except you'll be using text instead of clicking.
 
-When your first launch terminal, you'll see a `~` (called a tilde), which lets you know you're in your base or home directory. We want to ask the Terminal to tell us what is inside this home directory.
+When your first launch terminal, you'll see a `~` (called a tilde), which lets you know you're in your *base* or home directory. We want to ask the terminal to tell us what is inside this home directory.
 
-To do that, type the following command:
+To ask terminal what's inside a directory:
+
+1. Type the following in your terminal:
 
 ``` bash
 ls
 ```
 
-and press `Enter` to run the command.
+2. press `Enter` to run the command.
 
 Terminal will *respond* to your command with a list of files and folders like this:
 
@@ -33,45 +35,62 @@ _projects Desktop       Downloads   Movies      Pictures
 Documents   Library     Music       Public 
 ```
 
-Or it might be different depending on what's in your computer's home folder.
+Your list may be different depending on what's in your computer's home folder. That's ok!
 
 In any case, the list of directories returned by Terminal will match the folders you would see if you clicked on your home directory in the Finder on a Mac or in File Explorer on a Windows machine. For example, the list of folders listed in the example response above matches what we see in our home directory using Finder below.
 
-![An example of folders in a home directory on a Mac.](../images/home-directory.png)**Quick Recap: What does `ls` stand for?**
+![An example of folders in a home directory on a Mac.](../images/home-directory.png)
 
--   It’s short for "**list**."
+Quick Recap on the `ls` command:
 
--   It literally says, "List what’s here."
+-   `ls` is short for "**list**."
 
-## Moving Around (`cd`)
+-   It literally asks terminal, "list what’s here."
 
-Seeing what's around is nice — but what if you want to *go into* one of those folders?
+## Moving around (`cd`)
 
-Use the `cd` command, shorthand for "change directory".
+Seeing what's around us in a folder is nice, but what if you want to *go into* one of those folders?
 
-Suppose you see a folder called `Documents`.
+In terminal, we use the `cd` command -- shorthand for *"change directory"* -- to move into and out of folders.
 
-To do so, type the following command in your Terminal:
+Suppose you ran your `ls` command and see a folder called `Documents`. If you wanted to move into that folder, you'd do the following:
+
+1. Type the following command in your terminal:
 
 ``` bash
 cd Documents
 ```
 
-and press `Enter`.
+2. press `Enter/Return` to run.
 
 Now you’re inside the `Documents` directory!
+
+Now let's try running the `ls` command again:
+
+1. Type the following in your command line:
+
+``` bash
+ls
+```
+2. Hit `Enter/Return` to run.
+
+You should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your `Documents` folder.
+
+Nice job — you just moved between directories!
 
 ## How Can You Tell Where You Are Now? (`pwd`)
 
 There are a couple ways to make sure you are where you *think* you are in the Terminal.
 
-The first is to look at the command prompt line inside your Terminal window again. You should see something like:
+The first is to look at the command prompt line inside your terminal window again. 
+
+You should see something like:
 
 `Anas-MacBook-Air:Documents ana$`
 
-In the current directory space (where there used to be a `~`), you should now see the name of the `Documents` folder. Remember if you're ever unsure *where* you are, Terminal will tell you in the prompt!
+In the current directory space (where there used to be a `~`), you should see the name of the name of the folder you're *currently inside*. If you followed the steps above to get into your Documents folder, for example, you should now see the name of the `Documents` folder. Remember if you're ever unsure *where* you are, terminal will tell you in the prompt!
 
-If you're still not sure, remember you can use your new friend the `pwd` command from Chapter 1 by typing:
+If you're still not sure, remember you can use your new friend the `pwd` command from chapter 1 by typing and running:
 
 ``` bash
 pwd
@@ -85,19 +104,8 @@ or
 
 `C:\Users\yourname\Documents`
 
-Nice job — you just moved between directories!
 
-Now let's try sending the `ls` command again by typing:
-
-``` bash
-ls
-```
-
-and hitting `Enter`.
-
-You should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your `Documents` folder.
-
-## Going Back Up (`cd ..`)
+## Going Back Up (`cd ..`) [Editing stopped here]
 
 Ok now that we've moved *into* folders, what if you want to go *back* to the folder you came from?
 
@@ -129,13 +137,13 @@ Or use a backslash to "escape" the space:
 
 `cd My\ Documents`
 
-Like we mentioned before, Terminal is particular about the *way* you speak to it. For it to understand you, you've got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like `snake_case` or `kebab-case` will help you work more efficiently. 
+Like we mentioned before, terminal is particular about the *way* you speak to it. For it to understand you, you've got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like `snake_case` or `kebab-case` will help you work more efficiently. 
 
-## 📝 Mini Exercise
+## 📝 Mini exercise
 
 **Own your own, try this:**
 
-1.  Open your Terminal.
+1.  Open your terminal.
 
 2.  Type `pwd` to see where you are.
 
@@ -149,20 +157,19 @@ Like we mentioned before, Terminal is particular about the *way* you speak to it
 
 7.  `cd ..` to come back up.
 
-Take your time. Play around.\
-If you get lost, just type:
+Take your time. Play around.
+
+If you get lost, just type the following to jump back to your home directory:
 
 ``` bash 
 cd
 ```
 
-to jump back to your home directory.
+## 🔥 Pro Tip: speed up with tab completion
 
-## 🔥 Pro Tip: Speed Up with Tab Completion
+Ok, now that you've got some practice typing things into terminal, we'll let you in on a big time-saver: when you start typing a folder name, you don't have to type the whole thing.
 
-Ok, now that you've got some practice typing things into Terminal, we'll let you in on a big time-saver: when you start typing a folder name, you don't have to type the whole thing.
-
-Hit the `Tab` key after typing part of your folder name and the Terminal will *try* to **auto-complete** it for you.
+Hit the `Tab` key after typing part of your folder name and the terminal will *try* to **auto-complete** it for you.
 
 See it for yourself by typing:
 
@@ -171,7 +178,7 @@ cd Doc
 ``` 
 then press `Tab`.
 
--   If there’s a `Documents` folder, Terminal will fill in the rest automatically!
+-   If there’s a `Documents` folder, terminal will fill in the rest automatically!
 
 Huge time saver.
 
@@ -195,4 +202,4 @@ At this point you've started to learn some of the basics of "speaking" Bash.
 
 **Next up:**
 
-We'll learn how to create your own files and folders in the Terminal.
+We'll learn how to **create your own files and folders** in the terminal.
