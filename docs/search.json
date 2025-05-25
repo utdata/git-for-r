@@ -1132,7 +1132,7 @@
     "href": "terminal/moving-around.html#whats-in-this-folder-ls",
     "title": "2  Moving around in the terminal",
     "section": "",
-    "text": "Type the following in your terminal:\n\nls\n\npress Enter to run the command.\n\n\n_projects Desktop       Downloads   Movies      Pictures\nDocuments   Library     Music       Public \n\n\n\n\n\nAn example of folders in a home directory on a Mac.\n\n\n\n\nls is short for “list.”\nIt literally asks terminal, “list what’s here.”",
+    "text": "ls stands for list.\n\n\n\n\n\n\nType the following in your terminal:\n\nls\n\npress Enter to run the command.\n\n\n_projects Desktop       Downloads   Movies      Pictures\nDocuments   Library     Music       Public \n\n\n\n\n\nAn example of folders in a home directory on a Mac.\n\n\n\n\nls is short for “list.”\nIt literally asks terminal, “list what’s here.”",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
@@ -1143,7 +1143,7 @@
     "href": "terminal/moving-around.html#moving-around-cd",
     "title": "2  Moving around in the terminal",
     "section": "2.2 Moving around (cd)",
-    "text": "2.2 Moving around (cd)\nSeeing what’s around us in a folder is nice, but what if you want to go into one of those folders?\nIn terminal, we use the cd command – shorthand for “change directory” – to move into and out of folders.\nSuppose you ran your ls command and see a folder called Documents. If you wanted to move into that folder, you’d do the following:\n\nType the following command in your terminal:\n\ncd Documents\n\npress Enter/Return to run.\n\nNow you’re inside the Documents directory!\nNow let’s try running the ls command again:\n\nType the following in your command line:\n\nls\n\nHit Enter/Return to run.\n\nYou should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your Documents folder.\nNice job — you just moved between directories!",
+    "text": "2.2 Moving around (cd)\n\ncd stands for change directory.\n\nSeeing what’s around us in a folder is nice, but what if you want to go into one of those folders?\nIn terminal, we use the cd command – shorthand for “change directory” – to move into and out of folders.\nSuppose you ran your ls command and see a folder called Documents. If you wanted to move into that folder, you’d do the following:\n\nType the following command in your terminal:\n\ncd Documents\n\npress Enter/Return to run.\n\nNow you’re inside the Documents directory!\nNow let’s try running the ls command again:\n\nType the following in your command line:\n\nls\n\nHit Enter/Return to run.\n\nYou should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your Documents folder.\nNice job — you just moved between directories!",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
@@ -1154,7 +1154,7 @@
     "href": "terminal/moving-around.html#how-can-you-tell-where-you-are-now-pwd",
     "title": "2  Moving around in the terminal",
     "section": "2.3 How Can You Tell Where You Are Now? (pwd)",
-    "text": "2.3 How Can You Tell Where You Are Now? (pwd)\nThere are a couple ways to make sure you are where you think you are in the Terminal.\nThe first is to look at the command prompt line inside your terminal window again.\nYou should see something like:\nAnas-MacBook-Air:Documents ana$\nIn the current directory space (where there used to be a ~), you should see the name of the name of the folder you’re currently inside. If you followed the steps above to get into your Documents folder, for example, you should now see the name of the Documents folder. Remember if you’re ever unsure where you are, terminal will tell you in the prompt!\nIf you’re still not sure, remember you can use your new friend the pwd command from chapter 1 by typing and running:\npwd\nTerminal should now show something like:\n/Users/yourname/Documents\nor\nC:\\Users\\yourname\\Documents",
+    "text": "2.3 How Can You Tell Where You Are Now? (pwd)\n\npwd stands for print working directory.\n\nThere are a couple ways to make sure you are where you think you are in the Terminal.\nThe first is to look at the command prompt line inside your terminal window again.\nYou should see something like:\nAnas-MacBook-Air:Documents ana$\nIn the current directory space (where there used to be a ~), you should see the name of the name of the folder you’re currently inside. If you followed the steps above to get into your Documents folder, for example, you should now see the name of the Documents folder. Remember if you’re ever unsure where you are, terminal will tell you in the prompt!\nIf you’re still not sure, remember you can use your new friend the pwd (“Print Working Directory”) command from chapter 1 by typing and running:\npwd\nTerminal should now show something like:\n/Users/yourname/Documents\nor\nC:\\Users\\yourname\\Documents",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
@@ -1186,8 +1186,8 @@
     "objectID": "terminal/moving-around.html#mini-exercise",
     "href": "terminal/moving-around.html#mini-exercise",
     "title": "2  Moving around in the terminal",
-    "section": "2.6 📝 Mini exercise",
-    "text": "2.6 📝 Mini exercise\nOwn your own, try this:\n\nOpen your terminal.\nType pwd to see where you are.\nUse ls to list what’s inside.\nPick a folder you see (not your Documents folder).\ncd into that folder.\nUse pwd again to check that you moved.\ncd .. to come back up.\n\nTake your time. Play around.\nIf you get lost, just type the following to jump back to your home directory:\ncd",
+    "section": "2.5 📝 Mini exercise",
+    "text": "2.5 📝 Mini exercise\nOwn your own, try this:\n\nOpen your terminal.\nType and run pwd to see where you are.\nUse ls to list what’s inside.\nPick a folder you see (try something other than your Documents folder).\ncd into that folder.\nUse pwd again to check that you moved.\ncd .. to come back up.\n\nTake your time. Play around.\nIf you get lost, remember you can just type the following command to jump back to your home directory:\ncd",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
@@ -1197,8 +1197,8 @@
     "objectID": "terminal/moving-around.html#pro-tip-speed-up-with-tab-completion",
     "href": "terminal/moving-around.html#pro-tip-speed-up-with-tab-completion",
     "title": "2  Moving around in the terminal",
-    "section": "2.7 🔥 Pro Tip: speed up with tab completion",
-    "text": "2.7 🔥 Pro Tip: speed up with tab completion\nOk, now that you’ve got some practice typing things into terminal, we’ll let you in on a big time-saver: when you start typing a folder name, you don’t have to type the whole thing.\nHit the Tab key after typing part of your folder name and the terminal will try to auto-complete it for you.\nSee it for yourself by typing:\ncd Doc\nthen press Tab.\n\nIf there’s a Documents folder, terminal will fill in the rest automatically!\n\nHuge time saver.\nRemember, you’ll still need to hit Enter to run the command and move into the Documents folder though.",
+    "section": "2.6 🔥 Pro Tip: speed up with tab completion",
+    "text": "2.6 🔥 Pro Tip: speed up with tab completion\nOk, now that you’ve got some practice typing things into terminal, we’ll let you in on a big time-saver: when you start typing a folder name, you don’t have to type the whole thing.\nHit the Tab key after typing part of your folder name and the terminal will try to auto-complete it for you. Now, if you’ve got more than one folder with similar names, you may have to add more characters till it can successfully do so.\nLet’s see it action by doing the following:\n\nType out the following command, but don’t run:\n\ncd Doc\n\nNow, press the Tab key.\n\nIf there’s a Documents folder, terminal will fill in the rest automatically!\nHuge time saver.\nRemember, you’ll still need to hit Enter/Return to run the command and move into the Documents folder.",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
@@ -1208,8 +1208,8 @@
     "objectID": "terminal/moving-around.html#checkpoint",
     "href": "terminal/moving-around.html#checkpoint",
     "title": "2  Moving around in the terminal",
-    "section": "2.8 🎯 Checkpoint",
-    "text": "2.8 🎯 Checkpoint\nIn this chapter you’ve learned:\n\nHow to see what’s inside a folder (ls)\nHow to move into a folder (cd foldername)\nHow to move back up (cd ..)\nHow to use Tab to speed things up\n\nAt this point you’ve started to learn some of the basics of “speaking” Bash.\n\nNext up:\nWe’ll learn how to create your own files and folders in the terminal.",
+    "section": "2.7 🎯 Checkpoint",
+    "text": "2.7 🎯 Checkpoint\nIn this chapter you’ve learned:\n\nHow to see what’s inside a folder (ls).\nHow to move into a folder (cd foldername).\nHow to move back up (cd ..).\nHow to use Tab to speed things up.\n\nAt this point you’ve started to learn some of the basics of “speaking” terminal.\n\nNext up:\nWe’ll learn how to create your own files and folders in the terminal. When you’re ready, head to the next chapter!",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
@@ -1220,7 +1220,7 @@
     "href": "terminal/making-files-folders.html",
     "title": "3  Making and managing folder",
     "section": "",
-    "text": "3.1 Creating a Folder (mkdir)\nNow that you can move around the Terminal like a pro, it’s time to create your own stuff.\nIn this chapter, we’ll learn to make new folders and files. We’ll also learn how to move or delete them.\nLet’s say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you’d do something like right click and hit New Folder, then you’d need to fill out your folder name in the prompt next to the new folder.\nTo do this from the command line, we do all of this in a single prompt using the mkdir command.\nIf you ran the following command (don’t do this):\nThis would create a folder called my_new_folder inside whatever directory you’re inside in the Terminal.",
+    "text": "3.1 Creating a Folder (mkdir)\nNow that you can move around the Terminal like a pro, it’s time to create your own stuff.\nIn this chapter, we’ll learn to make new folders and files. We’ll also learn how to move or delete them.\nLet’s say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you’d do something like right click inside your folder, and click on New Folder in the menu. Then you’d need to fill out your folder name and save the folder.\nTo do this from the command line, however, we do all of these steps in a single prompt using the mkdir command.\nFor example, if you ran the following command from inside your home directory (~) (don’t do this):\nThis would create a new folder called my_new_folder inside your directory. We’ll practice doing this in the next step.",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
@@ -1231,7 +1231,7 @@
     "href": "terminal/making-files-folders.html#creating-a-folder-mkdir",
     "title": "3  Making and managing folder",
     "section": "",
-    "text": "mkdir stands for make directory.\n\n\nmkdir my_new_folder\n\n\n3.1.1 📝 Mini excercise: make a directory\nNow, try the mkdir command out on your own by making a new directory inside your home directory (~).\n\nCheck you’re in your home directory (Hint: you can get back to your home directory by running cd)\nType and run: mkdir terminal_practice in your command prompt\nRun the ls command to make sure it worked, You should see your new directory listed in the Terminal response.",
+    "text": "mkdir stands for make directory.\n\n\n\n\nmkdir my_new_folder",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
@@ -1241,8 +1241,8 @@
     "objectID": "terminal/making-files-folders.html#creating-a-file-touch",
     "href": "terminal/making-files-folders.html#creating-a-file-touch",
     "title": "3  Making and managing folder",
-    "section": "3.2 Creating a File (touch)",
-    "text": "3.2 Creating a File (touch)\nLike folders, we can also make new files from the command line using the touch command.\n\nUnlike other commands we’ve learned, touch isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️\n\nFor example, if you ran the following command:\ntouch example.txt\nThis creates a new, empty file called example.txt.\n\nNote: Windows users may need to use:\n\n\nbash echo.&gt; emample.txt\nor bash New-Item example.txt\n(Depending on if you’re using PowerShell.)\n\n\n3.2.1 📝 Mini excercise: make a file\nNow, try the touch command on your own by making a new file inside your new terminal_practice folder.\n\nMove into your new folder: run the command cd terminal_practice to move into your new folder.\nMake a new file: Type and run the command touch terminal-file.txt.\nCheck your work: Run the ls command to list the files in your folder. You should see a single file listed in the Terminal response called terminal-file.txt.",
+    "section": "3.3 Creating a File (touch)",
+    "text": "3.3 Creating a File (touch)\nLike folders, we can also make new files from the command line using the touch command.\n\nUnlike other commands we’ve learned, touch isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️\n\nFor example, if you ran the following command:\ntouch example.txt\nThis creates a new, empty file called example.txt.\n\nNote: Windows users may need to use:\n\n\nbash echo.&gt; emample.txt\nor bash New-Item example.txt\n(Depending on if you’re using PowerShell.)\n\n\n3.3.1 📝 Mini excercise: make a file\nNow, try the touch command on your own by making a new file inside your new terminal_practice folder.\n\nMove into your new folder: run the command cd terminal_practice to move into your new folder.\nMake a new file: Type and run the command touch terminal-file.txt.\nCheck your work: Run the ls command to list the files in your folder. You should see a single file listed in the Terminal response called terminal-file.txt.",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
@@ -1252,8 +1252,8 @@
     "objectID": "terminal/making-files-folders.html#copying-files-and-folders-cp",
     "href": "terminal/making-files-folders.html#copying-files-and-folders-cp",
     "title": "3  Making and managing folder",
-    "section": "3.3 Copying Files and Folders (cp)",
-    "text": "3.3 Copying Files and Folders (cp)\nWe can also make duplicate files or folders from command line using the cp command.\n\ncp is shorthand for “copy”\n\nSyntax of the cp command\ncp source_file_folder destination_file_folder\nThe cp command takes at least two arguments in its arguments:\n\nSource file or folder: the file or folder you want to copy\nDestination file or folder: the name you’d like the copy of the file or folder to be called\n\nTry running the following inside your terminal_practice folder:\ncp notes.txt copy_of_notes.txt\nIf you run ls again, you should now you have two files: the original (notes.txt) and the new copy (copy_of_notes.txt).\nAs we said before, the cp command can also copy whole directories. However, it’s a little more nuanced. If you’d like to learn more about copying folders, please see appendix XXX.\n📍 A note about destination folders: Bash will check to see if the folder you gave it already exists. If it doesn’t, Bash will create the new folder for you and place the file inside of it.",
+    "section": "3.5 Copying files and folders (cp)",
+    "text": "3.5 Copying files and folders (cp)\n\ncp is shorthand for “copy”\n\nWe can also make duplicate files or folders from command line using the cp command.\nUnlike the other commands we’ve learned so far, the cp commands takes two arguments instead of just one. “Arguments” are just the pieces of information you feed the command line to tell it what to do. For example, in the cd Documents command, “Documents” was the argument telling the command line to go inside the Documents folder.\nSyntax of the cp command\n\ncp source_file_folder destination_file_folder\n\nThe cp command takes at least two arguments:\n\nSource file or folder: the file or folder you want to copy.\nDestination file or folder: the name you’d like the copy of the file or folder to be called.",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
@@ -1263,8 +1263,8 @@
     "objectID": "terminal/making-files-folders.html#moving-or-renaming-files-mv",
     "href": "terminal/making-files-folders.html#moving-or-renaming-files-mv",
     "title": "3  Making and managing folder",
-    "section": "3.4 Moving or Renaming Files (mv)**",
-    "text": "3.4 Moving or Renaming Files (mv)**\nMoving files or folders from command line is also easy using the mv command. The command can also by used to rename files, depending on the syntax you use.\n\nmv is shorthand for “move”\n\nSyntax of the mv command\nTo move a file’s location, use the following syntax:\nmv source_file destination_folder\nIf you just want to rename a file, use the following syntax:\nmv oldname.txt newname.txt\nWe’ll practice the two ways to use the mv command in the next exercise.\n\n3.4.1 📝 Mini exercise: move and rename a file\nPart 1: move a file\n\nMake new subdirectory: run the command mkdir my_new_folder to make a new folder in your terminal_practice directory.\nPeek at our files: run ls to look at the files inside your terminal_practice folder to make sure the new folder is there.\nMove your notes.txt file: Move the copy of your notes files into the new sub-folder in your directory by running the following command: mv copy_of_notes.txt my_new_folder/\nCheck that it worked: run ls to look at the files inside your terminal_practice folder. You should still see a new folder called `my_new_folder but you should not see the copy of your notes file.\nLocate your notes copy file: run cd my_new_folder to move into your new folder. Then run ls to peek at the files. You should see your copy of the notes file listed.\n\nPart 2: rename a file\n\nRename your notes copy file: From inside your new folder, rename the copy of your notes file by running the following command: mv copy_of_notes.txt notes_new.txt\nCheck that it worked: run ls to look at your files. You should see the copy of your notes files, but now with a new name",
+    "section": "3.7 Moving or Renaming Files (mv)",
+    "text": "3.7 Moving or Renaming Files (mv)\n\nmv is shorthand for “move”\n\nMoving files or folders from command line is also easy using the mv command. The command can also by used to rename files, depending on the syntax you use.\nSyntax of the mv command\nTo move a file’s location, use the following syntax:\nmv source_file destination_folder\nIf you just want to rename a file, use the following syntax:\nmv oldname.txt newname.txt\nWe’ll practice the two different ways to use the mv command in the next exercise.",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
@@ -1274,8 +1274,8 @@
     "objectID": "terminal/making-files-folders.html#deleting-files-and-folders-rm",
     "href": "terminal/making-files-folders.html#deleting-files-and-folders-rm",
     "title": "3  Making and managing folder",
-    "section": "3.5 Deleting Files and Folders (rm)",
-    "text": "3.5 Deleting Files and Folders (rm)\nYou can also use the command line to delete files and folders on your machine using the rm command.\n\nrm is shorthand for “remove”\n\nThis command does require some caution because when you delete something from the Terminal, it doesn’t go to the Trash — it’s gone.\nSyntax of the rm command:\nDeleting a single file:\nrm name_file_to_delete\nDeleting a folder (and everything inside it):\nrm -r folder_to_delete\n📍 Note: The -r here is called a flag. It stands for “recursive” — it tells rm to delete not just the folder, but also anything inside it. We’ll talk a little more about flags in the next section.",
+    "section": "3.9 Deleting files and folders (rm)",
+    "text": "3.9 Deleting files and folders (rm)\n\nrm is shorthand for “remove”\n\nYou can also use the command line to delete files and folders on your machine using the rm command.\nThis command does require some caution because when you delete something from the terminal, it doesn’t go to the Trash — it’s just gone.\n\n\n\n\n\n\nImportant\n\n\n\nBe very careful when using the rm command. Any files you delete this way do not go to Trash, and will be unrecoverable. Make sure that you really want to delete your files or folder before proceeding. Additionally, deleting a folder deletes everything inside of that folder as well.\n\n\nSyntax of the rm command:\nDeleting a single file:\nrm name_file_to_delete\nDeleting a folder (and everything inside it):\nrm -r folder_to_delete\nWhat does that -r mean?\n\nThe -r here is called a flag. The one here stands for “recursive” — it tells rm command to delete not just the folder, but also everything that’s inside it. We’ll talk a little more about flags in the next section.",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
@@ -1285,8 +1285,8 @@
     "objectID": "terminal/making-files-folders.html#quick-note-about-flags",
     "href": "terminal/making-files-folders.html#quick-note-about-flags",
     "title": "3  Making and managing folder",
-    "section": "3.6 Quick Note About Flags 🏳️",
-    "text": "3.6 Quick Note About Flags 🏳️\nFlags are extra options you can add to commands to change how they behave.\n\nThey’re usually a dash plus one or two letters. (Example: -r means “recursive” for rm)\nYou can combine flags too (like -rf for rm -r -f, meaning “recursive” and “force delete”).\n\nYou’ll see flags often out in the wild. As you use the command line more, you’ll start to use more of these flags in your workflow to give you more control over what your commands do. For now, just know when you see something starting with a dash, it’s probably a flag to add a little extra to the primary command.\nOptional exercise:\nIf you want, try one out yourself now by using the -l flag along with the ls command.The flag tells the command line, “give me more information about each file in my directory”.\nRun the following command:\nls -l \nTerminal will respond with detailed information about each file and folder in your directory. See the screenshot below for more information about each detail field.\n\n\n\nBreakdown of each file detail in the -l flag Terminal response",
+    "section": "3.10 Quick Note About Flags 🏳️",
+    "text": "3.10 Quick Note About Flags 🏳️\nFlags are just another type of arguments you can add to commands to change how they behave.\n\nThey’re usually a dash plus one or two letters. (Example: -r means “recursive” for the rm command)\nEach command has its own set of flags that it understands. A flag that works with one command won’t necessarily work with another.\nYou can combine flags (like rm -rf which combines the -r flag for “recursive” and -f flag for “force delete”).\n\nYou’ll see flags often out in the wild. As you use the command line more, you’ll start to use more of these flags in your workflow to give you more control over what your commands do. For now, just know when you see something starting with a dash in the command line, it’s probably a flag giving the command a little extra information about what to do.\nOptional mini exercise:\nIf you want, you can try one out yourself now by using the -l flag along with the ls command.The flag tells the command line, “give me more information about each file in my directory”.\nRun the following command to see this flag in action:\nls -l \nTerminal will respond with detailed information about each file and folder in your directory. See the screenshot below for more information about each detail field.\n\n\n\nBreakdown of each file detail in the -l flag Terminal response",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
@@ -1296,8 +1296,8 @@
     "objectID": "terminal/making-files-folders.html#checkpoint",
     "href": "terminal/making-files-folders.html#checkpoint",
     "title": "3  Making and managing folder",
-    "section": "3.7 🎯 Checkpoint",
-    "text": "3.7 🎯 Checkpoint\nPhew. In this chapter you’ve learned a lot:\n\nHow to create a new folder/directory (mkdir)\nHow to create a new file (touch file_name)\nHow to copy files (cp ..)\nHow to move and rename files (mv..)\nHow flags can be used to power-up commands\n\n\nNext up:\nWe’ll learn some key tips and tricks to make your command line workflow more efficient.",
+    "section": "3.11 🎯 Checkpoint",
+    "text": "3.11 🎯 Checkpoint\nPhew. In this chapter you’ve learned a lot:\n\nHow to create a new folder/directory (mkdir).\nHow to create a new file (touch file_name).\nHow to copy files (cp ..).\nHow to move and rename files (mv..).\nHow flags (e.g. -r, -l) can be used to power-up commands.\n\nYou also may be catching onto the fact that we use some commands repeatedly in the command line to help us not get lost in our own workflow. The ls command, for example, is super useful for confirming actions on files and folders worked, and pwd is like a compass to figure out where you are.\n\nNext up:\nWe’ll learn some key tips and tricks to make your command line workflow more efficient.",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
@@ -1308,7 +1308,7 @@
     "href": "terminal/tips-tricks.html",
     "title": "4  Command line tips and tricks",
     "section": "",
-    "text": "4.1 Command History\nIn this brief chapter, we’ll touch on a few things that should help you work quicker in the Terminal. We’ll also touch on navigating common issues you’ll probably run into.\nThe command line keeps a history of the commands you give it. Much like scrolling back up through the messages in a conversation on your phone, you can “scroll up” through the conversation you’ve had with the Terminal (only withe Terminal, you’ll only see the messages you sent).\nHow to view your command history:\nTo see prior commands you’ve written, just press the up arrow ↑ on your keyboard. Each press will take you to the prior command in your history.\nTo get back to an empty prompt, scroll back down using the down arrow ↓\nYou can re-run any command that pops up simply by hitting the Enter / return key on your keyboard. No need to re-type things!\nWhy this is useful\nIn programming, we often repeat commands quite frequently (think about how often you re-run your notebook code in R-Studio, for example).\nHaving a command history is helpful because it:",
+    "text": "4.1 Command History\nIn this brief chapter, we’ll touch on a few things that should help you work quicker in the Terminal. We’ll also touch on navigating common issues you’ll probably run into.\nThe command line keeps a history of the commands you give it. Much like scrolling back up through the messages in a conversation on your phone, you can “scroll up” through the conversation you’ve had with the terminal (only with the terminal, you’ll only see the messages you sent).\nHow to view your command history:\nTo see prior commands you’ve written, just press the up arrow ↑ on your keyboard. Each press will take you to the prior command in your history.\nTo get back to an empty prompt, scroll back down using the down arrow ↓\nYou can re-run any command that pops up simply by hitting the Enter / return key on your keyboard. No need to re-type things!\nWhy this is useful\nIn programming, we repeat commands quite frequently (think about how often you re-run your notebook code in R-Studio, for example).\nHaving a command history is helpful because it:",
     "crumbs": [
       "Tips, tricks, troubleshooting",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
@@ -1319,7 +1319,7 @@
     "href": "terminal/tips-tricks.html#command-history",
     "title": "4  Command line tips and tricks",
     "section": "",
-    "text": "Saves time – You can quickly repeat or modify previous commands with the ↑ key instead of retyping them.\nReduces mistakes – Reusing known-good commands lowers the chance of typos or syntax errors.\nAids learning – You can review what you’ve done, which helps you remember your steps and can help with troubleshooting if something goes wrong.",
+    "text": "Saves time – You can quickly repeat or modify previous commands with the ↑ key instead of retyping them.\nReduces mistakes – Reusing known, valid commands lowers the chance of typos or syntax errors.\nAids in learning – You can review what you’ve done, which helps you remember your steps and can help with troubleshooting if something goes wrong.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
@@ -1330,7 +1330,7 @@
     "href": "terminal/tips-tricks.html#canceling-a-command",
     "title": "4  Command line tips and tricks",
     "section": "4.2 Canceling a Command",
-    "text": "4.2 Canceling a Command\nOne of the scariest things for new Terminal users happens when you run something you didn’t mean to.\nIf you realize you made a mistake while a command is running, press:\nCtrl + C\nThis cancels the running command and brings you back to the prompt.",
+    "text": "4.2 Canceling a Command\nOne of the scariest things for new command line users happens when you run something you didn’t mean to. We’ve been walking through things slowly and together in this guide, but you’ll be more on your own in the real world, and we promise you will mess up at some point.\nIf you realize you made a mistake while a command is running, press:\nCtrl + C\nThis cancels the running command and brings you back to the prompt.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
@@ -1341,7 +1341,7 @@
     "href": "terminal/tips-tricks.html#tab-completion",
     "title": "4  Command line tips and tricks",
     "section": "4.3 Tab Completion",
-    "text": "4.3 Tab Completion\nYou read about this in Chapter 2, but it’s worth mentioning again because it’s that good.\nRemember: start typing a folder or file name, press Tab, and Terminal finishes it for you if possible.\nSaves time and typos!\nIf there’s more than one similarly-named files in your folder, you may have to type more characters to get to the one you want.",
+    "text": "4.3 Tab Completion\nYou read about this in chapter 2, but it’s worth mentioning again because it’s that good.\nRemember: start typing a folder or file name, press Tab, and Terminal finishes it for you if possible.\nIt saves time and typos!\nIf there’s more than one similarly-named files in your folder, you may have to type more characters to get to the one you want.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
@@ -1352,7 +1352,7 @@
     "href": "terminal/tips-tricks.html#checkpoint",
     "title": "4  Command line tips and tricks",
     "section": "4.4 🎯 Checkpoint",
-    "text": "4.4 🎯 Checkpoint\nIn this chapter you’ve learned:\n\nHow to view your command history\nHow to cancel a command\nHow to use tab to auto-complete file and folder names\n\n\nNext up:\nWe’ll learn how about some common command line issues and how troubleshoot when you run into them.",
+    "text": "4.4 🎯 Checkpoint\nIn this chapter you’ve learned:\n\nHow to view your command history and use it to rerun prior commands.\nHow to cancel a command.\nHow to use tab to auto-complete file and folder names.\n\n\nNext up:\nWe’ll learn how about some common command line issues and how troubleshoot when you run into them.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
@@ -1451,10 +1451,87 @@
     "href": "terminal/moving-around.html#going-back-up-cd-..-editing-stopped-here",
     "title": "2  Moving around in the terminal",
     "section": "2.4 Going Back Up (cd ..) [Editing stopped here]",
-    "text": "2.4 Going Back Up (cd ..) [Editing stopped here]\nOk now that we’ve moved into folders, what if you want to go back to the folder you came from?\nTo go back up, type and run the following command:\ncd ..\nThe two dots .. simply mean “the folder above this one.”\nIf you run the pwd command again, you’ll see you’re back to where you started!",
+    "text": "2.4 Going Back Up (cd ..) [Editing stopped here]\nOk now that we’ve moved into folders, what if you want to go back out of it to the folder you came from?\nTo go back up, type and run the following command:\ncd ..\nThe two dots .. simply mean “the folder above this one.”\nIf you run the pwd command again, you’ll see you’re back to where you started!",
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/moving-around.html#getting-out-of-folders-cd-..",
+    "href": "terminal/moving-around.html#getting-out-of-folders-cd-..",
+    "title": "2  Moving around in the terminal",
+    "section": "2.4 Getting out of folders (cd ..)",
+    "text": "2.4 Getting out of folders (cd ..)\nOk now that we’ve moved into folders, what if you want to go back out of it to the folder you came from?\nTo go back up a directory:\n\ntype and run the following command:\n\ncd ..\nThe two dots .. simply mean “the folder above this one.”\nIf you run the pwd command again, you’ll see you’re back to where you started!\n\n2.4.1 Quick recap on cd commands\nHere are a few handy shortcuts you’ll want to remember:\n\n\n\nCommand\nWhat it does\n\n\n\n\ncd\nGo back to your home directory.\n\n\ncd ..\nMove up one directory.\n\n\ncd foldername\nMove into a folder.\n\n\n\n\n\n2.4.2 Folder names with spaces\nIf the folder name you’re trying to access has spaces (like My Documents), you’ll need to put it in quotes:\ncd \"My Documents\"\nOr you can use a backslash to “escape” the space like:\ncd My\\ Documents\nLike we mentioned before, terminal is particular about the way you speak to it. For it to understand you, you’ve got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like snake_case or kebab-case will help you work more efficiently.",
+    "crumbs": [
+      "Terminal basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/making-files-folders.html#mini-excercise-make-a-directory",
+    "href": "terminal/making-files-folders.html#mini-excercise-make-a-directory",
+    "title": "3  Making and managing folder",
+    "section": "3.2 📝 Mini excercise: make a directory",
+    "text": "3.2 📝 Mini excercise: make a directory\nNow, let’s try the mkdir command out on our own by making a new directory inside our own home directory (~).\nDo the following:\n\nCheck you’re in your home directory by running the cd command. (If you aren’t, use the cd shortcut to get there.)\nNow, in your terminal, type and run:\n\nmkdir terminal_practice\n\nNow, run the ls command to make sure it worked. You should see your new directory listed in the terminal response.",
+    "crumbs": [
+      "Terminal basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/making-files-folders.html#creating-a-new-file-touch",
+    "href": "terminal/making-files-folders.html#creating-a-new-file-touch",
+    "title": "3  Making and managing folder",
+    "section": "3.3 Creating a new file (touch)",
+    "text": "3.3 Creating a new file (touch)\n\nUnlike other commands we’ve learned, touch isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️\n\nLike folders, we can also make new files from the command line using the touch command.\nFor example, if you ran the following command (don’t do this):\ntouch example.txt\nThis creates a new, empty file called example.txt.\nNote for Windows user\nYou may need to use the command:\nbash echo.&gt; emample.txt\nor\nbash New-Item example.txt\nDepending whether you’re using Powershell.",
+    "crumbs": [
+      "Terminal basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/making-files-folders.html#mini-excercise-make-a-file",
+    "href": "terminal/making-files-folders.html#mini-excercise-make-a-file",
+    "title": "3  Making and managing folder",
+    "section": "3.4 📝 Mini excercise: make a file",
+    "text": "3.4 📝 Mini excercise: make a file\nNow, try let’s try touch command on our own by making a new file inside our new terminal_practice folder we created in the last exercise.\nDo the following:\n\nFirst, move into your new folder by running the command:\n\ncd terminal_practice\n\nNow, make a new file inside the folder by running:\n\ntouch terminal-file.txt\n\nCheck that your new file is there by running ls command to list the files in your folder.\n\nYou should see a single file listed in the terminal response called terminal-file.txt.\nGood job! You just made your first file and folder completely using the command line.",
+    "crumbs": [
+      "Terminal basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/making-files-folders.html#mini-excercise-make-a-file-1",
+    "href": "terminal/making-files-folders.html#mini-excercise-make-a-file-1",
+    "title": "3  Making and managing folder",
+    "section": "3.6 📝 Mini excercise: make a file",
+    "text": "3.6 📝 Mini excercise: make a file\nNow, try let’s try cp command on our own by making a copy of notes file you made inside your terminal_practice.\nDo the following to copy your notes file:\n\nRunning the following from inside your terminal_practice folder:\n\ncp notes.txt copy_of_notes.txt\n\nRun the ls command to see the files inside your folder.\n\nYou should now you have two files: the original (notes.txt) and the new copy (copy_of_notes.txt).\nAs we said before, the cp command can also copy whole directories. However, it’s a little more nuanced. If you’d like to learn more about copying folders, please see appendix [TK]\n📍 A note about destination folders: Bash will check to see if the folder you gave it already exists. If it doesn’t, Bash will create the new folder for you and place the file inside of it.",
+    "crumbs": [
+      "Terminal basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/making-files-folders.html#mini-excercise-copy-a-file",
+    "href": "terminal/making-files-folders.html#mini-excercise-copy-a-file",
+    "title": "3  Making and managing folder",
+    "section": "3.6 📝 Mini excercise: copy a file",
+    "text": "3.6 📝 Mini excercise: copy a file\nNow, try let’s try out the cp command on our own by making a copy of notes file you made inside your terminal_practice in the last exercise.\nDo the following to copy your notes file:\n\nRun the following from inside your terminal_practice folder:\n\ncp notes.txt copy_of_notes.txt\n\nRun the ls command to see the files inside your folder.\n\nYou should now you have two files: the original (notes.txt) and the new copy (copy_of_notes.txt).\nAs we said before, the cp command can also copy whole directories. However, it’s a little more nuanced. If you’d like to learn more about copying folders, please see appendix [TK]",
+    "crumbs": [
+      "Terminal basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/making-files-folders.html#mini-exercise-move-and-rename-a-file",
+    "href": "terminal/making-files-folders.html#mini-exercise-move-and-rename-a-file",
+    "title": "3  Making and managing folder",
+    "section": "3.8 📝 Mini exercise: move and rename a file",
+    "text": "3.8 📝 Mini exercise: move and rename a file\nIn this exercise we’ll practice both renaming and moving files using the copy of your notes file you made in the previous exercise.\nExercise part 1: move your notes copy file\n\nFirst, make a new directory by running the following command from inside your terminal_practice directory:\n\nmkdir my_new_folder\n\nNow, peek at your files and folders by running the ls inside your terminal_practice folder. Make sure the new folder is there.\nNext, we’ll move the copy of your notes files into your new sub-folder by running:\n\nmv copy_of_notes.txt my_new_folder/\n\nNow, run the ls command again to look at the files inside your terminal_practice folder. You should still see a new folder called my_new_folder, but you should not see the copy of your notes file.\n\nNext, we’ll locate the copy of our notes file:\n\nRun the following command to move into your new folder:\n\ncd my_new_folder\n\nNow run ls to peek at the files. You should see your copy of the notes file listed.\n\nExercise part 2: rename a file\nOk now that we’ve moved and located our copy of our notes file, let’s rename it something nicer.\n\nFrom inside your new folder, run the following command to rename your notes copy:\n\nmv copy_of_notes.txt notes_new.txt\n\nRun the ls to look at your files. You should see the copy of your notes files, but now with a new, cleaner name.\n\nGreat job! You’re now well on your way to managing files and folders directly from the command line.",
+    "crumbs": [
+      "Terminal basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   }
 ]
