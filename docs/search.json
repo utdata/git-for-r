@@ -939,7 +939,7 @@
     "href": "intro-to-git/pull-requests.html#suggest-and-review-changes-with-pull-requests",
     "title": "18  Pull requests",
     "section": "",
-    "text": "Review your changes\nTrack a discussion about them with your collaborators\nEnsure everything looks good before merging\n\n\n\n\n18.1.1 Step 1: Create a Branch and push to Github\nFirst, make sure you’re on a new branch (just like we did in Working with Feature Branches)\ngit checkout -b improve-plot\nMake some edits (e.g., tweak a plot or add new text), then stage and commit:\ngit add myfile.qmd` `git commit -m \"Improve plot aesthetics\"\nPush the branch to GitHub:\ngit push -u origin improve-plot\n\n\n\n18.1.2 Step 2: Open a Pull Request (PR) on GitHub\nOnce your branch is on GitHub, you’ll see a banner like:\n\n\n\nGithub repo Pull Request banner\n\n\nClick the blue “Compare & pull request” button!\n\nTip: You can also find this button under the “Pull requests” tab at the top.\n\nOn the Open a pull request page, do the following:\n\nReview what’s changing: underneath the form at the top of the page, Github will show you a list of commits and the files on the feature branch that are different than the main branch. These are the changes you will be merging into the main project. Before making the PR, you’ll want to make sure that all the changes showing are intentional and ready to merge.\nAdd a title description: After confirming your changes are ready to merge, add a title to the PR and description with more details about what you’re changing. The description and title should let others on your team know exactly what the changes are that they will be reviewing. See an example below.\n\n\nNote: Github has added a lot of features to help pre-fill out the title based on what it thinks your PR is. Sometimes it’s accurate, sometimes it’s not so always double-check.\n\n\nClick the Create pull request button.\n\nNow others (or future you) can review the change.\n\n\n\nPull request form\n\n\n\n\n\n18.1.3 👀 Step 3: Review and Discuss\nIf you’re collaborating, your teammates can:\n\nLeave comments on specific lines\nAsk questions or suggest edits\nApprove or request changes\n\nEven if you’re working alone, reviewing your changes with “fresh eyes” before merging can help you catch mistakes.\n\n\n\n18.1.4 ✅ Step 4: Merge the Pull Request\nOnce everything looks good, click Merge pull request → Confirm merge\nGitHub combines the branch into main.\nNow go back to your project in R Studio, and run:\ngit checkout main\nNow that you’re back on your main branch, you will also need to “pull down” the changes you made to your plot and merged into your main branch with your PR.\nTo pull the PR changes, run:\ngit pull\nNow when you navigate to your 01-plot.qmd file, you should see your plot improvements.\n\n18.1.4.1 🧹 Cleanup old branches\nSince we have merged our feature branch, let’s remember to keep our repository clean by deleting the local and remote versions.\nFirst, we’ll delete the branch locally, by running:\n`git branch -d improve-plot`\nNext, we’ll delete the remote branch on Github, by running:\n`git push origin --delete improve-plot`\n\n\n\n\n18.1.5 💡 Remember: Keep your main branch up to date\nAfter merging a PR (especially someone else’s), sync your local main branch:\ngit checkout main git pull\nNow you have all the latest changes from GitHub.",
+    "text": "Review your changes before merging.\nTrack a discussion about the changes you’re making with your collaborators.\nEnsure everything looks good before merging.",
     "crumbs": [
       "Advanced: collaborating with others",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Pull requests</span>"
@@ -948,56 +948,56 @@
   {
     "objectID": "intro-to-git/quick-reference.html",
     "href": "intro-to-git/quick-reference.html",
-    "title": "18  Quick reference",
+    "title": "19  Quick reference",
     "section": "",
-    "text": "18.1 Common commands",
+    "text": "19.1 Common commands",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Quick reference</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Quick reference</span>"
     ]
   },
   {
     "objectID": "intro-to-git/quick-reference.html#common-commands",
     "href": "intro-to-git/quick-reference.html#common-commands",
-    "title": "18  Quick reference",
+    "title": "19  Quick reference",
     "section": "",
     "text": "💻 Command\n💬 Description\n🛠️ Task\n\n\n\n\ngit status\nSee which files are staged, unstaged, or untracked\nCheck file status\n\n\ngit diff\nSee what’s changed but not yet staged\nView unstaged changes\n\n\ngit add filename\nAdd a specific file to the staging area\nStage a specific file\n\n\ngit add .\nAdd everything in the directory\nStage all changes\n\n\ngit commit -m \"Message here\"\nSave your staged changes with a message\nCommit staged changes\n\n\ngit push\nUpload your commits to the remote repository\nPush commits to GitHub\n\n\ngit pull\nFetch and merge the latest changes from GitHub\nPull the latest changes\n\n\ngit branch\nShow which branch you’re on\nCheck current branch\n\n\ngit checkout branch-name\nMove to another branch\nSwitch branches\n\n\ngit checkout -b new-branch-name\nMake a new branch and switch to it\nCreate and switch to a new branch",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Quick reference</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Quick reference</span>"
     ]
   },
   {
     "objectID": "intro-to-git/quick-reference.html#terminology",
     "href": "intro-to-git/quick-reference.html#terminology",
-    "title": "18  Quick reference",
-    "section": "18.2 Terminology",
-    "text": "18.2 Terminology",
+    "title": "19  Quick reference",
+    "section": "19.2 Terminology",
+    "text": "19.2 Terminology",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Quick reference</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Quick reference</span>"
     ]
   },
   {
     "objectID": "intro-to-git/troubleshooting.html",
     "href": "intro-to-git/troubleshooting.html",
-    "title": "19  Troubleshooting",
+    "title": "20  Troubleshooting",
     "section": "",
-    "text": "19.1 Common scenarios and fixes\nEven experienced developers forget a command or hit a weird error sometimes. You will mess up Git at some point. That’s part of the learning process!\nHere’s how to recover from common problems and feel less stuck.",
+    "text": "Common scenarios and fixes\nEven experienced developers forget a command or hit a weird error sometimes. You will mess up Git at some point. That’s part of the learning process!\nHere’s how to recover from common problems and feel less stuck.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Troubleshooting</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
   },
   {
     "objectID": "intro-to-git/troubleshooting.html#common-scenarios-and-fixes",
     "href": "intro-to-git/troubleshooting.html#common-scenarios-and-fixes",
-    "title": "19  Troubleshooting",
+    "title": "20  Troubleshooting",
     "section": "",
-    "text": "19.1.1 “I made a change I don’t want anymore”\nScenario 1: you changed a file but haven’t committed it yet.\nRun:\ngit restore filename.qmd\nThis resets the file to how it was in your last commit.\nScenario 2: you changed a file and already staged it (git add &lt;filename&gt;)\nFirst, unstage it by running:\ngit restore --staged filename.qmd\nThen run:\ngit restore filename.qmd\n\n\n19.1.2 “I committed the wrong thing”\nYou can undo the most recent commit (without losing your changes):\ngit reset --soft HEAD~1\nNow your changes are back in the staging area. Fix what you need, and recommit.\nIf you want to undo the commit and all your changes:\ngit reset --hard HEAD~1\n⚠️ Warning: Using --hard will delete your work — only use this if you’re really sure!\n\n\n19.1.3 “I forgot to add a file before committing”\nIf you made a commit but forgot a file you meant to include:\nStep 1: Stage the missing file:\ngit add missed_file.qmd\nStep 2: Amend your last commit:\ngit commit --amend\nThis opens the Terminal’s default text editor, Vim, so you can update the message or leave it the same. Git will include the new file in the same commit.\nAfter editing your message in Vim:\n\nPress Esc to make sure you’re not in insert mode.\nType :wq (stands for write and quit).\nPress Enter to save you changes and exit Vim.\n\n\n\n19.1.4 “I can’t push because ‘tip of your current branch is behind’”\nThis means someone else pushed changes to GitHub before you.\nTo fix it:\ngit pull --rebase\nThis fetches the new work and replays your changes on top of it. If there’s a conflict, Git will pause and ask you to resolve it. Once done, run:\ngit add . git rebase --continue\nThen push again:\ngit push",
+    "text": "“I made a change I don’t want anymore”\nScenario 1: you changed a file but haven’t committed it yet.\nRun:\ngit restore filename.qmd\nThis resets the file to how it was in your last commit.\nScenario 2: you changed a file and already staged it (git add &lt;filename&gt;)\nFirst, unstage it by running:\ngit restore --staged filename.qmd\nThen run:\ngit restore filename.qmd\n\n\n“I committed the wrong thing”\nYou can undo the most recent commit (without losing your changes):\ngit reset --soft HEAD~1\nNow your changes are back in the staging area. Fix what you need, and recommit.\nIf you want to undo the commit and all your changes:\ngit reset --hard HEAD~1\n⚠️ Warning: Using --hard will delete your work — only use this if you’re really sure!\n\n\n“I forgot to add a file before committing”\nIf you made a commit but forgot a file you meant to include:\nStep 1: Stage the missing file:\ngit add missed_file.qmd\nStep 2: Amend your last commit:\ngit commit --amend\nThis opens the Terminal’s default text editor, Vim, so you can update the message or leave it the same. Git will include the new file in the same commit.\nAfter editing your message in Vim:\n\nPress Esc to make sure you’re not in insert mode.\nType :wq (stands for write and quit).\nPress Enter to save you changes and exit Vim.\n\n\n\n“I can’t push because ‘tip of your current branch is behind’”\nThis means someone else pushed changes to GitHub before you.\nTo fix it:\ngit pull --rebase\nThis fetches the new work and replays your changes on top of it. If there’s a conflict, Git will pause and ask you to resolve it. Once done, run:\ngit add . git rebase --continue\nThen push again:\ngit push",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Troubleshooting</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
   },
   {
@@ -1785,6 +1785,61 @@
     "crumbs": [
       "Advanced: collaborating with others",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Working with feature branches</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pull-requests.html#step-1-create-a-branch-and-push-to-github",
+    "href": "intro-to-git/pull-requests.html#step-1-create-a-branch-and-push-to-github",
+    "title": "18  Pull requests",
+    "section": "18.2 Step 1: Create a Branch and push to Github",
+    "text": "18.2 Step 1: Create a Branch and push to Github\nFirst, make sure you’re on a new branch (just like we did in Working with Feature Branches)\n\nCreate a new feature branch by running: bash     git checkout -b improve-plot\nMake some edits to your plot file(e.g., tweak a plot or add new text)\nStage and commit the changes:\ngit add filename.qmd \ngit commit -m \"Improve plot aesthetics\"\nPush the branch to GitHub:\n\ngit push -u origin improve-plot",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Pull requests</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pull-requests.html#step-2-open-a-pull-request-pr-on-github",
+    "href": "intro-to-git/pull-requests.html#step-2-open-a-pull-request-pr-on-github",
+    "title": "18  Pull requests",
+    "section": "18.3 Step 2: Open a Pull Request (PR) on GitHub",
+    "text": "18.3 Step 2: Open a Pull Request (PR) on GitHub\nOnce your branch is on GitHub, you’ll see a banner like:\n\n\n\nGithub repo Pull Request banner\n\n\nClick the blue “Compare & pull request” button!\n\nTip: You can also find this button under the “Pull requests” tab at the top.\n\nOn the Open a pull request page, do the following:\n\nReview what’s changing: underneath the form at the top of the page, Github will show you a list of commits and the files on the feature branch that are different than the main branch. These are the changes you will be merging into the main project. Before making the PR, you’ll want to make sure that all the changes showing are intentional and ready to merge.\nAdd a title description: After confirming your changes are ready to merge, add a title to the PR and description with more details about what you’re changing. The description and title should let others on your team know exactly what the changes are that they will be reviewing. See an example below.\n\n\nNote: Github has added a lot of features to help pre-fill out the title based on what it thinks your PR is. Sometimes it’s accurate, sometimes it’s not so always double-check.\n\n\nClick the Create pull request button.\n\nNow others (or future you) can review the change.\n\n\n\nPull request form\n\n\n\n\n18.3.1 👀 Step 3: Review and Discuss\nIf you’re collaborating, your teammates can:\n\nLeave comments on specific lines\nAsk questions or suggest edits\nApprove or request changes\n\nEven if you’re working alone, reviewing your changes with “fresh eyes” before merging can help you catch mistakes.\n\n\n\n18.3.2 ✅ Step 4: Merge the Pull Request\nOnce everything looks good, click Merge pull request → Confirm merge\nGitHub combines the branch into main.\nNow go back to your project in R Studio, and run:\ngit checkout main\nNow that you’re back on your main branch, you will also need to “pull down” the changes you made to your plot and merged into your main branch with your PR.\nTo pull the PR changes, run:\ngit pull\nNow when you navigate to your 01-plot.qmd file, you should see your plot improvements.\n\n18.3.2.1 🧹 Cleanup old branches\nSince we have merged our feature branch, let’s remember to keep our repository clean by deleting the local and remote versions.\nFirst, we’ll delete the branch locally, by running:\n`git branch -d improve-plot`\nNext, we’ll delete the remote branch on Github, by running:\n`git push origin --delete improve-plot`\n\n\n\n\n18.3.3 💡 Remember: Keep your main branch up to date\nAfter merging a PR (especially someone else’s), sync your local main branch:\ngit checkout main git pull\nNow you have all the latest changes from GitHub.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Pull requests</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pull-requests.html#step-2-open-pull-request-pr-on-github",
+    "href": "intro-to-git/pull-requests.html#step-2-open-pull-request-pr-on-github",
+    "title": "18  Pull requests",
+    "section": "18.3 Step 2: Open pull request (PR) on GitHub",
+    "text": "18.3 Step 2: Open pull request (PR) on GitHub\nInstead of merging our changes from the command like like we did in the last chapter, we’re going to handle the merging process in Github so we can take advantage of some of the nice features it offers for code reviews.\nOnce your branch is on GitHub, you’ll see a banner like\n\n\n\nGithub repo Pull Request banner\n\n\nTo begin the pull request process:\n\nClick the blue “Compare & pull request” button! (Tip: You can also find this button under the “Pull requests” tab at the top.)\n\nOn the Open a pull request page, do the following:\n\nReview what’s changing: underneath the form at the top of the page, Github will show you a list of commits and the files on the feature branch that are different than the main branch. These are the changes you will be merging into the main project. Before making the PR, you’ll want to make sure that all the changes showing are intentional and ready to merge.\nAdd a title description: After confirming your changes are ready to merge, add a title to the PR and description with more details about what you’re changing. The description and title should let others on your team know exactly what the changes are that they will be reviewing. See an example below.\n\n\nNote: Github has added a lot of features to help pre-fill out the title based on what it thinks your PR is. Sometimes it’s accurate, sometimes it’s not so always double-check.\n\n\nClick the Create pull request button.\n\nNow others (or future you) can review the change.\n\n\n\nPull request form\n\n\n\n\n18.3.1 Step 3: review and discuss changes\nIf you’re collaborating, your teammates can:\n\nLeave comments on specific lines\nAsk questions or suggest edits\nApprove or request changes\n\nEven if you’re working alone, reviewing your changes with “fresh eyes” before merging can help you catch mistakes.\nSometimes your collaborators will suggest changes to files or code before “approving” the code to be merged. During the pull review process, you’ll discuss your changes and make sure everyone is on board for your code changes before incorporating them into the main project. This process is called a code review in the programming world and it’s an important part of the development process, especially for user-facing, live projects.\n\n\n\n18.3.2 Step 4: Merge the Pull Request\nOnce everything looks good, you can proceed to merging your branch.\nTo merge in your branch:\n\nclick Merge pull request → Confirm merge. GitHub will combines the branch into main.\nNow go back to your project in RStudio, and run:\ngit checkout main\n\nNow that you’re back on your main branch, you will also need to “pull down” the changes you made to your plot and merged into your main branch with your PR.\nPull the merged PR changes:\n\nRun the following:\n\ngit pull\nNow when you navigate to your 01-plot.qmd file, you should see your plot improvements.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Pull requests</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pull-requests.html#cleanup-old-branches",
+    "href": "intro-to-git/pull-requests.html#cleanup-old-branches",
+    "title": "18  Pull requests",
+    "section": "18.4 Cleanup old branches",
+    "text": "18.4 Cleanup old branches\nSince we have merged our feature branch, let’s remember to keep our repository clean by deleting the local and remote versions of our merged branches.\n\nFirst, we’ll delete the branch locally, by running:\ngit branch -d improve-plot\nNext, we’ll delete the remote branch on Github, by running:\ngit push origin --delete improve-plot",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Pull requests</span>"
+    ]
+  },
+  {
+    "objectID": "intro-to-git/pull-requests.html#remember-keep-your-main-branch-up-to-date",
+    "href": "intro-to-git/pull-requests.html#remember-keep-your-main-branch-up-to-date",
+    "title": "18  Pull requests",
+    "section": "18.5 Remember: Keep your main branch up to date",
+    "text": "18.5 Remember: Keep your main branch up to date\nAfter merging a PR (especially someone else’s), sync your local main branch:\ngit checkout main git pull\nNow you have all the latest changes from GitHub.",
+    "crumbs": [
+      "Advanced: collaborating with others",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Pull requests</span>"
     ]
   }
 ]

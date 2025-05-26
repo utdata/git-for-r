@@ -6,9 +6,9 @@ Even experienced developers forget a command or hit a weird error sometimes. You
 
 Here’s how to recover from common problems and feel less stuck.
 
-## Common scenarios and fixes
+## Common scenarios and fixes {.unnumbered}
 
-### "I made a change I don't want anymore"
+### "I made a change I don't want anymore" {.unnumbered}
 
 **Scenario 1:** you changed a file but **haven’t committed** it yet.
 
@@ -34,7 +34,7 @@ Then run:
 git restore filename.qmd
 ```
 
-### "I committed the wrong thing"
+### "I committed the wrong thing" {.unnumbered}
 
 You can undo the most recent commit **(without losing your changes)**:
 
@@ -52,7 +52,7 @@ git reset --hard HEAD~1
 
 ⚠️ Warning: Using `--hard` will **delete** your work — only use this if you're really sure!
 
-### "I forgot to add a file before committing"
+### "I forgot to add a file before committing" {.unnumbered}
 
 If you made a commit but forgot a file you meant to include:
 
@@ -78,7 +78,7 @@ After editing your message in Vim:
 
 3.  Press `Enter` to save you changes and exit Vim.
 
-### "I can't push because 'tip of your current branch is behind'"
+### "I can't push because 'tip of your current branch is behind'" {.unnumbered}
 
 This means someone else pushed changes to GitHub before you.
 

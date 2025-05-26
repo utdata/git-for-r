@@ -10,47 +10,46 @@ title: "Pull requests"
 
 Even if you’re working solo, they’re a great habit because they give you a space to:
 
--   Review your changes
+-   Review your changes before merging.
 
--   Track a discussion about them with your collaborators
+-   Track a discussion about the changes you're making with your collaborators.
 
--   Ensure everything looks good before merging
+-   Ensure everything looks good before merging.
 
 We'll walk through the basic pull request workflow below.
 
-------------------------------------------------------------------------
-
-### Step 1: Create a Branch and push to Github
+## Step 1: Create a Branch and push to Github
 
 First, make sure you’re on a new branch (just like we did in [Working with Feature Branches](/intro-to-git/working-with-branches.html))
 
-``` bash
-git checkout -b improve-plot
-```
+1.  Create a new feature branch by running: `bash     git checkout -b improve-plot`
 
-Make some edits (e.g., tweak a plot or add new text), then stage and commit:
+2.  Make some edits to your plot file(e.g., tweak a plot or add new text)
 
-``` bash
-git add myfile.qmd` `git commit -m "Improve plot aesthetics"
-```
+3.  Stage and commit the changes:
 
-Push the branch to GitHub:
+    ``` bash
+    git add filename.qmd 
+    git commit -m "Improve plot aesthetics"
+    ```
+
+4.  Push the branch to GitHub:
 
 ``` bash
 git push -u origin improve-plot
 ```
 
-------------------------------------------------------------------------
+## Step 2: Open pull request (PR) on GitHub
 
-### Step 2: Open a Pull Request (PR) on GitHub
+Instead of merging our changes from the command like like we did in the last chapter, we're going to handle the merging process in Github so we can take advantage of some of the nice features it offers for code reviews.
 
-Once your branch is on GitHub, you’ll see a banner like:
+Once your branch is on GitHub, you’ll see a banner like
 
 ![Github repo Pull Request banner](../images/pr-banner-example.png)
 
-Click the blue “Compare & pull request” button!
+To begin the pull request process:
 
-> Tip: You can also find this button under the “Pull requests” tab at the top.
+1.  Click the blue “Compare & pull request” button! (Tip: You can also find this button under the “Pull requests” tab at the top.)
 
 On the **Open a pull request** page, do the following:
 
@@ -67,9 +66,7 @@ Now others (or future you) can review the change.
 
 ------------------------------------------------------------------------
 
-### 👀 Step 3: Review and Discuss
-
-
+### Step 3: review and discuss changes
 
 If you're collaborating, your teammates can:
 
@@ -81,49 +78,53 @@ If you're collaborating, your teammates can:
 
 Even if you’re working alone, reviewing your changes with “fresh eyes” before merging can help you catch mistakes.
 
+Sometimes your collaborators will suggest changes to files or code before "approving" the code to be merged. During the pull review process, you'll discuss your changes and make sure everyone is on board for your code changes *before* incorporating them into the main project. This process is called a **code review** in the programming world and it's an important part of the development process, especially for user-facing, live projects.
+
 ------------------------------------------------------------------------
 
-### ✅ Step 4: Merge the Pull Request
+### Step 4: Merge the Pull Request
 
-Once everything looks good, click **Merge pull request** → **Confirm merge**
+Once everything looks good, you can proceed to merging your branch.
 
-GitHub combines the branch into `main`.
+To merge in your branch:
 
-Now go back to your project in R Studio, and run:
+1.  click **Merge pull request** → **Confirm merge.** GitHub will combines the branch into `main`.
+2.  Now go back to your project in RStudio, and run:
 
-``` bash
-git checkout main
-```
+    ``` bash
+    git checkout main
+    ```
 
 Now that you're back on your main branch, you will also need to **"pull down"** the changes you made to your plot and merged into your main branch with your PR.
 
-To pull the PR changes, run:
+Pull the merged PR changes:
 
-``` bash
-git pull
-```
+1. Run the following:
+
+  ``` bash
+  git pull
+  ```
 
 Now when you navigate to your `01-plot.qmd` file, you should see your plot improvements.
 
-#### 🧹 Cleanup old branches
+## Cleanup old branches
 
-Since we have merged our feature branch, let's remember to keep our repository clean by deleting the local and remote versions.
+Since we have merged our feature branch, let's remember to keep our repository clean by deleting the local and remote versions of our merged branches.
 
-First, we'll delete the branch locally, by running:
+1. First, we'll delete the branch locally, by running:
+    
+    ``` bash
+    git branch -d improve-plot
+    ```
+2. Next, we'll delete the remote branch on Github, by running:
+    
+    ``` bash
+    git push origin --delete improve-plot
+    ```
 
-``` bash        
-`git branch -d improve-plot`
-```
+---
 
-Next, we'll delete the remote branch on Github, by running:
-
-``` bash       
-`git push origin --delete improve-plot`
-```
-
-------------------------------------------------------------------------
-
-### 💡 Remember: Keep your `main` branch up to date
+## Remember: Keep your `main` branch up to date
 
 After merging a PR (especially someone else’s), sync your local main branch:
 
