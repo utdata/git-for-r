@@ -30,7 +30,7 @@ book:
     - text: "---"
     - part: "Installation"
       chapters:
-      - intro-to-git/introduction.qmd
+      - intro-to-git/welcome.qmd
       - intro-to-git/introduction-to-git.qmd
       - intro-to-git/install-and-setup.qmd
     - part: "Git basics"

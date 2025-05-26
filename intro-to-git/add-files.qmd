@@ -2,19 +2,27 @@
 title: "Add, ignore, and commit files"
 ---
 
-> In this chapter you'll learn how to tell Git which files you'd like to track and which ones to ignore. Lastly, you'll take your first "snapshot" (commit) of your project to send to Github.
+> 🎯 Goal: In this chapter you'll learn how to tell Git which files you'd like to track and which ones to ignore. Lastly, you'll take your first "snapshot" (commit) of your project to send it to Github.
+
+::: callout-caution
+Before you get started on this chapter, please make sure you have enough time set aside to get through both this chapter and the next one. They build upon each other and we highly recommend you complete both in one sitting because it will be difficult to pick up where you left off later.
+
+This is a good point to go take a break and eat a cookie 🍪 or drink some coffee ☕️ if you need to.
+:::
 
 ## Ignoring files
 
 In our last chapter, we ran the `git status` command to tell us what Git sees within our project.
 
-Let's take another look at those files now by re-running:
+Let's take another look at those files.
+
+1.  Run the following:
 
 ``` bash
 git status
 ```
 
-Under `untracked files` you'll see a list like:
+Under the "untracked files" sections, you should see a list of files in [red]{.text-red} like:
 
 ```         
         .Rproj.user/
@@ -26,19 +34,21 @@ Under `untracked files` you'll see a list like:
         my-first-git-project_files/
 ```
 
-Notice those `.html` files in the list? HTML files are the **rendered output** from Quarto, and they change every time you make a change and click “Render."
+Currently, Git "sees" all the files in your working directory, including some files we may not actually want to include.
 
-Generally-speaking, we don't save these kinds of rendered files in our repositories because they change so frequently and can cause a lot of headaches during collaboration.
+For example, notice those `.html` files in the list? HTML files are the **rendered output** from Quarto, and they change every time you make a change and click “Render" -- something we tend to do *a lot* in our Quarto files.
 
-There are some notable exceptions here...
+Generally-speaking, we don't save these kinds of rendered files in our repositories because they change so frequently and can cause a lot of headaches down the line, especially if we're working with other people.
 
-1. They're small, essential, and need to be *versioned* for a specific reason
+That said, there are some notable exceptions when you might include these files in Github:
 
-2. You're outputting human-readable deliverables (like a PDF report or documentation site)
+-   If they're small, essential, and need to be *versioned* for a specific reason.
 
-3. You're working on a static site or book.
+-   If you're outputting human-readable deliverables (like a PDF report or documentation site).
 
-*Note for Crit: obviously let's chat about this part and addressing the Github pages thing...My general thought with teaching people about github is that we should try our best to teach them best practices before teaching them exceptions to rules because it will help them be better prepared for real-world dev environments*
+-   If you're working on a static site or book.
+
+For our purposes, we'll be following the general best practice of excluding these kinds of rendered files -- we'll walk through how to do that below.
 
 ## Introducing `.gitignore`
 
@@ -48,35 +58,35 @@ What you ignore will depend on the type of project and the coding languages you'
 
 In general, the following kinds of files *shouldn't* be tracked in Github:
 
-1.  **Sensitive files**: Files containing passwords or private information
-2.  **Big files**: Git isn't built to keep track of large files.
+-   **Sensitive files**: Files containing passwords or private information
+-   **Big files**: Git isn't built to keep track of large files.
 
-For R and Quarto projects, this will include the following common files types:
+For R and Quarto projects, this will include the following common file types:
 
-1.  **Session and history files**: .Rhistory, .RData, .Rproj.user/
-2.  **Knitting files**: *.utf8.md,* .knit.md
-3.  **Output/render folders**: \*\_files/ ,\_site/, \_book/
-4.  **Editor and IDE Config Files**: `.Rproj.user/`
+-   **Session and history files**: .Rhistory, .RData, .Rproj.user/
+-   **Knitting files**: *.utf8.md,* .knit.md
+-   **Output/render folders**: \*\_files/ ,\_site/, \_book/
+-   **Editor and IDE Config Files**: `.Rproj.user/`
 
-Don't worry if you don't fully understand what all of these files are yet. The important thing here is to know is that there are things we *should* and *should not* upload to Git, and the way we keep the things we **don't want tracked** out of Github is by using a `.gitignore` file.
+Don't worry if you don't fully understand what all of these files are yet. The important thing here is to know is that there are things we *should* and *should not* upload to Github, and the way we keep the things we **don't want tracked** out of our Github project is by using a `.gitignore` file.
 
 We'll set one up for our new project in the next step.
 
-## 📝 Exercise: Make a `.gitignore`
+## 📝 Exercise: make a `.gitignore`
 
-Let’s make a `.gitignore` for your new Git project from the command line using the `touch` command.
+Let’s make a `.gitignore` file for your new Git project using the command line and the `touch` command.
 
-In the terminal, run:
+1.  In the terminal, run:
 
 ``` bash
 touch .gitignore
 ```
 
-In the RStudio **Files** pane, click on the new `.gitignore` file to open it.
+2.  In the RStudio **Files** pane, click on the new `.gitignore` file to open it.
 
 > Tip: If you don't see the `.gitignore` in your file pane, you may need to refresh by clicking the refresh icon at the top right of the file pane.
 
-Once you have your blank `.gitignore` file open, add the following lines and save the file:
+3.  In your blank `.gitignore` file, add the following lines and save the file:
 
 ``` bash
 *.html 
@@ -84,61 +94,63 @@ _site/
 .Rproj.user/
 ```
 
-**Let's break down what each of these mean:**
-
-1.  `*.html` : Ignore all `.html` files (rendered outputs)
-2.  `_site/`: Ignore the entire contents of the `_site` folder
-3.  `.Rproj.user/`: Ignore the hidden RStudio files
-
-Check your Git status again by running:
+4.  Check your Git status again by running:
 
 ``` bash
 git status
 ```
 
-Remember when we ran git status before and saw our `.html` files? Now the `.html` files should be gone from the list of files Git "sees" because we've told it to ignore these types of files with the `*.html` line in our ignore file.
+Remember when we ran `git status` before and we saw those `.html` files in our list of untracked files? Now the `.html` files should be gone from the list of files Git "sees" because we've told it to ignore these types of files with the `*.html` line in our ignore file.
+
+**Let's quickly break down what each of these mean:**
+
+-   `*.html` : Ignore all `.html` files. (The `*` here tells Git "all files ending in .html", regardless of their names)
+-   `_site/`: Ignore the entire contents of the `_site` folder.
+-   `.Rproj.user/`: Ignore the hidden RStudio files in the \``.Rproj.user/` folder.
 
 Before moving forward, let's add a few more things to the `.gitignore` to cover some additional things we want to ignore (don't worry about understanding what all of these are right now).
 
-Copy and paste the following code into your .gitignore file.
+1.  Copy and paste the following code into your `.gitignore` file:
 
-``` bash        
-# R
-.Rhistory
-.RData
-.Rproj.user/
+    ``` bash
+    # R
+    .Rhistory
+    .RData
+    .Rproj.user/
 
-# Quarto
-*.html
-*_files/
-*.utf8.md
-*.knit.md
-_site/
-_book/
+    # Quarto
+    *.html
+    *_files/
+    *.utf8.md
+    *.knit.md
+    _site/
+    _book/
 
-# System
-.DS_Store
-```
+    # System
+    .DS_Store
+    ```
 
-Save and close the file.
+2.  Save and close the file.
 
-## Staging: Adding the files you *do* want
+## Staging: Adding the files you *do* want (`git add`)
 
-Now that we've told Git what we *don't* want to keep track of, we need to tell Git to track the rest of our files. We'll do that by using the `add` command.
+Now that we've told Git what we *don't* want to keep track of, we need to tell Git what we do want to track -- in our case, the rest of our files. We'll do that by using the `git add` command.
 
-Type the run the following command in your terminal:
+Let's add our project files.
 
-``` bash
-git add .
-```
+1.  Type the run the following command in your terminal:
 
-The `.` after the `add` means “add everything in this folder" (ignoring anything listed in `.gitignore`.)
+    ``` bash
+    git add .
+    ```
 
-Run `git status` again
+-   The `.` after the `add` means “add everything in this folder" (ignoring anything listed in `.gitignore`.)
+
+2.  Now, check your project files by running `git status` again.
 
 The output should look something like this now:
 
-```         
+``` bash
 On branch main
 
 No commits yet
@@ -151,31 +163,37 @@ Changes to be committed:
         new file:   my-git-quarto-project.qmd
 ```
 
-Notice that the heading has changed to "Changes to be committed" and files are now shown in green. This is called **Staging**.
+Notice that the heading has changed to "Changes to be committed" and files are now shown in [**green**]{.text-green}. The process you just went through is called **Staging** your files.
 
-## Committing: take your first Snapshot
+## Committing: take your first Snapshot (`git commit`)
 
 Now that you've told Git which files you care about, it's time to take a "snapshot" of these files.
 
-Run the following in your command line:
+1.  Run the following in your command line:
 
-``` bash
-git commit -m "Initial commit: set up Quarto project"
-```
+    ``` bash
+    git commit -m "Initial commit: set up Quarto project"
+    ```
+
+Ok, so what did we just do?
+
+-   **Took a snapshot:** We told Git "save a copy of the version of the files we just added" using the `git commit` command
+-   **Added a description of the snapshot:** the `-m` is a flag that stands for "message". The message describes the changes you made in your files, and every commit needs a commit message. The commit message is included inside a set of quotation marks.
+
+We'll talk more about **commit messages** in the next chapter, but for now know that they are a required and important part of the git workflow.
 
 ## 🎯 Checkpoint
 
 In this chapter you:
 
-- Created a `.gitignore` file
-- Added the files you wanted to track (staged your files)
-- Took your first project snapshot (committed your files)
-
+-   Created a `.gitignore` file
+-   Added the files you wanted to track (staged your files)
+-   Took your first project snapshot (committed your files)
 
 Great job! You’ve saved the first version of your project *locally* (AKA on your computer). Now, the snapshot needs to be saved to a *remote* project (AKA Github).
 
----
+------------------------------------------------------------------------
 
 **Next up**
 
-You'll learn how to send this "snapshot" of our project to Github for safe keeping.
+You'll learn how to send this "snapshot" of our project by **pushing our changes** to Github for safe keeping.

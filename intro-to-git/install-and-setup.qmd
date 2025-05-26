@@ -18,31 +18,39 @@ Before we can get started, we'll need to make sure that our computers (often ref
     2.  Click **Sign up**
     3.  Choose a username and email you’ll remember (you’ll use this in Git config)
 
+::: callout-note
+## Terminology note
+
+When people (including the authors of this guide) use the terms "**local machine**," "**local computer**," or just "**your machine**," they’re all talking about your *personal* computer — the one you’re using right now.
+
+It’s called “local” to distinguish it from a remote machine (like a server or computer somewhere else, often in the cloud) that you connect to over the internet.
+:::
+
 ## Configure Git
 
 After installing Git, you’ll need to go through the one-time process of configure it with your **username** and **email**.
 
 **Step 1: Start a new terminal session in RStudio**
 
-Click on the **terminal** tab and a new session will be created (if there isn’t one already). The terminal tab is located next to the Console tab.
+1.  Click on the **terminal** tab in Rstudio to start a new session (if there isn’t one already).
 
-> Tip: If can't find the terminal tab, go to `Tools > Terminal > Move Focus to Terminal` .
+> Tip: The terminal tab is located next to the Console tab. If can't find the terminal tab, go to `Tools > Terminal > Move Focus to Terminal` .
 
 **Step 2: Set your Git username**
 
 First, we'll [set your user.name](https://help.github.com/en/github/using-git/setting-your-username-in-git#setting-your-git-username-for-every-repository-on-your-computer) so Git knows who you are.
 
-Run the following command from your terminal, replacing "Your Name" with the username you'd like to use (including the quotation marks):
+1.  Run the following command from your terminal, replacing "Your Name" with the username you'd like to use (including the quotation marks):
 
-``` bash
-git config --global user.name "Your Name"
-```
+    ``` bash
+    git config --global user.name "Your Name"
+    ```
 
-Check to see if you successfully set your name by running:
+2.  Check to see if you successfully set your name by running the command:
 
-``` bash
-git config user.name
-```
+    ``` bash
+    git config user.name
+    ```
 
 You should see a terminal response with the username you entered.
 
@@ -86,16 +94,37 @@ Lastly we'll set git to name your default branch "main" instead of "master" as t
     git config --global pull.ff only
     ```
 
-    This sets a behaivor that is too complicated to explain now, but comes recommended in this [very long but thorough explanation](https://stackoverflow.com/questions/71768999/how-to-merge-when-you-get-error-hint-you-have-divergent-branches-and-need-to-s/71774640#71774640).
+    This sets a behavior that is too complicated to explain now, but comes recommended in this [very long but thorough explanation](https://stackoverflow.com/questions/71768999/how-to-merge-when-you-get-error-hint-you-have-divergent-branches-and-need-to-s/71774640#71774640).
 
-## Setup your SSH Keys
+## Setup your SSH Keys (Authenticating)
 
-There are a couple of ways to authenticate with Github from your computer. The book [Happy Git with R](https://happygitwithr.com/https-pat) recommends using personal access tokens and I think that is fine, but I prefer the one-and-done nature of SSH keys, so that is the method we will use.
+**Authentication** is just a fancy term to describe proving that you are who you say you are. In other words, it's how you "sign in" to your Github using the command line. We need to do this so you can connect your project to your Github account and make changes.
+
+Without authentication, GitHub won’t let you push changes, clone private repositories, or do other actions that affect your account. It’s how GitHub keeps your code safe and makes sure only *you* can access *your* stuff.
+
+There are a couple of ways to **authenticate** with Github from your computer. The book [Happy Git with R](https://happygitwithr.com/https-pat) recommends using personal access tokens (basically a long password) and that is fine. We prefer the one-and-done nature of SSH keys, so that is the method we will use in this guide.
+
+Instead of using passwords, **SSH keys** are basically a lock and key system that have to match in order for your computer to access your Github accounts.
+
+You can think of SSH keys like this:
+
+-   🔒 **Public key** = A "lock" you give to GitHub
+
+-   🔑 **Private key** = Your secret "key" that opens that lock
+
+Together, they let Github know that it's really you (or rather your computer) who is connecting.
+
+We'll walk through getting SSH keys setup on your machine in the next steps!
+
+### Enable version control in RStudio
+
+First, we'll enable version control in RStudio by doing the following:
 
 1.  After making sure git is installed, launch RStudio. (If it was already open, quit and re-launch it.)
-2.  Go to the menu Tools \> Global Options, then click on the Git/SVN tab.
+2.  Go to the menu Tools \> Global Options, then click on the **Git/SVN tab**.
 3.  Check the **Enable version control interface for RStudio** button.
-4.  There should already be a path included in the Make sure the path to the git executable is correct.
+4.  There should already be a path included in the **git executable** field.
+5.  Make sure the path to the git executable is correct.
     -   If it is not, try quitting RStudio and relaunching it and do this step again.
     -   If it is still not there, talk to the prof. We'll find it.
 
@@ -103,70 +132,81 @@ There are a couple of ways to authenticate with Github from your computer. The b
 
 ### Create a new SSH key
 
-If you SSH Key path was already filled then you can skip to the next step.
+Next, we'll check if your SSH key is already setup:
+
+1.  In the Git/SVN window, look for the **SSH key** field.
+2.  If you SSH Key path is already filled in, then you can skip to the **"Add SSH Keys on Github"** section. If you do not have an SSH key showing, follow the next steps below to make one before moving on.
 
 If you've never used SSH keys before, you'll have to create one, but RStudio makes that fairly painless.
 
 1.  Click on the **Create RSA Key** button.
 2.  You should be able to leave all the defaults as they are. **Leave the optional Passphrase field blank.**
-3.  Click Create.
-4.  You should see a message that says "Key Created Successfully" and it might show you a pretty picture. Click OK.
+3.  Click the **Create** button.
+4.  You should see a message that says "Key Created Successfully" and it might show you a pretty picture. Click **OK**.
 
 ![SSH Key Creation window](../images/ssh-create-key.png)
 
 ## Add SSH key in Github
 
-Now we'll save the contents of that secret file on your computer into your Github account so Github "knows" about your computer.
+Finally, we'll save part of the contents (the **public** key) of that key in your Github account. This is so Github "knows" about your computer.
 
-First we need access to your "Public" key:
+To access your "Public" key, do the following:
 
 1.  In the RStudio Git/SVN window, click on the **View public key** button.
 2.  This will open a new window with the contents of your public key.
+3.  Copy the full contents of the public key.
+
+We'll paste the contents of this key into Github in the next steps.
 
 ![Public key example](../images/ssh-public-key.png)
 
-You'll want access to copy that key to paste into Github in the next step:
+Add the public key to Github by doing the following:
 
-1.  Go to [github.com](https://github.com/) and click your user icon and choose **Settings**.
+1.  Go to [github.com](https://github.com/), click your user icon and choose **Settings** in the dropdown.
 2.  In the user settings sidebar on the left, click **SSH and GPG keys**.
 3.  Click **New SSH key** or **Add SSH key**.
-4.  In the "Title" field, add a descriptive label for the new key. Name it after your computer, like "Personal MacBook Air" or something.
-5.  In the "Key" field, so Command-V to paste your key into the box.
+4.  In the "Title" field, add a descriptive label for the new key. Name it something like "Personal MacBook Air" to indicate its your personal computer.
+5.  In the "Key" field, paste ( `Command`+`V)`the public key you copied from RStudio into the box.
 
 It will look something like this:
 
 ![Saving the key](../images/git-adding-key.png)
 
-Almost done!
+Almost done! Now:
 
-6.  Click Add SSH key.
+6.  Click **Add SSH key**.
 7.  If prompted, confirm your GitHub password.
 
 ### Test Github connection
 
 1.  From your terminal in RStudio, do the following command:
 
-``` bash
-ssh -T git@github.com
-```
+    ``` bash
+    ssh -T git@github.com
+    ```
 
--   If you are asked about "RSA key fingerprint", type **yes** and hit return.
--   In the end, you should have a success message like: "Hi username! You've successfully authenticated, but GitHub does not provide shell access." If you get that message, you are good!
+2.  If you are asked about "RSA key fingerprint", type **yes** and hit return.
+
+In the end, you should have a success message like: "Hi username! You've successfully authenticated, but GitHub does not provide shell access." 
+
+If you get that message, you are good to move on!
 
 ## 🎯 Checkpoint
 
+Ok, we covered a lot in this section. 
+
 In this chapter you:
 
--   Downloaded Git
--   Setup your Github account
--   Set your Git username (with an appropriate name or alias)
--   Set your Git email (using the email on your account Github account)
--   Setup SSH Keys to authenticate with Github
+-   Downloaded Git.
+-   Setup your Github account.
+-   Set your Git username (with an appropriate name or alias).
+-   Set your Git email (using the email on your account Github account).
+-   Setup SSH Keys to authenticate with Github.
 
-Now that Git is configured, you're ready to create your first project.
+Now that Git is configured, you're ready to create your first project. 🎉
 
 ------------------------------------------------------------------------
 
 **Next up**
 
-In the next chapter, we’ll walk you through creating a new Quarto project with Git tracking from the start using the terminal.
+In the next chapter, we’ll walk you through creating a new Quarto project **with Git tracking** from the start using the terminal.
