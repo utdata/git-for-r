@@ -1,26 +1,10 @@
 ---
-title: "Welcome and launch"
+title: "Introduction to the terminal"
 ---
 
-**First things first:**
+In this chapter, we'll introduce what the terminal is, and discuss how we interact with it by speaking its langauge. We'll also open your first terminal window, run your first command, and see the terminal "talk back" to us. 
 
-If you've never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.
-
-You don’t need to memorize anything right now. You don’t need to be a "tech wizard." You just need a little curiosity.
-
-**A few important things before you get started:**
-
-1.  **Type your commands:** Getting used to writing in the command line is key to learning and remembering common commands. Though many of the code blocks in this books allow you to copy the code inside, please try to type it yourself (at least on the first try). You can always copy if you run into errors.
-2.  **Mini exercises:** There will be small exercises throughout this guide to reinforce learning and get you more comfortable working in the Terminal. Learning to code is largely done through *doing*, so we highly recommend you take the time to do them.
-3.  **Terminology notes:** Throughout this guide, there will be several callout boxes titled "terminology notes". These callouts will be used to explain key terms – especially those used interchangeably – that may be confusing to new programmers. We recommend you take the time to read them because knowing the language coders use will help when reading documentation and when seeking help in online spaces like Stack Overflow.
-
-Time to enter the Matrix, Neo.
-
-![Fun fact: the original design for the green "digital rain" animation used in the Matrix was based on scans of the creator's wife's Japanese cookbook.](https://upload.wikimedia.org/wikipedia/commons/c/cc/Digital_rain_animation_medium_letters_shine.gif)
-
-------------------------------------------------------------------------
-
-## What is the Terminal, Anyway?
+## What is the terminal?
 
 Think of using the terminal like dm'ing your computer.
 
@@ -90,7 +74,7 @@ Here’s how to find it on your computer:
 
 ## Your First Command: Saying Hello to the Terminal
 
-Ok, now that the terminal windown is open on your computer, let's take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.
+Ok, now that the terminal window is open on your computer, let's take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.
 
 ::: callout-caution
 ## Note for newer Mac users
@@ -162,7 +146,7 @@ You've made it to the end of chapter 1. Good job!
 
 You're officially no longer a terminal beginner. 🙌
 
-**A few quick Tips Before You Move On to the next chapter:**
+A few quick tips before you move on to the next chapter:
 
 -  **Command Case Matters in the Terminal**: `pwd` is *not* the same as `PWD`.
 -  **Press Enter to run things**: Every command you type needs an `Enter` to run.

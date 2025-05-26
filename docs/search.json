@@ -1053,111 +1053,111 @@
   {
     "objectID": "terminal/introduction.html",
     "href": "terminal/introduction.html",
-    "title": "1  Welcome and launch",
+    "title": "2  Introduction to the terminal",
     "section": "",
-    "text": "1.1 What is the Terminal, Anyway?\nFirst things first:\nIf you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.\nYou don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.\nA few important things before you get started:\nTime to enter the Matrix, Neo.\nThink of using the terminal like dm’ing your computer.\nInstead of clicking buttons or opening folders with a mouse or trackpad, you type commands in the command line asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.\nThe Terminal (on Mac) or Git Bash (on Windows) are the names of the programs that can run a shell. They are just the text-based user interfaces where you will type these commands.\nThe terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.\nHere’s just a few examples of what we can ask our computers to do using the terminal:\nWe can do all of these things by typing just a few words. But to communicate effectively with our terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.",
+    "text": "2.1 What is the terminal?\nIn this chapter, we’ll introduce what the terminal is, and discuss how we interact with it by speaking its langauge. We’ll also open your first terminal window, run your first command, and see the terminal “talk back” to us.\nThink of using the terminal like dm’ing your computer.\nInstead of clicking buttons or opening folders with a mouse or trackpad, you type commands in the command line asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.\nThe Terminal (on Mac) or Git Bash (on Windows) are the names of the programs that can run a shell. They are just the text-based user interfaces where you will type these commands.\nThe terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.\nHere’s just a few examples of what we can ask our computers to do using the terminal:\nWe can do all of these things by typing just a few words. But to communicate effectively with our terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.",
     "crumbs": [
       "Introduction",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/introduction.html#what-is-the-terminal-anyway",
     "href": "terminal/introduction.html#what-is-the-terminal-anyway",
-    "title": "1  Welcome and launch",
+    "title": "2  Introduction to the terminal",
     "section": "",
     "text": "Terminology note\n\n\n\nPeople (including the authors of this guide) will use the term shell, terminal and command line interchangeably. This means when we say “type into your shell”, “in your command line”, or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.\nIn reality, there are some nuances:\n\nThe terminal opens a window.\nInside that, a shell runs.\nYou interact with it through the command line interface.\n\nIn practical terms, just know they usually mean the same thing out in the wild.\n\n\n\n\n\nList all the files in a folder\nCreate a new folder\nInstall programs\nMove files around\nAutomate tasks",
     "crumbs": [
       "Introduction",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/introduction.html#speaking-the-terminals-language",
     "href": "terminal/introduction.html#speaking-the-terminals-language",
-    "title": "1  Welcome and launch",
-    "section": "1.2 Speaking the terminal’s language",
-    "text": "1.2 Speaking the terminal’s language\nThe programming language we will use for our interactions in the terminal is called Bash. Bash is a Unix-based program and most of the Internet runs on Unix (or Linux) computers.\nMacs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why Git and Git Bash were downloaded in the prerequisites – so we can all speak the same language, regardless of the machines we’re using.",
+    "title": "2  Introduction to the terminal",
+    "section": "2.2 Speaking the terminal’s language",
+    "text": "2.2 Speaking the terminal’s language\nThe programming language we will use for our interactions in the terminal is called Bash. Bash is a Unix-based program and most of the Internet runs on Unix (or Linux) computers.\nMacs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why Git and Git Bash were downloaded in the prerequisites – so we can all speak the same language, regardless of the machines we’re using.",
     "crumbs": [
       "Introduction",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/introduction.html#how-to-open-the-terminal",
     "href": "terminal/introduction.html#how-to-open-the-terminal",
-    "title": "1  Welcome and launch",
-    "section": "1.3 How to Open the Terminal",
-    "text": "1.3 How to Open the Terminal\nFirst things first, we need to actually open the Terminal on our machines.\nHere’s how to find it on your computer:\n\nMac:\nPress Command + Space, type Terminal, and hit Enter.\nWindows:\nOpen the Start Menu, search for Terminal or PowerShell, and open it.\n(There’s also something called “Command Prompt” — close enough for now.)\nLinux:\nPress Ctrl + Alt + T — it’s probably already installed!\n\nTip: If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)",
+    "title": "2  Introduction to the terminal",
+    "section": "2.3 How to Open the Terminal",
+    "text": "2.3 How to Open the Terminal\nFirst things first, we need to actually open the Terminal on our machines.\nHere’s how to find it on your computer:\n\nMac:\nPress Command + Space, type Terminal, and hit Enter.\nWindows:\nOpen the Start Menu, search for Terminal or PowerShell, and open it.\n(There’s also something called “Command Prompt” — close enough for now.)\nLinux:\nPress Ctrl + Alt + T — it’s probably already installed!\n\nTip: If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)",
     "crumbs": [
       "Introduction",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/introduction.html#your-first-command-saying-hello-to-the-terminal",
     "href": "terminal/introduction.html#your-first-command-saying-hello-to-the-terminal",
-    "title": "1  Welcome and launch",
-    "section": "1.4 Your First Command: Saying Hello to the Terminal",
-    "text": "1.4 Your First Command: Saying Hello to the Terminal\nOk, now that the terminal windown is open on your computer, let’s take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.\n\n\n\n\n\n\nNote for newer Mac users\n\n\n\nWhen you launch the Terminal for the first time, you’ll probably see a prompt saying something like:\nThe default interactive shell is now zsh.\nTo update your account to use zsh, please run `chsh -s /bin/zsh`.\nDISREGARD THIS MESSAGE. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.\n\n\n\n\n\nWhen you launch Terminal for the first time, you’ll see some text like this.\n\n\nLet’s breakdown a few things from the screenshot above:\n\nComputer name: the characters before the ~ is your computer’s name (you may not have known it even had one).\nCurrent directory: The ~ character is Terminal shorthand for your “base” directory on your computer. The value shown here will update as you move around to different folders on your computer.\nUser name: The part immediatetely after the ~ is your username.\nCommand prompt: Lastly we have the $. This is the “prompt” where you type commands.\n\nYou type your commands AFTER the $ and then hit Return/Enter on your keyboard to run or execute them. We’ll practice doing just that in the next section.\n\n1.4.1 Your First Command: Saying Hello to the Terminal\nLet’s try your first real command: finding out where you are using the command pwd.\n\nIn the terminal prompt (remember, after the $), type the following command:\n\npwd\n\nPress Enter to run the command.\n\nYou should see Terminal respond with something like this:\n/Users/yourname\nor this\nC:\\Users\\yourname\nDepending on your system, the path may look a little different — and that’s OK.\nSo what just happened?\n\npwd stands for “print working directory.”\nIt simply asks: Where am I right now in the computer’s folder system?\nYour computer provides the following answer: your current folder — usually your “home” directory when you first open the Terminal.",
+    "title": "2  Introduction to the terminal",
+    "section": "2.4 Your First Command: Saying Hello to the Terminal",
+    "text": "2.4 Your First Command: Saying Hello to the Terminal\nOk, now that the terminal window is open on your computer, let’s take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.\n\n\n\n\n\n\nNote for newer Mac users\n\n\n\nWhen you launch the Terminal for the first time, you’ll probably see a prompt saying something like:\nThe default interactive shell is now zsh.\nTo update your account to use zsh, please run `chsh -s /bin/zsh`.\nDISREGARD THIS MESSAGE. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.\n\n\n\n\n\nWhen you launch Terminal for the first time, you’ll see some text like this.\n\n\nLet’s breakdown a few things from the screenshot above:\n\nComputer name: the characters before the ~ is your computer’s name (you may not have known it even had one).\nCurrent directory: The ~ character is Terminal shorthand for your “base” directory on your computer. The value shown here will update as you move around to different folders on your computer.\nUser name: The part immediatetely after the ~ is your username.\nCommand prompt: Lastly we have the $. This is the “prompt” where you type commands.\n\nYou type your commands AFTER the $ and then hit Return/Enter on your keyboard to run or execute them. We’ll practice doing just that in the next section.\n\n2.4.1 Your First Command: Saying Hello to the Terminal\nLet’s try your first real command: finding out where you are using the command pwd.\n\nIn the terminal prompt (remember, after the $), type the following command:\n\npwd\n\nPress Enter to run the command.\n\nYou should see Terminal respond with something like this:\n/Users/yourname\nor this\nC:\\Users\\yourname\nDepending on your system, the path may look a little different — and that’s OK.\nSo what just happened?\n\npwd stands for “print working directory.”\nIt simply asks: Where am I right now in the computer’s folder system?\nYour computer provides the following answer: your current folder — usually your “home” directory when you first open the Terminal.",
     "crumbs": [
       "Introduction",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/introduction.html#checkpoint",
     "href": "terminal/introduction.html#checkpoint",
-    "title": "1  Welcome and launch",
-    "section": "1.5 🎯 Checkpoint",
-    "text": "1.5 🎯 Checkpoint\nYou’ve made it to the end of chapter 1. Good job!\nYou’ve now:\n\nOpened the Terminal.\nTyped and run your first command.\nSeen your computer respond back.\n\nYou’re officially no longer a terminal beginner. 🙌\nA few quick Tips Before You Move On to the next chapter:\n\nCommand Case Matters in the Terminal: pwd is not the same as PWD.\nPress Enter to run things: Every command you type needs an Enter to run.\nYou can’t break things easily: Typing pwd won’t hurt your computer.\n(In fact, almost everything we’ll do in this guide will be safe)\n\n\nNext up:\nWe’ll learn how to move around inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter.",
+    "title": "2  Introduction to the terminal",
+    "section": "2.5 🎯 Checkpoint",
+    "text": "2.5 🎯 Checkpoint\nYou’ve made it to the end of chapter 1. Good job!\nYou’ve now:\n\nOpened the Terminal.\nTyped and run your first command.\nSeen your computer respond back.\n\nYou’re officially no longer a terminal beginner. 🙌\nA few quick tips before you move on to the next chapter:\n\nCommand Case Matters in the Terminal: pwd is not the same as PWD.\nPress Enter to run things: Every command you type needs an Enter to run.\nYou can’t break things easily: Typing pwd won’t hurt your computer.\n(In fact, almost everything we’ll do in this guide will be safe)\n\n\nNext up:\nWe’ll learn how to move around inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter.",
     "crumbs": [
       "Introduction",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome and launch</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/moving-around.html",
     "href": "terminal/moving-around.html",
-    "title": "2  Moving around in the terminal",
+    "title": "3  Moving around in the terminal",
     "section": "",
-    "text": "2.1 What’s in this folder? (ls)\nNow that you know where you are (pwd), it’s time to explore what’s around you. Specifically, we’ll start by moving between different folders on your computer.\nIf you want to see what’s inside the current directory, you use the ls command.\nAs we said in Chapter 1, the terminal lets you interact with files the same way you would with File Explorer on Windows and Finder on a Mac — except you’ll be using text instead of clicking.\nWhen your first launch terminal, you’ll see a ~ (called a tilde), which lets you know you’re in your base or home directory. We want to ask the terminal to tell us what is inside this home directory.\nTo ask terminal what’s inside a directory:\nTerminal will respond to your command with a list of files and folders like this:\nYour list may be different depending on what’s in your computer’s home folder. That’s ok!\nIn any case, the list of directories returned by Terminal will match the folders you would see if you clicked on your home directory in the Finder on a Mac or in File Explorer on a Windows machine. For example, the list of folders listed in the example response above matches what we see in our home directory using Finder below.\nQuick Recap on the ls command:",
+    "text": "3.1 What’s in this folder? (ls)\nNow that you know where you are (pwd), it’s time to explore what’s around you. Specifically, we’ll start by moving between different folders on your computer.\nIf you want to see what’s inside the current directory, you use the ls command.\nAs we said in Chapter 1, the terminal lets you interact with files the same way you would with File Explorer on Windows and Finder on a Mac — except you’ll be using text instead of clicking.\nWhen your first launch terminal, you’ll see a ~ (called a tilde), which lets you know you’re in your base or home directory. We want to ask the terminal to tell us what is inside this home directory.\nTo ask terminal what’s inside a directory:\nTerminal will respond to your command with a list of files and folders like this:\nYour list may be different depending on what’s in your computer’s home folder. That’s ok!\nIn any case, the list of directories returned by Terminal will match the folders you would see if you clicked on your home directory in the Finder on a Mac or in File Explorer on a Windows machine. For example, the list of folders listed in the example response above matches what we see in our home directory using Finder below.\nQuick Recap on the ls command:",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Moving around in the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/moving-around.html#whats-in-this-folder-ls",
     "href": "terminal/moving-around.html#whats-in-this-folder-ls",
-    "title": "2  Moving around in the terminal",
+    "title": "3  Moving around in the terminal",
     "section": "",
     "text": "ls stands for list.\n\n\n\n\n\n\nType the following in your terminal:\n\nls\n\npress Enter to run the command.\n\n\n_projects Desktop       Downloads   Movies      Pictures\nDocuments   Library     Music       Public \n\n\n\n\n\nAn example of folders in a home directory on a Mac.\n\n\n\n\nls is short for “list.”\nIt literally asks terminal, “list what’s here.”",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Moving around in the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/moving-around.html#moving-around-cd",
     "href": "terminal/moving-around.html#moving-around-cd",
-    "title": "2  Moving around in the terminal",
-    "section": "2.2 Moving around (cd)",
-    "text": "2.2 Moving around (cd)\n\ncd stands for change directory.\n\nSeeing what’s around us in a folder is nice, but what if you want to go into one of those folders?\nIn terminal, we use the cd command – shorthand for “change directory” – to move into and out of folders.\nSuppose you ran your ls command and see a folder called Documents. If you wanted to move into that folder, you’d do the following:\n\nType the following command in your terminal:\n\ncd Documents\n\npress Enter/Return to run.\n\nNow you’re inside the Documents directory!\nNow let’s try running the ls command again:\n\nType the following in your command line:\n\nls\n\nHit Enter/Return to run.\n\nYou should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your Documents folder.\nNice job — you just moved between directories!",
+    "title": "3  Moving around in the terminal",
+    "section": "3.2 Moving around (cd)",
+    "text": "3.2 Moving around (cd)\n\ncd stands for change directory.\n\nSeeing what’s around us in a folder is nice, but what if you want to go into one of those folders?\nIn terminal, we use the cd command – shorthand for “change directory” – to move into and out of folders.\nSuppose you ran your ls command and see a folder called Documents. If you wanted to move into that folder, you’d do the following:\n\nType the following command in your terminal:\n\ncd Documents\n\npress Enter/Return to run.\n\nNow you’re inside the Documents directory!\nNow let’s try running the ls command again:\n\nType the following in your command line:\n\nls\n\nHit Enter/Return to run.\n\nYou should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your Documents folder.\nNice job — you just moved between directories!",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Moving around in the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/moving-around.html#how-can-you-tell-where-you-are-now-pwd",
     "href": "terminal/moving-around.html#how-can-you-tell-where-you-are-now-pwd",
-    "title": "2  Moving around in the terminal",
-    "section": "2.3 How Can You Tell Where You Are Now? (pwd)",
-    "text": "2.3 How Can You Tell Where You Are Now? (pwd)\n\npwd stands for print working directory.\n\nThere are a couple ways to make sure you are where you think you are in the Terminal.\nThe first is to look at the command prompt line inside your terminal window again.\nYou should see something like:\nAnas-MacBook-Air:Documents ana$\nIn the current directory space (where there used to be a ~), you should see the name of the name of the folder you’re currently inside. If you followed the steps above to get into your Documents folder, for example, you should now see the name of the Documents folder. Remember if you’re ever unsure where you are, terminal will tell you in the prompt!\nIf you’re still not sure, remember you can use your new friend the pwd (“Print Working Directory”) command from chapter 1 by typing and running:\npwd\nTerminal should now show something like:\n/Users/yourname/Documents\nor\nC:\\Users\\yourname\\Documents",
+    "title": "3  Moving around in the terminal",
+    "section": "3.3 How Can You Tell Where You Are Now? (pwd)",
+    "text": "3.3 How Can You Tell Where You Are Now? (pwd)\n\npwd stands for print working directory.\n\nThere are a couple ways to make sure you are where you think you are in the Terminal.\nThe first is to look at the command prompt line inside your terminal window again.\nYou should see something like:\nAnas-MacBook-Air:Documents ana$\nIn the current directory space (where there used to be a ~), you should see the name of the name of the folder you’re currently inside. If you followed the steps above to get into your Documents folder, for example, you should now see the name of the Documents folder. Remember if you’re ever unsure where you are, terminal will tell you in the prompt!\nIf you’re still not sure, remember you can use your new friend the pwd (“Print Working Directory”) command from chapter 1 by typing and running:\npwd\nTerminal should now show something like:\n/Users/yourname/Documents\nor\nC:\\Users\\yourname\\Documents",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Moving around in the terminal</span>"
     ]
   },
   {
@@ -1185,34 +1185,34 @@
   {
     "objectID": "terminal/moving-around.html#mini-exercise",
     "href": "terminal/moving-around.html#mini-exercise",
-    "title": "2  Moving around in the terminal",
-    "section": "2.5 📝 Mini exercise",
-    "text": "2.5 📝 Mini exercise\nOwn your own, try this:\n\nOpen your terminal.\nType and run pwd to see where you are.\nUse ls to list what’s inside.\nPick a folder you see (try something other than your Documents folder).\ncd into that folder.\nUse pwd again to check that you moved.\ncd .. to come back up.\n\nTake your time. Play around.\nIf you get lost, remember you can just type the following command to jump back to your home directory:\ncd",
+    "title": "3  Moving around in the terminal",
+    "section": "3.5 📝 Mini exercise",
+    "text": "3.5 📝 Mini exercise\nOwn your own, try this:\n\nOpen your terminal.\nType and run pwd to see where you are.\nUse ls to list what’s inside.\nPick a folder you see (try something other than your Documents folder).\ncd into that folder.\nUse pwd again to check that you moved.\ncd .. to come back up.\n\nTake your time. Play around.\nIf you get lost, remember you can just type the following command to jump back to your home directory:\ncd",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Moving around in the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/moving-around.html#pro-tip-speed-up-with-tab-completion",
     "href": "terminal/moving-around.html#pro-tip-speed-up-with-tab-completion",
-    "title": "2  Moving around in the terminal",
-    "section": "2.6 🔥 Pro Tip: speed up with tab completion",
-    "text": "2.6 🔥 Pro Tip: speed up with tab completion\nOk, now that you’ve got some practice typing things into terminal, we’ll let you in on a big time-saver: when you start typing a folder name, you don’t have to type the whole thing.\nHit the Tab key after typing part of your folder name and the terminal will try to auto-complete it for you. Now, if you’ve got more than one folder with similar names, you may have to add more characters till it can successfully do so.\nLet’s see it action by doing the following:\n\nType out the following command, but don’t run:\n\ncd Doc\n\nNow, press the Tab key.\n\nIf there’s a Documents folder, terminal will fill in the rest automatically!\nHuge time saver.\nRemember, you’ll still need to hit Enter/Return to run the command and move into the Documents folder.",
+    "title": "3  Moving around in the terminal",
+    "section": "3.6 🔥 Pro Tip: speed up with tab completion",
+    "text": "3.6 🔥 Pro Tip: speed up with tab completion\nOk, now that you’ve got some practice typing things into terminal, we’ll let you in on a big time-saver: when you start typing a folder name, you don’t have to type the whole thing.\nHit the Tab key after typing part of your folder name and the terminal will try to auto-complete it for you. Now, if you’ve got more than one folder with similar names, you may have to add more characters till it can successfully do so.\nLet’s see it action by doing the following:\n\nType out the following command, but don’t run:\n\ncd Doc\n\nNow, press the Tab key.\n\nIf there’s a Documents folder, terminal will fill in the rest automatically!\nHuge time saver.\nRemember, you’ll still need to hit Enter/Return to run the command and move into the Documents folder.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Moving around in the terminal</span>"
     ]
   },
   {
     "objectID": "terminal/moving-around.html#checkpoint",
     "href": "terminal/moving-around.html#checkpoint",
-    "title": "2  Moving around in the terminal",
-    "section": "2.7 🎯 Checkpoint",
-    "text": "2.7 🎯 Checkpoint\nIn this chapter you’ve learned:\n\nHow to see what’s inside a folder (ls).\nHow to move into a folder (cd foldername).\nHow to move back up (cd ..).\nHow to use Tab to speed things up.\n\nAt this point you’ve started to learn some of the basics of “speaking” terminal.\n\nNext up:\nWe’ll learn how to create your own files and folders in the terminal. When you’re ready, head to the next chapter!",
+    "title": "3  Moving around in the terminal",
+    "section": "3.7 🎯 Checkpoint",
+    "text": "3.7 🎯 Checkpoint\nIn this chapter you’ve learned:\n\nHow to see what’s inside a folder (ls).\nHow to move into a folder (cd foldername).\nHow to move back up (cd ..).\nHow to use Tab to speed things up.\n\nAt this point you’ve started to learn some of the basics of “speaking” terminal.\n\nNext up:\nWe’ll learn how to create your own files and folders in the terminal. When you’re ready, head to the next chapter!",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Moving around in the terminal</span>"
     ]
   },
   {
@@ -1460,12 +1460,12 @@
   {
     "objectID": "terminal/moving-around.html#getting-out-of-folders-cd-..",
     "href": "terminal/moving-around.html#getting-out-of-folders-cd-..",
-    "title": "2  Moving around in the terminal",
-    "section": "2.4 Getting out of folders (cd ..)",
-    "text": "2.4 Getting out of folders (cd ..)\nOk now that we’ve moved into folders, what if you want to go back out of it to the folder you came from?\nTo go back up a directory:\n\ntype and run the following command:\n\ncd ..\nThe two dots .. simply mean “the folder above this one.”\nIf you run the pwd command again, you’ll see you’re back to where you started!\n\n2.4.1 Quick recap on cd commands\nHere are a few handy shortcuts you’ll want to remember:\n\n\n\nCommand\nWhat it does\n\n\n\n\ncd\nGo back to your home directory.\n\n\ncd ..\nMove up one directory.\n\n\ncd foldername\nMove into a folder.\n\n\n\n\n\n2.4.2 Folder names with spaces\nIf the folder name you’re trying to access has spaces (like My Documents), you’ll need to put it in quotes:\ncd \"My Documents\"\nOr you can use a backslash to “escape” the space like:\ncd My\\ Documents\nLike we mentioned before, terminal is particular about the way you speak to it. For it to understand you, you’ve got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like snake_case or kebab-case will help you work more efficiently.",
+    "title": "3  Moving around in the terminal",
+    "section": "3.4 Getting out of folders (cd ..)",
+    "text": "3.4 Getting out of folders (cd ..)\nOk now that we’ve moved into folders, what if you want to go back out of it to the folder you came from?\nTo go back up a directory:\n\ntype and run the following command:\n\ncd ..\nThe two dots .. simply mean “the folder above this one.”\nIf you run the pwd command again, you’ll see you’re back to where you started!\n\n3.4.1 Quick recap on cd commands\nHere are a few handy shortcuts you’ll want to remember:\n\n\n\nCommand\nWhat it does\n\n\n\n\ncd\nGo back to your home directory.\n\n\ncd ..\nMove up one directory.\n\n\ncd foldername\nMove into a folder.\n\n\n\n\n\n3.4.2 Folder names with spaces\nIf the folder name you’re trying to access has spaces (like My Documents), you’ll need to put it in quotes:\ncd \"My Documents\"\nOr you can use a backslash to “escape” the space like:\ncd My\\ Documents\nLike we mentioned before, terminal is particular about the way you speak to it. For it to understand you, you’ve got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like snake_case or kebab-case will help you work more efficiently.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Moving around in the terminal</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Moving around in the terminal</span>"
     ]
   },
   {
@@ -1532,6 +1532,17 @@
     "crumbs": [
       "Terminal basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/introduction.html#what-is-the-terminal",
+    "href": "terminal/introduction.html#what-is-the-terminal",
+    "title": "2  Introduction to the terminal",
+    "section": "",
+    "text": "Terminology note\n\n\n\nPeople (including the authors of this guide) will use the term shell, terminal and command line interchangeably. This means when we say “type into your shell”, “in your command line”, or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.\nIn reality, there are some nuances:\n\nThe terminal opens a window.\nInside that, a shell runs.\nYou interact with it through the command line interface.\n\nIn practical terms, just know they usually mean the same thing out in the wild.\n\n\n\n\n\nList all the files in a folder\nCreate a new folder\nInstall programs\nMove files around\nAutomate tasks",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
     ]
   }
 ]

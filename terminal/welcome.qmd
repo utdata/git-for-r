@@ -1,0 +1,25 @@
+---
+title: "Welcome and launch"
+---
+
+**First things first:**
+
+If you've never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.
+
+You don’t need to memorize anything right now. You don’t need to be a "tech wizard." You just need a little curiosity.
+
+**A few important things before you get started:**
+
+1.  **Type your commands:** Getting used to writing in the command line is key to learning and remembering common commands. Though many of the code blocks in this books allow you to copy the code inside, please try to type it yourself (at least on the first try). You can always copy if you run into errors.
+2.  **Mini exercises:** There will be small exercises throughout this guide to reinforce learning and get you more comfortable working in the Terminal. Learning to code is largely done through *doing*, so we highly recommend you take the time to do them.
+3.  **Terminology notes:** Throughout this guide, there will be several callout boxes titled "terminology notes". These callouts will be used to explain key terms – especially those used interchangeably – that may be confusing to new programmers. We recommend you take the time to read them because knowing the language coders use will help when reading documentation and when seeking help in online spaces like Stack Overflow.
+
+Time to enter the Matrix, Neo.
+
+![Fun fact: the original design for the green "digital rain" animation used in the Matrix was based on scans of the creator's wife's Japanese cookbook.](https://upload.wikimedia.org/wikipedia/commons/c/cc/Digital_rain_animation_medium_letters_shine.gif)
+
+---
+
+**Next up:**
+
+We’ll learn how to **move around** inside your computer using simple commands. Whenever you're ready, proceed to the next chapter.
