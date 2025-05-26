@@ -2,6 +2,8 @@
 title: "Dealing with conflicts"
 ---
 
+> 🎯 Goal: By the end of this chapter, you'll understand what merge conflicts are and how to resolve them.
+
 Merge conflicts are an inevitable part of the collaboration process in Git. Knowing what to do when you encounter them will go a long way toward making your shared projects run smoothly.
 
 ## What if you both edit the same file?

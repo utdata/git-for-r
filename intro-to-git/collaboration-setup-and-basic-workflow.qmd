@@ -2,6 +2,9 @@
 title: "Project setup and basic workflow"
 ---
 
+> 🎯 Goal: By the end of this chapter, you'll know how to setup a Github project for collaboration. You'll also know some best practices when working with others on a shared project.
+
+
 Now that you can push your changes to GitHub, it’s time to talk about how to **collaborate** with others on the same project.
 
 One of the best things about keeping your code in a Github repository is that it allows you to collaborate with other people on the same coding project. Now, to make these collaborations work smoothly there are some best practices and processes you will need to follow.
