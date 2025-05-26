@@ -41,7 +41,7 @@ book:
        - intro-to-git/updating-your-repo.qmd
     - part: "Advanced: collaborating with others"
       chapters:
-      - intro-to-git/setup-and-basic-workflow.qmd
+      - intro-to-git/collaboration-setup-and-basic-workflow.qmd
       - intro-to-git/dealing-with-conflicts.qmd
       - intro-to-git/working-with-branches.qmd
       - intro-to-git/pull-requests.qmd

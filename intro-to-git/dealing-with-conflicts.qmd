@@ -2,13 +2,13 @@
 title: "Dealing with conflicts"
 ---
 
-> Merge conflicts are an inevitable part of the collaboration process in Git. Knowing what to do when you encounter them will go a long way toward making your shared projects run smoothly.
+Merge conflicts are an inevitable part of the collaboration process in Git. Knowing what to do when you encounter them will go a long way toward making your shared projects run smoothly.
 
 ## What if you both edit the same file?
 
-When you run `git pull`, Git will automatically try to **merge** your local changes with the most-recent version of the file on the Github repo.
+As we covered in the last chapter, before you make changes to your project you want to pull the most recent changes from the Github repo. When you run the `git pull` command, Git will automatically try to **merge** your local changes with the most-recent version of the file on the Github repo.
 
-Sometimes, two people (or even just you on two different branches) will make different changes to the **same lines** of a file.
+In an ideal world, Git is able to merge things without any issues. But sometimes, two people (or even just you on two different branches) will make different changes to the **same lines** of a file.
 
 When you try to run `git pull`, Git gets confused and says:
 
@@ -16,11 +16,7 @@ When you try to run `git pull`, Git gets confused and says:
 
 This is called a **merge conflict**.
 
-------------------------------------------------------------------------
-
-### What’s Really Happening?
-
-Git is trying to **combine** the changes from two versions of a file into one. Most of the time, if the changes are in *different parts* of the files, Git can handle it automatically.
+When merging, Git is trying to **combine** the changes from two versions of a file into one. Most of the time, if the changes are in *different parts* of the files, Git can handle it automatically.
 
 But if two people made edits to the *same part* of a file (like the same sentence or section), Git doesn’t want to **guess** who’s right — so it stops and asks you to make the call.
 
@@ -50,35 +46,35 @@ When Git encounters a merge conflict, two things will happen:
 
 You’ll need to manually choose which version (or both!) to keep and then commit the right changes to Git. We'll walk you through the process of resolving these conflicts in the section below.
 
-------------------------------------------------------------------------
-
-### Step-by-Step: Resolving a Merge Conflict
+## How to resolve a merge conflict
 
 Let’s say both you and a collaborator edited the same section of `analysis.qmd` and now Git is confused when you try to pull or merge.
 
-**Step 1: See the Conflict**
+**Step 1: read the conflict message**
 
 When you run:
 
 `git pull`
 
-Git might respond:
+Git might respond with something like this:
 
-`Auto-merging analysis.qmd CONFLICT (content): Merge conflict in analysis.qmd Automatic merge failed; fix conflicts and then commit the result.`
+> Auto-merging analysis.qmd CONFLICT (content): Merge conflict in analysis.qmd Automatic merge failed; fix conflicts and then commit the result.
+
+This message tells you that the issue is in the file `analysis.qmd`. This is where you'll need to resolve a merge conflict.
 
 **Step 2: Open the Conflicted File**
 
-Open `analysis.qmd` in RStudio or your code editor. You’ll see something like:
+1.  Open `analysis.qmd` in RStudio or your code editor.
+2.  Find the conflict by looking for the text `<<<<<<< HEAD`. You can use the find feature (`CMD`+`F`) to search in RStudio if needed
+3.  You’ll see something like: `<<<<<<< HEAD The sky is blue. ======= The sky is purple. >>>>>>> origin/main`
 
-`<<<<<<< HEAD The sky is blue. ======= The sky is purple. >>>>>>> origin/main`
+Here's what this means:
 
-This is Git saying:
+-   `<<<<<<< HEAD` is your local version
 
--   `<<<<<<< HEAD` = your local version
+-   `=======` is the separator
 
--   `=======` = the separator
-
--   `>>>>>>> origin/main` = the version from GitHub (or your teammate)
+-   `>>>>>>> origin/main` is the version you pulled from GitHub.
 
 In other words:
 
@@ -88,7 +84,9 @@ In other words:
 
 **Step 3: Choose What to Keep**
 
-Decide what version is correct. You can:
+Now it's time to decide what version is correct.
+
+You could:
 
 -   Keep one
 
@@ -96,25 +94,31 @@ Decide what version is correct. You can:
 
 -   Rewrite it entirely
 
-`The sky is blue and sometimes purple at sunset.`
+Just make sure to delete the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) when you’ve decided what you'd like to do.
 
-Note: make sure to delete the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) when you’re done.
+**Step 4: mark the conflict as resolved, commit and push**
 
-**Step 4: Mark the Conflict as Resolved**
+Once you’ve fixed the file, you need to tell Git it’s ready. We do this by saving our changes to the conflict file, then committing our changes and pushing the corrected file Github.
 
-Once you’ve fixed the file, you need to tell Git it’s ready:
+For our `analysis.qmd` conflict, for example, we'd do the following:
 
-``` bash
-git add analysis.qmd
-```
+1.  **Stage** our resolved conflict file:
 
-**Step 5: Commit the Merge**
+    ``` bash
+    git add analysis.qmd
+    ```
 
-Now complete the merge:
+2.  **Commit** our changes, noting the merge conflict in the commit message:
 
-``` bash
-git commit -m "Resolve merge conflict in analysis.qmd"
-```
+    ``` bash
+    git commit -m "Resolve merge conflict in analysis.qmd"
+    ```
+
+3.  **Push** the change to Github, so our team can see the resolution:
+
+    ``` bash
+    git push
+    ```
 
 🎉 That’s it — you’ve handled a merge conflict like a pro.
 
