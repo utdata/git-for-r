@@ -2,23 +2,23 @@
   {
     "objectID": "intro-to-git/introduction.html",
     "href": "intro-to-git/introduction.html",
-    "title": "7  Welcome",
+    "title": "8  Welcome",
     "section": "",
-    "text": "7.1 Who is this guide for?\nWelcome to the Intro to Git guide! We hope this guide will be a resource for you to learn the basics of working with version control for the first time.\nThis guide is for students who know some R and want to learn Git and GitHub to manage and collaborate on R projects (especially Quarto ones). It assumes little-to-no hands-on terminal experience but will encourage building confidence over time by interacting with Github through the command line.\nStudents who are brand new to the terminal may also find it helpful to go through the Intro to Terminal section of this book before working through this guide.",
+    "text": "8.1 Who is this guide for?\nWelcome to the Intro to Git guide! We hope this guide will be a resource for you to learn the basics of working with version control for the first time.\nThis guide is for students who know some R and want to learn Git and GitHub to manage and collaborate on R projects (especially Quarto ones). It assumes little-to-no hands-on terminal experience but will encourage building confidence over time by interacting with Github through the command line.\nStudents who are brand new to the terminal may also find it helpful to go through the Intro to Terminal section of this book before working through this guide.",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Welcome</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Welcome</span>"
     ]
   },
   {
     "objectID": "intro-to-git/introduction.html#prerequisites",
     "href": "intro-to-git/introduction.html#prerequisites",
-    "title": "7  Welcome",
-    "section": "7.2 Prerequisites",
-    "text": "7.2 Prerequisites\nBefore we move on to working with Git and Github, we need to make sure you have what you need to successfully complete the exercises in this guide. The guide assumes you already have the following installed on your computer:\n\nR\nRStudio\nQuarto\n\nIf you are missing any these, please go to the links listed and make sure to install before moving on to the next chapter!",
+    "title": "8  Welcome",
+    "section": "8.2 Prerequisites",
+    "text": "8.2 Prerequisites\nBefore we move on to working with Git and Github, we need to make sure you have what you need to successfully complete the exercises in this guide. The guide assumes you already have the following installed on your computer:\n\nR\nRStudio\nQuarto\n\nIf you are missing any these, please go to the links listed and make sure to install before moving on to the next chapter!",
     "crumbs": [
       "Installation",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Welcome</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Welcome</span>"
     ]
   },
   {
@@ -1543,6 +1543,28 @@
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/welcome.html",
+    "href": "terminal/welcome.html",
+    "title": "1  Welcome",
+    "section": "",
+    "text": "How to use this book\nWelcome to the Intro to Terminal guide! We hope this guide will be a resource for you to learn the basics of working with the command line.\nIf you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.\nYou don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.\nBefore you dive in, we want to highlight a few things about how we’ve structured the guide to ensure you get the most of your learning experience.\nAs you work through the guide, we strongly recommend that you do the following:\nTime to enter the Matrix, Neo.\nNext up:\nWe’ll learn how to move around inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/welcome.html#how-to-use-this-book",
+    "href": "terminal/welcome.html#how-to-use-this-book",
+    "title": "1  Welcome",
+    "section": "",
+    "text": "Type your commands: Getting used to writing in the command line is key to learning and remembering common commands. Though many of the code blocks in this books allow you to copy the code inside, please try to type it yourself (at least on the first try). You can always copy if you run into errors.\nDo the mini exercises: There will be small exercises throughout this guide to reinforce learning and get you more comfortable working in the Terminal. Learning to code is largely done through doing, so we highly recommend you take the time to do all of them.\nDo the chapters in order: The mini exercises and content in this book are structured to build upon each other. Your first time through, we recommend you complete each chapter along with the mini-exercises in chronological order to ensure you don’t miss steps you need later on.\nRead the terminology notes: Throughout this guide, there will be several callout boxes titled “terminology notes”. These callouts will be used to explain key terms – especially those used interchangeably – that may be confusing to new programmers. We recommend you take the time to read them because knowing the language coders use will help when reading documentation and when seeking help in online spaces like Stack Overflow.\n\n\n\n\n\nFun fact: the original design for the green “digital rain” animation used in the Matrix was based on scans of the creator’s wife’s Japanese cookbook.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
     ]
   }
 ]
