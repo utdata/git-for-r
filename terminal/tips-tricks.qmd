@@ -48,7 +48,7 @@ Remember: start typing a folder or file name, press `Tab`, and Terminal finishes
 
 It saves time and typos!
 
-If there's more than one similarly-named files in your folder, you may have to type more characters to get to the one you want.
+If there's more than one similarly-named files in your folder, you may have to type more characters to get to the one you want. You can also hit `Tab` again to see a list of possible matches to help guide you. 
 
 ## 🎯 Checkpoint
 

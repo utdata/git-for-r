@@ -2,7 +2,7 @@
 title: "Introduction to the terminal"
 ---
 
-In this chapter, we'll introduce what the terminal is, and discuss how we interact with it by speaking its langauge. We'll also open your first terminal window, run your first command, and see the terminal "talk back" to us. 
+In this chapter, we'll introduce what the terminal is, and discuss how we interact with it by speaking its language. We'll also open your first terminal window, run your first command, and see the terminal "talk back" to us.
 
 ## What is the terminal?
 
@@ -59,7 +59,7 @@ First things first, we need to actually *open* the Terminal on our machines.
 Here’s how to find it on your computer:
 
 -   **Mac**:\
-    Press `Command + Space`, type **Terminal**, and hit `Enter`.
+    Press `Command + Space`, type **Terminal**, and hit `Enter` / `return`.
 
 -   **Windows**:\
     Open the **Start Menu**, search for **Terminal** or **PowerShell**, and open it.\
@@ -95,22 +95,22 @@ To update your account to use zsh, please run `chsh -s /bin/zsh`.
 
 1.  **Computer name:** the characters before the `~` is your computer's name (you may not have known it even had one).
 2.  **Current directory:** The `~` character is Terminal shorthand for your "base" directory on your computer. The value shown here will update as you move around to different folders on your computer.
-3.  **User name:** The part immediatetely after the `~` is your username.
-4.  **Command prompt:** Lastly we have the `$`. This is the “prompt” where you type commands.
+3.  **User name:** The part immediately after the `~` is your username.
+4.  **Command prompt:** Lastly we have the \$. This is the “prompt” where you type commands. *(Note: if you're on a Mac and see a % instead of a "\$", you may not be in Bash. Fix that by going to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) in the troubleshooting chapter)*
 
-You type your commands AFTER the `$` and then hit `Return`/`Enter` on your keyboard to run or **execute** them. We'll practice doing just that in the next section.
+You type your commands AFTER the `$` and then hit `Enter` / `return` on your keyboard to run or **execute** them. We'll practice doing just that in the next section.
 
 ### Your First Command: Saying Hello to the Terminal
 
 Let’s try your first real command: finding out *where* you are using the command `pwd`.
 
-1. In the terminal prompt (remember, after the `$)`, type the following command:
+1.  In the terminal prompt (remember, after the `$)`, type the following command:
 
 ``` bash
 pwd
 ```
 
-2. Press `Enter` to *run* the command.
+2.  Press `Enter` / `return` to *run* the command.
 
 You should see Terminal respond with something like this:
 
@@ -148,9 +148,9 @@ You're officially no longer a terminal beginner. 🙌
 
 A few quick tips before you move on to the next chapter:
 
--  **Command Case Matters in the Terminal**: `pwd` is *not* the same as `PWD`.
--  **Press Enter to run things**: Every command you type needs an `Enter` to run.
-- **You can’t break things easily**: Typing `pwd` won't hurt your computer.\
+-   **Command Case Matters in the Terminal**: `pwd` is *not* the same as `PWD`.
+-   **Press `Enter` / `return` to run things**: Every command you type needs an `Enter` / `return` to run.
+-   **You can’t break things easily**: Typing `pwd` won't hurt your computer.\
     (In fact, almost everything we’ll do in this guide will be safe)
 
 ------------------------------------------------------------------------

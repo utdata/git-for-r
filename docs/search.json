@@ -1055,7 +1055,7 @@
     "href": "terminal/introduction.html",
     "title": "2  Introduction to the terminal",
     "section": "",
-    "text": "2.1 What is the terminal?\nIn this chapter, we’ll introduce what the terminal is, and discuss how we interact with it by speaking its langauge. We’ll also open your first terminal window, run your first command, and see the terminal “talk back” to us.\nThink of using the terminal like dm’ing your computer.\nInstead of clicking buttons or opening folders with a mouse or trackpad, you type commands in the command line asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.\nThe Terminal (on Mac) or Git Bash (on Windows) are the names of the programs that can run a shell. They are just the text-based user interfaces where you will type these commands.\nThe terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.\nHere’s just a few examples of what we can ask our computers to do using the terminal:\nWe can do all of these things by typing just a few words. But to communicate effectively with our terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.",
+    "text": "2.1 What is the terminal?\nIn this chapter, we’ll introduce what the terminal is, and discuss how we interact with it by speaking its language. We’ll also open your first terminal window, run your first command, and see the terminal “talk back” to us.\nThink of using the terminal like dm’ing your computer.\nInstead of clicking buttons or opening folders with a mouse or trackpad, you type commands in the command line asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.\nThe Terminal (on Mac) or Git Bash (on Windows) are the names of the programs that can run a shell. They are just the text-based user interfaces where you will type these commands.\nThe terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.\nHere’s just a few examples of what we can ask our computers to do using the terminal:\nWe can do all of these things by typing just a few words. But to communicate effectively with our terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
@@ -1088,7 +1088,7 @@
     "href": "terminal/introduction.html#how-to-open-the-terminal",
     "title": "2  Introduction to the terminal",
     "section": "2.3 How to Open the Terminal",
-    "text": "2.3 How to Open the Terminal\nFirst things first, we need to actually open the Terminal on our machines.\nHere’s how to find it on your computer:\n\nMac:\nPress Command + Space, type Terminal, and hit Enter.\nWindows:\nOpen the Start Menu, search for Terminal or PowerShell, and open it.\n(There’s also something called “Command Prompt” — close enough for now.)\nLinux:\nPress Ctrl + Alt + T — it’s probably already installed!\n\nTip: If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)",
+    "text": "2.3 How to Open the Terminal\nFirst things first, we need to actually open the Terminal on our machines.\nHere’s how to find it on your computer:\n\nMac:\nPress Command + Space, type Terminal, and hit return.\nWindows:\nOpen the Start Menu, search for Terminal or PowerShell, and open it.\n(There’s also something called “Command Prompt” — close enough for now.)\nLinux:\nPress Ctrl + Alt + T — it’s probably already installed!\n\nTip: If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
@@ -1099,7 +1099,7 @@
     "href": "terminal/introduction.html#your-first-command-saying-hello-to-the-terminal",
     "title": "2  Introduction to the terminal",
     "section": "2.4 Your First Command: Saying Hello to the Terminal",
-    "text": "2.4 Your First Command: Saying Hello to the Terminal\nOk, now that the terminal window is open on your computer, let’s take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.\n\n\n\n\n\n\nNote for newer Mac users\n\n\n\nWhen you launch the Terminal for the first time, you’ll probably see a prompt saying something like:\nThe default interactive shell is now zsh.\nTo update your account to use zsh, please run `chsh -s /bin/zsh`.\nDISREGARD THIS MESSAGE. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.\n\n\n\n\n\nWhen you launch Terminal for the first time, you’ll see some text like this.\n\n\nLet’s breakdown a few things from the screenshot above:\n\nComputer name: the characters before the ~ is your computer’s name (you may not have known it even had one).\nCurrent directory: The ~ character is Terminal shorthand for your “base” directory on your computer. The value shown here will update as you move around to different folders on your computer.\nUser name: The part immediatetely after the ~ is your username.\nCommand prompt: Lastly we have the $. This is the “prompt” where you type commands.\n\nYou type your commands AFTER the $ and then hit Return/Enter on your keyboard to run or execute them. We’ll practice doing just that in the next section.\n\n2.4.1 Your First Command: Saying Hello to the Terminal\nLet’s try your first real command: finding out where you are using the command pwd.\n\nIn the terminal prompt (remember, after the $), type the following command:\n\npwd\n\nPress Enter to run the command.\n\nYou should see Terminal respond with something like this:\n/Users/yourname\nor this\nC:\\Users\\yourname\nDepending on your system, the path may look a little different — and that’s OK.\nSo what just happened?\n\npwd stands for “print working directory.”\nIt simply asks: Where am I right now in the computer’s folder system?\nYour computer provides the following answer: your current folder — usually your “home” directory when you first open the Terminal.",
+    "text": "2.4 Your First Command: Saying Hello to the Terminal\nOk, now that the terminal window is open on your computer, let’s take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.\n\n\n\n\n\n\nNote for newer Mac users\n\n\n\nWhen you launch the Terminal for the first time, you’ll probably see a prompt saying something like:\nThe default interactive shell is now zsh.\nTo update your account to use zsh, please run `chsh -s /bin/zsh`.\nDISREGARD THIS MESSAGE. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.\n\n\n\n\n\nWhen you launch Terminal for the first time, you’ll see some text like this.\n\n\nLet’s breakdown a few things from the screenshot above:\n\nComputer name: the characters before the ~ is your computer’s name (you may not have known it even had one).\nCurrent directory: The ~ character is Terminal shorthand for your “base” directory on your computer. The value shown here will update as you move around to different folders on your computer.\nUser name: The part immediately after the ~ is your username.\nCommand prompt: Lastly we have the $. This is the “prompt” where you type commands. (Note: if you’re on a Mac and see a % instead of a “$”, you may not be in Bash. Fix that by going to the Change Mac shell to bash in the troubleshooting chapter)\n\nYou type your commands AFTER the $ and then hit Enter / return on your keyboard to run or execute them. We’ll practice doing just that in the next section.\n\n2.4.1 Your First Command: Saying Hello to the Terminal\nLet’s try your first real command: finding out where you are using the command pwd.\n\nIn the terminal prompt (remember, after the $), type the following command:\n\npwd\n\nPress Enter / return to run the command.\n\nYou should see Terminal respond with something like this:\n/Users/yourname\nor this\nC:\\Users\\yourname\nDepending on your system, the path may look a little different — and that’s OK.\nSo what just happened?\n\npwd stands for “print working directory.”\nIt simply asks: Where am I right now in the computer’s folder system?\nYour computer provides the following answer: your current folder — usually your “home” directory when you first open the Terminal.",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
@@ -1110,7 +1110,7 @@
     "href": "terminal/introduction.html#checkpoint",
     "title": "2  Introduction to the terminal",
     "section": "2.5 🎯 Checkpoint",
-    "text": "2.5 🎯 Checkpoint\nYou’ve made it to the end of chapter 1. Good job!\nYou’ve now:\n\nOpened the Terminal.\nTyped and run your first command.\nSeen your computer respond back.\n\nYou’re officially no longer a terminal beginner. 🙌\nA few quick tips before you move on to the next chapter:\n\nCommand Case Matters in the Terminal: pwd is not the same as PWD.\nPress Enter to run things: Every command you type needs an Enter to run.\nYou can’t break things easily: Typing pwd won’t hurt your computer.\n(In fact, almost everything we’ll do in this guide will be safe)\n\n\nNext up:\nWe’ll learn how to move around inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter.",
+    "text": "2.5 🎯 Checkpoint\nYou’ve made it to the end of chapter 1. Good job!\nYou’ve now:\n\nOpened the Terminal.\nTyped and run your first command.\nSeen your computer respond back.\n\nYou’re officially no longer a terminal beginner. 🙌\nA few quick tips before you move on to the next chapter:\n\nCommand Case Matters in the Terminal: pwd is not the same as PWD.\nPress Enter / return to run things: Every command you type needs an Enter / return to run.\nYou can’t break things easily: Typing pwd won’t hurt your computer.\n(In fact, almost everything we’ll do in this guide will be safe)\n\n\nNext up:\nWe’ll learn how to move around inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter.",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to the terminal</span>"
@@ -1218,23 +1218,23 @@
   {
     "objectID": "terminal/making-files-folders.html",
     "href": "terminal/making-files-folders.html",
-    "title": "3  Making and managing folder",
+    "title": "4  Making and managing folder",
     "section": "",
-    "text": "3.1 Creating a Folder (mkdir)\nNow that you can move around the Terminal like a pro, it’s time to create your own stuff.\nIn this chapter, we’ll learn to make new folders and files. We’ll also learn how to move or delete them.\nLet’s say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you’d do something like right click inside your folder, and click on New Folder in the menu. Then you’d need to fill out your folder name and save the folder.\nTo do this from the command line, however, we do all of these steps in a single prompt using the mkdir command.\nFor example, if you ran the following command from inside your home directory (~) (don’t do this):\nThis would create a new folder called my_new_folder inside your directory. We’ll practice doing this in the next step.",
+    "text": "4.1 Creating a Folder (mkdir)\nNow that you can move around the Terminal like a pro, it’s time to create your own stuff.\nIn this chapter, we’ll learn to make new folders and files. We’ll also learn how to move or delete them.\nLet’s say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you’d do something like right click inside your folder, and click on New Folder in the menu. Then you’d need to fill out your folder name and save the folder.\nTo do this from the command line, however, we do all of these steps in a single prompt using the mkdir command.\nFor example, if you ran the following command from inside your home directory (~) (don’t do this):\nThis would create a new folder called my_new_folder inside your directory. We’ll practice doing this in the next step.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
     "objectID": "terminal/making-files-folders.html#creating-a-folder-mkdir",
     "href": "terminal/making-files-folders.html#creating-a-folder-mkdir",
-    "title": "3  Making and managing folder",
+    "title": "4  Making and managing folder",
     "section": "",
     "text": "mkdir stands for make directory.\n\n\n\n\nmkdir my_new_folder",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
@@ -1251,199 +1251,199 @@
   {
     "objectID": "terminal/making-files-folders.html#copying-files-and-folders-cp",
     "href": "terminal/making-files-folders.html#copying-files-and-folders-cp",
-    "title": "3  Making and managing folder",
-    "section": "3.5 Copying files and folders (cp)",
-    "text": "3.5 Copying files and folders (cp)\n\ncp is shorthand for “copy”\n\nWe can also make duplicate files or folders from command line using the cp command.\nUnlike the other commands we’ve learned so far, the cp commands takes two arguments instead of just one. “Arguments” are just the pieces of information you feed the command line to tell it what to do. For example, in the cd Documents command, “Documents” was the argument telling the command line to go inside the Documents folder.\nSyntax of the cp command\n\ncp source_file_folder destination_file_folder\n\nThe cp command takes at least two arguments:\n\nSource file or folder: the file or folder you want to copy.\nDestination file or folder: the name you’d like the copy of the file or folder to be called.",
+    "title": "4  Making and managing folder",
+    "section": "4.5 Copying files and folders (cp)",
+    "text": "4.5 Copying files and folders (cp)\n\ncp is shorthand for “copy”\n\nWe can also make duplicate files or folders from command line using the cp command.\nUnlike the other commands we’ve learned so far, the cp commands takes two arguments instead of just one. “Arguments” are just the pieces of information you feed the command line to tell it what to do. For example, in the cd Documents command, “Documents” was the argument telling the command line to go inside the Documents folder.\nSyntax of the cp command\n\ncp source_file_folder destination_file_folder\n\nThe cp command takes at least two arguments:\n\nSource file or folder: the file or folder you want to copy.\nDestination file or folder: the name you’d like the copy of the file or folder to be called.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
     "objectID": "terminal/making-files-folders.html#moving-or-renaming-files-mv",
     "href": "terminal/making-files-folders.html#moving-or-renaming-files-mv",
-    "title": "3  Making and managing folder",
-    "section": "3.7 Moving or Renaming Files (mv)",
-    "text": "3.7 Moving or Renaming Files (mv)\n\nmv is shorthand for “move”\n\nMoving files or folders from command line is also easy using the mv command. The command can also by used to rename files, depending on the syntax you use.\nSyntax of the mv command\nTo move a file’s location, use the following syntax:\nmv source_file destination_folder\nIf you just want to rename a file, use the following syntax:\nmv oldname.txt newname.txt\nWe’ll practice the two different ways to use the mv command in the next exercise.",
+    "title": "4  Making and managing folder",
+    "section": "4.7 Moving or Renaming Files (mv)",
+    "text": "4.7 Moving or Renaming Files (mv)\n\nmv is shorthand for “move”\n\nMoving files or folders from command line is also easy using the mv command. The command can also by used to rename files, depending on the syntax you use.\nSyntax of the mv command\nTo move a file’s location, use the following syntax:\nmv source_file destination_folder\nIf you just want to rename a file, use the following syntax:\nmv oldname.txt newname.txt\nWe’ll practice the two different ways to use the mv command in the next exercise.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
     "objectID": "terminal/making-files-folders.html#deleting-files-and-folders-rm",
     "href": "terminal/making-files-folders.html#deleting-files-and-folders-rm",
-    "title": "3  Making and managing folder",
-    "section": "3.9 Deleting files and folders (rm)",
-    "text": "3.9 Deleting files and folders (rm)\n\nrm is shorthand for “remove”\n\nYou can also use the command line to delete files and folders on your machine using the rm command.\nThis command does require some caution because when you delete something from the terminal, it doesn’t go to the Trash — it’s just gone.\n\n\n\n\n\n\nImportant\n\n\n\nBe very careful when using the rm command. Any files you delete this way do not go to Trash, and will be unrecoverable. Make sure that you really want to delete your files or folder before proceeding. Additionally, deleting a folder deletes everything inside of that folder as well.\n\n\nSyntax of the rm command:\nDeleting a single file:\nrm name_file_to_delete\nDeleting a folder (and everything inside it):\nrm -r folder_to_delete\nWhat does that -r mean?\n\nThe -r here is called a flag. The one here stands for “recursive” — it tells rm command to delete not just the folder, but also everything that’s inside it. We’ll talk a little more about flags in the next section.",
+    "title": "4  Making and managing folder",
+    "section": "4.9 Deleting files and folders (rm)",
+    "text": "4.9 Deleting files and folders (rm)\n\nrm is shorthand for “remove”\n\nYou can also use the command line to delete files and folders on your machine using the rm command.\nThis command does require some caution because when you delete something from the terminal, it doesn’t go to the Trash — it’s just gone.\n\n\n\n\n\n\nImportant\n\n\n\nBe very careful when using the rm command. Any files you delete this way do not go to Trash, and will be unrecoverable. Make sure that you really want to delete your files or folder before proceeding. Additionally, deleting a folder deletes everything inside of that folder as well.\n\n\nSyntax of the rm command:\nDeleting a single file:\nrm name_file_to_delete\nDeleting a folder (and everything inside it):\nrm -r folder_to_delete\nWhat does that -r mean?\n\nThe -r here is called a flag. The one here stands for “recursive” — it tells rm command to delete not just the folder, but also everything that’s inside it. We’ll talk a little more about flags in the next section.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
     "objectID": "terminal/making-files-folders.html#quick-note-about-flags",
     "href": "terminal/making-files-folders.html#quick-note-about-flags",
-    "title": "3  Making and managing folder",
-    "section": "3.10 Quick Note About Flags 🏳️",
-    "text": "3.10 Quick Note About Flags 🏳️\nFlags are just another type of arguments you can add to commands to change how they behave.\n\nThey’re usually a dash plus one or two letters. (Example: -r means “recursive” for the rm command)\nEach command has its own set of flags that it understands. A flag that works with one command won’t necessarily work with another.\nYou can combine flags (like rm -rf which combines the -r flag for “recursive” and -f flag for “force delete”).\n\nYou’ll see flags often out in the wild. As you use the command line more, you’ll start to use more of these flags in your workflow to give you more control over what your commands do. For now, just know when you see something starting with a dash in the command line, it’s probably a flag giving the command a little extra information about what to do.\nOptional mini exercise:\nIf you want, you can try one out yourself now by using the -l flag along with the ls command.The flag tells the command line, “give me more information about each file in my directory”.\nRun the following command to see this flag in action:\nls -l \nTerminal will respond with detailed information about each file and folder in your directory. See the screenshot below for more information about each detail field.\n\n\n\nBreakdown of each file detail in the -l flag Terminal response",
+    "title": "4  Making and managing folder",
+    "section": "4.10 Quick Note About Flags 🏳️",
+    "text": "4.10 Quick Note About Flags 🏳️\nFlags are just another type of argument you can add to commands to change how they behave.\n\nThey’re usually a dash plus one or two letters. (Example: -r means “recursive” for the rm command)\nEach command has its own set of flags that it understands. A flag that works with one command won’t necessarily work with another.\nYou can combine flags (like rm -rf which combines the -r flag for “recursive” and -f flag for “force delete”).\n\nYou’ll see flags often out in the wild. As you use the command line more, you’ll start to use more of these flags in your workflow to give you more control over what your commands do. For now, just know when you see something starting with a dash in the command line, it’s probably a flag giving the command a little extra information about what to do.\nOptional mini exercise:\nIf you want, you can try one out yourself now by using the -l flag along with the ls command.The flag tells the command line, “give me more information about each file in my directory”.\nRun the following command to see this flag in action:\nls -l \nTerminal will respond with detailed information about each file and folder in your directory. See the screenshot below for more information about each detail field.\n\n\n\nBreakdown of each file detail in the -l flag Terminal response",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
     "objectID": "terminal/making-files-folders.html#checkpoint",
     "href": "terminal/making-files-folders.html#checkpoint",
-    "title": "3  Making and managing folder",
-    "section": "3.11 🎯 Checkpoint",
-    "text": "3.11 🎯 Checkpoint\nPhew. In this chapter you’ve learned a lot:\n\nHow to create a new folder/directory (mkdir).\nHow to create a new file (touch file_name).\nHow to copy files (cp ..).\nHow to move and rename files (mv..).\nHow flags (e.g. -r, -l) can be used to power-up commands.\n\nYou also may be catching onto the fact that we use some commands repeatedly in the command line to help us not get lost in our own workflow. The ls command, for example, is super useful for confirming actions on files and folders worked, and pwd is like a compass to figure out where you are.\n\nNext up:\nWe’ll learn some key tips and tricks to make your command line workflow more efficient.",
+    "title": "4  Making and managing folder",
+    "section": "4.11 🎯 Checkpoint",
+    "text": "4.11 🎯 Checkpoint\nPhew. In this chapter you’ve learned a lot:\n\nHow to create a new folder/directory (mkdir).\nHow to create a new file (touch file_name).\nHow to copy files (cp ..).\nHow to move and rename files (mv..).\nHow flags (e.g. -r, -l) can be used to power-up commands.\n\nYou also may be catching onto the fact that we use some commands repeatedly in the command line to help us not get lost in our own workflow. The ls command, for example, is super useful for confirming actions on files and folders worked, and pwd is like a compass to figure out where you are.\n\nNext up:\nWe’ll learn some key tips and tricks to make your command line workflow more efficient.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
     "objectID": "terminal/tips-tricks.html",
     "href": "terminal/tips-tricks.html",
-    "title": "4  Command line tips and tricks",
+    "title": "5  Command line tips and tricks",
     "section": "",
-    "text": "4.1 Command History\nIn this brief chapter, we’ll touch on a few things that should help you work quicker in the Terminal. We’ll also touch on navigating common issues you’ll probably run into.\nThe command line keeps a history of the commands you give it. Much like scrolling back up through the messages in a conversation on your phone, you can “scroll up” through the conversation you’ve had with the terminal (only with the terminal, you’ll only see the messages you sent).\nHow to view your command history:\nTo see prior commands you’ve written, just press the up arrow ↑ on your keyboard. Each press will take you to the prior command in your history.\nTo get back to an empty prompt, scroll back down using the down arrow ↓\nYou can re-run any command that pops up simply by hitting the Enter / return key on your keyboard. No need to re-type things!\nWhy this is useful\nIn programming, we repeat commands quite frequently (think about how often you re-run your notebook code in R-Studio, for example).\nHaving a command history is helpful because it:",
+    "text": "5.1 Command History\nIn this brief chapter, we’ll touch on a few things that should help you work quicker in the Terminal. We’ll also touch on navigating common issues you’ll probably run into.\nThe command line keeps a history of the commands you give it. Much like scrolling back up through the messages in a conversation on your phone, you can “scroll up” through the conversation you’ve had with the terminal (only with the terminal, you’ll only see the messages you sent).\nHow to view your command history:\nTo see prior commands you’ve written, just press the up arrow ↑ on your keyboard. Each press will take you to the prior command in your history.\nTo get back to an empty prompt, scroll back down using the down arrow ↓\nYou can re-run any command that pops up simply by hitting the Enter / return key on your keyboard. No need to re-type things!\nWhy this is useful\nIn programming, we repeat commands quite frequently (think about how often you re-run your notebook code in R-Studio, for example).\nHaving a command history is helpful because it:",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Command line tips and tricks</span>"
     ]
   },
   {
     "objectID": "terminal/tips-tricks.html#command-history",
     "href": "terminal/tips-tricks.html#command-history",
-    "title": "4  Command line tips and tricks",
+    "title": "5  Command line tips and tricks",
     "section": "",
     "text": "Saves time – You can quickly repeat or modify previous commands with the ↑ key instead of retyping them.\nReduces mistakes – Reusing known, valid commands lowers the chance of typos or syntax errors.\nAids in learning – You can review what you’ve done, which helps you remember your steps and can help with troubleshooting if something goes wrong.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Command line tips and tricks</span>"
     ]
   },
   {
     "objectID": "terminal/tips-tricks.html#canceling-a-command",
     "href": "terminal/tips-tricks.html#canceling-a-command",
-    "title": "4  Command line tips and tricks",
-    "section": "4.2 Canceling a Command",
-    "text": "4.2 Canceling a Command\nOne of the scariest things for new command line users happens when you run something you didn’t mean to. We’ve been walking through things slowly and together in this guide, but you’ll be more on your own in the real world, and we promise you will mess up at some point.\nIf you realize you made a mistake while a command is running, press:\nCtrl + C\nThis cancels the running command and brings you back to the prompt.",
+    "title": "5  Command line tips and tricks",
+    "section": "5.2 Canceling a Command",
+    "text": "5.2 Canceling a Command\nOne of the scariest things for new command line users happens when you run something you didn’t mean to. We’ve been walking through things slowly and together in this guide, but you’ll be more on your own in the real world, and we promise you will mess up at some point.\nIf you realize you made a mistake while a command is running, press:\nCtrl + C\nThis cancels the running command and brings you back to the prompt.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Command line tips and tricks</span>"
     ]
   },
   {
     "objectID": "terminal/tips-tricks.html#tab-completion",
     "href": "terminal/tips-tricks.html#tab-completion",
-    "title": "4  Command line tips and tricks",
-    "section": "4.3 Tab Completion",
-    "text": "4.3 Tab Completion\nYou read about this in chapter 2, but it’s worth mentioning again because it’s that good.\nRemember: start typing a folder or file name, press Tab, and Terminal finishes it for you if possible.\nIt saves time and typos!\nIf there’s more than one similarly-named files in your folder, you may have to type more characters to get to the one you want.",
+    "title": "5  Command line tips and tricks",
+    "section": "5.3 Tab Completion",
+    "text": "5.3 Tab Completion\nYou read about this in chapter 2, but it’s worth mentioning again because it’s that good.\nRemember: start typing a folder or file name, press Tab, and Terminal finishes it for you if possible.\nIt saves time and typos!\nIf there’s more than one similarly-named files in your folder, you may have to type more characters to get to the one you want. You can also hit Tab again to see a list of possible matches to help guide you.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Command line tips and tricks</span>"
     ]
   },
   {
     "objectID": "terminal/tips-tricks.html#checkpoint",
     "href": "terminal/tips-tricks.html#checkpoint",
-    "title": "4  Command line tips and tricks",
-    "section": "4.4 🎯 Checkpoint",
-    "text": "4.4 🎯 Checkpoint\nIn this chapter you’ve learned:\n\nHow to view your command history and use it to rerun prior commands.\nHow to cancel a command.\nHow to use tab to auto-complete file and folder names.\n\n\nNext up:\nWe’ll learn how about some common command line issues and how troubleshoot when you run into them.",
+    "title": "5  Command line tips and tricks",
+    "section": "5.4 🎯 Checkpoint",
+    "text": "5.4 🎯 Checkpoint\nIn this chapter you’ve learned:\n\nHow to view your command history and use it to rerun prior commands.\nHow to cancel a command.\nHow to use tab to auto-complete file and folder names.\n\n\nNext up:\nWe’ll learn how about some common command line issues and how troubleshoot when you run into them.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Command line tips and tricks</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Command line tips and tricks</span>"
     ]
   },
   {
     "objectID": "terminal/troubleshooting.html",
     "href": "terminal/troubleshooting.html",
-    "title": "5  Troubleshooting",
+    "title": "6  Troubleshooting",
     "section": "",
-    "text": "5.1 Common pitfalls and errors\nIn this final chapter, let’s touch quickly on navigating common issues you might run into using the terminal.\nHere’s a quick rundown of the most common problems and errors you’ll run into using the command line. Even experienced developers run into these issues, so learning what they mean will go a long way when troubleshooting.\nFor more common issues and how to fix them, see the Common errors table in the Glossary at the end of this guide.",
+    "text": "6.1 Common pitfalls and errors\nIn this final chapter, let’s touch quickly on navigating common issues you might run into using the terminal.\nHere’s a quick rundown of the most common problems and errors you’ll run into using the command line. Even experienced developers run into these issues, so learning what they mean will go a long way when troubleshooting.\nFor more common issues and how to fix them, see the Common errors table in the Glossary at the end of this guide.",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
   },
   {
     "objectID": "terminal/troubleshooting.html#common-pitfalls-and-errors",
     "href": "terminal/troubleshooting.html#common-pitfalls-and-errors",
-    "title": "5  Troubleshooting",
+    "title": "6  Troubleshooting",
     "section": "",
     "text": "Command not found? You might have a typo or the program isn’t installed.\nNo such file or directory? You’re trying to access a file/path that doesn’t exist. Check that the file exists and that you spelled it correctly.\nPermission denied?\nYou tried to do something you don’t have permission to do. Check your file/repo permissions.\nSyntax error\nYou typed a command in a way the shell doesn’t understand. Check that your syntax is correct and error-free.\nStuck in a weird app inside Terminal?\nTry pressing Ctrl + C or Ctrl + D to exit. (You may need to checkout “How to get out of Vim” below)",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
   },
   {
     "objectID": "terminal/troubleshooting.html#how-to-get-out-of-vim",
     "href": "terminal/troubleshooting.html#how-to-get-out-of-vim",
-    "title": "5  Troubleshooting",
-    "section": "5.2 How to Get Out of Vim",
-    "text": "5.2 How to Get Out of Vim\nEvery new command line user shares one panic-inducing experience at one point or another: accidentally opening Vim and not knowing how to get out of it.\nIn this section, we’ll briefly walk you through what Vim is and how to exit it so you don’t panic when this (inevitably) happens to you.\nWhat is Vim?\nVim is a text editor built into most Unix systems, including macOS and Linux. It’s used by developers to edit code and configuration files, but it works very differently from regular text editors.\nIf you accidentally open something in Vim (for example, by running git commit without a message), it might look like you’re stuck. But don’t worry — here’s how to exit safely.\nHow to Exit Vim\nIf you don’t want to save any changes (most common):\n\nPress Esc - to make sure you’re not in input mode.\nType :q! - to “quit and ignore changes”.\nHit Enter / return - to exit.\n\nIf You do want to save changes (less common):\n\nPress Esc\nType :wq (to “write and quit”).\nPress Enter / return",
+    "title": "6  Troubleshooting",
+    "section": "6.2 How to Get Out of Vim",
+    "text": "6.2 How to Get Out of Vim\nEvery new command line user shares one panic-inducing experience at one point or another: accidentally opening Vim and not knowing how to get out of it.\nIn this section, we’ll briefly walk you through what Vim is and how to exit it so you don’t panic when this (inevitably) happens to you.\nWhat is Vim?\nVim is a text editor built into most Unix systems, including macOS and Linux. It’s used by developers to edit code and configuration files, but it works very differently from regular text editors.\nIf you accidentally open something in Vim (for example, by running git commit without a message), it might look like you’re stuck. But don’t worry — here’s how to exit safely.\nHow to Exit Vim\nIf you don’t want to save any changes (most common):\n\nPress Esc - to make sure you’re not in input mode.\nType :q! - to “quit and ignore changes”.\nHit Enter / return - to exit.\n\nIf You do want to save changes (less common):\n\nPress Esc\nType :wq (to “write and quit”).\nPress Enter / return",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
   },
   {
     "objectID": "terminal/troubleshooting.html#final-words",
     "href": "terminal/troubleshooting.html#final-words",
-    "title": "5  Troubleshooting",
-    "section": "5.3 🎉 Final Words",
-    "text": "5.3 🎉 Final Words\nCongratulations! You’ve made it to the end of the Intro to Terminal guide.\nYou’ve now learned:\n\nHow to open the Terminal\nHow to move around\nHow to create and manage files and folders\nHow to read and use simple flags\nHow to fix common mistakes\n\nYou’ve built a real foundation for anything else you’ll learn later — whether that’s coding, scripting, data science, or just being more powerful with your own computer.\nRemember: the terminal is your friend.\nKeep practicing — the more you use it, the more natural it will feel.\nGood job! 🚀",
+    "title": "6  Troubleshooting",
+    "section": "6.4 🎉 Final Words",
+    "text": "6.4 🎉 Final Words\nCongratulations! You’ve made it to the end of the Intro to Terminal guide.\nYou’ve now learned:\n\nHow to open the Terminal\nHow to move around\nHow to create and manage files and folders\nHow to read and use simple flags\nHow to fix common mistakes\n\nYou’ve built a real foundation for anything else you’ll learn later — whether that’s coding, scripting, data science, or just being more powerful with your own computer.\nRemember: the terminal is your friend.\nKeep practicing — the more you use it, the more natural it will feel.\nGood job! 🚀",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Troubleshooting</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
   },
   {
     "objectID": "terminal/glossary.html",
     "href": "terminal/glossary.html",
-    "title": "6  Glossary: quick reference",
+    "title": "7  Glossary: quick reference",
     "section": "",
-    "text": "6.1 Terminology",
+    "text": "7.1 Terminology",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Glossary: quick reference</span>"
     ]
   },
   {
     "objectID": "terminal/glossary.html#terminology",
     "href": "terminal/glossary.html#terminology",
-    "title": "6  Glossary: quick reference",
+    "title": "7  Glossary: quick reference",
     "section": "",
     "text": "📓 Term\n📖 What It Means\n\n\n\n\nCommand line\nThe interface where you type and run text commands\n\n\nShell\nThe program that interprets your commands and runs them (e.g. bash, zsh)\n\n\nTerminal\nThe user interface that displays the shell and lets you interact with it. Examples: Terminal (Mac), Git Bash (Windows)\n\n\nDirectory (Folder)\nA container for files\n\n\nPath\nThe location of a file or folder\n\n\nFlag\nExtra option for a command",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Glossary: quick reference</span>"
     ]
   },
   {
     "objectID": "terminal/glossary.html#common-commands",
     "href": "terminal/glossary.html#common-commands",
-    "title": "6  Glossary: quick reference",
-    "section": "6.2 Common commands",
-    "text": "6.2 Common commands\n\n\n\n📝 Command\n️💬 Action\n\n\n\n\npwd\nShow current directory (path)\n\n\nls\nList files and folders\n\n\nls -l\nList with detailed info\n\n\ncd foldername\nChange into a folder\n\n\ncd ..\nMove up one folder\n\n\nmkdir name\nMake a new folder\n\n\ntouch name.txt\nCreate a blank file\n\n\ncp old new\nCopy a file\n\n\nmv old new\nMove or rename a file\n\n\nrm file\nDelete a file\n\n\nrm -r folder\nDelete a folder and its contents\n\n\nCtrl + C\nCancel a running command\n\n\nTab\nAutocomplete file/folder names",
+    "title": "7  Glossary: quick reference",
+    "section": "7.2 Common commands",
+    "text": "7.2 Common commands\n\n\n\n📝 Command\n️💬 Action\n\n\n\n\npwd\nShow current directory (path)\n\n\nls\nList files and folders\n\n\nls -l\nList with detailed info\n\n\ncd foldername\nChange into a folder\n\n\ncd ..\nMove up one folder\n\n\nmkdir name\nMake a new folder\n\n\ntouch name.txt\nCreate a blank file\n\n\ncp old new\nCopy a file\n\n\nmv old new\nMove or rename a file\n\n\nrm file\nDelete a file\n\n\nrm -r folder\nDelete a folder and its contents\n\n\nCtrl + C\nCancel a running command\n\n\nTab\nAutocomplete file/folder names",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Glossary: quick reference</span>"
     ]
   },
   {
     "objectID": "terminal/glossary.html#common-errors",
     "href": "terminal/glossary.html#common-errors",
-    "title": "6  Glossary: quick reference",
-    "section": "6.3 Common errors",
-    "text": "6.3 Common errors\n\n\n\n\n\n\n\n\n❌ Error\n📖 What It Means\n💡 Fix\n\n\n\n\ncommand not found\nYou typed a command the shell doesn’t recognize\nCheck for typos or whether the tool is installed\n\n\nNo such file or directory\nYou’re trying to access a file/path that doesn’t exist\nUse ls to explore and make sure the path is correct\n\n\nPermission denied\nYou tried to do something you don’t have permission for\nUse sudo (if appropriate), or check file permissions\n\n\nIs a directory\nYou tried to treat a directory like a file\nDouble-check what kind of thing you’re trying to use\n\n\nNot a directory\nYou tried to treat a file like a folder\nUse ls -l to see what’s a file vs folder\n\n\nSyntax error\nYou typed a command in a way the shell can’t parse\nReview the correct syntax, especially quotes or flags\n\n\nKilled or Terminated\nThe OS stopped a program (often for high memory/CPU usage)\nTry a smaller task or check system limits\n\n\nGetting stuck in VIM\nYou opened something in vim and can’t exit\nPress Esc, then :q!, then Enter to quit",
+    "title": "7  Glossary: quick reference",
+    "section": "7.3 Common errors",
+    "text": "7.3 Common errors\n\n\n\n\n\n\n\n\n❌ Error\n📖 What It Means\n💡 Fix\n\n\n\n\ncommand not found\nYou typed a command the shell doesn’t recognize\nCheck for typos or whether the tool is installed\n\n\nNo such file or directory\nYou’re trying to access a file/path that doesn’t exist\nUse ls to explore and make sure the path is correct\n\n\nPermission denied\nYou tried to do something you don’t have permission for\nUse sudo (if appropriate), or check file permissions\n\n\nIs a directory\nYou tried to treat a directory like a file\nDouble-check what kind of thing you’re trying to use\n\n\nNot a directory\nYou tried to treat a file like a folder\nUse ls -l to see what’s a file vs folder\n\n\nSyntax error\nYou typed a command in a way the shell can’t parse\nReview the correct syntax, especially quotes or flags\n\n\nKilled or Terminated\nThe OS stopped a program (often for high memory/CPU usage)\nTry a smaller task or check system limits\n\n\nGetting stuck in VIM\nYou opened something in vim and can’t exit\nPress Esc, then :q!, then Enter to quit",
     "crumbs": [
       "Tips, tricks, troubleshooting",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Glossary: quick reference</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Glossary: quick reference</span>"
     ]
   },
   {
@@ -1471,34 +1471,34 @@
   {
     "objectID": "terminal/making-files-folders.html#mini-excercise-make-a-directory",
     "href": "terminal/making-files-folders.html#mini-excercise-make-a-directory",
-    "title": "3  Making and managing folder",
-    "section": "3.2 📝 Mini excercise: make a directory",
-    "text": "3.2 📝 Mini excercise: make a directory\nNow, let’s try the mkdir command out on our own by making a new directory inside our own home directory (~).\nDo the following:\n\nCheck you’re in your home directory by running the cd command. (If you aren’t, use the cd shortcut to get there.)\nNow, in your terminal, type and run:\n\nmkdir terminal_practice\n\nNow, run the ls command to make sure it worked. You should see your new directory listed in the terminal response.",
+    "title": "4  Making and managing folder",
+    "section": "4.2 📝 Mini excercise: make a directory",
+    "text": "4.2 📝 Mini excercise: make a directory\nNow, let’s try the mkdir command out on our own by making a new directory inside our own home directory (~).\nDo the following:\n\nCheck you’re in your home directory by running the cd command. (If you aren’t, use the cd shortcut to get there.)\nNow, in your terminal, type and run:\n\nmkdir terminal_practice\n\nNow, run the ls command to make sure it worked. You should see your new directory listed in the terminal response.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
     "objectID": "terminal/making-files-folders.html#creating-a-new-file-touch",
     "href": "terminal/making-files-folders.html#creating-a-new-file-touch",
-    "title": "3  Making and managing folder",
-    "section": "3.3 Creating a new file (touch)",
-    "text": "3.3 Creating a new file (touch)\n\nUnlike other commands we’ve learned, touch isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️\n\nLike folders, we can also make new files from the command line using the touch command.\nFor example, if you ran the following command (don’t do this):\ntouch example.txt\nThis creates a new, empty file called example.txt.\nNote for Windows user\nYou may need to use the command:\nbash echo.&gt; emample.txt\nor\nbash New-Item example.txt\nDepending whether you’re using Powershell.",
+    "title": "4  Making and managing folder",
+    "section": "4.3 Creating a new file (touch)",
+    "text": "4.3 Creating a new file (touch)\n\nUnlike other commands we’ve learned, touch isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️\n\nLike folders, we can also make new files from the command line using the touch command.\nFor example, if you ran the following command (don’t do this):\ntouch example.txt\nThis creates a new, empty file called example.txt.\nNote for Windows user\nYou may need to use the command:\nbash echo.&gt; emample.txt\nor\nbash New-Item example.txt\nDepending whether you’re using Powershell.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
     "objectID": "terminal/making-files-folders.html#mini-excercise-make-a-file",
     "href": "terminal/making-files-folders.html#mini-excercise-make-a-file",
-    "title": "3  Making and managing folder",
-    "section": "3.4 📝 Mini excercise: make a file",
-    "text": "3.4 📝 Mini excercise: make a file\nNow, try let’s try touch command on our own by making a new file inside our new terminal_practice folder we created in the last exercise.\nDo the following:\n\nFirst, move into your new folder by running the command:\n\ncd terminal_practice\n\nNow, make a new file inside the folder by running:\n\ntouch terminal-file.txt\n\nCheck that your new file is there by running ls command to list the files in your folder.\n\nYou should see a single file listed in the terminal response called terminal-file.txt.\nGood job! You just made your first file and folder completely using the command line.",
+    "title": "4  Making and managing folder",
+    "section": "4.4 📝 Mini excercise: make a file",
+    "text": "4.4 📝 Mini excercise: make a file\nNow, try let’s try the touch command on our own by making a new file inside our new terminal_practice folder we created in the last exercise.\nDo the following:\n\nFirst, move into your new folder by running the command:\n\ncd terminal_practice\n\nNow, make a new file inside the folder by running:\n\ntouch terminal-file.txt\n\nCheck that your new file is there by running ls command to list the files in your folder.\n\nYou should see a single file listed in the terminal response called terminal-file.txt.\nGood job! You just made your first file and folder completely using the command line.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
@@ -1515,23 +1515,23 @@
   {
     "objectID": "terminal/making-files-folders.html#mini-excercise-copy-a-file",
     "href": "terminal/making-files-folders.html#mini-excercise-copy-a-file",
-    "title": "3  Making and managing folder",
-    "section": "3.6 📝 Mini excercise: copy a file",
-    "text": "3.6 📝 Mini excercise: copy a file\nNow, try let’s try out the cp command on our own by making a copy of notes file you made inside your terminal_practice in the last exercise.\nDo the following to copy your notes file:\n\nRun the following from inside your terminal_practice folder:\n\ncp notes.txt copy_of_notes.txt\n\nRun the ls command to see the files inside your folder.\n\nYou should now you have two files: the original (notes.txt) and the new copy (copy_of_notes.txt).\nAs we said before, the cp command can also copy whole directories. However, it’s a little more nuanced. If you’d like to learn more about copying folders, please see appendix [TK]",
+    "title": "4  Making and managing folder",
+    "section": "4.6 📝 Mini excercise: copy a file",
+    "text": "4.6 📝 Mini excercise: copy a file\nNow, try let’s try out the cp command on our own by making a copy of notes file you made inside your terminal_practice in the last exercise.\nDo the following to copy your notes file:\n\nRun the following from inside your terminal_practice folder:\n\ncp notes.txt copy_of_notes.txt\n\nRun the ls command to see the files inside your folder.\n\nYou should now you have two files: the original (notes.txt) and the new copy (copy_of_notes.txt).\nAs we said before, the cp command can also copy whole directories. However, it’s a little more nuanced. If you’d like to learn more about copying folders, please see appendix [TK]",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
     "objectID": "terminal/making-files-folders.html#mini-exercise-move-and-rename-a-file",
     "href": "terminal/making-files-folders.html#mini-exercise-move-and-rename-a-file",
-    "title": "3  Making and managing folder",
-    "section": "3.8 📝 Mini exercise: move and rename a file",
-    "text": "3.8 📝 Mini exercise: move and rename a file\nIn this exercise we’ll practice both renaming and moving files using the copy of your notes file you made in the previous exercise.\nExercise part 1: move your notes copy file\n\nFirst, make a new directory by running the following command from inside your terminal_practice directory:\n\nmkdir my_new_folder\n\nNow, peek at your files and folders by running the ls inside your terminal_practice folder. Make sure the new folder is there.\nNext, we’ll move the copy of your notes files into your new sub-folder by running:\n\nmv copy_of_notes.txt my_new_folder/\n\nNow, run the ls command again to look at the files inside your terminal_practice folder. You should still see a new folder called my_new_folder, but you should not see the copy of your notes file.\n\nNext, we’ll locate the copy of our notes file:\n\nRun the following command to move into your new folder:\n\ncd my_new_folder\n\nNow run ls to peek at the files. You should see your copy of the notes file listed.\n\nExercise part 2: rename a file\nOk now that we’ve moved and located our copy of our notes file, let’s rename it something nicer.\n\nFrom inside your new folder, run the following command to rename your notes copy:\n\nmv copy_of_notes.txt notes_new.txt\n\nRun the ls to look at your files. You should see the copy of your notes files, but now with a new, cleaner name.\n\nGreat job! You’re now well on your way to managing files and folders directly from the command line.",
+    "title": "4  Making and managing folder",
+    "section": "4.8 📝 Mini exercise: move and rename a file",
+    "text": "4.8 📝 Mini exercise: move and rename a file\nIn this exercise we’ll practice both renaming and moving files using the copy of your notes file you made in the previous exercise.\nExercise part 1: move your notes copy file\n\nFirst, make a new directory by running the following command from inside your terminal_practice directory:\n\nmkdir my_new_folder\n\nNow, peek at your files and folders by running the ls inside your terminal_practice folder. Make sure the new folder is there.\nNext, we’ll move the copy of your notes files into your new sub-folder by running:\n\nmv copy_of_notes.txt my_new_folder/\n\nNow, run the ls command again to look at the files inside your terminal_practice folder. You should still see a new folder called my_new_folder, but you should not see the copy of your notes file.\n\nNext, we’ll locate the copy of our notes file:\n\nRun the following command to move into your new folder:\n\ncd my_new_folder\n\nNow run ls to peek at the files. You should see your copy of the notes file listed.\n\nExercise part 2: rename a file\nOk now that we’ve moved and located our copy of our notes file, let’s rename it something nicer.\n\nFrom inside your new folder, run the following command to rename your notes copy:\n\nmv copy_of_notes.txt notes_new.txt\n\nRun the ls to look at your files. You should see the copy of your notes files, but now with a new, cleaner name.\n\nGreat job! You’re now well on your way to managing files and folders directly from the command line.",
     "crumbs": [
       "Terminal basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Making and managing folder</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Making and managing folder</span>"
     ]
   },
   {
@@ -1840,6 +1840,59 @@
     "crumbs": [
       "Advanced: collaborating with others",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Pull requests</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/welcome.html#conventions-and-styles-in-this-book",
+    "href": "terminal/welcome.html#conventions-and-styles-in-this-book",
+    "title": "1  Welcome",
+    "section": "Conventions and styles in this book",
+    "text": "Conventions and styles in this book\nWe hold the deep belief that “all ships rise with the tide” when members of the data journalism community learn together, and this book seeks to add to that mission. We’ve written this textbook in the first-person plural to foster a sense of collaboration and shared learning between the reader and the authors. By using pronouns like “we” and “our,” our guide invites students into a learning journey that feels supportive and inclusive, rather than distant or instructional. It reflects the idea that learning to code is not a solitary task, but a process that many people engage in together. Our aim for this guide is to help beginners feel less intimidated, encouraging them to see mistakes and discoveries as part of a shared experience, not personal failures.\nWe will try to be consistent in the way we write documentation and lessons, but we are human and sometimes we break our own rules. In general, keep the following in mind:\n\nThings to do\nThings to DO are in ordered lists:\n\nDo this thing.\nThen do this thing.\n\nExplanations are usually in text, like this very paragraph.\nSometimes details will be explained in lists:\n\nThis is the first thing I want you to know.\nThis is the second. You don’t have to DO these things, just know about them.\n\n\n\nCode blocks\nThis book often runs the code that is shown, so you’ll see the code and the result of that code below it.\n\n1 + 1\n\n[1] 2\n\n\n\n1.0.0.1 Copying code blocks\nWhen you see code in the instructions, you can roll your cursor over the right-corner and click on the copy icon to copy the code clock content to your clipboard.\n\nYou can then paste the code inside your coding program chunk.\nThat said, typing code yourself has many, many benefits. You learn better when you type yourself, make mistakes and have to fix them. We encourage you to always type short code snippets. Leave the copying to long ones.\n\n\n1.0.0.2 Hidden code\nSometimes we want to include code in the book but not display it so you can try the to write the code yourself first. When we do this, it will look like this:\n\n\nClick here to show the code\n1 + 1\n\n\n[1] 2\n\n\nIf you click on the triangle or the words that follow, you’ll reveal the code. Click again to hide it.\n\n\n1.0.0.3 Annotated code\nSometimes when we are explaining code it is helpful to match lines of code to the explanation about them, which we do through annotated code.\n\n1mtcars |&gt;\n2  head()\n\n\n1\n\nFirst we take the Motor Trend Car Road Tests data set AND THEN …\n\n2\n\nWe pipe into the head() command, which gives us the “top” of the data.\n\n\n\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nWhen there are annotations like this you have to be careful if you are copying code from the book. Either copy it one line at a time or use the copy icon noted above.\n\n\n1.0.0.4 Fenced code\nSometimes we need to show code chunk options that are added, like when explaining how to name chunks. In those cases, you may see the code chunk with all the tick marks, etc. like this:\n\n```{r block-named}\n1 + 1\n```\n\n[1] 2\n\n\nor\n\n```{r}\n#| label: block-named-yaml\n\n1 + 1\n```\n\n[1] 2\n\n\nYou can still copy/paste these blocks, but you’ll get the entire code block, not just the contents.\n\n\n\nNotes, some important\nWe will use information callouts to set off a less important aside:\n\n\n\n\n\n\nMarkdown was developed by JOHN GRUBER, as outlined on his Daring Fireball blog.\n\n\n\nBut sometimes those asides are important. We usually indicate that by using:\n\n\n\n\n\n\nImportant\n\n\n\nYou really should learn how to use Markdown as you will use it the whole semester, and hopefully for the rest of your life.\n\n\nOr we may use a caution callout:\n\n\n\n\n\n\nCaution\n\n\n\nNot learning Markdown may result in you earning less than stellar grades.\n\n\nTime to enter the Matrix, Neo.\n\n\n\nFun fact: the original design for the green “digital rain” animation used in the Matrix was based on scans of the creator’s wife’s Japanese cookbook.\n\n\n\nNext up:\nWe’ll learn how to move around inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "how-to-use.html",
+    "href": "how-to-use.html",
+    "title": "How to use this book",
+    "section": "",
+    "text": "Conventions and styles in this book\nWe hold the deep belief that “all ships rise with the tide” when members of the data journalism community learn together, and this book seeks to add to that mission. We’ve written this textbook in the first-person plural to foster a sense of collaboration and shared learning between the reader and the authors. By using pronouns like “we” and “our,” our guide invites students into a learning journey that feels supportive and inclusive, rather than distant or instructional. It reflects the idea that learning to code is not a solitary task, but a process that many people engage in together. Our aim for this guide is to help beginners feel less intimidated, encouraging them to see mistakes and discoveries as part of a shared experience, not personal failures.\nWe will try to be consistent in the way we write documentation and lessons, but we are human and sometimes we break our own rules. In general, keep the following in mind:",
+    "crumbs": [
+      "How to use this book"
+    ]
+  },
+  {
+    "objectID": "how-to-use.html#conventions-and-styles-in-this-book",
+    "href": "how-to-use.html#conventions-and-styles-in-this-book",
+    "title": "How to use this book",
+    "section": "",
+    "text": "Things to do\nThings to DO are in ordered lists:\n\nDo this thing.\nThen do this thing.\n\n\n\nThings to know\nThings that need EXPLANATIONS are usually in text, like this very paragraph.\nSometimes details will be explained in lists:\n\nThis is the first thing I want you to know.\nThis is the second. You don’t have to DO these things, just know about them.\n\n\n\nCode blocks\nThis book often runs the code that is shown, so you’ll see the code and the result of that code below it.\n\n1 + 1\n\n[1] 2\n\n\n\nCopying code blocks\nWhen you see code in the instructions, you can roll your cursor over the right-corner and click on the copy icon to copy the code clock content to your clipboard.\n\nYou can then paste the code inside your coding program chunk.\nThat said, typing code yourself has many, many benefits. You learn better when you type yourself, make mistakes and have to fix them. We encourage you to always type short code snippets. Leave the copying to long ones.\n\n\nHidden code\nSometimes we want to include code in the book but not display it so you can try the to write the code yourself first. When we do this, it will look like this:\n\n\nClick here to show the code\n1 + 1\n\n\n[1] 2\n\n\nIf you click on the triangle or the words that follow, you’ll reveal the code. Click again to hide it.\n\n\nAnnotated code\nSometimes when we are explaining code it is helpful to match lines of code to the explanation about them, which we do through annotated code.\n\n1mtcars |&gt;\n2  head()\n\n\n1\n\nFirst we take the Motor Trend Car Road Tests data set AND THEN …\n\n2\n\nWe pipe into the head() command, which gives us the “top” of the data.\n\n\n\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nWhen there are annotations like this you have to be careful if you are copying code from the book. Either copy it one line at a time or use the copy icon noted above.\n\n\nFenced code\nSometimes we need to show code chunk options that are added, like when explaining how to name chunks. In those cases, you may see the code chunk with all the tick marks, etc. like this:\n\n```{r block-named}\n1 + 1\n```\n\n[1] 2\n\n\nor\n\n```{r}\n#| label: block-named-yaml\n\n1 + 1\n```\n\n[1] 2\n\n\nYou can still copy/paste these blocks, but you’ll get the entire code block, not just the contents.\n\n\n\nNotes, some important\nWe will use information callouts to set off a less important aside:\n\n\n\n\n\n\nMarkdown was developed by JOHN GRUBER, as outlined on his Daring Fireball blog.\n\n\n\nBut sometimes those asides are important. We usually indicate that by using:\n\n\n\n\n\n\nImportant\n\n\n\nYou really should learn how to use Markdown as you will use it the whole semester, and hopefully for the rest of your life.\n\n\nOr we may use a caution callout:\n\n\n\n\n\n\nCaution\n\n\n\nNot learning Markdown may result in you earning less than stellar grades.",
+    "crumbs": [
+      "How to use this book"
+    ]
+  },
+  {
+    "objectID": "terminal/troubleshooting.html#change-mac-shell-to-bash",
+    "href": "terminal/troubleshooting.html#change-mac-shell-to-bash",
+    "title": "6  Troubleshooting",
+    "section": "6.3 Change Mac shell to bash",
+    "text": "6.3 Change Mac shell to bash\nMac Catalina changes the default shell program from Bash to zsh. While zsh is a great shell, we are using Bash in this class for consistency.\n\nOpen a Terminal\nCopy or Type and run this command:\nchsh -s /bin/bash\nYou will be asked to enter your computer password. YOU WON’T SEE KEYSTROKES AS YOU TYPE in your password. Just type it in anyway and hit Return. If you flub the password, you’ll have to enter the above command again.\nIf you don’t get an error, close your terminal and reopen it and it should say “bash” at the top.\n\nAlternative method:\nIf for some reason that doesn’t work, there is this way, too:\n\nChoose Apple menu  &gt; System Settings, then click Users & Groups.\nClick the lock, then enter your account name and password.\nControl-click your user name in the list of users on the left, then choose Advanced Options.\nChoose a shell from the ”Login shell” menu, then click OK to save the changes.\n\n\n\n\nDefault to bash\n\n\n\nClick OK and close the System Preferences window.\nClose any Terminal windows you have open and restart them.",
+    "crumbs": [
+      "Tips, tricks, troubleshooting",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting</span>"
+    ]
+  },
+  {
+    "objectID": "terminal/troubleshooting.html#alternative-method",
+    "href": "terminal/troubleshooting.html#alternative-method",
+    "title": "6  Troubleshooting",
+    "section": "6.4 Alternative method",
+    "text": "6.4 Alternative method\nIf for some reason that doesn’t work, there is this way, too:\n\nChoose Apple menu  &gt; System Settings, then click Users & Groups.\nClick the lock, then enter your account name and password.\nControl-click your user name in the list of users on the left, then choose Advanced Options.\nChoose a shell from the ”Login shell” menu, then click OK to save the changes.\n\n\n\n\nDefault to bash\n\n\n\nClick OK and close the System Preferences window.\nClose any Terminal windows you have open and restart them.",
+    "crumbs": [
+      "Tips, tricks, troubleshooting",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
   }
 ]

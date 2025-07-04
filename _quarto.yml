@@ -9,6 +9,7 @@ book:
         
   chapters:
     - index.qmd
+    - how-to-use.qmd
     - text: "---"  
     - part: "Intro to Terminal"
     - text: "---"

@@ -70,7 +70,7 @@ Depending whether you're using Powershell.
 
 ## 📝 Mini excercise: make a file
 
-Now, try let's try `touch` command on our own by making a new file inside our new `terminal_practice` folder we created in the last exercise.
+Now, try let's try the `touch` command on our own by making a new file inside our new `terminal_practice` folder we created in the last exercise.
 
 Do the following:
 
@@ -80,15 +80,15 @@ Do the following:
 cd terminal_practice
 ```
 
-2.  Now, make a new file inside the folder by running:
+2.  Now, make a new notes file inside the folder by running:
 
 ``` bash
-touch terminal-file.txt
+touch notes.txt
 ```
 
 3.  Check that your new file is there by running `ls` command to list the files in your folder.
 
-You should see a single file listed in the terminal response called `terminal-file.txt`.
+You should see a single file listed in the terminal response called `notes.txt`.
 
 Good job! You just made your first file and folder completely using the command line.
 
@@ -106,8 +106,8 @@ Unlike the other commands we've learned so far, the `cp` commands takes two **ar
 
 The `cp` command takes at least two arguments:
 
-1.  **Source file or folder:** the file or folder you want to copy.
-2.  **Destination file or folder:** the name you'd like the copy of the file or folder to be called.
+-   **Source file or folder:** the file or folder you want to copy.
+-   **Destination file or folder:** the name you'd like the copy of the file or folder to be called.
 
 ## 📝 Mini excercise: copy a file
 
@@ -219,7 +219,7 @@ Deleting a folder (and *everything inside it)*:
 
 ## Quick Note About Flags 🏳️
 
-**Flags** are just another type of **arguments** you can add to commands to change how they behave.
+**Flags** are just another type of **argument** you can add to commands to change how they behave.
 
 -   They're usually a **dash** plus **one or two letters**. (Example: `-r` means "recursive" for the `rm` command)
 

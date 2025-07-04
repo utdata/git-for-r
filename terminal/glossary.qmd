@@ -43,4 +43,4 @@ title: "Glossary: quick reference"
 | `Not a directory`             | You tried to treat a file like a folder                         | Use `ls -l` to see what's a file vs folder                |
 | `Syntax error`                 | You typed a command in a way the shell can't parse              | Review the correct syntax, especially quotes or flags     |
 | `Killed` or `Terminated`       | The OS stopped a program (often for high memory/CPU usage)      | Try a smaller task or check system limits                 |
-| Getting stuck in VIM           | You opened something in `vim` and can't exit                    | Press `Esc`, then `:q!`, then `Enter` to quit             |
+| Getting stuck in VIM           | You opened something in `vim` and can't exit                    | Press `Esc`, then `:q!`, then `Enter` / `return` to quit             |

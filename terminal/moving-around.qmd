@@ -28,7 +28,7 @@ To ask terminal what's inside a directory:
 ls
 ```
 
-2.  press `Enter` to run the command.
+2.  press `Enter` / `return` to run the command.
 
 Terminal will *respond* to your command with a list of files and folders like this:
 
@@ -65,7 +65,7 @@ Suppose you ran your `ls` command and see a folder called `Documents`. If you wa
 cd Documents
 ```
 
-2.  press `Enter/Return` to run.
+2.  press `Enter` / `return` to run.
 
 Now you’re inside the `Documents` directory!
 
@@ -77,9 +77,9 @@ Now let's try running the `ls` command again:
 ls
 ```
 
-2.  Hit `Enter/Return` to run.
+2.  Hit `Enter` / `return` to run.
 
-You should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your `Documents` folder.
+You should see a different list of files and/or folder names than you did when you ran the same command inside the home directory — now showing the contents of your `Documents` folder.
 
 Nice job — you just moved between directories!
 
@@ -199,7 +199,7 @@ If there’s a `Documents` folder, terminal will fill in the rest automatically!
 
 Huge time saver.
 
-Remember, you'll still need to hit `Enter`/`Return` to run the command and move into the Documents folder.
+Remember, you'll still need to hit `Enter` / `return` to run the command and move into the Documents folder.
 
 ## 🎯 Checkpoint
 
