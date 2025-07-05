@@ -25,11 +25,8 @@ But if two people made edits to the *same part* of a file (like the same sentenc
 Think of it like this:
 
 -   You're merging two Word documents together.
-
 -   One version says "The sky is blue."
-
 -   The other version says "The sky is purple."
-
 -   Git says: “You can’t have both. Which one do you want?”
 
 In Git world, this is a **merge conflict**, and Git needs your help to resolve it.
@@ -42,7 +39,7 @@ When Git encounters a merge conflict, two things will happen:
 
     > *Auto-merging filename.qmd CONFLICT (content): Merge conflict in analysis.qmd Automatic merge failed; fix conflicts and then commit the result.*
 
-2.  In the **file with the conflict**, Git will mark the conflicted lines like this:
+1.  In the **file with the conflict**, Git will mark the conflicted lines like this:
 
     `<<<<<<< HEAD This is your version. ======= This is your teammate’s version. >>>>>>> abc123`
 
@@ -67,8 +64,8 @@ This message tells you that the issue is in the file `analysis.qmd`. This is whe
 **Step 2: Open the Conflicted File**
 
 1.  Open `analysis.qmd` in RStudio or your code editor.
-2.  Find the conflict by looking for the text `<<<<<<< HEAD`. You can use the find feature (`CMD`+`F`) to search in RStudio if needed
-3.  You’ll see something like: `<<<<<<< HEAD The sky is blue. ======= The sky is purple. >>>>>>> origin/main`
+1.  Find the conflict by looking for the text `<<<<<<< HEAD`. You can use the find feature (`CMD`+`F`) to search in RStudio if needed
+1.  You’ll see something like: `<<<<<<< HEAD The sky is blue. ======= The sky is purple. >>>>>>> origin/main`
 
 Here's what this means:
 
@@ -81,7 +78,6 @@ Here's what this means:
 In other words:
 
 -   Anything between `<<<<<<< HEAD` and the `=======` separator are **your** current changes.
-
 -   Anything between the `=======` and `>>>>>>> origin/main` is what's on the **Github version**.
 
 **Step 3: Choose What to Keep**
@@ -91,9 +87,7 @@ Now it's time to decide what version is correct.
 You could:
 
 -   Keep one
-
 -   Combine them
-
 -   Rewrite it entirely
 
 Just make sure to delete the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) when you’ve decided what you'd like to do.
@@ -110,13 +104,13 @@ For our `analysis.qmd` conflict, for example, we'd do the following:
     git add analysis.qmd
     ```
 
-2.  **Commit** our changes, noting the merge conflict in the commit message:
+1.  **Commit** our changes, noting the merge conflict in the commit message:
 
     ``` bash
     git commit -m "Resolve merge conflict in analysis.qmd"
     ```
 
-3.  **Push** the change to Github, so our team can see the resolution:
+1.  **Push** the change to Github, so our team can see the resolution:
 
     ``` bash
     git push
@@ -129,9 +123,12 @@ For our `analysis.qmd` conflict, for example, we'd do the following:
 ## Tips for Smooth Collaboration
 
 -   **Communicate!** Decide who is editing what and when.
-
 -   Always `git pull` before you start working.
-
 -   Commit and push **frequently** — don’t wait until the end of the day.
-
 -   Avoid working on the same file at the same time.
+
+------------------------------------------------------------------------
+
+**Next up**
+
+You'll learn how to use **feature branches** to make collaborations smoother.

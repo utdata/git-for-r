@@ -1,5 +1,5 @@
 ---
-title: "Glossary: quick reference"
+title: "Quick reference"
 ---
 
 ## Terminology

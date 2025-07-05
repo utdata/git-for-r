@@ -16,6 +16,3 @@ title: "Quick reference"
 | `git branch`                        | Show which branch you're on                 | Check current branch                 |
 | `git checkout branch-name`          | Move to another branch                      | Switch branches                      |
 | `git checkout -b new-branch-name`   | Make a new branch and switch to it          | Create and switch to a new branch    |
-
-
-## Terminology

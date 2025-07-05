@@ -44,7 +44,7 @@ This command did two things:
 
 1.  `checkout`: Tells Git you want to switch to another branch.
 
-2.  `-b plot-experiment`: the `-b` flag tells Git that you'll be creating a new branch called `plot-experiment`. Without the flag, Git would try to switch to a branch that already existed.
+1.  `-b plot-experiment`: the `-b` flag tells Git that you'll be creating a new branch called `plot-experiment`. Without the flag, Git would try to switch to a branch that already existed.
 
 Now let's confirm that you're on the new branch.
 
@@ -72,8 +72,7 @@ Let's try adding some new files to test this out.
 In RStudio, do the following:
 
 1.  Make a new quarto file called `01-plot.qmd`
-
-2.  Inside the file, make a **new code block cell** and add the following code:
+1.  Inside the file, make a **new code block cell** and add the following code:
 
     ``` bash
     library(tidyverse)
@@ -82,16 +81,15 @@ In RStudio, do the following:
         geom_point(size=3)
     ```
 
-3.  Run the cell to generate a simple ggplot() scatterplot.
-
-4.  Save the file.
+1.  Run the cell to generate a simple ggplot() scatterplot.
+1.  Save the file.
 
 Now, we'll add the new plot file to Git by completing the normal Git workflow steps:
 
 1.  Run `git status` to see what's changed.
-2.  Type and run `git add 01-plot.qmd` to tell Git to start tracking your new file.
-3.  Run `git status` again to make sure your new file showing under *"changes to be committed".*
-4.  Run `git commit -m "Add experimental plot"` to take a snapshot of your changes.
+1.  Type and run `git add 01-plot.qmd` to tell Git to start tracking your new file.
+1.  Run `git status` again to make sure your new file showing under *"changes to be committed".*
+1.  Run `git commit -m "Add experimental plot"` to take a snapshot of your changes.
 
 This process is exactly the same as it has been for our other updates. However, this time you’ve saved the snapshot of your file **only** to the `plot-experiment` branch, not to `main`.
 
@@ -110,7 +108,7 @@ git push -u origin branch-name
 This command does two things:
 
 1.  **Creates** the new branch on the GitHub project.
-2.  **Links** your local branch to it.
+1.  **Links** your local branch to it.
 
 So if you wanted to add your new `plot-experiment` branch, for example, you'd type and run:
 
@@ -140,7 +138,7 @@ To do so, follow the steps below.
     git checkout main
     ```
 
-2.  Run `git branch` again. The asterisk should show next to `main` again.
+1.  Run `git branch` again. The asterisk should show next to `main` again.
 
 Ok, now that we're on a `main` branch, we want to bring in the changes from `plot-experiment`.
 
@@ -167,7 +165,7 @@ If everything goes smoothly, you’ll see a message like:
 
 In your R Studio file pane, you should now see the `01-plot.qmd` file listed (you may need to refresh).
 
-------------------------------------------------------------------------
+---
 
 **Next up**
 

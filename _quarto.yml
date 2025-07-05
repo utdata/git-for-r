@@ -21,14 +21,13 @@ book:
       chapters:
       - terminal/moving-around.qmd
       - terminal/making-files-folders.qmd
-    - part: "Tips, tricks, troubleshooting"
+    - part: "Tips & tricks"
       chapters:
       - terminal/tips-tricks.qmd
-      - terminal/troubleshooting.qmd
-      - terminal/glossary.qmd
     - part: "Appendices"
       chapters:
-      - appendices/a-macos-shell.qmd
+      - terminal/troubleshooting.qmd
+      - terminal/quick-reference.qmd
     - text: "---"
     - part: "Intro to Git"
     - text: "---"
@@ -51,8 +50,8 @@ book:
       - intro-to-git/pull-requests.qmd
     - part: "Appendices"
       chapters:
-      - intro-to-git/quick-reference.qmd
       - intro-to-git/troubleshooting.qmd
+      - intro-to-git/quick-reference.qmd
 
 format:
   html:

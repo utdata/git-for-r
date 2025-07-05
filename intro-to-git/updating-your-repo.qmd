@@ -7,9 +7,7 @@ execute:
 > 🎯 Goal: By the end of this chapter, you’ll know how to:
 >
 > -   Make a meaningful change to your project.
->
 > -   Stage and commit that change using Git,
->
 > -   Push that change to GitHub to save your work.
 
 You’ll also practice writing good commit messages and checking your work.
@@ -23,14 +21,10 @@ Now that we have our **local** repository setup and connected to our **remote** 
 The basic git workflow goes like this:
 
 1.  You make changes to your local repository files.
-
-2.  You take a snapshot of those changes by **committing** them on your local repo.
-
-3.  You **push** those committed changes to Github to track.
-
-4.  Before making more changes, you **pull** down the most recent changes from Github.
-
-5.  Rinse and repeat.
+1.  You take a snapshot of those changes by **committing** them on your local repo.
+1.  You **push** those committed changes to Github to track.
+1.  Before making more changes, you **pull** down the most recent changes from Github.
+1.  Rinse and repeat.
 
 Some additional steps may be added if you begin using more advanced features in Git later on -- especially when working with a team -- but the basic steps outlined above will still apply even when working with more complicated workflows like feature branches and pull requests.
 
@@ -41,27 +35,26 @@ We'll practice this workflow in the sections below.
 To see this process in action, let's make a couple changes to our project.
 
 1.  Open the Quarto file you made in Chapter 1 (e.g., `01-index.qmd`)
+1.  Replace the auto-generated text and code blocks in the file with the following (feel free to copy/paste):
 
-2.  Replace the auto-generated text and code blocks in the file with the following (feel free to copy/paste):
+    ``` {.bash include="false"}
+    ---
+    title: "Intro to Git"
+    format: html
+    ---
+    
+    # Summary
+    
+    Here is a summary of the `mtcars` dataset.
+    ```
 
-``` {.bash include="false"}
----
-title: "Intro to Git"
-format: html
----
-
-# Summary
-
-Here is a summary of the `mtcars` dataset.
-```
-
-3.  Under the summary header and description, add a **new code block** with the following:
+1.  Under the summary header and description, add a **new code block** with the following:
 
     ``` bash
     summary(mtcars)
     ```
 
-4.  **Save** the file.
+1.  **Save** the file.
 
 Now that we've made a change to our files, let's check in with Git:
 
@@ -73,20 +66,20 @@ Now that we've made a change to our files, let's check in with Git:
 
 The Terminal should respond with something like this:
 
-``` bash
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   01-index.qmd
-```
+  ``` bash
+  On branch main
+  Your branch is up to date with 'origin/main'.
+  
+  Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+          modified:   01-index.qmd
+  ```
 
 Let's break this down:
 
 -   We see the label `modified:` next to our filename, which tells us that Git *sees* that something has changed.
--   But, the file is under the `Changes not staged for commit:` section and in [red]{.text-red} font, which tells us that Git hasn’t *staged* it yet (so it won’t be saved in the next commit).
+-   But, the file is under the `Changes not staged for commit:` section and in **[red]{.text-red}** font, which tells us that Git hasn’t *staged* it yet (so it won’t be saved in the next commit).
 
 ## Stage changes (`git add...`)
 
@@ -104,7 +97,7 @@ To stage only your index file:
     git add 01-index.qmd
     ```
 
-2.  Check your Git status again by running:
+1.  Check your Git status again by running:
 
     ``` bash
     git status
@@ -169,11 +162,8 @@ Since you already connected your Quarto project to Github and connected your bra
 Before we move on, here's a few key best practices to keep in mind as you're getting used to working in Git:
 
 -   **Commit early, commit often:** Save your work frequently in small, logical chunks. This makes changes easier to track, understand, and roll back.
-
 -   **Stage changes selectively:** Use `git add <filename>` (instead of `git add .`) when you want more control over what goes into each commit. Being surgical helps keep things clean.
-
 -   **Write clear commit messages:** Use concise, meaningful messages that explain why the change was made. (e.g., "Fix typo in introduction", not just "update")
-
 -   **Check status regularly**: Run `git status` often to see what’s changed and what’s staged.
 
 ## 🎯 Checkpoint
@@ -181,18 +171,15 @@ Before we move on, here's a few key best practices to keep in mind as you're get
 In this chapter, you learned the basic git workflow by:
 
 -   Making a change to your local project.
-
 -   Staging the changes in git (`git add ..`).
-
 -   Taking a snapshot of the changed files (`git commit -m ...`).
-
 -   Pushing your changes to Github (`git push`).
 
 You also learned a few more best practices to keep things clean and manageable.
 
 This is the cycle you will repeat over and over again as you work on coding projects using git.
 
-------------------------------------------------------------------------
+---
 
 **Next up:**
 

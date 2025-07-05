@@ -76,27 +76,27 @@ Let’s make a `.gitignore` file for your new Git project using the command line
 
 1.  In the terminal, run:
 
-  ``` bash
-  touch .gitignore
-```
+    ``` bash
+    touch .gitignore
+    ```
 
-2.  In the RStudio **Files** pane, click on the new `.gitignore` file to open it.
+1.  In the RStudio **Files** pane, click on the new `.gitignore` file to open it.
 
-> Tip: If you don't see the `.gitignore` in your file pane, you may need to refresh by clicking the refresh icon at the top right of the file pane.
+    > Tip: If you don't see the `.gitignore` in your file pane, you may need to refresh by clicking the refresh icon at the top right of the file pane.
 
-3.  In your blank `.gitignore` file, add the following lines and save the file:
+1.  In your blank `.gitignore` file, add the following lines and save the file:
 
-  ``` bash
-  *.html 
-  _site/ 
-  .Rproj.user/
-  ```
+    ``` bash
+    *.html 
+    _site/ 
+    .Rproj.user/
+    ```
 
-4.  Check your Git status again by running:
-
-  ``` bash
-  git status
-  ```
+1.  Check your Git status again by running:
+  
+    ``` bash
+    git status
+    ```
 
 Remember when we ran `git status` before and we saw those `.html` files in our list of untracked files? Now the `.html` files should be gone from the list of files Git "sees" because we've told it to ignore these types of files with the `*.html` line in our ignore file.
 
@@ -128,7 +128,7 @@ Before moving forward, let's add a few more things to the `.gitignore` to cover 
     .DS_Store
     ```
 
-1.  Save and close the file.
+1. Save and close the file.
 1. Run `git status` to preview the files git sees after the changes.
 
 ## Staging: Adding the files you *do* want (`git add`)
@@ -143,9 +143,9 @@ Let's add our project files.
     git add .
     ```
 
--   The `.` after the `add` means “add everything in this folder" (ignoring anything listed in `.gitignore`.)
+    -  The `.` after the `add` means “add everything in this folder" (ignoring anything listed in `.gitignore`.)
 
-2.  Now, check your project files by running `git status` again.
+1.  Now, check your project files by running `git status` again.
 
 The output should look something like this now:
 

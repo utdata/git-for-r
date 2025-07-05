@@ -57,6 +57,26 @@ In this chapter you've learned:
 - How to use tab to auto-complete file and folder names.
 
 ---
+## 🎉 Final Words
+
+Congratulations! You've made it to the end of the Intro to Terminal guide.
+
+You’ve now learned:
+
+-   How to open the Terminal
+-   How to move around
+-   How to create and manage files and folders
+-   How to read and use simple flags
+-   How to fix common mistakes
+
+You’ve built a *real foundation* for anything else you’ll learn later — whether that’s coding, scripting, data science, or just being more powerful with your own computer.
+
+**Remember: the terminal is your friend.**\
+Keep practicing — the more you use it, the more natural it will feel.
+
+If you forget how to do something or get stuck you may find the [quick reference](../intro-to-git/quick-reference.qmd) and [troubleshooting](../intro-to-git/troubleshooting.qmd) appendices helpful. 
+
+Good job! 🚀
 
 **Next up:**
 

@@ -11,9 +11,7 @@ title: "Pull requests"
 Even if you’re working solo, they’re a great habit because they give you a space to:
 
 -   Review your changes before merging.
-
 -   Track a discussion about the changes you're making with your collaborators.
-
 -   Ensure everything looks good before merging.
 
 We'll walk through the basic pull request workflow below.
@@ -55,26 +53,21 @@ To begin the pull request process:
 On the **Open a pull request** page, do the following:
 
 1.  **Review what’s changing:** underneath the form at the top of the page, Github will show you a list of commits and the files on the feature branch that are *different* than the `main` branch. These are the changes you will be merging into the main project. Before making the PR, you'll want to make sure that all the changes showing are intentional and ready to merge.
-2.  **Add a title description**: After confirming your changes are ready to merge, add a title to the PR and description with more details about what you're changing. The description and title should let others on your team know *exactly* what the changes are that they will be reviewing. See an example below.
+1.  **Add a title description**: After confirming your changes are ready to merge, add a title to the PR and description with more details about what you're changing. The description and title should let others on your team know *exactly* what the changes are that they will be reviewing. See an example below.
 
-> Note: Github has added a lot of features to help pre-fill out the title based on what it thinks your PR is. Sometimes it's accurate, sometimes it's not so always double-check.
-
-3.  Click the **Create pull request** button.
+    > Note: Github has added a lot of features to help pre-fill out the title based on what it thinks your PR is. Sometimes it's accurate, sometimes it's not so always double-check.
+1.  Click the **Create pull request** button.
 
 Now others (or future you) can review the change.
 
 ![Pull request form](../images/pr-form-example.png)
-
-------------------------------------------------------------------------
 
 ### Step 3: review and discuss changes
 
 If you're collaborating, your teammates can:
 
 -   Leave comments on specific lines
-
 -   Ask questions or suggest edits
-
 -   Approve or request changes
 
 Even if you’re working alone, reviewing your changes with “fresh eyes” before merging can help you catch mistakes.
@@ -126,7 +119,7 @@ Since we have merged our feature branch, let's remember to keep our repository c
     ``` bash
     git branch -d improve-plot
     ```
-2. Next, we'll delete the remote branch on Github, by running:
+1. Next, we'll delete the remote branch on Github, by running:
     
     ``` bash
     git push origin --delete improve-plot
@@ -149,3 +142,25 @@ After merging a PR (especially someone else’s), sync your local main branch by
     ```
 
 Now you have all the latest changes from GitHub.
+
+## 🎉 Final Words
+Congratulations! You’ve made it to the end of the Intro to Git guide.
+
+You’ve now learned:
+
+- How to setup Git
+- How to make a Github repository
+- How to make a Git-tracked project
+- How to take a snapshot of your project and push it to Github
+- How to make a shared project in Github
+- How to make a feature branch
+- How to merge a feature branch into your main project
+- How to make a pull request
+
+You’ve built a strong foundation for using version control in your future projects, both solo and with others. 
+
+Remember: Practicing these skills is key to improving and getting comfortable -- the more you use git to track project work, the more natural it will feel.
+
+If you forget how to do something or get stuck you may find the [quick reference](../intro-to-git/quick-reference.qmd) and [troubleshooting](../intro-to-git/troubleshooting.qmd) appendices helpful. 
+
+Good job! 🚀

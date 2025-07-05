@@ -19,9 +19,9 @@ In RStudio, navigate to:
 In the "Create Quarto Website" window, do the following:
 
 1. Give your directory a descriptive name like `my-first-git-project` in the  **Directory Name field**.
-2. Check the  **Create project as a subdirectory of** field to make sure you're creating your project in the folder where you keep your class or coding projects on your computer.
-3.  Make sure none of the boxes are checked.
-4.  Finally, click **Create Project.**
+1. Check the  **Create project as a subdirectory of** field to make sure you're creating your project in the folder where you keep your class or coding projects on your computer.
+1. Make sure none of the boxes are checked.
+1. Finally, click **Create Project.**
 
 You’ll now have a project with some base project files, inclued an `index.qmd` file.
 
@@ -31,7 +31,7 @@ Before we get into Git, let’s quickly make sure Quarto is working as expected 
 
 1. In the Files pane, find your index.qmd file and click to open it.
 1. Change the title to something like "Intro to Git". 
-4. Click the **➡️ Render** button in the top toolbar.
+1. Click the **➡️ Render** button in the top toolbar.
 
 A new browser window should open with an HTML preview of your file.
 
@@ -46,8 +46,7 @@ In basic terms, initializing tells Git "I want you to start tracking this folder
 To initialize git, do the following:
 
 1. Navigate to the `Terminal` tab inside the Console pane in RStudio.
-
-2. In the terminal, run this:
+1. In the terminal, run this:
 
     ``` bash
     git init
@@ -95,11 +94,9 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 Let's quickly breakdown what this all means:
 
-1. "On branch main": You're working on the `main` branch — the default starting branch for development.
-
-2. "No commits yet": This means Git is ready, but you haven’t saved any versions yet.
-
-3. "Untracked Files": These are files Git sees in your folder, but it’s not saving changes to them yet. These files are marked in <span class = "text-red">**red**</span> in the terminal.
+- "On branch main": You're working on the `main` branch — the default starting branch for development.
+- "No commits yet": This means Git is ready, but you haven’t saved any versions yet.
+- "Untracked Files": These are files Git sees in your folder, but it’s not saving changes to them yet. These files are marked in <span class = "text-red">**red**</span> in the terminal.
 
 The `git status` command will be used frequently throughout this guide, and you should use it a lot in your own Git workflow. It's an incredibly helpful command for tracking your progress and helping you to make sure you are where you think you are. 
 

@@ -72,22 +72,3 @@ If for some reason that doesn't work, there is this way, too:
 
 1.  Click OK and close the System Preferences window.
 1.  Close any Terminal windows you have open and restart them.
-
-## 🎉 Final Words
-
-Congratulations! You've made it to the end of the Intro to Terminal guide.
-
-You’ve now learned:
-
--   How to open the Terminal
--   How to move around
--   How to create and manage files and folders
--   How to read and use simple flags
--   How to fix common mistakes
-
-You’ve built a *real foundation* for anything else you’ll learn later — whether that’s coding, scripting, data science, or just being more powerful with your own computer.
-
-**Remember: the terminal is your friend.**\
-Keep practicing — the more you use it, the more natural it will feel.
-
-Good job! 🚀

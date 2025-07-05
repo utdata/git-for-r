@@ -9,10 +9,10 @@ Before we can get started, we'll need to make sure that our computers (often ref
 1.  **Install Git**
 
     1.  Go to: <https://git-scm.com/downloads>
-    2.  Download and install Git
-    3.  Default install settings are fine
+    1.  Download and install Git
+    1.  Default install settings are fine
 
-2.  **Sign up for a Github account:**
+1.  **Sign up for a Github account:**
 
     1.  Go to: <https://github.com>
     1.  Click **Sign up**
@@ -44,7 +44,7 @@ First, we'll [set your user.name](https://help.github.com/en/github/using-git/se
     git config --global user.name "Your Name"
     ```
 
-2.  Check to see if you successfully set your name by running the command:
+1.  Check to see if you successfully set your name by running the command:
 
     ``` bash
     git config user.name
@@ -105,7 +105,6 @@ Instead of using passwords, **SSH keys** are basically a lock and key system tha
 You can think of SSH keys like this:
 
 -   🔒 **Public key** = A "lock" you give to GitHub
-
 -   🔑 **Private key** = Your secret "key" that opens that lock
 
 Together, they let Github know that it's really you (or rather your local machine) who is connecting.
@@ -125,12 +124,12 @@ It’s called “local” to distinguish it from a remote machine (like a server
 First, we'll enable version control in RStudio by doing the following:
 
 1.  Launch RStudio.
-2.  Go to the menu Tools \> Global Options, then click on the **Git/SVN tab**.
-3.  Check the **Enable version control interface for RStudio** button.
-4.  There should already be a path included in the **git executable** field.
-5.  Make sure the path to the git executable is correct.
+1.  Go to the menu Tools \> Global Options, then click on the **Git/SVN tab**.
+1.  Check the **Enable version control interface for RStudio** button.
+1.  There should already be a path included in the **git executable** field.
+1.  Make sure the path to the git executable is correct.
     -   If it is not, try quitting RStudio and relaunching it and do this step again.
-    -   If it is still not there, talk to the prof. We'll find it.
+    -   If it is still not there, talk to your professor. We'll find it.
 
 ![Git/SVN window](../images/git-set-ssh.png)
 
@@ -139,14 +138,14 @@ First, we'll enable version control in RStudio by doing the following:
 Next, we'll check if your SSH key is already setup:
 
 1.  In the Git/SVN window, look for the **SSH key** field.
-2.  If you SSH Key path is already filled in, then you can skip to the **"Add SSH Keys on Github"** section. If you do not have an SSH key showing, follow the next steps below to make one before moving on.
+1.  If you SSH Key path is already filled in, then you can skip to the **"Add SSH Keys on Github"** section. If you do not have an SSH key showing, follow the next steps below to make one before moving on.
 
 If you've never used SSH keys before, you'll have to create one, but RStudio makes that fairly painless.
 
 1.  Click on the **Create RSA Key** button.
-2.  You should be able to leave all the defaults as they are. **Leave the optional Passphrase field blank.**
-3.  Click the **Create** button.
-4.  You should see a message that says "Key Created Successfully" and it might show you a pretty picture. Click **OK**.
+1.  You should be able to leave all the defaults as they are. **Leave the optional Passphrase field blank.**
+1.  Click the **Create** button.
+1.  You should see a message that says "Key Created Successfully" and it might show you a pretty picture. Click **OK**.
 
 ![SSH Key Creation window](../images/ssh-create-key.png)
 
@@ -157,8 +156,8 @@ Finally, we'll save part of the contents (the **public** key) of that key in you
 To access your "Public" key, do the following:
 
 1.  In the RStudio Git/SVN window, click on the **View public key** button.
-2.  This will open a new window with the contents of your public key.
-3.  Copy the full contents of the public key.
+1.  This will open a new window with the contents of your public key.
+1.  Copy the full contents of the public key.
 
 We'll paste the contents of this key into Github in the next steps.
 
@@ -167,16 +166,14 @@ We'll paste the contents of this key into Github in the next steps.
 Add the public key to Github by doing the following:
 
 1.  Go to [github.com](https://github.com/), choose **Settings** in the dropdown under your User Profile photo.
-2.  In the user settings sidebar on the left, click **SSH and GPG keys**.
-3.  Click **New SSH key** or **Add SSH key**.
-4.  In the "Title" field, add a descriptive label for the new key. Name it something like "Personal MacBook Air" to indicate its your personal computer.
-5.  In the "Key" field, paste ( `Command`+`V)`the public key you copied from RStudio into the box.
+1.  In the user settings sidebar on the left, click **SSH and GPG keys**.
+1.  Click **New SSH key** or **Add SSH key**.
+1.  In the "Title" field, add a descriptive label for the new key. Name it something like "Personal MacBook Air" to indicate its your personal computer.
+1.  In the "Key" field, paste ( `Command`+`V)`the public key you copied from RStudio into the box.
 
-It will look something like this:
-
-![Saving the key](../images/git-adding-key.png)
-
-Almost done! Now:
+    It will look something like this:
+    
+    ![Saving the key](../images/git-adding-key.png)
 
 6.  Click **Add SSH key**.
 7.  If prompted, confirm your GitHub password.

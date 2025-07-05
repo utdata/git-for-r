@@ -21,13 +21,9 @@ It's easy to see how it could become difficult to keep track of which version wa
 To keep track of versions of coding projects, programmers use a version control tool called **Git**. It runs on your computer and helps you:
 
 -   Track changes you make to your project files.
-
 -   Save "snapshots" (called **commits**) of your project over time.
-
 -   Go back to an earlier snapshot if needed.
-
 -   See what exactly *changed* between versions.
-
 -   Work with teammates without messing up each others' work.
 
 You can think of Git like the "save game" feature on a video game. Instead of saving the progress of your character in your game, Git saves your progress in your coding files. But just like in many games, we have to tell Git *when* and *how* to save a new version.
@@ -41,11 +37,8 @@ This is where Github comes in.
 Github lets you:
 
 -   Store your Git project safely in the cloud.
-
 -   Share your project with others.
-
 -   Collaborate with other people (even if they are far away).
-
 -   Keep a backup in case your computer crashes.
 
 If Git is a notebook where you track all your work, GitHub is like an online library where you can store a copy of that notebook — and invite others to read it or even help you write in it.
@@ -57,9 +50,7 @@ In this chapter you learned some about version control and the tools we use to a
 Let's quickly recap those tools before moving on:
 
 -   **Version control:** the system of tracking changes to your files over time so you can revisit or undo edits, collaborate with others, and keep a history of your work.
-
 -   **Git:** a version control *tool* you use on your computer to track changes.
-
 -   **GitHub:** a *website* where you can upload (and share) your Git projects.
 
 ------------------------------------------------------------------------
