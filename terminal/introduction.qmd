@@ -20,8 +20,8 @@ People (including the authors of this guide) will use the term **shell**, **term
 In reality, there are some nuances:
 
 1.  The **terminal** opens a window.
-2.  Inside that, a **shell** runs.
-3.  You interact with it through the **command line** interface.
+1.  Inside that, a **shell** runs.
+1.  You interact with it through the **command line** interface.
 
 In practical terms, just know they usually mean the same thing out in the wild.
 :::
@@ -31,13 +31,9 @@ The terminal might look a little old-school (and let's be real: a bit scary 👻
 Here's just a few examples of what we can ask our computers to do using the terminal:
 
 -   List all the files in a folder
-
 -   Create a new folder
-
 -   Install programs
-
 -   Move files around
-
 -   Automate tasks
 
 We can do all of these things by typing just a few words. But to communicate effectively with our terminals, we have to learn "speak" its language. In this guide, you'll learn the basics of this language to get you started.
@@ -61,7 +57,8 @@ First things first, we need to actually *open* the Terminal on our machines.
     Once you launch it will look like this (though it may have a white screen):
 
     ![Mac Terminal](../images/terminal-startup.png)
-2. . Look at the very top line to see if the term in the middle of the title bar is `bash` like above. If it says `zsh` instead, go to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter to fix it.
+
+1. Look at the very top line to see if the term in the middle of the title bar is `bash` like above. If it says `zsh` instead, go to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter to fix it.
 
 **Tip:** If you want, you can change the Terminal’s theme to make it more comfortable to look at by following the steps in the [how to change your Terminal theme](../appendices/a-change-terminal-color.qmd) appendix.
 
@@ -101,9 +98,9 @@ If you accidentally switched to zsh already, go to the [Change Mac shell to bash
 **Let's breakdown a few things from the screenshot above:**
 
 1.  **Computer name:** the characters before the `~` is your computer's name (you may not have known it even had one).
-2.  **Current directory:** The `~` character is Terminal shorthand for your "base" directory on your computer. The value shown here will update as you move around to different folders on your computer.
-3.  **User name:** The part immediately after the `~` is your username.
-4.  **Command prompt:** Lastly we have the \$. This is the “prompt” where you type commands. *(Note: if you're on a Mac and see a % instead of a "\$", you may not be in Bash. Fix that by going to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter)*
+1.  **Current directory:** The `~` character is Terminal shorthand for your "base" directory on your computer. The value shown here will update as you move around to different folders on your computer.
+1.  **User name:** The part immediately after the `~` is your username.
+1.  **Command prompt:** Lastly we have the \$. This is the “prompt” where you type commands. *(Note: if you're on a Mac and see a % instead of a "\$", you may not be in Bash. Fix that by going to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter)*
 
 You type your commands AFTER the `$` and then hit `Enter` / `return` on your keyboard to run or **execute** them. We'll practice doing just that in the next section.
 
@@ -112,12 +109,12 @@ You type your commands AFTER the `$` and then hit `Enter` / `return` on your key
 Let’s try your first real command: finding out *where* you are using the command `pwd`.
 
 1.  In the terminal prompt (remember, after the `$)`, type the following command:
+    
+    ``` bash
+    pwd
+    ```
 
-``` bash
-pwd
-```
-
-2.  Press `Enter` / `return` to *run* the command.
+1.  Press `Enter` / `return` to *run* the command.
 
 You should see Terminal respond with something like this:
 
@@ -132,9 +129,7 @@ Depending on your system, the path may look a little different — and that's OK
 **So what just happened?**
 
 -   `pwd` stands for *"print working directory."*
-
 -   It simply asks: *Where am I right now in the computer’s folder system?*
-
 -   Your computer provides the following answer: your current folder — usually your "home" directory when you first open the Terminal.
 
 ------------------------------------------------------------------------
@@ -146,9 +141,7 @@ You've made it to the end of chapter 1. Good job!
 **You’ve now:**
 
 -   Opened the Terminal.
-
 -   Typed and run your first command.
-
 -   Seen your computer respond back.
 
 You're officially no longer a terminal beginner. 🙌

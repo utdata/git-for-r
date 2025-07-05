@@ -23,9 +23,7 @@ In programming, we repeat commands quite frequently (think about how often you r
 Having a command history is helpful because it:
 
 -   **Saves time** – You can quickly repeat or modify previous commands with the ↑ key instead of retyping them.
-
 -   **Reduces mistakes** – Reusing known, valid commands lowers the chance of typos or syntax errors.
-
 -   **Aids in learning** – You can review what you've done, which helps you remember your steps and can help with troubleshooting if something goes wrong.
 
 

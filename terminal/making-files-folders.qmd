@@ -30,13 +30,13 @@ Do the following:
 
 1.  Check you're in your home directory by running the `cd` command. (If you aren't, use the `cd` shortcut to get there.)
 
-2.  Now, in your terminal, type and run:
+1.  Now, in your terminal, type and run:
 
-``` bash
-mkdir terminal_practice
-```
+    ``` bash
+    mkdir terminal_practice
+    ```
 
-3.  Now, run the `ls` command to make sure it worked. You should see your new directory listed in the terminal response.
+1.  Now, run the `ls` command to make sure it worked. You should see your new directory listed in the terminal response.
 
 ## Creating a new file (`touch`)
 
@@ -60,17 +60,17 @@ Do the following:
 
 1.  First, move into your new folder by running the command:
 
-``` bash
-cd terminal_practice
-```
+    ``` bash
+    cd terminal_practice
+    ```
 
-2.  Now, make a new notes file inside the folder by running:
+1.  Now, make a new notes file inside the folder by running:
 
-``` bash
-touch notes.txt
-```
+    ``` bash
+    touch notes.txt
+    ```
 
-3.  Check that your new file is there by running `ls` command to list the files in your folder.
+1.  Check that your new file is there by running `ls` command to list the files in your folder.
 
 You should see a single file listed in the terminal response called `notes.txt`.
 
@@ -101,11 +101,11 @@ Do the following to copy your notes file:
 
 1.  Run the following from inside your `terminal_practice` folder:
 
-``` bash
-cp notes.txt copy_of_notes.txt
-```
+    ``` bash
+    cp notes.txt copy_of_notes.txt
+    ```
 
-2.  Run the `ls` command to see the files inside your folder.
+1.  Run the `ls` command to see the files inside your folder.
 
 You should now you have two files: the original (`notes.txt`) and the new copy (`copy_of_notes.txt`).
 
@@ -137,29 +137,28 @@ In this exercise we'll practice both **renaming** and **moving** files using the
 
 1.  First, make a new directory by running the following command from inside your `terminal_practice` directory:
 
-``` bash
-mkdir my_new_folder
-```
+    ``` bash
+    mkdir my_new_folder
+    ```
 
-2.  Now, peek at your files and folders by running the `ls` inside your `terminal_practice` folder. Make sure the new folder is there.
+1.  Now, peek at your files and folders by running the `ls` inside your `terminal_practice` folder. Make sure the new folder is there.
+1.  Next, we'll move the copy of your notes files *into* your new sub-folder by running:
 
-3.  Next, we'll move the copy of your notes files *into* your new sub-folder by running:
+    ``` bash
+    mv copy_of_notes.txt my_new_folder/
+    ```
 
-``` bash
-mv copy_of_notes.txt my_new_folder/
-```
-
-4.  Now, run the `ls` command again to look at the files inside your `terminal_practice` folder. You should still see a new folder called `my_new_folder`, but you should *not* see the copy of your notes file.
+1.  Now, run the `ls` command again to look at the files inside your `terminal_practice` folder. You should still see a new folder called `my_new_folder`, but you should *not* see the copy of your notes file.
 
 Next, we'll locate the copy of our notes file:
 
 1.  Run the following command to *move into* your new folder:
 
-``` bash
-cd my_new_folder
-```
+    ``` bash
+    cd my_new_folder
+    ```
 
-2.  Now run `ls` to peek at the files. You should see your copy of the notes file listed.
+1.  Now run `ls` to peek at the files. You should see your copy of the notes file listed.
 
 **Exercise part 2:** rename a file
 
@@ -167,11 +166,11 @@ Ok now that we've moved and located our copy of our notes file, let's rename it 
 
 1.  From *inside* your new folder, run the following command to rename your notes copy:
 
-``` bash
-mv copy_of_notes.txt notes_new.txt
-```
+    ``` bash
+    mv copy_of_notes.txt notes_new.txt
+    ```
 
-2.  Run the `ls` to look at your files. You should see the copy of your notes files, but now with a new, cleaner name.
+1.  Run the `ls` to look at your files. You should see the copy of your notes files, but now with a new, cleaner name.
 
 Great job! You're now well on your way to managing files and folders directly from the command line.
 
@@ -206,9 +205,7 @@ Deleting a folder (and *everything inside it)*:
 **Flags** are just another type of **argument** you can add to commands to change how they behave.
 
 -   They're usually a **dash** plus **one or two letters**. (Example: `-r` means "recursive" for the `rm` command)
-
 -   Each command has its own set of flags that it understands. A flag that works with one command won’t necessarily work with another.
-
 -   You can combine flags (like `rm -rf` which combines the `-r` flag for "recursive" and `-f` flag for "force delete").
 
 You'll see flags often out in the wild. As you use the command line more, you'll start to use more of these flags in your workflow to give you **more control** over what your commands do. For now, just know when you see something starting with a dash in the command line, it's probably a flag giving the command a little extra information about what to do.
@@ -232,13 +229,9 @@ Terminal will respond with detailed information about **each** file and folder i
 Phew. In this chapter you've learned *a lot*:
 
 -   How to create a new folder/directory (`mkdir`).
-
 -   How to create a new file (`touch file_name`).
-
 -   How to copy files (`cp ..`).
-
 -   How to move and rename files (`mv..`).
-
 -   How flags (e.g. `-r`, `-l`) can be used to power-up commands.
 
 You also may be catching onto the fact that we use some commands repeatedly in the command line to help us not get lost in our own workflow. The `ls` command, for example, is super useful for confirming actions on files and folders worked, and `pwd` is like a compass to figure out where you are.

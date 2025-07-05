@@ -9,15 +9,11 @@ In this final chapter, let's touch quickly on navigating common issues you might
 Here's a quick rundown of the most common problems and errors you'll run into using the command line. Even experienced developers run into these issues, so learning what they mean will go a long way when troubleshooting.
 
 -   **Command not found?** You might have a typo or the program isn’t installed.
-
 -   **No such file or directory?** You might be trying to access a file/path that doesn't exist. Check that the file exists and that you spelled it correctly. You could also not be in the directory you *think* you are — try running `pwd` or `ls` to check your location, then use the `cd` to navigate where you should be if needed.
-
 -   **Permission denied?**\
     You tried to do something you don't have permission to do. Check your file/repo permissions.
-
 -   **Syntax error**\
     You typed a command in a way the shell doesn't understand. Check that your syntax is correct and error-free.
-
 -   **Stuck in a weird app inside Terminal?**\
     Try pressing `Ctrl + C` or `Ctrl + D` to exit. (You may need to checkout "How to get out of Vim" below)
 
@@ -40,48 +36,42 @@ If you accidentally open something in Vim (for example, by running git commit wi
 If you **don’t** want to save any changes (most common):
 
 1.  Press `Esc` *- to make sure you're not in input mode.*
-
-2.  Type `:q!` - *to "quit and ignore changes".*
-
-3.  Hit `Enter` / `return` - *to exit.*
+1.  Type `:q!` - *to "quit and ignore changes".*
+1.  Hit `Enter` / `return` - *to exit.*
 
 If You **do** want to save changes (less common):
 
 1.  Press `Esc`
-
-2.  Type `:wq` (to "write and quit").
-
-3.  Press `Enter` / `return`
+1.  Type `:wq` (to "write and quit").
+1.  Press `Enter` / `return`
 
 ## Change Mac shell to bash
 
 Mac Catalina changes the default shell program from **Bash** to **zsh**. While zsh is a great shell, we are using Bash in this class for consistency.
 
 1.  Open a Terminal
-
-2.  Copy or Type and run this command:
+1.  Copy or Type and run this command:
 
     ``` bash
     chsh -s /bin/bash
     ```
 
-3.  You will be asked to enter your computer password. YOU WON'T SEE KEYSTROKES AS YOU TYPE in your password. Just type it in anyway and hit **Return**. If you flub the password, you'll have to enter the above command again.
-
-4.  If you don't get an error, close your terminal and reopen it and it should say "bash" at the top.
+1.  You will be asked to enter your computer password. YOU WON'T SEE KEYSTROKES AS YOU TYPE in your password. Just type it in anyway and hit **Return**. If you flub the password, you'll have to enter the above command again.
+1.  If you don't get an error, close your terminal and reopen it and it should say "bash" at the top.
 
 **Alternative method:**
 
 If for some reason that doesn't work, there is this way, too:
 
 1.  Choose Apple menu  \> System Settings, then click Users & Groups.
-2.  Click the lock, then enter your account name and password.
-3.  Control-click your user name in the list of users on the left, then choose Advanced Options.
-4.  Choose a shell from the ”Login shell” menu, then click OK to save the changes.
+1.  Click the lock, then enter your account name and password.
+1.  Control-click your user name in the list of users on the left, then choose Advanced Options.
+1.  Choose a shell from the ”Login shell” menu, then click OK to save the changes.
 
-![Default to bash](../images/default-to-bash.png)
+    ![Default to bash](../images/default-to-bash.png)
 
-5.  Click OK and close the System Preferences window.
-6.  Close any Terminal windows you have open and restart them.
+1.  Click OK and close the System Preferences window.
+1.  Close any Terminal windows you have open and restart them.
 
 ## 🎉 Final Words
 
@@ -90,13 +80,9 @@ Congratulations! You've made it to the end of the Intro to Terminal guide.
 You’ve now learned:
 
 -   How to open the Terminal
-
 -   How to move around
-
 -   How to create and manage files and folders
-
 -   How to read and use simple flags
-
 -   How to fix common mistakes
 
 You’ve built a *real foundation* for anything else you’ll learn later — whether that’s coding, scripting, data science, or just being more powerful with your own computer.

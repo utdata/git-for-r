@@ -40,12 +40,9 @@ Before you dive in, we want to highlight a few things about how we've structured
 As you work through the guide, we strongly recommend that you do the following:
 
 1. **Type your commands:** Getting used to writing in the command line is key to learning and remembering common commands. Though many of the code blocks in this books allow you to copy the code inside, please try to type it yourself (at least on the first try). You can always copy if you run into errors.
-
-3. **Do the mini exercises:** There will be small exercises throughout this guide to reinforce learning and get you more comfortable working in the Terminal. Learning to code is largely done through *doing*, so we highly recommend you take the time to do all of them.
-
-2. **Do the chapters in order**: The mini exercises and content in this book are structured to build upon each other. Your first time through, we recommend you complete each chapter along with the mini-exercises in chronological order to ensure you don't miss steps you need later on. 
-
-4. **Read the terminology notes:** Throughout this guide, there will be several callout boxes titled "terminology notes". These callouts will be used to explain key terms – especially those used interchangeably – that may be confusing to new programmers. We recommend you take the time to read them because knowing the language coders use will help when reading documentation and when seeking help in online spaces like Stack Overflow.
+1. **Do the mini exercises:** There will be small exercises throughout this guide to reinforce learning and get you more comfortable working in the Terminal. Learning to code is largely done through *doing*, so we highly recommend you take the time to do all of them.
+1. **Do the chapters in order**: The mini exercises and content in this book are structured to build upon each other. Your first time through, we recommend you complete each chapter along with the mini-exercises in chronological order to ensure you don't miss steps you need later on. 
+1. **Read the terminology notes:** Throughout this guide, there will be several callout boxes titled "terminology notes". These callouts will be used to explain key terms – especially those used interchangeably – that may be confusing to new programmers. We recommend you take the time to read them because knowing the language coders use will help when reading documentation and when seeking help in online spaces like Stack Overflow.
 
 Time to enter the Matrix, Neo.
 
