@@ -28,7 +28,7 @@ We'll use your Terminal within RStudio.
 1. Launch RStudio.
 2. Go to the **Terminal** tab.
     - It's usually in the same pane as Console and Background jobs on the bottom left.
-3. Type `git --version` and press Enter.
+3. Type `git --version` and press `Enter` / `return`.
     - It should respond with a version number.
   
 ![Teminal Window](images/git-version.png)

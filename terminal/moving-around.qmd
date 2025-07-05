@@ -151,7 +151,7 @@ Or you can use a backslash to "escape" the space like:
 cd My\ Documents
 ```
 
-Like we mentioned before, terminal is particular about the *way* you speak to it. For it to understand you, you've got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like `snake_case` or `kebab-case` will help you work more efficiently. Tab completion, which we cover below, is also helpful navigating around these kinds of file and folder name spaces.
+Like we mentioned before, terminal is particular about the *way* you speak to it. For it to understand you, you've got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like `snake_case` or `kebab-case` will help you work more efficiently. Tab completion, which we cover below, is also helpful navigating around these kinds of file and folder with spaces in the names.
 
 ## 📝 Mini exercise
 
