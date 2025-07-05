@@ -52,24 +52,6 @@ touch example.txt
 
 This creates a new, empty file called `example.txt`.
 
-
-
-**Note for Windows user**
-
-You may need to use the command:
-
-``` bash
-bash echo.> example.txt
-```
-
-or
-
-``` bash
-bash New-Item example.txt
-```
-
-Depending whether you're using Powershell.
-
 ## 📝 Mini excercise: make a file
 
 Now, try let's try the `touch` command on our own by making a new file inside our new `terminal_practice` folder we created in the last exercise.

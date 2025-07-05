@@ -1,5 +1,5 @@
 ---
-title: "Welcome"
+title: "Welcome & Install"
 ---
 
 Welcome to the **Intro to Terminal** guide! We hope this guide will be a resource for you to learn the basics of working with the command line. 
@@ -7,6 +7,31 @@ Welcome to the **Intro to Terminal** guide! We hope this guide will be a resourc
 If you've never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.
 
 You don’t need to memorize anything right now. You don’t need to be a "tech wizard." You just need a little curiosity.
+
+## Prerequisites {.unnumbered}
+
+This guide covers how to use **command-line interface** tools that allow us to work with our computer through text commands, which is essential in programming.
+
+On Macintosh computers, the program to use we'll use is called Terminal and it is already installed.
+
+Windows computers are set up a bit differently, so to work in the same environment as Mac users, we’ll need to install Git — which also includes Git Bash — before moving forward.
+
+::: {.callout-caution}
+## Windows users must install Git first
+
+Windows users have to install Git and Git Bash using the following steps before moving forward with this guide.
+
+
+1. Go to [Git Downloads](https://git-scm.com/downloads), and download the latest version of git.
+1. Run the installer and follow the prompts as you normally would, choosing the defaults for everthing **except** when you're asked how to use Git from the command line (see below).
+
+    ![git setup](../images/git-setup-windows.png)
+
+1. When you get to this page (or a similar one), select **Use Git from Git Bash only**.
+1. Use the default settings for everything else.
+1. You should now be able to find the program **Git Bash** from your Windows Start menu. Go ahead and launch it.
+
+:::
 
 ## How to use this book {.unnumbered}
 

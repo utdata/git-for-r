@@ -42,35 +42,40 @@ Here's just a few examples of what we can ask our computers to do using the term
 
 We can do all of these things by typing just a few words. But to communicate effectively with our terminals, we have to learn "speak" its language. In this guide, you'll learn the basics of this language to get you started.
 
-------------------------------------------------------------------------
-
 ## Speaking the terminal's language
 
 The programming language we will use for our interactions in the terminal is called **Bash**. Bash is a Unix-based program and most of the Internet runs on Unix (or Linux) computers.
 
-Macs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why Git and Git Bash were downloaded in the prerequisites -- so we can all speak the same language, regardless of the machines we're using.
-
-------------------------------------------------------------------------
+Macs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why we [downloaded Git and Git Bash](../terminal/welcome.html#prerequisites) in the prerequisites -- so we can all speak the same language, regardless of the machines we're using.
 
 ## How to Open the Terminal
 
 First things first, we need to actually *open* the Terminal on our machines.
 
-Here’s how to find it on your computer:
+::: {.panel-tabset}
 
--   **Mac**:\
-    Press `Command + Space`, type **Terminal**, and hit `Enter` / `return`.
+### macOS
 
--   **Windows**:\
-    Open the **Start Menu**, search for **Terminal** or **PowerShell**, and open it.\
-    (There’s also something called "Command Prompt" — close enough for now.)
+1. For **Macs**, press `Command + Space` to launch Spotlight, then type **Terminal**, and hit `Enter` / `return`. 
+    
+    Once you launch it will look like this (though it may have a white screen):
 
--   **Linux**:\
-    Press `Ctrl + Alt + T` — it’s probably already installed!
+    ![Mac Terminal](../images/terminal-startup.png)
+2. . Look at the very top line to see if the term in the middle of the title bar is `bash` like above. If it says `zsh` instead, go to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter to fix it.
 
-**Tip:** If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)
+**Tip:** If you want, you can change the Terminal’s theme to make it more comfortable to look at by following the steps in the [how to change your Terminal theme](../appendices/a-change-terminal-color.qmd) appendix.
 
-------------------------------------------------------------------------
+### Windows
+
+1. For **Windows** you can go to your Start menu and type in _Git Bash_ and launch it.
+
+It will look like this:
+
+![Windows Git Bash](../images/gitbash-startup.png)
+
+**Tip:** If you want, you can change the Terminal’s theme to make it more comfortable to look at by following the steps in the [how to change your Terminal theme](../appendices/a-change-terminal-color.qmd) appendix
+
+:::
 
 ## Your First Command: Saying Hello to the Terminal
 
@@ -87,6 +92,8 @@ To update your account to use zsh, please run `chsh -s /bin/zsh`.
 ```
 
 **DISREGARD THIS MESSAGE**. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.
+
+If you accidentally switched to zsh already, go to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter to fix it.
 :::
 
 ![When you launch Terminal for the first time, you'll see some text like this.](../images/terminal_launch%20copy.png)
@@ -96,7 +103,7 @@ To update your account to use zsh, please run `chsh -s /bin/zsh`.
 1.  **Computer name:** the characters before the `~` is your computer's name (you may not have known it even had one).
 2.  **Current directory:** The `~` character is Terminal shorthand for your "base" directory on your computer. The value shown here will update as you move around to different folders on your computer.
 3.  **User name:** The part immediately after the `~` is your username.
-4.  **Command prompt:** Lastly we have the \$. This is the “prompt” where you type commands. *(Note: if you're on a Mac and see a % instead of a "\$", you may not be in Bash. Fix that by going to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) in the troubleshooting chapter)*
+4.  **Command prompt:** Lastly we have the \$. This is the “prompt” where you type commands. *(Note: if you're on a Mac and see a % instead of a "\$", you may not be in Bash. Fix that by going to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter)*
 
 You type your commands AFTER the `$` and then hit `Enter` / `return` on your keyboard to run or **execute** them. We'll practice doing just that in the next section.
 

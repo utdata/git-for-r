@@ -26,6 +26,9 @@ book:
       - terminal/tips-tricks.qmd
       - terminal/troubleshooting.qmd
       - terminal/glossary.qmd
+    - part: "Appendices"
+      chapters:
+      - appendices/a-macos-shell.qmd
     - text: "---"
     - part: "Intro to Git"
     - text: "---"
