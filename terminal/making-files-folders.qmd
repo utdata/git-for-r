@@ -52,12 +52,14 @@ touch example.txt
 
 This creates a new, empty file called `example.txt`.
 
+
+
 **Note for Windows user**
 
 You may need to use the command:
 
 ``` bash
-bash echo.> emample.txt
+bash echo.> example.txt
 ```
 
 or

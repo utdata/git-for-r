@@ -15,32 +15,30 @@ Before we can get started, we'll need to make sure that our computers (often ref
 2.  **Sign up for a Github account:**
 
     1.  Go to: <https://github.com>
-    2.  Click **Sign up**
-    3.  Choose a username and email you’ll remember (you’ll use this in Git config)
-
-::: callout-note
-## Terminology note
-
-When people (including the authors of this guide) use the terms "**local machine**," "**local computer**," or just "**your machine**," they’re all talking about your *personal* computer — the one you’re using right now.
-
-It’s called “local” to distinguish it from a remote machine (like a server or computer somewhere else, often in the cloud) that you connect to over the internet.
+    1.  Click **Sign up**
+    1.  Fill in your **email** and **password**
+    1.  Choose a **username**. Keep this professional enough that you wouldn't mind a professor, colleague or future employer seeing it.
+    
+    ::: callout-caution
+Remember, the username you set here will be **visible** (*read: public*) in any future projects you push to GitHub. If you choose to use a nickname or alias instead of your real name, keep it professional enough that you wouldn't mind future colleagues or a potential employer seeing it if needed to share your work.
 :::
 
 ## Configure Git
 
-After installing Git, you’ll need to go through the one-time process of configure it with your **username** and **email**.
+After installing Git, you’ll need to go through a one-time process to configure it with your **username** and **email** on your computer. We'll use the terminal to do this.
 
 **Step 1: Start a new terminal session in RStudio**
 
-1.  Click on the **terminal** tab in Rstudio to start a new session (if there isn’t one already).
+1. Launch R Studio
+1. Click on the **terminal** tab to start a new session (if there isn’t one already).
 
 > Tip: The terminal tab is located next to the Console tab. If can't find the terminal tab, go to `Tools > Terminal > Move Focus to Terminal` .
 
 **Step 2: Set your Git username**
 
-First, we'll [set your user.name](https://help.github.com/en/github/using-git/setting-your-username-in-git#setting-your-git-username-for-every-repository-on-your-computer) so Git knows who you are.
+First, we'll [set your user.name](https://help.github.com/en/github/using-git/setting-your-username-in-git#setting-your-git-username-for-every-repository-on-your-computer) so Git knows who you are. The username you set here will be associated with future commits to your projects which may be public, so this name should also be professional enough that you wouldn't mind a future employee seeing it. We recommend using your first name and last name. 
 
-1.  Run the following command from your terminal, replacing "Your Name" with the username you'd like to use (including the quotation marks):
+1.  Run the following command from your terminal, replacing "Your Name" with your name (including the quotation marks):
 
     ``` bash
     git config --global user.name "Your Name"
@@ -55,10 +53,6 @@ First, we'll [set your user.name](https://help.github.com/en/github/using-git/se
 You should see a terminal response with the username you entered.
 
 If you didn't get the response expected, then try again. Remember, be careful about *punctuation*.
-
-::: callout-caution
-Remember, the username you set here will be **visible** (*read: public*) in any future commits you push to GitHub. If you choose to use a nickname or alias instead of your real name, keep it professional enough that you wouldn't mind a future employer or colleague seeing it if you needed to share your work.
-:::
 
 **Step 3: Setting your git email**
 
@@ -76,25 +70,27 @@ The email you enter needs to **match the one you used to setup your Github accou
 Your git email should be the same as the one you use on GitHub so your commits will be linked correctly. If it doesn't match, you may run into permissions issues later on.
 :::
 
-**Step 4: set your default branch**
+**Step 4: Set your default branch**
 
-Lastly we'll set git to name your default branch "main" instead of "master" as this is a [new standard](https://sfconservancy.org/news/2020/jun/23/gitbranchname/).
+Next, we'll set git to name your default branch "main" instead of "master" as this is a [new standard](https://sfconservancy.org/news/2020/jun/23/gitbranchname/).
 
 1.  In your terminal, run this:
-
+    
     ``` bash
     git config --global init.defaultBranch main
     ```
 
-    You won't get a response unless there was a problem.
+You won't get a response unless there was a problem.
 
-2.  In your terminal, run this:
+**Step 5: Ensure a clean git history**
+
+Lastly, we’ll set a preferred Git configuration for our UT-Data projects. While the exact behavior is a bit complex, this setting helps keep our commit history clean and is recommended in [this detailed explanation](https://stackoverflow.com/questions/71768999/how-to-merge-when-you-get-error-hint-you-have-divergent-branches-and-need-to-s/71774640#71774640).
+
+1.  In your terminal, run this:
 
     ``` bash
     git config --global pull.ff only
     ```
-
-    This sets a behavior that is too complicated to explain now, but comes recommended in this [very long but thorough explanation](https://stackoverflow.com/questions/71768999/how-to-merge-when-you-get-error-hint-you-have-divergent-branches-and-need-to-s/71774640#71774640).
 
 ## Setup your SSH Keys (Authenticating)
 
@@ -112,15 +108,23 @@ You can think of SSH keys like this:
 
 -   🔑 **Private key** = Your secret "key" that opens that lock
 
-Together, they let Github know that it's really you (or rather your computer) who is connecting.
+Together, they let Github know that it's really you (or rather your local machine) who is connecting.
 
 We'll walk through getting SSH keys setup on your machine in the next steps!
+
+::: callout-note
+## Terminology note
+
+When people (including the authors of this guide) use the terms "**local machine**," "**local computer**," or just "**your machine**," they’re all talking about your *personal* computer — the one you’re using right now.
+
+It’s called “local” to distinguish it from a remote machine (like a server or computer somewhere else, often in the cloud) that you connect to over the internet.
+:::
 
 ### Enable version control in RStudio
 
 First, we'll enable version control in RStudio by doing the following:
 
-1.  After making sure git is installed, launch RStudio. (If it was already open, quit and re-launch it.)
+1.  Launch RStudio.
 2.  Go to the menu Tools \> Global Options, then click on the **Git/SVN tab**.
 3.  Check the **Enable version control interface for RStudio** button.
 4.  There should already be a path included in the **git executable** field.
@@ -162,7 +166,7 @@ We'll paste the contents of this key into Github in the next steps.
 
 Add the public key to Github by doing the following:
 
-1.  Go to [github.com](https://github.com/), click your user icon and choose **Settings** in the dropdown.
+1.  Go to [github.com](https://github.com/), choose **Settings** in the dropdown under your User Profile photo.
 2.  In the user settings sidebar on the left, click **SSH and GPG keys**.
 3.  Click **New SSH key** or **Add SSH key**.
 4.  In the "Title" field, add a descriptive label for the new key. Name it something like "Personal MacBook Air" to indicate its your personal computer.
@@ -179,13 +183,25 @@ Almost done! Now:
 
 ### Test Github connection
 
-1.  From your terminal in RStudio, do the following command:
+Let's make sure everything is hooked up correctly between our local machine and remote Github account. 
+
+In RStudio, do the following:
+
+**Step 1: Restart Terminal**
+
+1. Go to the Terminal pane in RStudio.
+1. Click the small carrot (▾) in your terminal tab.
+1. Select **New Terminal** in the dropdown to launch a new Terminal. 
+
+**Step 2: Test Gitub connection**
+
+1. Run the following from your new Terminal tab:
 
     ``` bash
     ssh -T git@github.com
     ```
-
-2.  If you are asked about "RSA key fingerprint", type **yes** and hit return.
+    
+1.  If you are asked about "RSA key fingerprint", type **yes** and hit `Enter` / `return`.
 
 In the end, you should have a success message like: "Hi username! You've successfully authenticated, but GitHub does not provide shell access." 
 

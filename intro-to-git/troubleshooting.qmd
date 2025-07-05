@@ -76,7 +76,7 @@ After editing your message in Vim:
 
 2.  Type `:wq` (stands for write and quit).
 
-3.  Press `Enter` to save you changes and exit Vim.
+3.  Press `Enter` / `return`to save you changes and exit Vim.
 
 ### "I can't push because 'tip of your current branch is behind'" {.unnumbered}
 

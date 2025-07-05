@@ -151,7 +151,7 @@ Or you can use a backslash to "escape" the space like:
 cd My\ Documents
 ```
 
-Like we mentioned before, terminal is particular about the *way* you speak to it. For it to understand you, you've got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like `snake_case` or `kebab-case` will help you work more efficiently.
+Like we mentioned before, terminal is particular about the *way* you speak to it. For it to understand you, you've got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like `snake_case` or `kebab-case` will help you work more efficiently. Tab completion, which we cover below, is also helpful navigating around these kinds of file and folder name spaces.
 
 ## 📝 Mini exercise
 
@@ -183,17 +183,17 @@ cd
 
 Ok, now that you've got some practice typing things into terminal, we'll let you in on a big time-saver: when you start typing a folder name, you don't have to type the whole thing.
 
-Hit the `Tab` key after typing part of your folder name and the terminal will *try* to **auto-complete** it for you. Now, if you've got more than one folder with similar names, you may have to add more characters till it can successfully do so. 
+Hit the `Tab` key after typing part of your folder name and the terminal will *try* to **auto-complete** it for you. Now, if you've got more than one folder with similar names, you may have to add more characters till it can successfully do so.
 
 Let's see it action by doing the following:
 
-1. Type out the following command, but don't run:
+1.  Type out the following command, but don't run:
 
 ``` bash
 cd Doc
 ```
 
-2. Now, press the `Tab` key.
+2.  Now, press the `Tab` key.
 
 If there’s a `Documents` folder, terminal will fill in the rest automatically!
 

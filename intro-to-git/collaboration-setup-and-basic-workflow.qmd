@@ -77,7 +77,7 @@ In Github, do the following:
 git clone git@github.com:username/repository-name
 ```
 
-2.  Hit `Enter` to run the command.
+2.  Hit `Enter` / `return` to run the command.
 
 This creates a local folder with all of the repo’s contents and Git history within the projects folder on your computer.
 
@@ -91,7 +91,7 @@ You can check to make sure this worked by doing the following:
 
 2.  Locate the name of your cloned repo in the files list.
 
-3.  Use `cd` commmand to navigate into your repo folder, replacing `folder_name` with your repo name:
+3.  Use the `cd` commmand to navigate into your repo folder, replacing `folder_name` with your repo name:
 
     ``` bash
     the cd folder_name
@@ -116,7 +116,7 @@ git pull
 This downloads any changes pushed to GitHub since you last worked from your specific machine. These changes might include changes your teammates made, but could also include changes you made if you're working on a different computer (yes, you can do that with Git).
 
 ::: callout-warning
-Skipping `git pull` can lead to **merge conflicts** when Git sees two people made changes to the same thing, but they don't match. We want to avoid this whenever possible to make our project workflow more efficient and less prone to errors.
+Skipping `git pull` is more likely to lead to **merge conflicts** when Git sees two people made changes to the same thing, but they don't match. We want to avoid this whenever possible to make our project workflow more efficient and less prone to errors.
 :::
 
 ## Each Person Works, Commits, and Pushes

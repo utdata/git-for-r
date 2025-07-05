@@ -107,4 +107,19 @@ Or we may use a caution callout:
 Not learning Markdown may result in you earning less than stellar grades.
 :::
 
+## macOS vs Windows
+
+On some occasions we may need to give specific directions depending on your operating system or some other division. You would choose the tab that fits your situation.
+
+::: {.panel-tabset}
+
+### macOS
+
+The authors use macOS so most directions are from that perspective.
+
+### Windows
+
+Usually you can use **Cntl + command** as a PC equivalent to **Cmd + command** on a Mac.
+
+:::
 

@@ -18,9 +18,9 @@ Let's take another look at those files.
 
 1.  Run the following:
 
-``` bash
-git status
-```
+    ``` bash
+    git status
+    ```
 
 Under the "untracked files" sections, you should see a list of files in [red]{.text-red} like:
 
@@ -42,11 +42,9 @@ Generally-speaking, we don't save these kinds of rendered files in our repositor
 
 That said, there are some notable exceptions when you might include these files in Github:
 
--   If they're small, essential, and need to be *versioned* for a specific reason.
-
--   If you're outputting human-readable deliverables (like a PDF report or documentation site).
-
--   If you're working on a static site or book.
+-   If they're **small**, **essential**, and need to be **versioned** for a specific reason.
+-   If you're outputting human-readable **deliverables** (like a PDF report or documentation site).
+-   If you're working on a **static site** or **book**.
 
 For our purposes, we'll be following the general best practice of excluding these kinds of rendered files -- we'll walk through how to do that below.
 
@@ -78,8 +76,8 @@ Let’s make a `.gitignore` file for your new Git project using the command line
 
 1.  In the terminal, run:
 
-``` bash
-touch .gitignore
+  ``` bash
+  touch .gitignore
 ```
 
 2.  In the RStudio **Files** pane, click on the new `.gitignore` file to open it.
@@ -88,17 +86,17 @@ touch .gitignore
 
 3.  In your blank `.gitignore` file, add the following lines and save the file:
 
-``` bash
-*.html 
-_site/ 
-.Rproj.user/
-```
+  ``` bash
+  *.html 
+  _site/ 
+  .Rproj.user/
+  ```
 
 4.  Check your Git status again by running:
 
-``` bash
-git status
-```
+  ``` bash
+  git status
+  ```
 
 Remember when we ran `git status` before and we saw those `.html` files in our list of untracked files? Now the `.html` files should be gone from the list of files Git "sees" because we've told it to ignore these types of files with the `*.html` line in our ignore file.
 
@@ -130,7 +128,8 @@ Before moving forward, let's add a few more things to the `.gitignore` to cover 
     .DS_Store
     ```
 
-2.  Save and close the file.
+1.  Save and close the file.
+1. Run `git status` to preview the files git sees after the changes.
 
 ## Staging: Adding the files you *do* want (`git add`)
 

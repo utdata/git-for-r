@@ -36,7 +36,7 @@ Some additional steps may be added if you begin using more advanced features in 
 
 We'll practice this workflow in the sections below.
 
-## Make a Small Change
+## Make a small change
 
 To see this process in action, let's make a couple changes to our project.
 
@@ -65,7 +65,7 @@ Here is a summary of the `mtcars` dataset.
 
 Now that we've made a change to our files, let's check in with Git:
 
-1.  Run the following:
+1.  Go back to your Terminal window, and run the following:
 
     ``` bash
     git status
@@ -86,9 +86,9 @@ Changes not staged for commit:
 Let's break this down:
 
 -   We see the label `modified:` next to our filename, which tells us that Git *sees* that something has changed.
--   But, it's under the `Changes not staged for commit:` section and in [red]{.text-red} font, which tells us that Git hasn’t *staged* it yet (so it won’t be saved in the next commit).
+-   But, the file is under the `Changes not staged for commit:` section and in [red]{.text-red} font, which tells us that Git hasn’t *staged* it yet (so it won’t be saved in the next commit).
 
-## Stage the Change (`git add...`)
+## Stage changes (`git add...`)
 
 Now that you know Git sees the change, you need to tell Git, “Hey, save this file in the next snapshot.”
 
@@ -170,9 +170,9 @@ Before we move on, here's a few key best practices to keep in mind as you're get
 
 -   **Commit early, commit often:** Save your work frequently in small, logical chunks. This makes changes easier to track, understand, and roll back.
 
--   **Stage changes selectively:** Use `git add <filename>` (instead of `git add .`) when you want more control over what goes into each commit. Being surgical helps keep tings clean.
+-   **Stage changes selectively:** Use `git add <filename>` (instead of `git add .`) when you want more control over what goes into each commit. Being surgical helps keep things clean.
 
--   **Write clear commit messages:** Use concise, meaningful messages that explain why the change was made. (e.g., Fix typo in introduction, not just update)
+-   **Write clear commit messages:** Use concise, meaningful messages that explain why the change was made. (e.g., "Fix typo in introduction", not just "update")
 
 -   **Check status regularly**: Run `git status` often to see what’s changed and what’s staged.
 
