@@ -74,7 +74,7 @@ You’ve built a *real foundation* for anything else you’ll learn later — wh
 **Remember: the terminal is your friend.**\
 Keep practicing — the more you use it, the more natural it will feel.
 
-If you forget how to do something or get stuck you may find the [quick reference](../intro-to-git/quick-reference.qmd) and [troubleshooting](../intro-to-git/troubleshooting.qmd) appendices helpful. 
+If you forget how to do something or get stuck you may find the [quick reference](../terminal/appendices/a-quick-reference.qmd) and [troubleshooting](../terminal/appendices/a-troubleshooting.qmd) appendices helpful. 
 
 Good job! 🚀
 

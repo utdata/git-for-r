@@ -139,7 +139,7 @@ Terminal will respond with a summary of insertions and deletions in your file.
 
 Git commits **always** need a message attached to them. The `-m` flag tells the command line that we'll be writing our message *inline* along with our `commit` command.
 
-If you forget to include that message flag, the Terminal will open its default text editor called Vim. If you find yourself in this scenario (and you likely will at some point), don't panic. There's a section on [getting out of Vim](../terminal/04-troubleshooting.html#how-to-get-out-of-vim) in our Intro to Terminal book.
+If you forget to include that message flag, the Terminal will open its default text editor called Vim. If you find yourself in this scenario (and you likely will at some point), don't panic. There's a section on [getting out of Vim](../terminal/appendices/a-troubleshooting.html#how-to-get-out-of-vim) in our Intro to Terminal book.
 
 ## Push your commit to GitHub (`git push`)
 

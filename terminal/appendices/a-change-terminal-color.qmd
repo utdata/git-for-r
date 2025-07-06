@@ -13,7 +13,7 @@ If you want, you can change the terminal’s color theme to make it more comfort
 1. Click the **Default** button at the end of bottom of the theme options to set your preferred theme.
 1. You'll need to quit and relaunch terminal to see the new theme. 
 
-![Mac Terminal Profile themes](../images/terminal-profiles.png)
+![Mac Terminal Profile themes](../../images/terminal-profiles.png)
 
 ### Windows
 

@@ -26,8 +26,9 @@ book:
       - terminal/tips-tricks.qmd
     - part: "Appendices"
       chapters:
-      - terminal/troubleshooting.qmd
-      - terminal/quick-reference.qmd
+      - terminal/appendices/a-troubleshooting.qmd
+      - terminal/appendices/a-quick-reference.qmd
+      - terminal/appendices/a-change-terminal-color.qmd
     - text: "---"
     - part: "Intro to Git"
     - text: "---"
@@ -50,8 +51,8 @@ book:
       - intro-to-git/pull-requests.qmd
     - part: "Appendices"
       chapters:
-      - intro-to-git/troubleshooting.qmd
-      - intro-to-git/quick-reference.qmd
+      - intro-to-git/appendices/a-troubleshooting.qmd
+      - intro-to-git/appendices/a-quick-reference.qmd
 
 format:
   html:

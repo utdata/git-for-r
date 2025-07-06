@@ -58,9 +58,9 @@ First things first, we need to actually *open* the Terminal on our machines.
 
     ![Mac Terminal](../images/terminal-startup.png)
 
-1. Look at the very top line to see if the term in the middle of the title bar is `bash` like above. If it says `zsh` instead, go to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter to fix it.
+1. Look at the very top line to see if the term in the middle of the title bar is `bash` like above. If it says `zsh` instead, go to the [Change Mac shell to bash](../terminal/appendices/a-troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter to fix it.
 
-**Tip:** If you want, you can change the Terminal’s theme to make it more comfortable to look at by following the steps in the [how to change your Terminal theme](../appendices/a-change-terminal-color.qmd) appendix.
+**Tip:** If you want, you can change the Terminal’s theme to make it more comfortable to look at by following the steps in the [how to change your Terminal theme](../terminal/appendices/a-change-terminal-color.qmd) appendix.
 
 ### Windows
 
@@ -70,7 +70,7 @@ It will look like this:
 
 ![Windows Git Bash](../images/gitbash-startup.png)
 
-**Tip:** If you want, you can change the Terminal’s theme to make it more comfortable to look at by following the steps in the [how to change your Terminal theme](../appendices/a-change-terminal-color.qmd) appendix
+**Tip:** If you want, you can change the Terminal’s theme to make it more comfortable to look at by following the steps in the [how to change your Terminal theme](../terminal/appendices/a-change-terminal-color.qmd) appendix
 
 :::
 
@@ -90,7 +90,7 @@ To update your account to use zsh, please run `chsh -s /bin/zsh`.
 
 **DISREGARD THIS MESSAGE**. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.
 
-If you accidentally switched to zsh already, go to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter to fix it.
+If you accidentally switched to zsh already, go to the [Change Mac shell to bash](../terminal/appendices/a-troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter to fix it.
 :::
 
 ![When you launch Terminal for the first time, you'll see some text like this.](../images/terminal_launch%20copy.png)
@@ -100,7 +100,7 @@ If you accidentally switched to zsh already, go to the [Change Mac shell to bash
 1.  **Computer name:** the characters before the `~` is your computer's name (you may not have known it even had one).
 1.  **Current directory:** The `~` character is Terminal shorthand for your "base" directory on your computer. The value shown here will update as you move around to different folders on your computer.
 1.  **User name:** The part immediately after the `~` is your username.
-1.  **Command prompt:** Lastly we have the \$. This is the “prompt” where you type commands. *(Note: if you're on a Mac and see a % instead of a "\$", you may not be in Bash. Fix that by going to the [Change Mac shell to bash](/terminal/troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter)*
+1.  **Command prompt:** Lastly we have the \$. This is the “prompt” where you type commands. *(Note: if you're on a Mac and see a % instead of a "\$", you may not be in Bash. Fix that by going to the [Change Mac shell to bash](../terminal/appendices/a-troubleshooting.html#change-mac-shell-to-bash) section in the troubleshooting chapter)*
 
 You type your commands AFTER the `$` and then hit `Enter` / `return` on your keyboard to run or **execute** them. We'll practice doing just that in the next section.
 

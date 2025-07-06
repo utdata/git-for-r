@@ -68,7 +68,7 @@ If for some reason that doesn't work, there is this way, too:
 1.  Control-click your user name in the list of users on the left, then choose Advanced Options.
 1.  Choose a shell from the ”Login shell” menu, then click OK to save the changes.
 
-    ![Default to bash](../images/default-to-bash.png)
+    ![Default to bash](../../images/default-to-bash.png)
 
 1.  Click OK and close the System Preferences window.
 1.  Close any Terminal windows you have open and restart them.

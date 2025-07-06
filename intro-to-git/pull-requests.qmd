@@ -161,6 +161,6 @@ You’ve built a strong foundation for using version control in your future proj
 
 Remember: Practicing these skills is key to improving and getting comfortable -- the more you use git to track project work, the more natural it will feel.
 
-If you forget how to do something or get stuck you may find the [quick reference](../intro-to-git/quick-reference.qmd) and [troubleshooting](../intro-to-git/troubleshooting.qmd) appendices helpful. 
+If you forget how to do something or get stuck you may find the [quick reference](/intro-to-git/appendices/a-quick-reference.qmd) and [troubleshooting](/intro-to-git/appendices/a-troubleshooting.qmd) appendices helpful. 
 
 Good job! 🚀
