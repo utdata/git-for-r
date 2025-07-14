@@ -1,0 +1,115 @@
+---
+title: "Make a Git project"
+---
+
+> 🎯 Goal: By the end of this chapter, you’ll have an RStudio Quarto project tracked by Git.
+
+## Create a new RStudio Project
+
+Before we can add anything to our Github, we need a Quarto project to track.
+
+Follow the steps below to make a new Quarto project in RStudio:
+
+**Make a new Quarto project**
+
+In RStudio, navigate to:
+
+1. File → New Project → New Directory → **Quarto Website**
+
+In the "Create Quarto Website" window, do the following:
+
+1. Give your directory a descriptive name like `my-first-git-project` in the  **Directory Name field**.
+1. Check the  **Create project as a subdirectory of** field to make sure you're creating your project in the folder where you keep your class or coding projects on your computer.
+1. Make sure none of the boxes are checked.
+1. Finally, click **Create Project.**
+
+You’ll now have a project with some base project files, inclued an `index.qmd` file.
+
+## Run a Quarto File 
+
+Before we get into Git, let’s quickly make sure Quarto is working as expected by rendering one of our new files.
+
+1. In the Files pane, find your index.qmd file and click to open it.
+1. Change the title to something like "Intro to Git". 
+1. Click the **➡️ Render** button in the top toolbar.
+
+A new browser window should open with an HTML preview of your file.
+
+Great! You’re ready to start version-controlling this project.
+
+## Initialize Git in our Project
+
+If we want Git to start watching our files and keeping track of our changes, we have to make sure Git is connected to our project. To do this, we need to **initialize** Git inside of our Quarto project.
+
+In basic terms, initializing tells Git "I want you to start tracking this folder.”
+
+To initialize git, do the following:
+
+1. Navigate to the `Terminal` tab inside the Console pane in RStudio.
+1. In the terminal, run this:
+
+    ``` bash
+    git init
+    ```
+
+If it works, you’ll see Terminal respond with something like:
+
+`Initialized empty Git repository in /Users/yourname/my-quarto-project/.git/`
+
+**What's actually happening here?**
+
+This command creates a hidden folder called `.git` inside the project folder. This folder contains all the information Git needs to track changes in our project.
+
+## Ask Git what it sees (`git status`)
+
+Now that we've let Git know that we want it to start *watching* our project by initializing, we can ask Git what it "sees" using the `git status` command.
+
+Let's try this out now
+
+1. Run the following command
+
+  ``` bash
+  git status
+  ```
+
+Terminal will return something like the following as a response:
+
+``` bash        
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .Rproj.user/
+        .quarto/
+        _quarto.yml
+        my-first-git-project.Rproj
+        my-first-git-project.html
+        my-first-git-project.qmd
+        my-first-git-project_files/
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+Let's quickly breakdown what this all means:
+
+- "On branch main": You're working on the `main` branch — the default starting branch for development.
+- "No commits yet": This means Git is ready, but you haven’t saved any versions yet.
+- "Untracked Files": These are files Git sees in your folder, but it’s not saving changes to them yet. These files are marked in <span class = "text-red">**red**</span> in the terminal.
+
+The `git status` command will be used frequently throughout this guide, and you should use it a lot in your own Git workflow. It's an incredibly helpful command for tracking your progress and helping you to make sure you are where you think you are. 
+
+## 🎯 Checkpoint
+
+In this chapter you've:
+
+ - Made a new Quarto project and rendered your index file.
+ - Initialized Git inside your project (`git init`).
+ - Learned how to ask Git about the status of our project files (`git status`).
+
+---
+
+**Next up**
+
+In the next step, we'll learn how to tell Git what files we'd like it to **track** and which files to **ignore**. Then we'll take our first **"snapshot"** of our project. Proceed when you're ready!

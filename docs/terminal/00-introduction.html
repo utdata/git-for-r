@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Anastasia Goodwin, edited by Christian McDonald">
-<meta name="dcterms.date" content="2025-05-01">
 
-<title>Intro to Terminal &amp; Git for R</title>
+<title>1&nbsp; Welcome and launch – Intro to Terminal &amp; Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./how-to-use.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../terminal/01-moving-around.html" rel="next">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -84,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About this book</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/00-introduction.html">Introduction</a></li><li class="breadcrumb-item"><a href="../terminal/00-introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -99,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Intro to Terminal &amp; Git for R</a> 
+      <a href="../">Intro to Terminal &amp; Git for R</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -111,14 +144,8 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About this book</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./how-to-use.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to use this book</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -138,14 +165,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/welcome.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./terminal/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to the terminal</span></span></a>
+  <a href="../terminal/00-introduction.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,14 +182,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/moving-around.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Moving around in the terminal</span></span></a>
+  <a href="../terminal/01-moving-around.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/making-files-folders.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span></a>
+  <a href="../terminal/02-making-files-folders.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span></a>
   </div>
 </li>
       </ul>
@@ -184,20 +205,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/tips-tricks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
+  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/troubleshooting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  <a href="../terminal/04-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/glossary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Glossary: quick reference</span></span></a>
+  <a href="../terminal/05-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Glossary: quick reference</span></span></a>
   </div>
 </li>
       </ul>
@@ -219,20 +240,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/welcome.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
+  <a href="../intro-to-git/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/introduction-to-git.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Introduction to version control</span></span></a>
+  <a href="../intro-to-git/introduction-to-git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to version control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/install-and-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
+  <a href="../intro-to-git/install-and-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,26 +269,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/make-git-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Make a Git project</span></span></a>
+  <a href="../intro-to-git/make-git-project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Make our Git project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/add-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span></a>
+  <a href="../intro-to-git/add-files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/pushing-to-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
+  <a href="../intro-to-git/pushing-to-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/updating-your-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Updating files</span></span></a>
+  <a href="../intro-to-git/updating-your-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Updating files</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,26 +304,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/collaboration-setup-and-basic-workflow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span></a>
+  <a href="../intro-to-git/setup-and-basic-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/dealing-with-conflicts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dealing with conflicts</span></span></a>
+  <a href="../intro-to-git/dealing-with-conflicts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dealing with conflicts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/working-with-branches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
+  <a href="../intro-to-git/working-with-branches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/pull-requests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Pull requests</span></span></a>
+  <a href="../intro-to-git/pull-requests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Pull requests</span></span></a>
   </div>
 </li>
       </ul>
@@ -318,14 +339,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/quick-reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Quick reference</span></span></a>
+  <a href="../intro-to-git/quick-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quick reference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/troubleshooting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  <a href="../intro-to-git/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,44 +361,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#about-this-book" id="toc-about-this-book" class="nav-link active" data-scroll-target="#about-this-book">About this book</a>
+  <li><a href="#what-is-the-terminal-anyway" id="toc-what-is-the-terminal-anyway" class="nav-link active" data-scroll-target="#what-is-the-terminal-anyway"><span class="header-section-number">1.1</span> What is the Terminal, Anyway?</a></li>
+  <li><a href="#speaking-the-terminals-language" id="toc-speaking-the-terminals-language" class="nav-link" data-scroll-target="#speaking-the-terminals-language"><span class="header-section-number">1.2</span> Speaking the Terminal’s language</a></li>
+  <li><a href="#how-to-open-the-terminal" id="toc-how-to-open-the-terminal" class="nav-link" data-scroll-target="#how-to-open-the-terminal"><span class="header-section-number">1.3</span> How to Open the Terminal</a></li>
+  <li><a href="#your-first-command-saying-hello-to-the-terminal" id="toc-your-first-command-saying-hello-to-the-terminal" class="nav-link" data-scroll-target="#your-first-command-saying-hello-to-the-terminal"><span class="header-section-number">1.4</span> Your First Command: Saying Hello to the Terminal</a>
   <ul class="collapse">
-  <li><a href="#some-words-from-the-authors" id="toc-some-words-from-the-authors" class="nav-link" data-scroll-target="#some-words-from-the-authors">Some words from the authors</a></li>
-  <li><a href="#about-the-authors" id="toc-about-the-authors" class="nav-link" data-scroll-target="#about-the-authors">About the authors</a>
-  <ul class="collapse">
-  <li><a href="#anastasia-goodwin" id="toc-anastasia-goodwin" class="nav-link" data-scroll-target="#anastasia-goodwin">Anastasia Goodwin</a></li>
-  <li><a href="#christian-mcdonald" id="toc-christian-mcdonald" class="nav-link" data-scroll-target="#christian-mcdonald">Christian McDonald</a></li>
+  <li><a href="#your-first-command-saying-hello-to-the-terminal-1" id="toc-your-first-command-saying-hello-to-the-terminal-1" class="nav-link" data-scroll-target="#your-first-command-saying-hello-to-the-terminal-1"><span class="header-section-number">1.4.1</span> Your First Command: Saying Hello to the Terminal</a></li>
   </ul></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">1.5</span> 🎯 Checkpoint</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/00-introduction.html">Introduction</a></li><li class="breadcrumb-item"><a href="../terminal/00-introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Intro to Terminal &amp; Git for R</h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Anastasia Goodwin, edited by Christian McDonald </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -387,54 +394,157 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about-this-book" class="level1 unnumbered">
-<h1 class="unnumbered">About this book</h1>
+<p><strong>First things first:</strong></p>
+<p>If you’ve never opened a Terminal window before, you’re not alone. This guide is here to show you that the command line isn’t something to fear. It’s just a different way to tell your computer what to do — directly, and often much faster.</p>
+<p>You don’t need to memorize anything right now. You don’t need to be a “tech wizard.” You just need a little curiosity.</p>
+<p><strong>A few important things before you get started:</strong></p>
+<ol type="1">
+<li><strong>Type your commands:</strong> Getting used to writing in the command line is key to learning and remembering common commands. Though many of the code blocks in this books allow you to copy the code inside, please try to type it yourself (at least on the first try). You can always copy if you run into errors.</li>
+<li><strong>Mini exercises:</strong> There will be small exercises throughout this guide to reinforce learning and get you more comfortable working in the Terminal. Learning to code is largely done through <em>doing</em>, so we highly recommend you take the time to do them.</li>
+<li><strong>Terminology notes:</strong> Throughout this guide, there will be several callout boxes titled “terminology notes”. These callouts will be used to explain key terms – especially those used interchangeably – that may be confusing to new programmers. We recommend you take the time to read them because knowing the language coders use will help when reading documentation and when seeking help in online spaces like Stack Overflow.</li>
+</ol>
+<p>Time to enter the Matrix, Neo.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Digital_rain_animation_medium_letters_shine.gif" class="img-fluid figure-img"></p>
+<figcaption>Fun fact: the original design for the green “digital rain” animation used in the Matrix was based on scans of the creator’s wife’s Japanese cookbook.</figcaption>
+</figure>
+</div>
+<hr>
+<section id="what-is-the-terminal-anyway" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-the-terminal-anyway"><span class="header-section-number">1.1</span> What is the Terminal, Anyway?</h2>
+<p>Think of using the Terminal like dm’ing your computer.</p>
+<p>Instead of clicking buttons or opening folders with a mouse or trackpad, you type <strong>commands</strong> in the <strong>command line</strong> asking your computer to do these things for you. Your computer reads your message and replies by immediately doing what you ask.</p>
+<p>The <strong>Terminal</strong> (on Mac) or <strong>Git Bash</strong> (on Windows) are programs that can run a shell, are just the names of the user interfaces where you will type these commands.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Terminology note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>This work is under constant revision</strong>. It is written using <a href="https://quarto.org/docs/guide/">Quarto</a> and the source is available on <a href="https://github.com/utdata/git-for-r">Github</a>.</p>
-<p>This version is being revised for fall 2025.</p>
+<p>People (including the authors of this guide) will use the term <strong>shell</strong> and <strong>terminal</strong> and <em>command line</em> interchangeably. This means when we say “type into your shell”, “in your command line”, or “in your terminal”, we mean type at the prompt in your Terminal or Git Bash program. Later, we’ll use our Terminal from within Visual Studio Code.</p>
+<p>In reality, there are some nuances:</p>
+<ol type="1">
+<li>The <strong>terminal</strong> opens a window.</li>
+<li>Inside that, a <strong>shell</strong> runs.</li>
+<li>You interact with it through the <strong>command line</strong> interface.</li>
+</ol>
+<p>In practical terms, just know they usually mean the same thing out in the wild.</p>
 </div>
 </div>
-<p>Intro to Terminal and Git for R is a series of lessons and instructions used for courses in the School of Journalism and Media, Moody College of Communication at the University of Texas at Austin. This book is the brainchild of Associate Professor of Practice <a href="https://moody.utexas.edu/faculty/christian-mcdonald">Christian McDonald</a>, but has primarily been written by Anastasia Goodwin.</p>
-<section id="some-words-from-the-authors" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="some-words-from-the-authors">Some words from the authors</h2>
-<p>There is always more than one way to do things in coding. This book is an <strong>opinionated</strong> collection of lessons intended to teach students new to programming how to get started using the command line and version control. We consider our audiences beginners, and strive to make steps as simple as possible, which means we may not go into detail about alternative (and possibly better) ways to accomplish tasks in favor of reducing options to simplify understanding. For our purposes, we stick to the basics in hopes it eliminates enough of the noise for our students to get their feet on the ground using these technologies.</p>
-<p>There are a multitude of other resources available to students once they advance beyond the materials in this book, and we strongly encourage them to Google and seek out additional information about the concepts covered in this guide for further learning.</p>
-</section>
-<section id="about-the-authors" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="about-the-authors">About the authors</h2>
-<section id="anastasia-goodwin" class="level3">
-<h3 class="anchored" data-anchor-id="anastasia-goodwin">Anastasia Goodwin</h3>
-<p>I am a former web developer and UX/UI designer turned data journalist. I work as a senior data journalist embedded with the Houston Chronicle’s education team where I cover everything from pre-K to higher education. I also sometimes have the privilege to teach sections of Reporting with Data at the University of Texas at Austin, where I also attended journalism school.</p>
+<p>The Terminal might look a little old-school (and let’s be real: a bit scary 👻), but it’s still one of the most powerful tools you can learn. People who work in code, data, security, and tech use it all the time.</p>
+<p>Here’s just a few examples of what we can ask our computers to do using the Terminal:</p>
 <ul>
-<li>Email: <a href="mailto:ana.goodwin10@gmail.com" class="email">ana.goodwin10@gmail.com</a></li>
+<li><p>List all the files in a folder</p></li>
+<li><p>Create a new folder</p></li>
+<li><p>Install programs</p></li>
+<li><p>Move files around</p></li>
+<li><p>Automate tasks</p></li>
 </ul>
+<p>We can do all of these things by typing just a few words. But to communicate effectively with our Terminals, we have to learn “speak” its language. In this guide, you’ll learn the basics of this language to get you started.</p>
+<hr>
 </section>
-<section id="christian-mcdonald" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="christian-mcdonald">Christian McDonald</h3>
-<p>I’m a career journalist who most recently served as data and projects editor at the Austin American-Statesman before joining the University of Texas at Austin faculty full-time in fall 2018. I’ve taught data-related course at UT since 2013. I also serve as the innovation director of the <a href="https://journalism.utexas.edu/innovation">Dallas Morning News Journalism Innovation Endowment</a>.</p>
+<section id="speaking-the-terminals-language" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="speaking-the-terminals-language"><span class="header-section-number">1.2</span> Speaking the Terminal’s language</h2>
+<p>The programming language we will use for our interactions in the Terminal is called <strong>Bash</strong>. Bash is a Unix-based program and most of the Internet runs on Unix (or Linux) computers.</p>
+<p>Macs understand Bash natively, but Windows doesn’t understand Bash at all without the help of another program. This is why Git and Git Bash were downloaded in the prerequisites – so we can all speak the same language, regardless of the machines we’re using.</p>
+<hr>
+</section>
+<section id="how-to-open-the-terminal" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="how-to-open-the-terminal"><span class="header-section-number">1.3</span> How to Open the Terminal</h2>
+<p>First things first, we need to actually <em>open</em> the Terminal on our machines.</p>
+<p>Here’s how to find it on your computer:</p>
 <ul>
-<li>The UT Data Github: <a href="https://github.com/utdata">utdata</a></li>
-<li>Threads: <a href="https://www.threads.net/@critmcdonald">@critmcdonald</a> | Mastodon <a href="https://newsie.social/@crit">crit</a> | Bluesky: <span class="citation" data-cites="crit">@crit</span></li>
-<li>Email: <a href="mailto:christian.mcdonald@utexas.edu" class="email">christian.mcdonald@utexas.edu</a></li>
+<li><p><strong>Mac</strong>:<br>
+Press <code>Command + Space</code>, type <strong>Terminal</strong>, and hit <code>Enter</code>.</p></li>
+<li><p><strong>Windows</strong>:<br>
+Open the <strong>Start Menu</strong>, search for <strong>Terminal</strong> or <strong>PowerShell</strong>, and open it.<br>
+(There’s also something called “Command Prompt” — close enough for now.)</p></li>
+<li><p><strong>Linux</strong>:<br>
+Press <code>Ctrl + Alt + T</code> — it’s probably already installed!</p></li>
 </ul>
+<p><strong>Tip:</strong> If you want, you can change the Terminal’s color theme to make it more comfortable to look at. (We’ll cover this later.)</p>
+<hr>
+</section>
+<section id="your-first-command-saying-hello-to-the-terminal" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="your-first-command-saying-hello-to-the-terminal"><span class="header-section-number">1.4</span> Your First Command: Saying Hello to the Terminal</h2>
+<p>Ok, now that the Terminal is open on your computer, let’s take a quick look at the text showing in the window when you launch to familiarize ourselves with basics of the interface.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note for newer Mac users
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you launch the Terminal for the first time, you’ll probably see a prompt saying something like:</p>
+<pre><code>The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.</code></pre>
+<p><strong>DISREGARD THIS MESSAGE</strong>. Do not run this the command to update to zsh. Zsh is a similar language that Mac is transitioning to by default. However, we will use Bash for this guide to keep everyone on the same page, regardless of their operating systems.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/terminal_launch copy.png" class="img-fluid figure-img"></p>
+<figcaption>When you launch Terminal for the first time, you’ll see some text like this.</figcaption>
+</figure>
+</div>
+<p><strong>Let’s breakdown a few things from the screenshot above:</strong></p>
+<ol type="1">
+<li>Computer name: the characters before the <code>~</code> are your computer name.</li>
+<li>Current directory: The <code>~</code> character is Terminal shorthand for your “base” directory on your computer. The value shown here will update as you move around to different folders on your computer.</li>
+<li>User name: The part immediatetely after the <code>~</code> is your username.</li>
+<li>Command prompt: Lastly we have the <code>$</code>. This is the “prompt” where you type commands.</li>
+</ol>
+<p>You type your commands AFTER the <code>$</code> and then hit <code>Return</code>/<code>Enter</code> on your keyboard to run or <strong>execute</strong> them. We’ll practice doing just that in the next section.</p>
+<section id="your-first-command-saying-hello-to-the-terminal-1" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="your-first-command-saying-hello-to-the-terminal-1"><span class="header-section-number">1.4.1</span> Your First Command: Saying Hello to the Terminal</h3>
+<p>Let’s try your first real command: finding out <em>where</em> you are using the command <code>pwd</code>.</p>
+<p>In the Terminal prompt (remember after the <code>$)</code>, type the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then press <code>Enter</code> to <em>run</em> the command.</p>
+<p>You should see Terminal respond with something like this:</p>
+<p><code>/Users/yourname</code></p>
+<p>or this</p>
+<p><code>C:\Users\yourname</code></p>
+<p>Depending on your system, the path may look a little different — and that’s OK.</p>
+<p><strong>So what just happened?</strong></p>
+<ul>
+<li><p><code>pwd</code> stands for “<strong>print working directory</strong>.”</p></li>
+<li><p>It simply asks: <em>Where am I right now in the computer’s folder system?</em></p></li>
+<li><p>Your computer provides the answer: your current folder — usually your “home” directory when you first open the Terminal.</p></li>
+</ul>
+<hr>
 </section>
 </section>
-<section id="license" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"></a><br><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-<p>Let’s just say this is free on the internet. I don’t make any money from it and you shouldn’t either.</p>
+<section id="checkpoint" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">1.5</span> 🎯 Checkpoint</h2>
+<p>You’ve made it to the end of chapter 1. Good job!</p>
+<p><strong>You’ve now:</strong></p>
+<ul>
+<li><p>Opened the Terminal.</p></li>
+<li><p>Typed and ran your first command.</p></li>
+<li><p>Seen your computer respond back.</p></li>
+</ul>
+<p>You’re officially no longer a Terminal beginner. 🙌</p>
+<p><strong>A few quick Tips Before You Move On to the next chapter:</strong></p>
+<ol type="1">
+<li><strong>Command Case Matters in the Terminal</strong>: <code>pwd</code> is <em>not</em> the same as <code>PWD</code>.</li>
+<li><strong>Press Enter</strong>: Every command you type needs an <code>Enter</code> to run.</li>
+<li><strong>You can’t break things easily</strong>: Typing <code>pwd</code> won’t hurt your computer.<br>
+(In fact, almost everything we’ll do in this guide will be safe.)</li>
+</ol>
+<hr>
+<p><strong>Next up:</strong></p>
+<p>We’ll learn how to <em>move around</em> inside your computer using simple commands. Whenever you’re ready, proceed to the next chapter.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -841,8 +951,8 @@ Note
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./how-to-use.html" class="pagination-link" aria-label="How to use this book">
-        <span class="nav-page-text">How to use this book</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../terminal/01-moving-around.html" class="pagination-link" aria-label="Moving Around in the Terminal">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,1 +1,5 @@
 /* css styles */
+
+.sidebar-item-text.sidebar-link.text-start > .menu-text[data-nav-title="Intro to Terminal"] {
+  font-weight: bold;
+}

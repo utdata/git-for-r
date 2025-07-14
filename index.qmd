@@ -1,4 +1,37 @@
 # About this book {.unnumbered}
 
-I'm finding I'm not happy with existing resources on using Git with R, so I want to make a very opinionated guide specifically for my students.
+::: callout-note
+**This work is under constant revision**. It is written using [Quarto](https://quarto.org/docs/guide/) and the source is available on [Github](https://github.com/utdata/git-for-r).
 
+This version is being revised for fall 2025.
+:::
+
+Intro to Terminal and Git for R is a series of lessons and instructions used for courses in the School of Journalism and Media, Moody College of Communication at the University of Texas at Austin. This book is the brainchild of Associate Professor of Practice [Christian McDonald](https://moody.utexas.edu/faculty/christian-mcdonald), but has primarily been written by Anastasia Goodwin.
+
+## Some words from the authors {.unnumbered}
+
+There is always more than one way to do things in coding. This book is an **opinionated** collection of lessons intended to teach students new to programming how to get started using the command line and version control. We consider our audiences beginners, and strive to make steps as simple as possible, which means we may not go into detail about alternative (and possibly better) ways to accomplish tasks in favor of reducing options to simplify understanding. For our purposes, we stick to the basics in hopes it eliminates enough of the noise for our students to get their feet on the ground using these technologies.
+
+There are a multitude of other resources available to students once they advance beyond the materials in this book, and we strongly encourage them to Google and seek out additional information about the concepts covered in this guide for further learning.
+
+## About the authors {.unnumbered}
+
+### Anastasia Goodwin
+
+I am a former web developer and UX/UI designer turned data journalist. I work as a senior data journalist embedded with the Houston Chronicle's education team where I cover everything from pre-K to higher education. I also sometimes have the privilege to teach sections of Reporting with Data at the University of Texas at Austin, where I also attended journalism school.
+
+-   Email: [ana.goodwin10\@gmail.com](mailto:ana.goodwin10@gmail.com){.email}
+
+### Christian McDonald {.unnumbered}
+
+I'm a career journalist who most recently served as data and projects editor at the Austin American-Statesman before joining the University of Texas at Austin faculty full-time in fall 2018. I've taught data-related course at UT since 2013. I also serve as the innovation director of the [Dallas Morning News Journalism Innovation Endowment](https://journalism.utexas.edu/innovation).
+
+-   The UT Data Github: [utdata](https://github.com/utdata)
+-   Threads: [\@critmcdonald](https://www.threads.net/@critmcdonald) \| Mastodon [crit](https://newsie.social/@crit) \| Bluesky: @crit
+-   Email: [christian.mcdonald\@utexas.edu](mailto:christian.mcdonald@utexas.edu){.email}
+
+## License {.unnumbered}
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"/></a><br /><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+Let's just say this is free on the internet. I don't make any money from it and you shouldn't either.

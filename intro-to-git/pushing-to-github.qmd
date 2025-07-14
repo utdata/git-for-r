@@ -1,0 +1,130 @@
+---
+title: "Pushing to Github"
+---
+
+> 🎯 Goal: By the end of this chapter, you’ll know how to connect your
+> Git project to Github and push your first commit.
+
+Now that your project changes have been committed locally on your computer, let’s put it on GitHub
+so you can back it up and collaborate with others.
+
+## Create a Repository on GitHub
+
+First things first, we need to actually make a place for our project on Github. In Github, this is called a **repository**. Think of a repository (or **repo** for short) like making a new folder in Google Drive where you'd save all your interview notes, research and drafts when working on a story. 
+
+To make new Github repository:
+
+1.  Go to [github.com](https://github.com) and log in.
+1.  Click the **+** in toolbar at the upper right corner. Then click **"New
+    repository"** in the dropdown.
+1.  Do the following in the **Create a new repository** form:
+
+    1. Fill in the **Repository name** field, using the same name as
+        your project folder (e.g. `my-quarto-project`)
+
+    1. Leave **Description** blank for now
+
+    1. Leave the box **unchecked** that says "Initialize this
+        repository with a README" (We can add this on our own later)
+    1. Leave the other defaults as-is (None gitignore and None for licence) 
+1. Click **Create repository**. 
+
+    You’ll now see a page with instructions on how to connect your local folder to this GitHub repository.
+
+1. In the **Quick setup** box
+
+    1. Click the **SSH** tab to get the correct URL to clone (it will begin with `git@` instead of `https:`)
+    1. Click the copy icon button next to the "SSH URL" box to copy the URL to your clipboard
+
+This URL is the "address" where your repository lives. We'll use it to connect our local Git project to our Github project in the next step.
+
+## Connect your local Git project to GitHub
+
+We're now ready to hook up local project to our Github project. We'll only have to do this once, but it involves a couple steps
+
+First, we'll add our remote project by doing the following:
+
+1. Navigate to the `Terminal` tab inside your RStudio Quarto project.
+1. Type the following command, but replace the URL with the one you copied from GitHub:
+    
+    ``` bash
+    git remote add origin git@github.com:your-name/your-repo-name.git
+    ```
+1. Run the command by hitting `Enter` / `return`.
+
+Now, we'll add our saved snapshot of our files to Github by **pushing our changes**:
+
+1. Run the following:
+
+    ``` bash
+    git push -u origin main
+    ```
+
+## Quick Recap: what do these commands do?
+
+Ok, we just did a lot there. Let's pause for a moment and breakdown
+everything we just did:
+
+-   `git remote add origin {REPO_URL}`: Told Git where your online repository
+    lives (on GitHub).
+-   `git push -u origin main`
+    
+    This command did two things:
+
+    1. Setup a link between your local `main`
+    branch and the `main` branch on GitHub. 
+    1. "Pushed" your local commits (aka the "snapshot" we took last section) to GitHub.
+
+In short, these steps connected your *local* project to your *remote* project on Github, then saved the snapshot you took to the cloud. We won't
+have to repeat these exact steps ever again when saving snapshots in the
+future for this project. 
+
+That said, is the process you will follow when making new Github projects in the future, so make sure you understand the basics of what we did here. 
+
+🎉 Congratulations: you now have your first live project is on GitHub!
+
+------------------------------------------------------------------------
+
+## 📝 Mini exercise: explore Your GitHub project
+
+Go to your repository page on GitHub (or refresh the page if you still
+have it open from before).
+
+You should see all your project files, including `.qmd`, `.gitignore`,
+etc.
+
+Pay attention to what's showing in the file list. You'll see some
+helpful information about the project, including:
+
+1.  Which user made the most recent commit
+2.  The commit message
+3.  The commit number
+4.  The timestamp of the commit In the file list
+5.  The commit message and timestamp from the most recent update made to
+    each file or folder.
+    
+Take a few minutes to click on some of your files and get familiar with the Github interface. 
+
+::: callout-note
+Not **every** file will update with each git push. Git only keeps track
+of *changes* to files. If you made no edits to a file in a commit, it
+won't change. Timestamps will help you track when updates were last made
+different parts of your project!
+:::
+
+## 🎯 Checkpoint
+
+At this point in the guide, you've learned how to:
+
+-   Create a new RStudio project.
+-   Turn on Git tracking with `git init`.
+-   Tell Git to ignore files (`.gitignore`).
+-   Stage and commit changes to Git (`git add` and `git commit`).
+-   Connect your local project to your remote GitHub repository (`git remote add origin`).
+-   Push your first commit to Github (`git push`).
+
+---
+**Next up:**
+
+We’ll learn how to **make changes**, **track versions**, and
+**collaborate** like pros.

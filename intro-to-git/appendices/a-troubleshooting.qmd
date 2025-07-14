@@ -1,0 +1,99 @@
+---
+title: "Troubleshooting"
+---
+
+Even experienced developers forget a command or hit a weird error sometimes. You *will* mess up Git at some point. That’s part of the learning process!
+
+Here’s how to recover from common problems and feel less stuck.
+
+## Common scenarios and fixes {.unnumbered}
+
+### "I made a change I don't want anymore" {.unnumbered}
+
+**Scenario 1:** you changed a file but **haven’t committed** it yet.
+
+Run:
+
+``` bash
+git restore filename.qmd
+```
+
+This resets the file to how it was in your last commit.
+
+**Scenario 2:** you changed a file and already **staged** it (`git add <filename>`)
+
+First, unstage it by running:
+
+``` bash
+git restore --staged filename.qmd
+```
+
+Then run:
+
+``` bash
+git restore filename.qmd
+```
+
+### "I committed the wrong thing" {.unnumbered}
+
+You can undo the most recent commit **(without losing your changes)**:
+
+``` bash
+git reset --soft HEAD~1
+```
+
+Now your changes are back in the staging area. Fix what you need, and recommit.
+
+If you want to **undo the commit and all your changes**:
+
+``` bash
+git reset --hard HEAD~1
+```
+
+⚠️ Warning: Using `--hard` will **delete** your work — only use this if you're really sure!
+
+### "I forgot to add a file before committing" {.unnumbered}
+
+If you made a commit but forgot a file you meant to include:
+
+Step 1: Stage the missing file:
+
+``` bash
+git add missed_file.qmd
+```
+
+Step 2: Amend your last commit:
+
+``` bash
+git commit --amend
+```
+
+This opens the Terminal's default text editor, **Vim,** so you can update the message or leave it the same. Git will include the new file in the same commit.
+
+After editing your message in Vim:
+
+1.  Press `Esc` to make sure you're not in insert mode.
+1.  Type `:wq` (stands for write and quit).
+1.  Press `Enter` / `return`to save you changes and exit Vim.
+
+### "I can't push because 'tip of your current branch is behind'" {.unnumbered}
+
+This means someone else pushed changes to GitHub before you.
+
+To fix it:
+
+``` bash
+git pull --rebase
+```
+
+This fetches the new work and replays your changes on top of it. If there’s a conflict, Git will pause and ask you to resolve it. Once done, run:
+
+``` bash
+git add . git rebase --continue
+```
+
+Then push again:
+
+``` bash
+git push
+```

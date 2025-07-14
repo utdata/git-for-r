@@ -1,0 +1,46 @@
+---
+title: "Quick reference"
+---
+
+## Terminology
+
+|📓 Term|📖 What It Means|
+|---|---|
+|Command line|The interface where you type and run text commands|
+|Shell|The program that interprets your commands and runs them (e.g. `bash`, `zsh`) |
+|Terminal|The user interface that displays the shell and lets you interact with it. Examples: Terminal (Mac), Git Bash (Windows)|
+|Directory (Folder)|A container for files|
+|Path|The location of a file or folder|
+|Flag|Extra option for a command|
+
+## Common commands
+
+|📝 Command| ️💬 Action|
+|---|---|
+|`pwd`|Show current directory (path)|
+|`ls`|List files and folders|
+|`ls -l`|List with detailed info|
+|`cd foldername`|Change into a folder|
+|`cd ..`|Move up one folder|
+|`mkdir name`|Make a new folder|
+|`touch name.txt`|Create a blank file|
+|`cp old new`|Copy a file|
+|`mv old new`|Move or rename a file|
+|`rm file`|Delete a file|
+|`rm -r folder`|Delete a folder and its contents|
+|`Ctrl + C`|Cancel a running command|
+|Tab|Autocomplete file/folder names|
+
+
+## Common errors
+    
+| ❌ Error                        | 📖 What It Means                                                 | 💡 Fix                                                   |
+|--------------------------------|------------------------------------------------------------------|-----------------------------------------------------------|
+| `command not found`            | You typed a command the shell doesn't recognize                 | Check for typos or whether the tool is installed          |
+| `No such file or directory`    | You're trying to access a file/path that doesn't exist          | Use `ls` to explore and make sure the path is correct     |
+| `Permission denied`            | You tried to do something you don’t have permission for         | Use `sudo` (if appropriate), or check file permissions    |
+| `Is a directory`               | You tried to treat a directory like a file                      | Double-check what kind of thing you're trying to use      |
+| `Not a directory`             | You tried to treat a file like a folder                         | Use `ls -l` to see what's a file vs folder                |
+| `Syntax error`                 | You typed a command in a way the shell can't parse              | Review the correct syntax, especially quotes or flags     |
+| `Killed` or `Terminated`       | The OS stopped a program (often for high memory/CPU usage)      | Try a smaller task or check system limits                 |
+| Getting stuck in VIM           | You opened something in `vim` and can't exit                    | Press `Esc`, then `:q!`, then `Enter` / `return` to quit             |

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Anastasia Goodwin, edited by Christian McDonald">
-<meta name="dcterms.date" content="2025-05-01">
 
-<title>Intro to Terminal &amp; Git for R</title>
+<title>2&nbsp; Moving Around in the Terminal – Intro to Terminal &amp; Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./how-to-use.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../terminal/02-making-files-folders.html" rel="next">
+<link href="../terminal/00-introduction.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +106,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -84,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About this book</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/01-moving-around.html">Terminal basics</a></li><li class="breadcrumb-item"><a href="../terminal/01-moving-around.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -99,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Intro to Terminal &amp; Git for R</a> 
+      <a href="../">Intro to Terminal &amp; Git for R</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -111,14 +144,8 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About this book</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./how-to-use.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to use this book</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -138,14 +165,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/welcome.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./terminal/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to the terminal</span></span></a>
+  <a href="../terminal/00-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,14 +182,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/moving-around.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Moving around in the terminal</span></span></a>
+  <a href="../terminal/01-moving-around.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/making-files-folders.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span></a>
+  <a href="../terminal/02-making-files-folders.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span></a>
   </div>
 </li>
       </ul>
@@ -184,20 +205,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/tips-tricks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
+  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/troubleshooting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  <a href="../terminal/04-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/glossary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Glossary: quick reference</span></span></a>
+  <a href="../terminal/05-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Glossary: quick reference</span></span></a>
   </div>
 </li>
       </ul>
@@ -219,20 +240,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/welcome.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
+  <a href="../intro-to-git/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/introduction-to-git.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Introduction to version control</span></span></a>
+  <a href="../intro-to-git/introduction-to-git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to version control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/install-and-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
+  <a href="../intro-to-git/install-and-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,26 +269,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/make-git-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Make a Git project</span></span></a>
+  <a href="../intro-to-git/make-git-project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Make our Git project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/add-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span></a>
+  <a href="../intro-to-git/add-files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/pushing-to-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
+  <a href="../intro-to-git/pushing-to-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/updating-your-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Updating files</span></span></a>
+  <a href="../intro-to-git/updating-your-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Updating files</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,26 +304,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/collaboration-setup-and-basic-workflow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span></a>
+  <a href="../intro-to-git/setup-and-basic-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/dealing-with-conflicts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dealing with conflicts</span></span></a>
+  <a href="../intro-to-git/dealing-with-conflicts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dealing with conflicts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/working-with-branches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
+  <a href="../intro-to-git/working-with-branches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/pull-requests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Pull requests</span></span></a>
+  <a href="../intro-to-git/pull-requests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Pull requests</span></span></a>
   </div>
 </li>
       </ul>
@@ -318,14 +339,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/quick-reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Quick reference</span></span></a>
+  <a href="../intro-to-git/quick-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quick reference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/troubleshooting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  <a href="../intro-to-git/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,44 +361,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#about-this-book" id="toc-about-this-book" class="nav-link active" data-scroll-target="#about-this-book">About this book</a>
-  <ul class="collapse">
-  <li><a href="#some-words-from-the-authors" id="toc-some-words-from-the-authors" class="nav-link" data-scroll-target="#some-words-from-the-authors">Some words from the authors</a></li>
-  <li><a href="#about-the-authors" id="toc-about-the-authors" class="nav-link" data-scroll-target="#about-the-authors">About the authors</a>
-  <ul class="collapse">
-  <li><a href="#anastasia-goodwin" id="toc-anastasia-goodwin" class="nav-link" data-scroll-target="#anastasia-goodwin">Anastasia Goodwin</a></li>
-  <li><a href="#christian-mcdonald" id="toc-christian-mcdonald" class="nav-link" data-scroll-target="#christian-mcdonald">Christian McDonald</a></li>
-  </ul></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul></li>
+  <li><a href="#whats-in-this-folder-ls" id="toc-whats-in-this-folder-ls" class="nav-link active" data-scroll-target="#whats-in-this-folder-ls"><span class="header-section-number">2.1</span> What’s in This Folder? (<code>ls</code>)</a></li>
+  <li><a href="#moving-around-cd" id="toc-moving-around-cd" class="nav-link" data-scroll-target="#moving-around-cd"><span class="header-section-number">2.2</span> Moving Around (<code>cd</code>)</a></li>
+  <li><a href="#how-can-you-tell-where-you-are-now-pwd" id="toc-how-can-you-tell-where-you-are-now-pwd" class="nav-link" data-scroll-target="#how-can-you-tell-where-you-are-now-pwd"><span class="header-section-number">2.3</span> How Can You Tell Where You Are Now? (<code>pwd</code>)</a></li>
+  <li><a href="#going-back-up-cd-.." id="toc-going-back-up-cd-.." class="nav-link" data-scroll-target="#going-back-up-cd-.."><span class="header-section-number">2.4</span> Going Back Up (<code>cd ..</code>)</a></li>
+  <li><a href="#extra-special-shortcuts" id="toc-extra-special-shortcuts" class="nav-link" data-scroll-target="#extra-special-shortcuts"><span class="header-section-number">2.5</span> Extra: Special Shortcuts</a></li>
+  <li><a href="#mini-exercise" id="toc-mini-exercise" class="nav-link" data-scroll-target="#mini-exercise"><span class="header-section-number">2.6</span> 📝 Mini Exercise</a></li>
+  <li><a href="#pro-tip-speed-up-with-tab-completion" id="toc-pro-tip-speed-up-with-tab-completion" class="nav-link" data-scroll-target="#pro-tip-speed-up-with-tab-completion"><span class="header-section-number">2.7</span> 🔥 Pro Tip: Speed Up with Tab Completion</a></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">2.8</span> 🎯 Checkpoint</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/01-moving-around.html">Terminal basics</a></li><li class="breadcrumb-item"><a href="../terminal/01-moving-around.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Intro to Terminal &amp; Git for R</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Anastasia Goodwin, edited by Christian McDonald </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -387,54 +394,153 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about-this-book" class="level1 unnumbered">
-<h1 class="unnumbered">About this book</h1>
+<p>Now that you know where you <em>are</em> (<code>pwd</code>), it’s time to explore what’s <em>around</em> you. Specifically, we’ll start by moving between different folders on your computer.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Terminology note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>This work is under constant revision</strong>. It is written using <a href="https://quarto.org/docs/guide/">Quarto</a> and the source is available on <a href="https://github.com/utdata/git-for-r">Github</a>.</p>
-<p>This version is being revised for fall 2025.</p>
+<p>In the Terminal world, folders are usually called <strong>directories</strong>. (You’ll hear both words out in the world — they mean the same thing.)</p>
 </div>
 </div>
-<p>Intro to Terminal and Git for R is a series of lessons and instructions used for courses in the School of Journalism and Media, Moody College of Communication at the University of Texas at Austin. This book is the brainchild of Associate Professor of Practice <a href="https://moody.utexas.edu/faculty/christian-mcdonald">Christian McDonald</a>, but has primarily been written by Anastasia Goodwin.</p>
-<section id="some-words-from-the-authors" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="some-words-from-the-authors">Some words from the authors</h2>
-<p>There is always more than one way to do things in coding. This book is an <strong>opinionated</strong> collection of lessons intended to teach students new to programming how to get started using the command line and version control. We consider our audiences beginners, and strive to make steps as simple as possible, which means we may not go into detail about alternative (and possibly better) ways to accomplish tasks in favor of reducing options to simplify understanding. For our purposes, we stick to the basics in hopes it eliminates enough of the noise for our students to get their feet on the ground using these technologies.</p>
-<p>There are a multitude of other resources available to students once they advance beyond the materials in this book, and we strongly encourage them to Google and seek out additional information about the concepts covered in this guide for further learning.</p>
-</section>
-<section id="about-the-authors" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="about-the-authors">About the authors</h2>
-<section id="anastasia-goodwin" class="level3">
-<h3 class="anchored" data-anchor-id="anastasia-goodwin">Anastasia Goodwin</h3>
-<p>I am a former web developer and UX/UI designer turned data journalist. I work as a senior data journalist embedded with the Houston Chronicle’s education team where I cover everything from pre-K to higher education. I also sometimes have the privilege to teach sections of Reporting with Data at the University of Texas at Austin, where I also attended journalism school.</p>
+<section id="whats-in-this-folder-ls" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="whats-in-this-folder-ls"><span class="header-section-number">2.1</span> What’s in This Folder? (<code>ls</code>)</h2>
+<p>If you want to <em>see</em> what’s inside the current directory, you use the <code>ls</code> command.</p>
+<p>As we said in Chapter 1, the Terminal lets you interact with files the same way you would with <strong>File Explorer</strong> on Windows and <strong>Finder</strong> on a Mac — except you’ll be using text instead of clicking.</p>
+<p>When your first launch terminal, you’ll see a <code>~</code> (called a tilde), which lets you know you’re in your base or home directory. We want to ask the Terminal to tell us what is inside this home directory.</p>
+<p>To do that, type the following command:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and press <code>Enter</code> to run the command.</p>
+<p>Terminal will <em>respond</em> to your command with a list of files and folders like this:</p>
+<pre><code>_projects Desktop       Downloads   Movies      Pictures
+Documents   Library     Music       Public </code></pre>
+<p>Or it might be different depending on what’s in your computer’s home folder.</p>
+<p>In any case, the list of directories returned by Terminal will match the folders you would see if you clicked on your home directory in the Finder on a Mac or in File Explorer on a Windows machine. For example, the list of folders listed in the example response above matches what we see in our home directory using Finder below.</p>
+<p><img src="../images/home-directory.png" class="img-fluid" alt="An example of folders in a home directory on a Mac."><strong>Quick Recap: What does <code>ls</code> stand for?</strong></p>
 <ul>
-<li>Email: <a href="mailto:ana.goodwin10@gmail.com" class="email">ana.goodwin10@gmail.com</a></li>
+<li><p>It’s short for “<strong>list</strong>.”</p></li>
+<li><p>It literally says, “List what’s here.”</p></li>
 </ul>
 </section>
-<section id="christian-mcdonald" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="christian-mcdonald">Christian McDonald</h3>
-<p>I’m a career journalist who most recently served as data and projects editor at the Austin American-Statesman before joining the University of Texas at Austin faculty full-time in fall 2018. I’ve taught data-related course at UT since 2013. I also serve as the innovation director of the <a href="https://journalism.utexas.edu/innovation">Dallas Morning News Journalism Innovation Endowment</a>.</p>
+<section id="moving-around-cd" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="moving-around-cd"><span class="header-section-number">2.2</span> Moving Around (<code>cd</code>)</h2>
+<p>Seeing what’s around is nice — but what if you want to <em>go into</em> one of those folders?</p>
+<p>Use the <code>cd</code> command, shorthand for “change directory”.</p>
+<p>Suppose you see a folder called <code>Documents</code>.</p>
+<p>To do so, type the following command in your Terminal:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Documents</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and press <code>Enter</code>.</p>
+<p>Now you’re inside the <code>Documents</code> directory!</p>
+</section>
+<section id="how-can-you-tell-where-you-are-now-pwd" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="how-can-you-tell-where-you-are-now-pwd"><span class="header-section-number">2.3</span> How Can You Tell Where You Are Now? (<code>pwd</code>)</h2>
+<p>There are a couple ways to make sure you are where you <em>think</em> you are in the Terminal.</p>
+<p>The first is to look at the command prompt line inside your Terminal window again. You should see something like:</p>
+<p><code>Anas-MacBook-Air:Documents ana$</code></p>
+<p>In the current directory space (where there used to be a <code>~</code>), you should now see the name of the <code>Documents</code> folder. Remember if you’re ever unsure <em>where</em> you are, Terminal will tell you in the prompt!</p>
+<p>If you’re still not sure, remember you can use your new friend the <code>pwd</code> command from Chapter 1 by typing:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Terminal should now show something like:</p>
+<p><code>/Users/yourname/Documents</code></p>
+<p>or</p>
+<p><code>C:\Users\yourname\Documents</code></p>
+<p>Nice job — you just moved between directories!</p>
+<p>Now let’s try sending the <code>ls</code> command again by typing:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>and hitting <code>Enter</code>.</p>
+<p>You should see a different list of files and/or folder names that you did when you ran the same command inside the home directory — now showing the contents of your <code>Documents</code> folder.</p>
+</section>
+<section id="going-back-up-cd-.." class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="going-back-up-cd-.."><span class="header-section-number">2.4</span> Going Back Up (<code>cd ..</code>)</h2>
+<p>Ok now that we’ve moved <em>into</em> folders, what if you want to go <em>back</em> to the folder you came from?</p>
+<p>To go back up, type and run the following command:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The two dots <code>..</code> simply mean “the folder above this one.”</p>
+<p>If you run the <code>pwd</code> command again, you’ll see you’re back to where you started!</p>
+</section>
+<section id="extra-special-shortcuts" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="extra-special-shortcuts"><span class="header-section-number">2.5</span> Extra: Special Shortcuts</h2>
+<p>Here are a few handy shortcuts you’ll want to remember:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>cd</code></td>
+<td>Go back to your <strong>home</strong> directory.</td>
+</tr>
+<tr class="even">
+<td><code>cd ..</code></td>
+<td>Move <strong>up one</strong> directory.</td>
+</tr>
+<tr class="odd">
+<td><code>cd foldername</code></td>
+<td>Move <strong>into</strong> a folder.</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>Tip:</strong> If the folder name has spaces (like <code>My Documents</code>), put it in quotes:</p>
+<p><code>cd "My Documents"</code></p>
+</blockquote>
+<p>Or use a backslash to “escape” the space:</p>
+<p><code>cd My\ Documents</code></p>
+<p>Like we mentioned before, Terminal is particular about the <em>way</em> you speak to it. For it to understand you, you’ve got to speak its language. But this is another reason why naming your files and directories cleanly using a naming convention like <code>snake_case</code> or <code>kebab-case</code> will help you work more efficiently.</p>
+</section>
+<section id="mini-exercise" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="mini-exercise"><span class="header-section-number">2.6</span> 📝 Mini Exercise</h2>
+<p><strong>Own your own, try this:</strong></p>
+<ol type="1">
+<li><p>Open your Terminal.</p></li>
+<li><p>Type <code>pwd</code> to see where you are.</p></li>
+<li><p>Use <code>ls</code> to list what’s inside.</p></li>
+<li><p>Pick a folder you see (not your Documents folder).</p></li>
+<li><p><code>cd</code> into that folder.</p></li>
+<li><p>Use <code>pwd</code> again to check that you moved.</p></li>
+<li><p><code>cd ..</code> to come back up.</p></li>
+</ol>
+<p>Take your time. Play around.<br>
+If you get lost, just type:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>to jump back to your home directory.</p>
+</section>
+<section id="pro-tip-speed-up-with-tab-completion" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="pro-tip-speed-up-with-tab-completion"><span class="header-section-number">2.7</span> 🔥 Pro Tip: Speed Up with Tab Completion</h2>
+<p>Ok, now that you’ve got some practice typing things into Terminal, we’ll let you in on a big time-saver: when you start typing a folder name, you don’t have to type the whole thing.</p>
+<p>Hit the <code>Tab</code> key after typing part of your folder name and the Terminal will <em>try</em> to <strong>auto-complete</strong> it for you.</p>
+<p>See it for yourself by typing:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>then press <code>Tab</code>.</p>
 <ul>
-<li>The UT Data Github: <a href="https://github.com/utdata">utdata</a></li>
-<li>Threads: <a href="https://www.threads.net/@critmcdonald">@critmcdonald</a> | Mastodon <a href="https://newsie.social/@crit">crit</a> | Bluesky: <span class="citation" data-cites="crit">@crit</span></li>
-<li>Email: <a href="mailto:christian.mcdonald@utexas.edu" class="email">christian.mcdonald@utexas.edu</a></li>
+<li>If there’s a <code>Documents</code> folder, Terminal will fill in the rest automatically!</li>
 </ul>
+<p>Huge time saver.</p>
+<p>Remember, you’ll still need to hit Enter to run the command and move into the Documents folder though.</p>
 </section>
-</section>
-<section id="license" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"></a><br><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-<p>Let’s just say this is free on the internet. I don’t make any money from it and you shouldn’t either.</p>
+<section id="checkpoint" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">2.8</span> 🎯 Checkpoint</h2>
+<p>In this chapter you’ve learned:</p>
+<ul>
+<li><p>How to see what’s inside a folder (<code>ls</code>)</p></li>
+<li><p>How to move into a folder (<code>cd foldername</code>)</p></li>
+<li><p>How to move back up (<code>cd ..</code>)</p></li>
+<li><p>How to use <code>Tab</code> to speed things up</p></li>
+</ul>
+<p>At this point you’ve started to learn some of the basics of “speaking” Bash.</p>
+<hr>
+<p><strong>Next up:</strong></p>
+<p>We’ll learn how to create your own files and folders in the Terminal.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -839,10 +945,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../terminal/00-introduction.html" class="pagination-link" aria-label="Welcome and launch">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./how-to-use.html" class="pagination-link" aria-label="How to use this book">
-        <span class="nav-page-text">How to use this book</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../terminal/02-making-files-folders.html" class="pagination-link" aria-label="Making and managing folder">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

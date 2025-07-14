@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Anastasia Goodwin, edited by Christian McDonald">
-<meta name="dcterms.date" content="2025-05-01">
 
-<title>Intro to Terminal &amp; Git for R</title>
+<title>3&nbsp; Making and managing folder – Intro to Terminal &amp; Git for R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,27 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./how-to-use.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../terminal/03-tips-tricks.html" rel="next">
+<link href="../terminal/01-moving-around.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9129edf2ad6f8f5b92289adb7e3ee029.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,7 +106,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -84,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About this book</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/01-moving-around.html">Terminal basics</a></li><li class="breadcrumb-item"><a href="../terminal/02-making-files-folders.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -99,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Intro to Terminal &amp; Git for R</a> 
+      <a href="../">Intro to Terminal &amp; Git for R</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -111,14 +144,8 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About this book</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./how-to-use.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How to use this book</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -138,14 +165,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/welcome.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./terminal/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to the terminal</span></span></a>
+  <a href="../terminal/00-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome and launch</span></span></a>
   </div>
 </li>
       </ul>
@@ -161,14 +182,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/moving-around.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Moving around in the terminal</span></span></a>
+  <a href="../terminal/01-moving-around.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/making-files-folders.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span></a>
+  <a href="../terminal/02-making-files-folders.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></span></a>
   </div>
 </li>
       </ul>
@@ -184,20 +205,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/tips-tricks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
+  <a href="../terminal/03-tips-tricks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/troubleshooting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  <a href="../terminal/04-troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./terminal/glossary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Glossary: quick reference</span></span></a>
+  <a href="../terminal/05-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Glossary: quick reference</span></span></a>
   </div>
 </li>
       </ul>
@@ -219,20 +240,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/welcome.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
+  <a href="../intro-to-git/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/introduction-to-git.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Introduction to version control</span></span></a>
+  <a href="../intro-to-git/introduction-to-git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction to version control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/install-and-setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
+  <a href="../intro-to-git/install-and-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Installation and setup</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,26 +269,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/make-git-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Make a Git project</span></span></a>
+  <a href="../intro-to-git/make-git-project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Make our Git project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/add-files.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span></a>
+  <a href="../intro-to-git/add-files.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Add, ignore, and commit files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/pushing-to-github.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
+  <a href="../intro-to-git/pushing-to-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Pushing to Github</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/updating-your-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Updating files</span></span></a>
+  <a href="../intro-to-git/updating-your-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Updating files</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,26 +304,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/collaboration-setup-and-basic-workflow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span></a>
+  <a href="../intro-to-git/setup-and-basic-workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Project setup and basic workflow</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/dealing-with-conflicts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dealing with conflicts</span></span></a>
+  <a href="../intro-to-git/dealing-with-conflicts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dealing with conflicts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/working-with-branches.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
+  <a href="../intro-to-git/working-with-branches.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Working with feature branches</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/pull-requests.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Pull requests</span></span></a>
+  <a href="../intro-to-git/pull-requests.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Pull requests</span></span></a>
   </div>
 </li>
       </ul>
@@ -318,14 +339,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/quick-reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Quick reference</span></span></a>
+  <a href="../intro-to-git/quick-reference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Quick reference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro-to-git/troubleshooting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
+  <a href="../intro-to-git/troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
       </ul>
@@ -340,44 +361,38 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#about-this-book" id="toc-about-this-book" class="nav-link active" data-scroll-target="#about-this-book">About this book</a>
+  <li><a href="#creating-a-folder-mkdir" id="toc-creating-a-folder-mkdir" class="nav-link active" data-scroll-target="#creating-a-folder-mkdir"><span class="header-section-number">3.1</span> Creating a Folder (<code>mkdir</code>)</a>
   <ul class="collapse">
-  <li><a href="#some-words-from-the-authors" id="toc-some-words-from-the-authors" class="nav-link" data-scroll-target="#some-words-from-the-authors">Some words from the authors</a></li>
-  <li><a href="#about-the-authors" id="toc-about-the-authors" class="nav-link" data-scroll-target="#about-the-authors">About the authors</a>
+  <li><a href="#mini-excercise-make-a-directory" id="toc-mini-excercise-make-a-directory" class="nav-link" data-scroll-target="#mini-excercise-make-a-directory"><span class="header-section-number">3.1.1</span> 📝 Mini excercise: make a directory</a></li>
+  </ul></li>
+  <li><a href="#creating-a-file-touch" id="toc-creating-a-file-touch" class="nav-link" data-scroll-target="#creating-a-file-touch"><span class="header-section-number">3.2</span> Creating a File (<code>touch</code>)</a>
   <ul class="collapse">
-  <li><a href="#anastasia-goodwin" id="toc-anastasia-goodwin" class="nav-link" data-scroll-target="#anastasia-goodwin">Anastasia Goodwin</a></li>
-  <li><a href="#christian-mcdonald" id="toc-christian-mcdonald" class="nav-link" data-scroll-target="#christian-mcdonald">Christian McDonald</a></li>
+  <li><a href="#mini-excercise-make-a-file" id="toc-mini-excercise-make-a-file" class="nav-link" data-scroll-target="#mini-excercise-make-a-file"><span class="header-section-number">3.2.1</span> 📝 Mini excercise: make a file</a></li>
   </ul></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
+  <li><a href="#copying-files-and-folders-cp" id="toc-copying-files-and-folders-cp" class="nav-link" data-scroll-target="#copying-files-and-folders-cp"><span class="header-section-number">3.3</span> Copying Files and Folders (<code>cp</code>)</a></li>
+  <li><a href="#moving-or-renaming-files-mv" id="toc-moving-or-renaming-files-mv" class="nav-link" data-scroll-target="#moving-or-renaming-files-mv"><span class="header-section-number">3.4</span> Moving or Renaming Files (<code>mv</code>)**</a>
+  <ul class="collapse">
+  <li><a href="#mini-exercise-move-and-rename-a-file" id="toc-mini-exercise-move-and-rename-a-file" class="nav-link" data-scroll-target="#mini-exercise-move-and-rename-a-file"><span class="header-section-number">3.4.1</span> 📝 Mini exercise: move and rename a file</a></li>
   </ul></li>
+  <li><a href="#deleting-files-and-folders-rm" id="toc-deleting-files-and-folders-rm" class="nav-link" data-scroll-target="#deleting-files-and-folders-rm"><span class="header-section-number">3.5</span> Deleting Files and Folders (<code>rm</code>)</a></li>
+  <li><a href="#quick-note-about-flags" id="toc-quick-note-about-flags" class="nav-link" data-scroll-target="#quick-note-about-flags"><span class="header-section-number">3.6</span> Quick Note About Flags 🏳️</a></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint"><span class="header-section-number">3.7</span> 🎯 Checkpoint</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../terminal/01-moving-around.html">Terminal basics</a></li><li class="breadcrumb-item"><a href="../terminal/02-making-files-folders.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Intro to Terminal &amp; Git for R</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Making and managing folder</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Anastasia Goodwin, edited by Christian McDonald </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 1, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -387,54 +402,152 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about-this-book" class="level1 unnumbered">
-<h1 class="unnumbered">About this book</h1>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>This work is under constant revision</strong>. It is written using <a href="https://quarto.org/docs/guide/">Quarto</a> and the source is available on <a href="https://github.com/utdata/git-for-r">Github</a>.</p>
-<p>This version is being revised for fall 2025.</p>
-</div>
-</div>
-<p>Intro to Terminal and Git for R is a series of lessons and instructions used for courses in the School of Journalism and Media, Moody College of Communication at the University of Texas at Austin. This book is the brainchild of Associate Professor of Practice <a href="https://moody.utexas.edu/faculty/christian-mcdonald">Christian McDonald</a>, but has primarily been written by Anastasia Goodwin.</p>
-<section id="some-words-from-the-authors" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="some-words-from-the-authors">Some words from the authors</h2>
-<p>There is always more than one way to do things in coding. This book is an <strong>opinionated</strong> collection of lessons intended to teach students new to programming how to get started using the command line and version control. We consider our audiences beginners, and strive to make steps as simple as possible, which means we may not go into detail about alternative (and possibly better) ways to accomplish tasks in favor of reducing options to simplify understanding. For our purposes, we stick to the basics in hopes it eliminates enough of the noise for our students to get their feet on the ground using these technologies.</p>
-<p>There are a multitude of other resources available to students once they advance beyond the materials in this book, and we strongly encourage them to Google and seek out additional information about the concepts covered in this guide for further learning.</p>
+<p>Now that you can move around the Terminal like a pro, it’s time to <strong>create your own stuff</strong>.</p>
+<p>In this chapter, we’ll learn to make new folders and files. We’ll also learn how to move or delete them.</p>
+<section id="creating-a-folder-mkdir" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="creating-a-folder-mkdir"><span class="header-section-number">3.1</span> Creating a Folder (<code>mkdir</code>)</h2>
+<p>Let’s say you wanted to make a brand new folder on your computer. If you were doing this in Finder, you’d do something like right click and hit <code>New Folder</code>, then you’d need to fill out your folder name in the prompt next to the new folder.</p>
+<p>To do this from the command line, we do all of this in a single prompt using the <code>mkdir</code> command.</p>
+<blockquote class="blockquote">
+<p><code>mkdir</code> stands for <strong>make directory</strong>.</p>
+</blockquote>
+<p>If you ran the following command (don’t do this):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my_new_folder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This would create a folder called <code>my_new_folder</code> inside whatever directory you’re inside in the Terminal.</p>
+<section id="mini-excercise-make-a-directory" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="mini-excercise-make-a-directory"><span class="header-section-number">3.1.1</span> 📝 Mini excercise: make a directory</h3>
+<p>Now, try the <code>mkdir</code> command out on your own by making a new directory inside your home directory (<code>~</code>).</p>
+<ol type="1">
+<li>Check you’re in your home directory (Hint: you can get back to your home directory by running <code>cd</code>)</li>
+<li>Type and run: <code>mkdir terminal_practice</code> in your command prompt</li>
+<li>Run the <code>ls</code> command to make sure it worked, You should see your new directory listed in the Terminal response.</li>
+</ol>
 </section>
-<section id="about-the-authors" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="about-the-authors">About the authors</h2>
-<section id="anastasia-goodwin" class="level3">
-<h3 class="anchored" data-anchor-id="anastasia-goodwin">Anastasia Goodwin</h3>
-<p>I am a former web developer and UX/UI designer turned data journalist. I work as a senior data journalist embedded with the Houston Chronicle’s education team where I cover everything from pre-K to higher education. I also sometimes have the privilege to teach sections of Reporting with Data at the University of Texas at Austin, where I also attended journalism school.</p>
+</section>
+<section id="creating-a-file-touch" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="creating-a-file-touch"><span class="header-section-number">3.2</span> Creating a File (<code>touch</code>)</h2>
+<p>Like folders, we can also make new files from the command line using the <code>touch</code> command.</p>
+<blockquote class="blockquote">
+<p>Unlike other commands we’ve learned, <code>touch</code> isn’t shorthand for anything. It’s just the name of the command to make a new, empty file in Bash 🤷‍♀️</p>
+</blockquote>
+<p>For example, if you ran the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> example.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This creates a new, empty file called <code>example.txt</code>.</p>
+<blockquote class="blockquote">
+<p><strong>Note:</strong> Windows users may need to use:</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><code>bash echo.&gt; emample.txt</code></p>
+<p>or <code>bash New-Item example.txt</code></p>
+<p>(Depending on if you’re using PowerShell.)</p>
+</blockquote>
+<section id="mini-excercise-make-a-file" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="mini-excercise-make-a-file"><span class="header-section-number">3.2.1</span> 📝 Mini excercise: make a file</h3>
+<p>Now, try the <code>touch</code> command on your own by making a new file inside your new <code>terminal_practice</code> folder.</p>
+<ol type="1">
+<li><strong>Move into your new folder:</strong> run the command <code>cd terminal_practice</code> to move into your new folder.</li>
+<li><strong>Make a new file:</strong> Type and run the command <code>touch terminal-file.txt</code>.</li>
+<li><strong>Check your work:</strong> Run the <code>ls</code> command to list the files in your folder. You should see a single file listed in the Terminal response called <code>terminal-file.txt</code>.</li>
+</ol>
+</section>
+</section>
+<section id="copying-files-and-folders-cp" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="copying-files-and-folders-cp"><span class="header-section-number">3.3</span> Copying Files and Folders (<code>cp</code>)</h2>
+<p>We can also make duplicate files or folders from command line using the <code>cp</code> command.</p>
+<blockquote class="blockquote">
+<p><code>cp</code> is shorthand for “copy”</p>
+</blockquote>
+<p><strong>Syntax of the <code>cp</code> command</strong></p>
+<pre><code>cp source_file_folder destination_file_folder</code></pre>
+<p>The <code>cp</code> command takes at least two arguments in its arguments:</p>
+<ol type="1">
+<li><strong>Source file or folder:</strong> the file or folder you want to copy</li>
+<li><strong>Destination file or folder:</strong> the name you’d like the copy of the file or folder to be called</li>
+</ol>
+<p>Try running the following inside your <code>terminal_practice</code> folder:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> notes.txt copy_of_notes.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you run <code>ls</code> again, you should now you have two files: the original (<code>notes.txt</code>) and the new copy (<code>copy_of_notes.txt</code>).</p>
+<p>As we said before, the <code>cp</code> command can also copy whole directories. However, it’s a little more nuanced. If you’d like to learn more about copying folders, please see appendix XXX.</p>
+<p>📍 A note about destination folders: Bash will check to see if the folder you gave it <em>already exists</em>. If it doesn’t, Bash will <em>create</em> the new folder for you and place the file inside of it.</p>
+</section>
+<section id="moving-or-renaming-files-mv" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="moving-or-renaming-files-mv"><span class="header-section-number">3.4</span> Moving or Renaming Files (<code>mv</code>)**</h2>
+<p>Moving files or folders from command line is also easy using the <code>mv</code> command. The command can also by used to <strong>rename</strong> files, depending on the syntax you use.</p>
+<blockquote class="blockquote">
+<p><code>mv</code> is shorthand for “move”</p>
+</blockquote>
+<p><strong>Syntax of the <code>mv</code> command</strong></p>
+<p>To <strong>move a file’s location</strong>, use the following syntax:</p>
+<pre><code>mv source_file destination_folder</code></pre>
+<p>If you just want to <strong>rename</strong> a file, use the following syntax:</p>
+<pre><code>mv oldname.txt newname.txt</code></pre>
+<p>We’ll practice the two ways to use the <code>mv</code> command in the next exercise.</p>
+<section id="mini-exercise-move-and-rename-a-file" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="mini-exercise-move-and-rename-a-file"><span class="header-section-number">3.4.1</span> 📝 Mini exercise: move and rename a file</h3>
+<p><strong>Part 1:</strong> move a file</p>
+<ol type="1">
+<li><strong>Make new subdirectory:</strong> run the command <code>mkdir my_new_folder</code> to make a new folder in your <code>terminal_practice</code> directory.</li>
+<li><strong>Peek at our files:</strong> run <code>ls</code> to look at the files inside your <code>terminal_practice</code> folder to make sure the new folder is there.</li>
+<li><strong>Move your <code>notes.txt</code> file:</strong> Move the copy of your notes files into the new sub-folder in your directory by running the following command: <code>mv copy_of_notes.txt my_new_folder/</code></li>
+<li><strong>Check that it worked:</strong> run <code>ls</code> to look at the files inside your <code>terminal_practice</code> folder. You should still see a new folder called `<code>my_new_folder</code> but you should <em>not</em> see the copy of your notes file.</li>
+<li><strong>Locate your notes copy file:</strong> run <code>cd my_new_folder</code> to move into your new folder. Then run <code>ls</code> to peek at the files. You should see your copy of the notes file listed.</li>
+</ol>
+<p><strong>Part 2:</strong> rename a file</p>
+<ol type="1">
+<li><strong>Rename your notes copy file:</strong> From <em>inside</em> your new folder, rename the copy of your notes file by running the following command: <code>mv copy_of_notes.txt notes_new.txt</code></li>
+<li><strong>Check that it worked:</strong> run <code>ls</code> to look at your files. You should see the copy of your notes files, but now with a new name</li>
+</ol>
+</section>
+</section>
+<section id="deleting-files-and-folders-rm" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="deleting-files-and-folders-rm"><span class="header-section-number">3.5</span> Deleting Files and Folders (<code>rm</code>)</h2>
+<p>You can also use the command line to delete files and folders on your machine using the <code>rm</code> command.</p>
+<blockquote class="blockquote">
+<p><code>rm</code> is shorthand for “remove”</p>
+</blockquote>
+<p>This command does require some <strong>caution</strong> because when you delete something from the Terminal, it doesn’t go to the Trash — <strong>it’s gone</strong>.</p>
+<p><strong>Syntax of the <code>rm</code> command:</strong></p>
+<p>Deleting a single file:</p>
+<p><code>rm name_file_to_delete</code></p>
+<p>Deleting a folder (and <em>everything inside it)</em>:</p>
+<p><code>rm -r folder_to_delete</code></p>
+<p><em>📍 Note: The <code>-r</code> here is called a <strong>flag</strong>.</em> It stands for “<strong>recursive</strong>” — it tells <code>rm</code> to delete not just the folder, but also anything inside it. We’ll talk a little more about flags in the next section.</p>
+</section>
+<section id="quick-note-about-flags" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="quick-note-about-flags"><span class="header-section-number">3.6</span> Quick Note About Flags 🏳️</h2>
+<p><strong>Flags</strong> are <strong>extra options</strong> you can add to commands to change how they behave.</p>
 <ul>
-<li>Email: <a href="mailto:ana.goodwin10@gmail.com" class="email">ana.goodwin10@gmail.com</a></li>
+<li><p>They’re usually a <strong>dash</strong> plus <strong>one or two letters</strong>. (Example: <code>-r</code> means “recursive” for <code>rm</code>)</p></li>
+<li><p>You can combine flags too (like <code>-rf</code> for <code>rm -r -f</code>, meaning “recursive” and “force delete”).</p></li>
 </ul>
+<p>You’ll see flags often out in the wild. As you use the command line more, you’ll start to use more of these flags in your workflow to give you <strong>more control</strong> over what your commands do. For now, just know when you see something starting with a dash, it’s probably a flag to add a little extra to the primary command.</p>
+<p><strong>Optional exercise:</strong></p>
+<p>If you want, try one out yourself now by using the <code>-l</code> flag along with the <code>ls</code> command.The flag tells the command line, “give me more information about each file in my directory”.</p>
+<p>Run the following command:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Terminal will respond with detailed information about <strong>each</strong> file and folder in your directory. See the screenshot below for more information about each detail field.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/ls-flag-example.png" class="img-fluid figure-img"></p>
+<figcaption>Breakdown of each file detail in the <code>-l</code> flag Terminal response</figcaption>
+</figure>
+</div>
 </section>
-<section id="christian-mcdonald" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="christian-mcdonald">Christian McDonald</h3>
-<p>I’m a career journalist who most recently served as data and projects editor at the Austin American-Statesman before joining the University of Texas at Austin faculty full-time in fall 2018. I’ve taught data-related course at UT since 2013. I also serve as the innovation director of the <a href="https://journalism.utexas.edu/innovation">Dallas Morning News Journalism Innovation Endowment</a>.</p>
+<section id="checkpoint" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="checkpoint"><span class="header-section-number">3.7</span> 🎯 Checkpoint</h2>
+<p>Phew. In this chapter you’ve learned <em>a lot</em>:</p>
 <ul>
-<li>The UT Data Github: <a href="https://github.com/utdata">utdata</a></li>
-<li>Threads: <a href="https://www.threads.net/@critmcdonald">@critmcdonald</a> | Mastodon <a href="https://newsie.social/@crit">crit</a> | Bluesky: <span class="citation" data-cites="crit">@crit</span></li>
-<li>Email: <a href="mailto:christian.mcdonald@utexas.edu" class="email">christian.mcdonald@utexas.edu</a></li>
+<li><p>How to create a new folder/directory (<code>mkdir</code>)</p></li>
+<li><p>How to create a new file (<code>touch file_name</code>)</p></li>
+<li><p>How to copy files (<code>cp ..</code>)</p></li>
+<li><p>How to move and rename files (<code>mv..</code>)</p></li>
+<li><p>How flags can be used to power-up commands</p></li>
 </ul>
-</section>
-</section>
-<section id="license" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
-<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons License" style="border-width:0"></a><br><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-<p>Let’s just say this is free on the internet. I don’t make any money from it and you shouldn’t either.</p>
+<hr>
+<p><strong>Next up:</strong></p>
+<p>We’ll learn some key tips and tricks to make your command line workflow more efficient.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -839,10 +952,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../terminal/01-moving-around.html" class="pagination-link" aria-label="Moving Around in the Terminal">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Moving Around in the Terminal</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./how-to-use.html" class="pagination-link" aria-label="How to use this book">
-        <span class="nav-page-text">How to use this book</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../terminal/03-tips-tricks.html" class="pagination-link" aria-label="Command line tips and tricks">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Command line tips and tricks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
