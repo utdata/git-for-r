@@ -1,8 +1,11 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,windows,r
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,r
 
-## Note that below I remove docs/ from this file
-## so it DOES track and publish to Github.
+## Custom quarto edits
+
+/.quarto/
+/_site/
+/_book/
 
 ### macOS ###
 # General
@@ -80,7 +83,6 @@ vignettes/*.pdf
 .Renviron
 
 # pkgdown site
-## Edited for UT Journalism
 docs/
 
 # translation temp files
@@ -120,4 +122,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,r
-/.quarto/
