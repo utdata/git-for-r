@@ -1,8 +1,0 @@
-# Merging code
-
-This chapter is not even started, but I want to save [this stack overflow post](https://stackoverflow.com/questions/71768999/how-to-merge-when-you-get-error-hint-you-have-divergent-branches-and-need-to-s/71774640#71774640) that explains the differences in `git pull` options.
-
-Two important things:
-
-- Perhaps it is better not to use `git pull`, but instead to use `git fetch` and bring code to your computer, and then decide later what to do with it. But I need to try this (use git fetch on a different branch to pull commits into mine) to make sure I understand `git fetch` correctly.
-- We should set our git pull functionality to do fast-forward: `git config --global pull.ff only`. 
